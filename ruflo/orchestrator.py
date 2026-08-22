@@ -7,6 +7,7 @@ CONSOLIDAR → REGISTRAR → CONCLUIR
 
 Coordena capacidades internas, externas, multimídia, voz,
 avatar e distribuição global.
+Integra política de governança (capacidade + alto risco).
 """
 
 from __future__ import annotations
@@ -15,6 +16,8 @@ from datetime import datetime, timezone
 from enum import Enum
 from typing import Any, Callable, Dict, List, Optional
 import uuid
+
+from .politica import inferir_capacidade, precisa_autorizacao
 
 
 class EstadoCiclo(str, Enum):
@@ -43,13 +46,14 @@ class RufloOrchestrator:
         self.state: Dict[str, Any] = {
             "status": "operational",
             "layer": "ruflo",
-            "version": "0.3.0",
+            "version": "0.4.0",
             "ready_for": [
                 "workflow_definition",
                 "agent_coordination",
                 "state_sync",
                 "capability_routing",
                 "ciclo_autonomo",
+                "politica_governanca",
             ],
         }
         self._register_default_workflows()
@@ -65,6 +69,7 @@ class RufloOrchestrator:
             "estado": EstadoCiclo.RECEBIDA.value,
             "intencao": intencao,
             "contexto": contexto or {},
+            "capacidade": None,
             "tentativas": [],
             "plano": [],
             "resultados": [],
@@ -99,18 +104,8 @@ class RufloOrchestrator:
         return ciclo
 
     def precisa_autorizacao(self, sinal: Optional[Dict] = None) -> Dict[str, Any]:
-        if not sinal:
-            return {"necessaria": False}
-        alto_risco = (
-            sinal.get("risco") == "ALTO"
-            or sinal.get("irreversivel") is True
-            or sinal.get("altera_nucleo") is True
-            or sinal.get("exige_credencial") is True
-        )
-        return {
-            "necessaria": bool(alto_risco),
-            "motivo": (sinal.get("motivo") or "POLITICA_DE_GOVERNANCA") if alto_risco else None,
-        }
+        """Delega para a política de governança."""
+        return precisa_autorizacao(sinal)
 
     # ------------------------------------------------------------------
     # Workflows
@@ -169,15 +164,16 @@ class RufloOrchestrator:
         ciclo = self.criar_ciclo(intencao, context)
 
         try:
-            # PLANEJANDO
+            # PLANEJANDO — infere capacidade via política
             self.mudar_estado(ciclo, EstadoCiclo.PLANEJANDO.value)
             plano = self._planejar(ciclo, context)
             ciclo["plano"] = plano
 
-            # Verifica autorização de alto risco
+            # Verifica autorização de alto risco (política de governança)
             auth = self.precisa_autorizacao(context.get("sinal_risco"))
             if auth["necessaria"]:
                 self.mudar_estado(ciclo, EstadoCiclo.AGUARDANDO_AUTORIZACAO.value, auth)
+                ciclo.setdefault("autorizacoes", []).append(auth)
                 return {
                     "ok": False,
                     "status": "AGUARDANDO_AUTORIZACAO",
@@ -240,8 +236,13 @@ class RufloOrchestrator:
     def _planejar(self, ciclo: Dict, context: Dict) -> List[Dict]:
         if "PLANEJANDO" in self.handlers:
             return self.handlers["PLANEJANDO"](ciclo, context)
+
+        texto = str(ciclo.get("intencao") or context.get("texto") or "")
+        capacidade = context.get("capacidade") or inferir_capacidade(texto)
+        ciclo["capacidade"] = capacidade
+
         return [
-            {"etapa": "inferir_capacidade", "status": "pending"},
+            {"etapa": "inferir_capacidade", "status": "ok", "capacidade": capacidade},
             {"etapa": "selecionar_recurso", "status": "pending"},
             {"etapa": "preparar_contexto", "status": "pending"},
         ]
@@ -250,12 +251,12 @@ class RufloOrchestrator:
         if "EXECUTANDO" in self.handlers:
             return self.handlers["EXECUTANDO"](ciclo, context)
 
-        # Placeholder operacional — será ligado ao Executor Universal / SOUSA IA
         return {
             "ok": True,
             "status": "EXECUTADO_ESTRUTURA",
             "message": "Ruflo executou o ciclo em modo estrutura. Conecte handlers ou SOUSA IA para execução real.",
             "intencao": ciclo.get("intencao"),
+            "capacidade": ciclo.get("capacidade"),
             "contexto": context,
         }
 
@@ -295,7 +296,13 @@ class RufloOrchestrator:
             **self.state,
             "workflows_registrados": list(self.workflows.keys()),
             "handlers_registrados": list(self.handlers.keys()),
-            "ciclos_ativos": len([c for c in self.ciclos.values() if c["estado"] not in (EstadoCiclo.CONCLUIDA.value, EstadoCiclo.FALHA.value)]),
+            "ciclos_ativos": len(
+                [
+                    c
+                    for c in self.ciclos.values()
+                    if c["estado"] not in (EstadoCiclo.CONCLUIDA.value, EstadoCiclo.FALHA.value)
+                ]
+            ),
             "total_ciclos": len(self.ciclos),
         }
 

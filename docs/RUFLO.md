@@ -3,64 +3,71 @@
 ## O que é
 
 A **Ruflo** é a camada de orquestração do SOUSA 2.0.  
-Ela implementa a máquina de estados do ciclo autônomo definido no pacote oficial:
+Implementa a máquina de estados do ciclo autônomo, política de governança e **persistência de ciclos**.
 
 ```
 INTENÇÃO → PLANEJAR → EXECUTAR → VERIFICAR → RECUPERAR →
 CONSOLIDAR → REGISTRAR → CONCLUIR
 ```
 
-Estados extras de governança:
-- `AGUARDANDO_AUTORIZACAO`
-- `FALHA`
+## Persistência
+
+Cada mudança de estado grava o ciclo em disco:
+
+```
+data/ciclos/
+  CICLO_xxxxxxxxxxxx.json   # snapshot completo do ciclo
+  _index.json               # índice dos ciclos recentes
+```
+
+- Variável opcional: `SOUSA_DATA_DIR` (raiz dos dados)
+- Conteúdo operacional **não** é versionado no Git (`.gitignore`)
+- No start, o orquestrador recarrega os ciclos mais recentes na memória
+
+### CLI de consulta
+
+```bash
+# Listar ciclos persistidos
+python scripts/run_ciclo.py listar
+python scripts/run_ciclo.py listar --estado CONCLUIDA --limite 10
+
+# Carregar um ciclo específico
+python scripts/run_ciclo.py carregar --ciclo-id CICLO_abc123def456
+```
 
 ## Uso rápido
 
 ```bash
-# Status
 python scripts/run_ciclo.py status
-
-# Ciclo padrão com intenção
 python scripts/run_ciclo.py ciclo_padrao --intencao "sincronizar memória"
-
-# JSON puro (útil para Actions)
 python scripts/run_ciclo.py ciclo_padrao -i "teste" --json
 ```
 
 ## API Python
 
 ```python
-from ruflo import RufloOrchestrator
+from ruflo import RufloOrchestrator, persistencia
 
-r = RufloOrchestrator()
+r = RufloOrchestrator()  # já carrega ciclos persistidos
 
-# Status
-print(r.get_status())
+resultado = r.execute("ciclo_padrao", {"intencao": "gerar resumo"})
+print(resultado["ciclo"]["id"], resultado["status"])
 
-# Executar ciclo
-resultado = r.execute("ciclo_padrao", {"intencao": "gerar resumo do dia"})
-print(resultado["status"], resultado["ok"])
-
-# Registrar handler customizado para a etapa EXECUTANDO
-def meu_executor(ciclo, context):
-    return {"ok": True, "status": "CUSTOM", "data": "..."}
-
-r.register_handler("EXECUTANDO", meu_executor)
+# Consulta
+ciclo = r.get_ciclo("CICLO_...")
+lista = r.listar_ciclos(estado="CONCLUIDA")
+print(persistencia.estatisticas())
 ```
 
-## Integração com o Orquestrador JS
+## Módulos
 
-O `SOUSA_ORQUESTRADOR.js` do pacote oficial segue o mesmo fluxo.  
-A Ruflo é a implementação Python equivalente, pensada para:
+| Módulo | Função |
+|--------|--------|
+| `orchestrator.py` | Máquina de estados + execute |
+| `politica.py` | Capacidade, alto risco, saúde, cooldown |
+| `persistencia.py` | Salvar / carregar / listar ciclos |
+| `handlers.py` | EXECUTANDO via SOUSA IA (Gemini) |
 
-- GitHub Actions
-- CLI (`scripts/run_ciclo.py`)
-- API Flask (`app.py`)
-- Futura ponte com os módulos USB / SOUSA IA
+## Versão
 
-## Próximos passos
-
-1. Conectar handlers reais (SOUSA IA, Executor Universal, voz, avatar)
-2. Workflow GitHub Actions que chama `run_ciclo.py`
-3. Persistência de ciclos (memória / Drive)
-4. Ponte bidirecional com os módulos JS do `pacote_oficial/src/`
+Ruflo **0.5.0** — orquestração + governança + persistência.

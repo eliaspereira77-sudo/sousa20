@@ -5,9 +5,7 @@ Orquestrador de fluxos alinhado ao ciclo do pacote oficial:
 INTENÇÃO → PLANEJAR → EXECUTAR → VERIFICAR → RECUPERAR →
 CONSOLIDAR → REGISTRAR → CONCLUIR
 
-Coordena capacidades internas, externas, multimídia, voz,
-avatar e distribuição global.
-Integra política de governança (capacidade + alto risco).
+Coordena capacidades, integra política de governança e persiste ciclos.
 """
 
 from __future__ import annotations
@@ -18,6 +16,7 @@ from typing import Any, Callable, Dict, List, Optional
 import uuid
 
 from .politica import inferir_capacidade, precisa_autorizacao
+from . import persistencia
 
 
 class EstadoCiclo(str, Enum):
@@ -38,15 +37,16 @@ class RufloOrchestrator:
 
     ESTADOS_VALIDOS = [e.value for e in EstadoCiclo]
 
-    def __init__(self):
+    def __init__(self, carregar_persistidos: bool = True, limite_carga: int = 50):
         self.workflows: Dict[str, Dict[str, Any]] = {}
         self.active_agents: List[str] = []
         self.ciclos: Dict[str, Dict[str, Any]] = {}
         self.handlers: Dict[str, Callable] = {}
+        self.persistir: bool = True
         self.state: Dict[str, Any] = {
             "status": "operational",
             "layer": "ruflo",
-            "version": "0.4.0",
+            "version": "0.5.0",
             "ready_for": [
                 "workflow_definition",
                 "agent_coordination",
@@ -54,12 +54,17 @@ class RufloOrchestrator:
                 "capability_routing",
                 "ciclo_autonomo",
                 "politica_governanca",
+                "persistencia_ciclos",
             ],
         }
         self._register_default_workflows()
 
+        if carregar_persistidos:
+            carregados = persistencia.carregar_todos_em_memoria(limite=limite_carga)
+            self.ciclos.update(carregados)
+
     # ------------------------------------------------------------------
-    # Ciclo (máquina de estados alinhada ao SOUSA_CICLO_AUTONOMO)
+    # Ciclo
     # ------------------------------------------------------------------
 
     def criar_ciclo(self, intencao: Any, contexto: Optional[Dict] = None) -> Dict[str, Any]:
@@ -79,6 +84,7 @@ class RufloOrchestrator:
             "historico_estados": [EstadoCiclo.RECEBIDA.value],
         }
         self.ciclos[ciclo_id] = ciclo
+        self._persistir(ciclo)
         return ciclo
 
     def mudar_estado(
@@ -97,15 +103,23 @@ class RufloOrchestrator:
             "timestamp": datetime.now(timezone.utc).isoformat(),
         }
         ciclo.setdefault("historico_estados", []).append(estado)
+        self._persistir(ciclo)
         return ciclo
 
     def registrar_tentativa(self, ciclo: Dict[str, Any], tentativa: Dict[str, Any]) -> Dict[str, Any]:
         ciclo.setdefault("tentativas", []).append(tentativa or {})
+        self._persistir(ciclo)
         return ciclo
 
     def precisa_autorizacao(self, sinal: Optional[Dict] = None) -> Dict[str, Any]:
-        """Delega para a política de governança."""
         return precisa_autorizacao(sinal)
+
+    def _persistir(self, ciclo: Dict[str, Any]) -> None:
+        if self.persistir:
+            try:
+                persistencia.salvar_ciclo(ciclo)
+            except OSError:
+                pass  # não interrompe o ciclo por falha de disco
 
     # ------------------------------------------------------------------
     # Workflows
@@ -139,7 +153,6 @@ class RufloOrchestrator:
         self.workflows[name] = definition
 
     def register_handler(self, etapa: str, handler: Callable) -> None:
-        """Registra handler para uma etapa do ciclo (ex: EXECUTANDO)."""
         self.handlers[etapa] = handler
 
     def execute(
@@ -164,16 +177,16 @@ class RufloOrchestrator:
         ciclo = self.criar_ciclo(intencao, context)
 
         try:
-            # PLANEJANDO — infere capacidade via política
             self.mudar_estado(ciclo, EstadoCiclo.PLANEJANDO.value)
             plano = self._planejar(ciclo, context)
             ciclo["plano"] = plano
+            self._persistir(ciclo)
 
-            # Verifica autorização de alto risco (política de governança)
             auth = self.precisa_autorizacao(context.get("sinal_risco"))
             if auth["necessaria"]:
                 self.mudar_estado(ciclo, EstadoCiclo.AGUARDANDO_AUTORIZACAO.value, auth)
                 ciclo.setdefault("autorizacoes", []).append(auth)
+                self._persistir(ciclo)
                 return {
                     "ok": False,
                     "status": "AGUARDANDO_AUTORIZACAO",
@@ -181,7 +194,6 @@ class RufloOrchestrator:
                     "autorizacao": auth,
                 }
 
-            # EXECUTANDO
             self.mudar_estado(ciclo, EstadoCiclo.EXECUTANDO.value)
             resultado = self._executar(ciclo, context)
             self.registrar_tentativa(ciclo, {
@@ -191,7 +203,6 @@ class RufloOrchestrator:
             })
             ciclo["resultados"].append(resultado)
 
-            # VERIFICANDO
             self.mudar_estado(ciclo, EstadoCiclo.VERIFICANDO.value, resultado)
             ok = bool(resultado.get("ok"))
 
@@ -228,10 +239,6 @@ class RufloOrchestrator:
                 "error": str(e),
                 "ciclo": ciclo,
             }
-
-    # ------------------------------------------------------------------
-    # Etapas internas (extensíveis via handlers)
-    # ------------------------------------------------------------------
 
     def _planejar(self, ciclo: Dict, context: Dict) -> List[Dict]:
         if "PLANEJANDO" in self.handlers:
@@ -276,10 +283,8 @@ class RufloOrchestrator:
     def _registrar(self, ciclo: Dict) -> None:
         if "REGISTRANDO" in self.handlers:
             self.handlers["REGISTRANDO"](ciclo)
-
-    # ------------------------------------------------------------------
-    # Roteamento de capacidades
-    # ------------------------------------------------------------------
+        # Persistência final garantida
+        self._persistir(ciclo)
 
     def route_capability(self, capability: str, payload: Any) -> Dict[str, Any]:
         return self.execute(
@@ -287,24 +292,27 @@ class RufloOrchestrator:
             {"intencao": capability, "payload": payload, "capacidade": capability},
         )
 
-    # ------------------------------------------------------------------
-    # Status
-    # ------------------------------------------------------------------
-
     def get_status(self) -> Dict[str, Any]:
+        stats = persistencia.estatisticas()
         return {
             **self.state,
             "workflows_registrados": list(self.workflows.keys()),
             "handlers_registrados": list(self.handlers.keys()),
+            "ciclos_em_memoria": len(self.ciclos),
             "ciclos_ativos": len(
                 [
                     c
                     for c in self.ciclos.values()
-                    if c["estado"] not in (EstadoCiclo.CONCLUIDA.value, EstadoCiclo.FALHA.value)
+                    if c.get("estado") not in (EstadoCiclo.CONCLUIDA.value, EstadoCiclo.FALHA.value)
                 ]
             ),
-            "total_ciclos": len(self.ciclos),
+            "persistencia": stats,
         }
 
     def get_ciclo(self, ciclo_id: str) -> Optional[Dict[str, Any]]:
-        return self.ciclos.get(ciclo_id)
+        if ciclo_id in self.ciclos:
+            return self.ciclos[ciclo_id]
+        return persistencia.carregar_ciclo(ciclo_id)
+
+    def listar_ciclos(self, estado: Optional[str] = None, limite: int = 50) -> List[Dict[str, Any]]:
+        return persistencia.listar_ciclos(estado=estado, limite=limite)

@@ -1,4 +1,4 @@
-"""SOUSA 2.0 — Camada Ruflo (Orquestração + Política)"""
+"""SOUSA 2.0 — Camada Ruflo (Orquestração + Política + Persistência)"""
 
 from .orchestrator import RufloOrchestrator, EstadoCiclo
 from .politica import (
@@ -11,6 +11,7 @@ from .politica import (
     em_cooldown,
     aplicar_cooldown,
 )
+from . import persistencia
 
 __all__ = [
     "RufloOrchestrator",
@@ -23,4 +24,5 @@ __all__ = [
     "consultar_saude",
     "em_cooldown",
     "aplicar_cooldown",
+    "persistencia",
 ]

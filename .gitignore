@@ -65,3 +65,7 @@ media/generated/
 
 # Jupyter
 .ipynb_checkpoints/
+
+# SOUSA data (ciclos persistidos — não versionar conteúdo operacional)
+data/ciclos/
+!data/.gitkeep

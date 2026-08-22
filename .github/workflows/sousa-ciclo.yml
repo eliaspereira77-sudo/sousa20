@@ -1,0 +1,64 @@
+name: SOUSA 2.0 – Ciclo Ruflo
+
+on:
+  workflow_dispatch:
+    inputs:
+      workflow:
+        description: "Workflow Ruflo (ciclo_padrao | status)"
+        required: true
+        default: "ciclo_padrao"
+        type: choice
+        options:
+          - ciclo_padrao
+          - status
+      intencao:
+        description: "Intenção / comando para o SOUSA"
+        required: false
+        default: "status do sistema"
+  schedule:
+    # 12:00 UTC ≈ 09:00 Brasília (ajuste se necessário)
+    - cron: "0 12 * * *"
+  push:
+    paths:
+      - "ruflo/**"
+      - "core/**"
+      - "scripts/**"
+      - ".github/workflows/sousa-ciclo.yml"
+
+jobs:
+  executar-ciclo:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Executar ciclo Ruflo
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          SOUSA_AMBIENTE: PRODUCAO
+        run: |
+          WORKFLOW="${{ github.event.inputs.workflow || 'ciclo_padrao' }}"
+          INTENCAO="${{ github.event.inputs.intencao || 'ciclo agendado ou por push' }}"
+
+          if [ "$WORKFLOW" = "status" ]; then
+            python scripts/run_ciclo.py status --json
+          else
+            python scripts/run_ciclo.py "$WORKFLOW" --intencao "$INTENCAO" --json
+          fi
+
+      - name: Resumo
+        if: always()
+        run: echo "Ciclo SOUSA 2.0 / Ruflo finalizado."

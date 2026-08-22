@@ -1,0 +1,13 @@
+{
+  "name": "sousa-2.0-oficial",
+  "version": "2.0.0",
+  "description": "SOUSA 2.0 + SOUSA IA — Pacote Oficial Limpo",
+  "main": "src/SOUSA_ORQUESTRADOR.js",
+  "scripts": {
+    "start": "node src/SOUSA_ORQUESTRADOR.js",
+    "cli": "python3 sousa_cli.py"
+  },
+  "keywords": ["sousa", "ia", "usb", "orquestrador"],
+  "author": "Elias Pereira de Sousa",
+  "license": "UNLICENSED"
+}

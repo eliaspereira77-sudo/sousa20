@@ -1,4 +1,4 @@
-"""
+﻿"""
 SOUSA 2.0 - Entry Point Principal
 Sistema de IA Pessoal Avançado
 """
@@ -20,6 +20,20 @@ except ImportError:
     GeminiClient = None
     SousaIA = None
     RufloOrchestrator = None
+
+try:
+    from core.omniroute_client import (
+        OmniRouteClient,
+        OmniRouteUnavailableError,
+        OmniRouteAPIError,
+        registrar_omniroute_como_usb,
+    )
+    if os.getenv("OMNIROUTE_BASE_URL"):
+        registrar_omniroute_como_usb()
+except ImportError:
+    OmniRouteClient = None
+    OmniRouteUnavailableError = Exception
+    OmniRouteAPIError = Exception
 
 
 @app.route("/")
@@ -46,12 +60,36 @@ def health():
 
 @app.route("/chat", methods=["POST"])
 def chat():
-    """Endpoint básico de chat (Gemini)."""
+    """
+    Endpoint básico de chat. Se OMNIROUTE_BASE_URL estiver configurada,
+    tenta o OmniRoute primeiro (aproveita os provedores gratuitos do
+    catálogo — princípio de maximizar recursos $0 antes de gastar quota
+    paga do Gemini). Se o OmniRoute estiver indisponível ou não
+    configurado, cai pro GeminiClient — comportamento antigo preservado.
+    """
     data = request.get_json() or {}
     message = data.get("message", "")
 
     if not message:
         return jsonify({"error": "message is required"}), 400
+
+    omniroute_base_url = os.getenv("OMNIROUTE_BASE_URL")
+    if omniroute_base_url and OmniRouteClient is not None:
+        try:
+            client = OmniRouteClient(
+                api_key=os.getenv("OMNIROUTE_API_KEY", "local"),
+                model_name=os.getenv("OMNIROUTE_MODEL", "auto/cheap"),
+                base_url=omniroute_base_url,
+            )
+            response = client.generate(message)
+            return jsonify({
+                "system": "SOUSA 2.0",
+                "response": response,
+                "model": "omniroute"
+            })
+        except (OmniRouteUnavailableError, OmniRouteAPIError) as e:
+            # Não derruba a requisição — cai pro Gemini abaixo.
+            app.logger.warning("OmniRoute indisponível, caindo pro Gemini: %s", e)
 
     api_key = os.getenv("GEMINI_API_KEY")
     if not api_key:

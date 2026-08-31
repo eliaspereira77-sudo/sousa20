@@ -1,0 +1,14 @@
+﻿{
+  "protocolo": "SOUSA_SOURCE_OF_TRUTH",
+  "versao": "1.0.0",
+  "sistema": "SOUSA 2.0",
+  "ambiente": "PRODUCAO",
+  "raiz_oficial": "SOUSA 2.0 Produção",
+  "regra": "A raiz operacional local é a pasta que contém este manifesto.",
+  "sincronizacao": {
+    "via_bidirecional_existente": true,
+    "sincronizador_oficial": "A_DEFINIR"
+  },
+  "status": "IDENTIDADE_DECLARADA",
+  "observacao": "Arquivos legados, mortos, ambiguos ou incompatíveis serão auditados posteriormente."
+}

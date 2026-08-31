@@ -1,0 +1,25 @@
+# SOUSA 2.0 - Controle Git
+
+# Dependências locais Node
+node_modules/
+package-lock.json
+
+# Arquivos temporários
+.tmp.driveupload/
+
+# Logs locais
+07_LOG/
+LOG/
+
+# Backups locais
+BACKUP/
+BACKUP_*/
+*_BACKUP_*
+
+# Arquivos temporários Windows
+Thumbs.db
+Desktop.ini
+
+# Ambientes locais
+.env
+.env.*

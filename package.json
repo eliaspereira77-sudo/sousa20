@@ -1,0 +1,10 @@
+{
+  "name": "sousa-installer",
+  "version": "2.0.4",
+  "description": "Instalador Autônomo e de Missão Crítica SOUSA 2.0",
+  "main": "sousa20/app.py",
+  "scripts": {
+    "start": ".venv\\Scripts\\python.exe sousa20/app.py"
+  },
+  "author": "Elias Pereira de Sousa"
+}

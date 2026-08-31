@@ -1,0 +1,44 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "tipo_registro": "EVENTO",
+
+  "versao": "1.0.0",
+
+  "evento": {
+    "id_evento": "",
+    "data": "",
+    "hora": "",
+    "modulo": "",
+    "acao": "",
+    "arquivo": "",
+    "explicacao": "",
+    "resultado": "",
+    "pendencias": [],
+    "decisao_fundador": "",
+    "proximo_passo": ""
+  },
+
+  "classificacao": {
+    "tipo": [
+      "CRIACAO",
+      "ALTERACAO",
+      "TESTE",
+      "BACKUP",
+      "DECISAO",
+      "PENDENCIA"
+    ],
+    "importancia": [
+      "BAIXA",
+      "MEDIA",
+      "ALTA",
+      "CRITICA"
+    ]
+  },
+
+  "saidas": {
+    "memoria_tecnica": true,
+    "briefing": true,
+    "relatorio_pdf": true
+  }
+}

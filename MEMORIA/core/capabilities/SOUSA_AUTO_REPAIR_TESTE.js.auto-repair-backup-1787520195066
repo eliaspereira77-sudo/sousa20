@@ -1,0 +1,8 @@
+﻿'use strict';
+
+function testeReparo() {
+  console.log("SOUSA AUTO REPAIR TEST";
+  console.log("ERRO CONTROLADO");
+}
+
+module.exports = { testeReparo };

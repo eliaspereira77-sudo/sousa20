@@ -1,0 +1,2024 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SOUSA 2.0</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Times New Roman', 'Georgia', serif; }
+
+:root {
+    --azul-profundo: #051A40;
+    --azul-medio: #0A2A66;
+    --dourado-claro: #F8D478;
+    --dourado-medio: #D4A028;
+    --dourado-escuro: #9A7018;
+    --gradiente-fundo: linear-gradient(180deg, var(--azul-profundo) 0%, #E8C880 100%);
+    --sombra-dourada: 0 0 15px rgba(212, 160, 40, 0.4);
+    --sombra-profunda: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+body { background: var(--gradiente-fundo); min-height: 100vh; padding: 2rem 1rem; display: flex; justify-content: center; }
+
+.tela-sistema { width: 900px; max-width: 100%; background: transparent; position: relative; }
+
+.cabecalho-principal { text-align: center; margin-bottom: 1.5rem; }
+.cruz-luz { font-size: 5rem; color: var(--dourado-medio); text-shadow: 0 0 20px #FFE680, 0 0 40px #FFD440; margin-bottom: -1rem; }
+
+.faixa-titulo {
+    background: linear-gradient(90deg, var(--dourado-escuro), var(--dourado-medio), var(--dourado-escuro));
+    border-radius: 12px; padding: 1rem 2rem; box-shadow: var(--sombra-profunda);
+    border: 2px solid var(--dourado-claro); position: relative; display: inline-block;
+}
+.faixa-titulo::before, .faixa-titulo::after {
+    content: ""; position: absolute; width: 60px; height: 40px;
+    background: var(--dourado-medio); top: 50%; transform: translateY(-50%);
+    border-radius: 4px; box-shadow: var(--sombra-profunda);
+}
+.faixa-titulo::before { left: -20px; }
+.faixa-titulo::after { right: -20px; }
+
+.titulo-sistema { font-size: 3.2rem; color: #FFF8E6; font-weight: bold; letter-spacing: 2px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); }
+.bem-vindo { color: #FFF8E6; font-size: 1.4rem; margin: 1rem 0 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+.nome-usuario { color: #FFE8A0; font-size: 2rem; font-weight: 600; margin-bottom: 1rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.4); }
+
+.status-sistema {
+    background: #102A10; color: #48E048; font-family: monospace; font-size: 1.3rem;
+    padding: 0.6rem 1.2rem; border-radius: 8px; display: inline-flex;
+    align-items: center; gap: 0.8rem; border: 1px solid #286028;
+}
+.indicador-online { color: #FFF; font-size: 1.2rem; margin-top: 0.8rem; display: flex; align-items: center; justify-content: center; gap: 0.6rem; }
+.relogio-sistema { color: #FFF8E6; font-size: 1rem; margin-top: 0.5rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.45); }
+.painel-automacao {
+    margin: 1.4rem auto 0; max-width: 1080px; display: grid; grid-template-columns: 1.2fr repeat(6, auto);
+    gap: 0.6rem; align-items: center; background: rgba(5,26,64,0.55);
+    border: 1.5px solid var(--dourado-medio); border-radius: 12px; padding: 0.8rem;
+    box-shadow: var(--sombra-profunda);
+}
+#busca-modulos {
+    width: 100%; background: rgba(255,255,255,0.09); border: 1.5px solid var(--dourado-medio);
+    border-radius: 9px; color: #FFF8E6; padding: 0.65rem 0.85rem; font-size: 0.95rem; outline: none;
+}
+#busca-modulos::placeholder { color: #ccb77a; }
+.botao-auto {
+    background: linear-gradient(135deg, var(--dourado-medio), var(--dourado-claro)); color: var(--azul-profundo);
+    border: 1px solid #FFF2CC; border-radius: 9px; padding: 0.65rem 0.85rem; cursor: pointer;
+    font-weight: bold; box-shadow: 0 3px 8px rgba(0,0,0,0.25); white-space: nowrap;
+}
+.botao-auto:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.cartao-nucleo.oculto { display: none; }
+.sem-resultados { display: none; grid-column: 1 / -1; text-align: center; color: #FFF8E6; padding: 1rem; border: 1px dashed var(--dourado-medio); border-radius: 10px; }
+.sem-resultados.visivel { display: block; }
+
+.secao-esteira { margin: 0 0 1.6rem; }
+.painel-esteira {
+    margin-top: 1rem; background: linear-gradient(180deg, rgba(5,26,64,0.95), rgba(10,42,102,0.88));
+    border: 2px solid var(--dourado-medio); border-radius: 12px; padding: 1rem;
+    box-shadow: var(--sombra-dourada), var(--sombra-profunda); color: #FFF8E6;
+}
+.linha-status-tunel {
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between;
+    gap: 0.6rem; margin-bottom: 0.9rem; padding: 0.6rem 0.9rem; border-radius: 9px;
+    background: rgba(0,0,0,0.22); border: 1px solid rgba(248,212,120,0.3);
+}
+.indicador-tunel { font-family: monospace; font-weight: bold; font-size: 0.95rem; display: flex; align-items: center; gap: 0.5rem; }
+.indicador-tunel .ponto-tunel { width: 10px; height: 10px; border-radius: 50%; display: inline-block; background: #888; box-shadow: 0 0 6px #888; }
+.indicador-tunel.online .ponto-tunel { background: #48E048; box-shadow: 0 0 8px #48E048; }
+.indicador-tunel.offline .ponto-tunel { background: #E04848; box-shadow: 0 0 8px #E04848; }
+.indicador-tunel.verificando .ponto-tunel { background: #D4A028; box-shadow: 0 0 8px #D4A028; animation: pulsar-tunel 1s infinite; }
+.indicador-tunel.atencao .ponto-tunel { background: #D4A028; box-shadow: 0 0 8px #D4A028; }
+@keyframes pulsar-tunel { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+.latencia-tunel { font-size: 0.82rem; color: #e9d89f; }
+.grade-esteira {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.6rem; margin-bottom: 0.9rem;
+}
+.botao-esteira {
+    background: linear-gradient(135deg, var(--dourado-medio), var(--dourado-claro)); color: var(--azul-profundo);
+    border: 1px solid #FFF2CC; border-radius: 9px; padding: 0.75rem 0.6rem; cursor: pointer;
+    font-weight: bold; font-size: 0.88rem; box-shadow: 0 3px 8px rgba(0,0,0,0.25);
+    display: flex; flex-direction: column; align-items: center; gap: 0.3rem; text-align: center;
+    transition: transform 0.12s ease, filter 0.12s ease;
+}
+.botao-esteira:hover { filter: brightness(1.06); transform: translateY(-1px); }
+.botao-esteira:disabled { opacity: 0.6; cursor: wait; transform: none; }
+.botao-esteira .emoji-esteira { font-size: 1.3rem; }
+.monitor-tunel { border-top: 1px solid rgba(248,212,120,0.3); padding-top: 0.7rem; }
+.titulo-monitor { color: var(--dourado-claro); font-size: 0.82rem; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 0.5rem; }
+.log-tunel { max-height: 190px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.3rem; }
+.linha-log-tunel {
+    font-family: monospace; font-size: 0.8rem; padding: 0.4rem 0.6rem; border-radius: 6px;
+    background: rgba(255,255,255,0.05); border-left: 3px solid #888; color: #e9d89f;
+}
+.linha-log-tunel.ok { border-left-color: #48E048; }
+.linha-log-tunel.falha { border-left-color: #E04848; color: #FFD2C0; }
+.log-tunel-vazio { font-size: 0.85rem; color: #ccb77a; text-align: center; padding: 0.6rem; }
+
+.secao-cotas { margin: 1.6rem 0 2rem; }
+.painel-cotas {
+    margin-top: 1rem; display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem;
+}
+.cartao-cota {
+    background: linear-gradient(180deg, rgba(10,42,102,0.96), rgba(5,26,64,0.96));
+    border: 1.5px solid var(--dourado-medio); border-radius: 10px; padding: 0.9rem;
+    box-shadow: var(--sombra-profunda); color: #FFF8E6; min-height: 118px;
+}
+.rotulo-cota { color: var(--dourado-claro); font-size: 0.82rem; letter-spacing: 0.6px; text-transform: uppercase; }
+.valor-cota { font-size: 1.65rem; font-weight: bold; margin: 0.35rem 0; color: #FFF8E6; }
+.detalhe-cota { font-size: 0.82rem; color: #e9d89f; line-height: 1.35; }
+.barra-cota {
+    height: 9px; margin-top: 0.65rem; background: rgba(255,255,255,0.12);
+    border-radius: 999px; overflow: hidden; border: 1px solid rgba(248,212,120,0.28);
+}
+.preenchimento-cota {
+    height: 100%; width: 0%; border-radius: inherit;
+    background: linear-gradient(90deg, #48E048, var(--dourado-claro), #D46A28);
+    transition: width 0.3s ease;
+}
+.controles-cotas {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 0.9rem;
+}
+.alerta-cota {
+    margin-top: 0.85rem; padding: 0.65rem 0.9rem; border-radius: 9px;
+    background: rgba(16,42,16,0.72); border: 1px solid rgba(72,224,72,0.45);
+    color: #DDF7DD; text-align: center; font-size: 0.9rem;
+}
+.alerta-cota.atencao { background: rgba(74,45,8,0.78); border-color: #D4A028; color: #FFE8A0; }
+.alerta-cota.limite { background: rgba(75,15,15,0.82); border-color: #D46A28; color: #FFD2C0; }
+
+.secao-afiliados { margin: 0 0 2rem; }
+.painel-afiliados {
+    margin-top: 1rem; background: linear-gradient(180deg, rgba(10,42,102,0.9), rgba(5,26,64,0.95));
+    border: 1.5px solid var(--dourado-medio); border-radius: 12px; padding: 1rem;
+    box-shadow: var(--sombra-profunda); color: #FFF8E6;
+}
+.grade-afiliados {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem;
+}
+.cartao-afiliado {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(248,212,120,0.35);
+    border-radius: 10px; padding: 0.9rem; min-height: 116px;
+}
+.rotulo-afiliado { color: var(--dourado-claro); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.6px; }
+.valor-afiliado { font-size: 1.55rem; font-weight: bold; margin: 0.35rem 0; color: #FFF8E6; }
+.detalhe-afiliado { color: #e9d89f; font-size: 0.82rem; line-height: 1.35; }
+.funil-afiliado {
+    margin-top: 1rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem;
+}
+.etapa-funil {
+    position: relative; overflow: hidden; background: rgba(0,0,0,0.18);
+    border: 1px solid rgba(248,212,120,0.3); border-radius: 10px; padding: 0.9rem;
+}
+.etapa-funil::before {
+    content: ""; position: absolute; inset: 0; width: var(--nivel, 0%);
+    background: linear-gradient(90deg, rgba(72,224,72,0.18), rgba(248,212,120,0.2));
+    pointer-events: none;
+}
+.etapa-funil > * { position: relative; }
+.controles-afiliados {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 0.9rem;
+}
+.alerta-afiliados {
+    margin-top: 0.85rem; padding: 0.65rem 0.9rem; border-radius: 9px;
+    background: rgba(16,42,16,0.72); border: 1px solid rgba(72,224,72,0.45);
+    color: #DDF7DD; text-align: center; font-size: 0.9rem;
+}
+.alerta-afiliados.atencao { background: rgba(74,45,8,0.78); border-color: #D4A028; color: #FFE8A0; }
+.alerta-afiliados.limite { background: rgba(75,15,15,0.82); border-color: #D46A28; color: #FFD2C0; }
+
+.secao-automacao { margin: 0 0 2rem; }
+.painel-automacoes {
+    margin-top: 1rem; background: linear-gradient(180deg, rgba(5,26,64,0.92), rgba(10,42,102,0.82));
+    border: 1.5px solid var(--dourado-medio); border-radius: 12px; padding: 1rem;
+    box-shadow: var(--sombra-profunda); color: #FFF8E6;
+}
+.grade-automacoes {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.8rem;
+}
+.cartao-automacao {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(248,212,120,0.32);
+    border-radius: 10px; padding: 0.85rem; min-height: 112px;
+}
+.rotulo-automacao { color: var(--dourado-claro); font-size: 0.76rem; text-transform: uppercase; letter-spacing: 0.6px; }
+.valor-automacao { font-size: 1.35rem; font-weight: bold; margin: 0.35rem 0; color: #FFF8E6; }
+.detalhe-automacao { color: #e9d89f; font-size: 0.82rem; line-height: 1.35; }
+.log-automacao {
+    margin-top: 0.9rem; max-height: 220px; overflow-y: auto; display: grid; gap: 0.55rem;
+}
+.item-automacao {
+    background: rgba(0,0,0,0.18); border-left: 4px solid var(--dourado-medio);
+    border-radius: 8px; padding: 0.68rem 0.8rem; font-size: 0.88rem; line-height: 1.38;
+}
+.item-automacao.ok { border-left-color: #48E048; }
+.item-automacao.atencao { border-left-color: #D4A028; }
+.item-automacao.falha { border-left-color: #D46A28; }
+.controles-automacoes {
+    display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 0.9rem;
+}
+.status-automacao {
+    margin-top: 0.85rem; padding: 0.65rem 0.9rem; border-radius: 9px;
+    background: rgba(16,42,16,0.72); border: 1px solid rgba(72,224,72,0.45);
+    color: #DDF7DD; text-align: center; font-size: 0.9rem; line-height: 1.4;
+}
+.status-automacao.atencao { background: rgba(74,45,8,0.78); border-color: #D4A028; color: #FFE8A0; }
+.status-automacao.falha { background: rgba(75,15,15,0.82); border-color: #D46A28; color: #FFD2C0; }
+
+.secao-erros { margin: 0 0 2rem; }
+.painel-erros {
+    margin-top: 1rem; background: linear-gradient(180deg, rgba(5,26,64,0.86), rgba(10,42,102,0.76));
+    border: 1.5px solid var(--dourado-medio); border-radius: 12px; padding: 1rem;
+    box-shadow: var(--sombra-profunda); color: #FFF8E6;
+}
+.resumo-erros {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.8rem; margin-bottom: 0.9rem;
+}
+.bloco-erro {
+    background: rgba(0,0,0,0.18); border: 1px solid rgba(248,212,120,0.35);
+    border-radius: 10px; padding: 0.8rem; text-align: center;
+}
+.rotulo-erro { color: var(--dourado-claro); font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.6px; }
+.valor-erro { font-size: 1.4rem; font-weight: bold; margin-top: 0.25rem; }
+.status-restauracao {
+    padding: 0.75rem 0.9rem; border-radius: 10px; background: rgba(16,42,16,0.72);
+    border: 1px solid rgba(72,224,72,0.45); color: #DDF7DD; text-align: center; line-height: 1.4;
+}
+.status-restauracao.atencao { background: rgba(74,45,8,0.78); border-color: #D4A028; color: #FFE8A0; }
+.status-restauracao.falha { background: rgba(75,15,15,0.82); border-color: #D46A28; color: #FFD2C0; }
+.auto-recuperacao {
+    margin-top: 0.85rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.65rem;
+}
+.bloco-recuperacao {
+    background: rgba(0,0,0,0.18); border: 1px solid rgba(248,212,120,0.32);
+    border-radius: 10px; padding: 0.75rem; text-align: center;
+}
+.rotulo-recuperacao { color: var(--dourado-claro); font-size: 0.74rem; text-transform: uppercase; letter-spacing: 0.6px; }
+.valor-recuperacao { margin-top: 0.25rem; color: #FFF8E6; font-weight: bold; line-height: 1.35; }
+.linha-recuperacao {
+    margin-top: 0.75rem; padding: 0.65rem 0.85rem; border-radius: 9px;
+    background: rgba(16,42,16,0.65); border: 1px solid rgba(72,224,72,0.36);
+    color: #DDF7DD; text-align: center; font-size: 0.88rem; line-height: 1.4;
+}
+.linha-recuperacao.atencao { background: rgba(74,45,8,0.78); border-color: #D4A028; color: #FFE8A0; }
+.linha-recuperacao.falha { background: rgba(75,15,15,0.82); border-color: #D46A28; color: #FFD2C0; }
+.lista-erros { display: grid; gap: 0.65rem; margin-top: 0.9rem; max-height: 260px; overflow-y: auto; }
+.item-erro {
+    background: rgba(255,255,255,0.06); border-left: 4px solid var(--dourado-medio);
+    border-radius: 8px; padding: 0.75rem 0.85rem;
+}
+.item-erro.falha { border-left-color: #D46A28; }
+.item-erro.ok { border-left-color: #48E048; }
+.erro-topo { display: flex; justify-content: space-between; gap: 0.7rem; align-items: center; margin-bottom: 0.35rem; }
+.erro-titulo { color: var(--dourado-claro); font-weight: bold; }
+.erro-data { color: #d7c27e; font-size: 0.78rem; white-space: nowrap; }
+.erro-texto { font-size: 0.9rem; line-height: 1.45; color: #FFF8E6; }
+.erro-solucao { color: #FFE8A0; margin-top: 0.35rem; font-size: 0.86rem; line-height: 1.4; }
+.controles-erros { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 0.9rem; }
+
+.secao-livro { margin: 0 0 2rem; }
+.painel-livro {
+    margin-top: 1rem; background: linear-gradient(180deg, rgba(10,42,102,0.92), rgba(5,26,64,0.94));
+    border: 1.5px solid var(--dourado-medio); border-radius: 12px; padding: 1rem;
+    box-shadow: var(--sombra-profunda); color: #FFF8E6;
+}
+.abas-livro { display: flex; flex-wrap: wrap; gap: 0.55rem; justify-content: center; margin-bottom: 1rem; }
+.aba-livro {
+    background: rgba(248,212,120,0.12); color: #FFF8E6; border: 1px solid var(--dourado-medio);
+    border-radius: 999px; padding: 0.5rem 0.85rem; cursor: pointer; font-weight: bold;
+}
+.aba-livro.ativa, .aba-livro:hover {
+    background: linear-gradient(135deg, var(--dourado-medio), var(--dourado-claro));
+    color: var(--azul-profundo);
+}
+.conteudo-livro { display: none; }
+.conteudo-livro.ativo { display: block; }
+.grade-livro { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.85rem; }
+.cartao-livro {
+    background: rgba(255,255,255,0.06); border: 1px solid rgba(248,212,120,0.32);
+    border-radius: 10px; padding: 0.9rem; line-height: 1.45;
+}
+.cartao-livro h4 { color: var(--dourado-claro); font-size: 1.05rem; margin-bottom: 0.45rem; }
+.cartao-livro p, .cartao-livro li { font-size: 0.9rem; color: #FFF8E6; }
+.cartao-livro ul, .cartao-livro ol { padding-left: 1.2rem; }
+.linha-diario {
+    display: grid; grid-template-columns: 130px 1fr; gap: 0.8rem; padding: 0.75rem 0;
+    border-bottom: 1px solid rgba(248,212,120,0.18);
+}
+.linha-diario:last-child { border-bottom: none; }
+.data-diario { color: var(--dourado-claro); font-weight: bold; }
+.texto-diario { line-height: 1.45; }
+.texto-diario b { color: #FFE8A0; }
+.lista-help { display: grid; gap: 0.75rem; }
+.item-help {
+    background: rgba(0,0,0,0.18); border-left: 4px solid var(--dourado-medio);
+    border-radius: 8px; padding: 0.8rem;
+}
+.item-help b { color: var(--dourado-claro); }
+.controles-livro { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.6rem; margin-top: 1rem; }
+
+.secao-artigos { margin: 2rem 0; }
+.titulo-secao {
+    background: linear-gradient(90deg, var(--azul-medio), #154080, var(--azul-medio));
+    color: #FFF; font-size: 1.8rem; text-align: center; padding: 0.7rem;
+    border-radius: 8px; box-shadow: var(--sombra-profunda); position: relative;
+}
+.titulo-secao::before, .titulo-secao::after { content: "★"; color: var(--dourado-claro); position: absolute; top: 50%; transform: translateY(-50%); font-size: 1.4rem; }
+.titulo-secao::before { left: 1.5rem; }
+.titulo-secao::after { right: 1.5rem; }
+
+.grade-artigos { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0.8rem; margin-top: 1rem; }
+.cartao-artigo { background: linear-gradient(180deg, var(--dourado-claro), var(--dourado-medio)); border-radius: 6px; padding: 0.8rem 0.4rem; text-align: center; box-shadow: var(--sombra-profunda); border: 1px solid #FFF2CC; }
+.icone-artigo { font-size: 1.8rem; color: var(--azul-profundo); margin-bottom: 0.3rem; }
+.texto-artigo { font-weight: bold; color: var(--azul-profundo); font-size: 0.9rem; line-height: 1.3; }
+
+.grade-nucleos { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 1fr; gap: 1.2rem; margin-bottom: 2rem; }
+.cartao-nucleo {
+    background: linear-gradient(180deg, var(--azul-medio), var(--azul-profundo));
+    border-radius: 12px; padding: 1.5rem 1rem; text-align: center;
+    box-shadow: var(--sombra-profunda); border: 2px solid var(--dourado-medio);
+    transition: transform 0.2s ease; cursor: pointer;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 180px;
+}
+.cartao-nucleo:hover { transform: translateY(-4px); box-shadow: var(--sombra-dourada), var(--sombra-profunda); }
+.icone-nucleo { font-size: 3.2rem; color: var(--dourado-claro); margin-bottom: 1rem; text-shadow: 0 0 8px rgba(248, 212, 120, 0.5); line-height: 1; }
+.titulo-nucleo { color: #FFF8E6; font-size: 1.3rem; font-weight: bold; margin-bottom: 0.6rem; letter-spacing: 0.5px; min-height: 1.6rem; display: flex; align-items: center; justify-content: center; }
+.desc-nucleo { color: var(--dourado-claro); font-size: 1.0rem; font-style: italic; }
+
+.navegacao-inferior {
+    display: grid; grid-template-columns: repeat(4, 1fr); background: var(--azul-profundo);
+    border-radius: 10px; padding: 1rem 0; box-shadow: var(--sombra-profunda);
+    border-top: 2px solid var(--dourado-medio);
+}
+.item-nav { text-align: center; color: #FFF8E6; cursor: pointer; transition: color 0.2s; }
+.item-nav.ativo, .item-nav:hover { color: var(--dourado-claro); }
+.icone-nav { font-size: 1.6rem; margin-bottom: 0.4rem; }
+.texto-nav { font-size: 1rem; font-weight: 500; }
+
+/* ===== CHAT ===== */
+#tela-chat {
+    display: none; flex-direction: column; height: 90vh; max-height: 800px;
+    background: linear-gradient(180deg, var(--azul-profundo), var(--azul-medio));
+    border-radius: 14px; border: 2px solid var(--dourado-medio); box-shadow: var(--sombra-profunda);
+    overflow: hidden;
+}
+#tela-chat.visivel { display: flex; }
+.chat-cabecalho {
+    display: flex; align-items: center; gap: 1rem; padding: 1rem 1.2rem;
+    background: linear-gradient(90deg, var(--dourado-escuro), var(--dourado-medio));
+    border-bottom: 2px solid var(--dourado-claro);
+}
+.chat-voltar {
+    background: rgba(0,0,0,0.25); border: 1.5px solid #FFF8E6; border-radius: 8px;
+    color: #FFF8E6; font-size: 1.2rem; cursor: pointer; padding: 0.3rem 0.8rem;
+}
+.chat-icone { font-size: 1.8rem; }
+.chat-titulo { color: var(--azul-profundo); font-weight: bold; font-size: 1.2rem; }
+.chat-sub { color: #4a3000; font-size: 0.85rem; }
+.chat-status { margin-left: auto; display: flex; align-items: center; gap: 0.4rem; color: #1a4a1a; font-size: 0.85rem; font-weight: bold; }
+.chat-dot { width: 8px; height: 8px; border-radius: 50%; background: #2a8a2a; }
+
+.chat-mensagens { flex: 1; overflow-y: auto; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+.msg-linha { display: flex; }
+.msg-linha.usuario { justify-content: flex-end; }
+.msg-linha.assistente { justify-content: flex-start; align-items: flex-end; gap: 0.5rem; }
+.msg-emoji { font-size: 1.4rem; }
+.msg-bolha {
+    max-width: 75%; border-radius: 12px; padding: 0.7rem 1rem; font-size: 0.95rem;
+    line-height: 1.5; color: #FFF8E6; white-space: pre-wrap; word-break: break-word;
+}
+.msg-bolha.usuario { background: linear-gradient(135deg, var(--azul-medio), var(--azul-profundo)); border: 1.5px solid var(--dourado-claro); border-radius: 12px 12px 2px 12px; }
+.msg-bolha.assistente { background: rgba(212,160,40,0.12); border: 1.5px solid var(--dourado-medio); border-radius: 12px 12px 12px 2px; color: #FFF8E6; }
+.msg-bolha b { color: var(--dourado-claro); }
+
+.chat-digitando { display: flex; gap: 0.3rem; align-items: center; padding: 0.7rem 1rem; background: rgba(212,160,40,0.12); border: 1.5px solid var(--dourado-medio); border-radius: 12px 12px 12px 2px; }
+.ponto { width: 7px; height: 7px; border-radius: 50%; background: var(--dourado-claro); animation: pulso 1.2s ease-in-out infinite; }
+.ponto:nth-child(2) { animation-delay: .2s; }
+.ponto:nth-child(3) { animation-delay: .4s; }
+@keyframes pulso { 0%,100%{opacity:.3;transform:scale(.8)} 50%{opacity:1;transform:scale(1)} }
+
+.atalhos-chat {
+    display: flex; flex-wrap: wrap; gap: 0.5rem; padding: 0.8rem 1rem;
+    background: rgba(5,26,64,0.72); border-top: 1px solid rgba(212,160,40,0.55);
+}
+.chip-atalho {
+    background: rgba(248,212,120,0.13); color: #FFF8E6; border: 1px solid var(--dourado-medio);
+    border-radius: 999px; padding: 0.45rem 0.75rem; cursor: pointer; font-size: 0.85rem;
+}
+.chip-atalho:hover { background: rgba(248,212,120,0.24); color: var(--dourado-claro); }
+
+.chat-entrada { display: flex; gap: 0.6rem; padding: 1rem; background: rgba(0,0,0,0.2); border-top: 2px solid var(--dourado-medio); }
+#campo-mensagem {
+    flex: 1; background: rgba(255,255,255,0.08); border: 1.5px solid var(--dourado-medio);
+    border-radius: 10px; color: #FFF8E6; font-size: 0.95rem; padding: 0.7rem 0.9rem;
+    resize: none; outline: none; font-family: inherit; line-height: 1.4; max-height: 100px;
+}
+#campo-mensagem::placeholder { color: #9a8a60; }
+#botao-enviar {
+    background: linear-gradient(135deg, var(--dourado-medio), var(--dourado-claro)); border: none;
+    border-radius: 10px; width: 48px; cursor: pointer; font-size: 1.3rem;
+}
+#botao-enviar:disabled { background: rgba(212,160,40,0.3); cursor: not-allowed; }
+
+@media (max-width: 700px) {
+    .grade-nucleos { grid-template-columns: repeat(2, 1fr); }
+    .grade-artigos { grid-template-columns: repeat(3, 1fr); }
+    .titulo-sistema { font-size: 2.2rem; }
+    .painel-automacao { grid-template-columns: 1fr; }
+    .painel-cotas { grid-template-columns: repeat(2, 1fr); }
+    .grade-afiliados { grid-template-columns: repeat(2, 1fr); }
+    .grade-automacoes { grid-template-columns: repeat(2, 1fr); }
+    .funil-afiliado { grid-template-columns: 1fr; }
+    .resumo-erros { grid-template-columns: 1fr; }
+    .auto-recuperacao { grid-template-columns: 1fr; }
+    .grade-livro { grid-template-columns: 1fr; }
+    .linha-diario { grid-template-columns: 1fr; }
+    .botao-auto { width: 100%; }
+}
+
+@media (max-width: 480px) {
+    .painel-cotas { grid-template-columns: 1fr; }
+    .grade-afiliados { grid-template-columns: 1fr; }
+    .grade-automacoes { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="tela-sistema">
+    <!-- ===== HOME ===== -->
+    <div id="tela-home">
+        <header class="cabecalho-principal">
+            <div class="cruz-luz">✙</div>
+            <div class="faixa-titulo"><h1 class="titulo-sistema">SOUSA 2.0</h1></div>
+            <p class="bem-vindo" id="saudacao-auto">Bem-vindo,</p>
+            <h2 class="nome-usuario">Elias Pereira de Sousa</h2>
+            <div class="status-sistema" id="status-sistema">SISTEMA OPERACIONAL ✅</div>
+            <div class="indicador-online" id="indicador-online">☁️ NÚCLEO: ONLINE</div>
+            <div class="relogio-sistema" id="relogio-sistema">Carregando data e hora...</div>
+            <div class="painel-automacao">
+                <input id="busca-modulos" type="search" placeholder="Buscar módulo, função ou palavra-chave..." autocomplete="off">
+                <button class="botao-auto" onclick="abrirUltimoModulo()">RETOMAR</button>
+                <button class="botao-auto" onclick="abrirModulo('conselho')">CONSELHO</button>
+                <button class="botao-auto" onclick="abrirMetricasAfiliadoPro()">AFILIADOS</button>
+                <button class="botao-auto" onclick="abrirCentroAutomacao()">AUTO</button>
+                <button class="botao-auto" onclick="abrirLivroTecnico()">HELP</button>
+                <button class="botao-auto" onclick="limparConversas()">LIMPAR</button>
+            </div>
+        </header>
+
+        <section class="secao-esteira" id="secao-esteira">
+            <div class="titulo-secao">PAINEL OPERACIONAL — ESTEIRA DO TÚNEL</div>
+            <div class="painel-esteira">
+                <div class="linha-status-tunel">
+                    <div class="indicador-tunel" id="indicador-tunel"><span class="ponto-tunel"></span><span id="indicador-tunel-texto">TÚNEL: VERIFICANDO...</span></div>
+                    <div class="latencia-tunel" id="latencia-tunel">Última verificação: nunca</div>
+                </div>
+                <div class="grade-esteira">
+                    <button class="botao-esteira" id="btn-liberar-esteira" onclick="liberarEsteira()"><span class="emoji-esteira">🚀</span>Liberar Esteira</button>
+                    <button class="botao-esteira" id="btn-ping-tunel" onclick="pingTunel()"><span class="emoji-esteira">📡</span>Ping do Túnel</button>
+                    <button class="botao-esteira" id="btn-reconectar" onclick="reconectarTunel()"><span class="emoji-esteira">🔄</span>Reconectar</button>
+                    <button class="botao-esteira" id="btn-testar-backend" onclick="testarBackend()"><span class="emoji-esteira">🧪</span>Testar Backend</button>
+                    <button class="botao-esteira" id="btn-status-conexao" onclick="statusConexao()"><span class="emoji-esteira">📊</span>Status da Conexão</button>
+                    <button class="botao-esteira" id="btn-logs-tunel" onclick="alternarLogsTunel()"><span class="emoji-esteira">📄</span>Logs</button>
+                    <button class="botao-esteira" id="btn-reiniciar-sessao" onclick="reiniciarSessaoTunel()"><span class="emoji-esteira">♻</span>Reiniciar Sessão</button>
+                    <button class="botao-esteira" id="btn-diagnostico-tunel" onclick="diagnosticoTunel()"><span class="emoji-esteira">🔍</span>Diagnóstico</button>
+                </div>
+                <div class="monitor-tunel" id="monitor-tunel">
+                    <div class="titulo-monitor">MONITOR DO TÚNEL</div>
+                    <div class="log-tunel" id="log-tunel">
+                        <div class="log-tunel-vazio">Nenhuma verificação registrada ainda. Use um dos comandos acima.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-cotas">
+            <div class="titulo-secao">MÉTRICAS DE COTAS</div>
+            <div class="painel-cotas">
+                <div class="cartao-cota">
+                    <div class="rotulo-cota">Requisições hoje</div>
+                    <div class="valor-cota" id="cota-requisicoes">0</div>
+                    <div class="detalhe-cota" id="cota-requisicoes-detalhe">0 de 100 chamadas</div>
+                    <div class="barra-cota"><div class="preenchimento-cota" id="barra-requisicoes"></div></div>
+                </div>
+                <div class="cartao-cota">
+                    <div class="rotulo-cota">Mensagens</div>
+                    <div class="valor-cota" id="cota-mensagens">0</div>
+                    <div class="detalhe-cota" id="cota-mensagens-detalhe">Entradas e respostas registradas</div>
+                    <div class="barra-cota"><div class="preenchimento-cota" id="barra-mensagens"></div></div>
+                </div>
+                <div class="cartao-cota">
+                    <div class="rotulo-cota">Tokens estimados</div>
+                    <div class="valor-cota" id="cota-tokens">0</div>
+                    <div class="detalhe-cota" id="cota-tokens-detalhe">0 de 50.000 estimados</div>
+                    <div class="barra-cota"><div class="preenchimento-cota" id="barra-tokens"></div></div>
+                </div>
+                <div class="cartao-cota">
+                    <div class="rotulo-cota">Falhas / conexão</div>
+                    <div class="valor-cota" id="cota-falhas">0</div>
+                    <div class="detalhe-cota" id="cota-falhas-detalhe">Nenhuma falha hoje</div>
+                    <div class="barra-cota"><div class="preenchimento-cota" id="barra-falhas"></div></div>
+                </div>
+            </div>
+            <div class="controles-cotas">
+                <button class="botao-auto" onclick="configurarCotas()">AJUSTAR COTAS</button>
+                <button class="botao-auto" onclick="zerarMetricasHoje()">ZERAR HOJE</button>
+            </div>
+            <div class="alerta-cota" id="alerta-cota">Consumo local monitorado. O valor é estimado quando o servidor não retorna uso real.</div>
+        </section>
+
+        <section class="secao-afiliados" id="metricas-afiliados">
+            <div class="titulo-secao">MÉTRICAS AFILIADOPRO</div>
+            <div class="painel-afiliados">
+                <div class="grade-afiliados">
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">Cliques hoje</div>
+                        <div class="valor-afiliado" id="af-cliques">0</div>
+                        <div class="detalhe-afiliado" id="af-cliques-det">Entrada no funil</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">Leads hoje</div>
+                        <div class="valor-afiliado" id="af-leads">0</div>
+                        <div class="detalhe-afiliado" id="af-leads-det">0% de conversão clique → lead</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">Vendas hoje</div>
+                        <div class="valor-afiliado" id="af-vendas">0</div>
+                        <div class="detalhe-afiliado" id="af-vendas-det">0% de conversão clique → venda</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">Comissão estimada</div>
+                        <div class="valor-afiliado" id="af-comissao">R$ 0,00</div>
+                        <div class="detalhe-afiliado" id="af-comissao-det">Ticket e comissão configuráveis</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">EPC</div>
+                        <div class="valor-afiliado" id="af-epc">R$ 0,00</div>
+                        <div class="detalhe-afiliado">Ganho médio por clique</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">CPL</div>
+                        <div class="valor-afiliado" id="af-cpl">R$ 0,00</div>
+                        <div class="detalhe-afiliado">Custo médio por lead</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">CPA</div>
+                        <div class="valor-afiliado" id="af-cpa">R$ 0,00</div>
+                        <div class="detalhe-afiliado">Custo médio por venda</div>
+                    </div>
+                    <div class="cartao-afiliado">
+                        <div class="rotulo-afiliado">ROI estimado</div>
+                        <div class="valor-afiliado" id="af-roi">0%</div>
+                        <div class="detalhe-afiliado" id="af-roi-det">Comissão menos investimento</div>
+                    </div>
+                </div>
+
+                <div class="funil-afiliado">
+                    <div class="etapa-funil" id="funil-cliques">
+                        <div class="rotulo-afiliado">Topo do funil</div>
+                        <div class="valor-afiliado" id="funil-cliques-valor">0 cliques</div>
+                        <div class="detalhe-afiliado">Atenção gerada por links, posts e anúncios.</div>
+                    </div>
+                    <div class="etapa-funil" id="funil-leads">
+                        <div class="rotulo-afiliado">Meio do funil</div>
+                        <div class="valor-afiliado" id="funil-leads-valor">0 leads</div>
+                        <div class="detalhe-afiliado">Pessoas interessadas capturadas.</div>
+                    </div>
+                    <div class="etapa-funil" id="funil-vendas">
+                        <div class="rotulo-afiliado">Fundo do funil</div>
+                        <div class="valor-afiliado" id="funil-vendas-valor">0 vendas</div>
+                        <div class="detalhe-afiliado">Conversões confirmadas.</div>
+                    </div>
+                </div>
+
+                <div class="controles-afiliados">
+                    <button class="botao-auto" onclick="registrarAfiliado('cliques', 1)">+ CLIQUE</button>
+                    <button class="botao-auto" onclick="registrarAfiliado('leads', 1)">+ LEAD</button>
+                    <button class="botao-auto" onclick="registrarAfiliado('vendas', 1)">+ VENDA</button>
+                    <button class="botao-auto" onclick="configurarAfiliadoPro()">CONFIGURAR</button>
+                    <button class="botao-auto" onclick="zerarAfiliadoHoje()">ZERAR AFILIADO</button>
+                </div>
+                <div class="alerta-afiliados" id="alerta-afiliados">Funil AfiliadoPro pronto para registro manual de desempenho.</div>
+            </div>
+        </section>
+
+        <section class="secao-automacao" id="centro-automacao">
+            <div class="titulo-secao">CENTRO DE AUTOMAÇÃO</div>
+            <div class="painel-automacoes">
+                <div class="grade-automacoes">
+                    <div class="cartao-automacao">
+                        <div class="rotulo-automacao">Rotinas ativas</div>
+                        <div class="valor-automacao" id="auto-rotinas">0</div>
+                        <div class="detalhe-automacao">Saúde, backup, diário, alertas e rotas.</div>
+                    </div>
+                    <div class="cartao-automacao">
+                        <div class="rotulo-automacao">Último backup</div>
+                        <div class="valor-automacao" id="auto-backup">Nenhum</div>
+                        <div class="detalhe-automacao">Snapshot local dos dados críticos.</div>
+                    </div>
+                    <div class="cartao-automacao">
+                        <div class="rotulo-automacao">Saúde geral</div>
+                        <div class="valor-automacao" id="auto-saude">OK</div>
+                        <div class="detalhe-automacao" id="auto-saude-det">Monitoramento periódico ativo.</div>
+                    </div>
+                    <div class="cartao-automacao">
+                        <div class="rotulo-automacao">Próxima ação</div>
+                        <div class="valor-automacao" id="auto-proxima">Aguardar</div>
+                        <div class="detalhe-automacao">Ações seguras executadas sem intervenção.</div>
+                    </div>
+                </div>
+                <div class="status-automacao" id="status-automacao">
+                    Automação ampliada ativa: saúde, backup local, diário operacional, alertas e recomendações.
+                </div>
+                <div class="log-automacao" id="log-automacao"></div>
+                <div class="controles-automacoes">
+                    <button class="botao-auto" onclick="executarCicloAutomacao('manual')">EXECUTAR CICLO</button>
+                    <button class="botao-auto" onclick="criarBackupAutomatico('manual')">BACKUP AGORA</button>
+                    <button class="botao-auto" onclick="restaurarUltimoBackup()">RESTAURAR BACKUP</button>
+                    <button class="botao-auto" onclick="exportarBackupSistema()">EXPORTAR JSON</button>
+                    <button class="botao-auto" onclick="document.getElementById('importar-backup').click()">IMPORTAR JSON</button>
+                    <button class="botao-auto" onclick="alternarAutomacaoGeral()">AUTO GERAL</button>
+                    <input id="importar-backup" type="file" accept="application/json" style="display:none">
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-erros">
+            <div class="titulo-secao">ERROS, RESTAURAÇÃO E CONSERTO</div>
+            <div class="painel-erros">
+                <div class="resumo-erros">
+                    <div class="bloco-erro">
+                        <div class="rotulo-erro">Erros hoje</div>
+                        <div class="valor-erro" id="erros-hoje">0</div>
+                    </div>
+                    <div class="bloco-erro">
+                        <div class="rotulo-erro">Último erro</div>
+                        <div class="valor-erro" id="ultimo-erro-tipo">Nenhum</div>
+                    </div>
+                    <div class="bloco-erro">
+                        <div class="rotulo-erro">Restauração</div>
+                        <div class="valor-erro" id="status-restauro-curto">OK</div>
+                    </div>
+                </div>
+                <div class="status-restauracao" id="status-restauracao">
+                    Nenhum erro registrado. Sistema pronto para diagnóstico automático.
+                </div>
+                <div class="auto-recuperacao">
+                    <div class="bloco-recuperacao">
+                        <div class="rotulo-recuperacao">Modo automático</div>
+                        <div class="valor-recuperacao" id="auto-recuperacao-modo">ATIVO</div>
+                    </div>
+                    <div class="bloco-recuperacao">
+                        <div class="rotulo-recuperacao">Tentativas</div>
+                        <div class="valor-recuperacao" id="auto-recuperacao-tentativas">0 / 3</div>
+                    </div>
+                    <div class="bloco-recuperacao">
+                        <div class="rotulo-recuperacao">Última ação</div>
+                        <div class="valor-recuperacao" id="auto-recuperacao-acao">Aguardando</div>
+                    </div>
+                </div>
+                <div class="linha-recuperacao" id="auto-recuperacao-status">
+                    Recuperação automática ativada: diagnóstico, restauração local e reenvio controlado quando possível.
+                </div>
+                <div class="lista-erros" id="lista-erros"></div>
+                <div class="controles-erros">
+                    <button class="botao-auto" onclick="executarDiagnostico()">DIAGNÓSTICO</button>
+                    <button class="botao-auto" onclick="tentarRestaurarSistema()">RESTAURAR</button>
+                    <button class="botao-auto" onclick="alternarRecuperacaoAutomatica()">AUTO ON/OFF</button>
+                    <button class="botao-auto" onclick="limparErros()">LIMPAR ERROS</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-livro" id="livro-tecnico">
+            <div class="titulo-secao">LIVRO TÉCNICO / DIÁRIO DE BORDO / TUTORIAL / HELP</div>
+            <div class="painel-livro">
+                <div class="abas-livro">
+                    <button class="aba-livro ativa" onclick="trocarAbaLivro('tecnico')">LIVRO TÉCNICO</button>
+                    <button class="aba-livro" onclick="trocarAbaLivro('diario')">DIÁRIO DE BORDO</button>
+                    <button class="aba-livro" onclick="trocarAbaLivro('tutorial')">TUTORIAL</button>
+                    <button class="aba-livro" onclick="trocarAbaLivro('help')">HELP</button>
+                </div>
+
+                <div class="conteudo-livro ativo" id="aba-tecnico">
+                    <div class="grade-livro">
+                        <div class="cartao-livro">
+                            <h4>Arquitetura do SOUSA 2.0</h4>
+                            <ul>
+                                <li>Aplicação em HTML, CSS e JavaScript puro.</li>
+                                <li>Interface principal com módulos de atendimento por núcleo.</li>
+                                <li>Chat integrado ao Apps Script configurado no sistema.</li>
+                                <li>Dados locais salvos no navegador via localStorage.</li>
+                            </ul>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Módulos ativos</h4>
+                            <ul>
+                                <li>Jurídico, Financeiro, Produtor, Estrategista, AfiliadoPro, ADS Acadêmico, Saber/Conhecimento, Mentor e Conselho.</li>
+                                <li>Cada módulo possui título, ícone, subtítulo, prompts rápidos e histórico próprio.</li>
+                            </ul>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Persistência local</h4>
+                            <ul>
+                                <li>Histórico por módulo.</li>
+                                <li>Último módulo acessado.</li>
+                                <li>Métricas de cotas por dia.</li>
+                                <li>Histórico de erros do dia.</li>
+                                <li>Backups locais rotativos do estado do sistema.</li>
+                                <li>Log local do Centro de Automação.</li>
+                            </ul>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Segurança aplicada</h4>
+                            <ul>
+                                <li>Mensagens do usuário são escapadas antes de aparecer na tela.</li>
+                                <li>Respostas são formatadas com proteção básica contra HTML injetado.</li>
+                                <li>Erros são registrados sem interromper a navegação principal.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteudo-livro" id="aba-diario">
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Módulo Conselho:</b> adicionado card CONSELHO ao painel principal seguindo o mesmo design dos núcleos existentes.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Automações:</b> adicionados saudação por horário, relógio em tempo real, status online/offline, busca de módulos, retomada do último módulo, atalhos rápidos, histórico automático e navegação por hash.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Métricas de cotas:</b> adicionados contadores de requisições, mensagens, tokens estimados, falhas, barras de uso, alertas, ajuste de cotas e zeragem diária.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Erros e restauração:</b> adicionada central de diagnóstico, histórico de erros, causa provável, sugestão de conserto, restauração local e limpeza de erros.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Livro técnico:</b> adicionada documentação integrada com registro das mudanças, tutorial e help operacional.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Métricas AfiliadoPro:</b> adicionados funil de cliques, leads e vendas, comissão estimada, EPC, CPL, CPA, ROI, configuração de ticket/comissão/investimento/meta e zeragem diária.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Recuperação automática:</b> adicionadas tentativas controladas, diagnóstico silencioso, restauração local, reenvio seguro da última solicitação, espera por retorno da internet e botão AUTO ON/OFF.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Centro de Automação:</b> adicionados ciclos automáticos de saúde, backup local, diário automático, alertas de cotas, alertas AfiliadoPro, recomendações por busca, exportação JSON e restauração de backup.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-12</div>
+                        <div class="texto-diario"><b>Automação ampliada:</b> adicionados backup inicial automático, timers de ciclo, importação JSON, abertura por recomendação ao pressionar Enter na busca e logs operacionais do Centro de Automação.</div>
+                    </div>
+                    <div class="linha-diario">
+                        <div class="data-diario">2026-07-27</div>
+                        <div class="texto-diario"><b>Painel Operacional da Esteira do Túnel:</b> adicionado ConnectionManager único (Interface → ConnectionManager → Túnel → Backend → Resposta → Interface), consolidando em um só ponto toda comunicação com o Apps Script (chat e novos comandos). Adicionados 8 comandos reais: Liberar Esteira, Ping do Túnel, Reconectar, Testar Backend, Status da Conexão, Logs, Reiniciar Sessão e Diagnóstico — cada um com handler funcional, monitor de log e indicador de conexão real (substitui o indicador antigo baseado só em navigator.onLine). Pendência registrada: SOUSA_Core.js (doPost) precisa reconhecer o campo "action" e implementar os handlers ping, status, testar_backend, liberar_esteira, reconectar, reiniciar_sessao e logs; até lá, essas ações retornam "handler pendente" de forma tratada, sem quebrar a interface.</div>
+                    </div>
+                    <div id="diario-local"></div>
+                </div>
+
+                <div class="conteudo-livro" id="aba-tutorial">
+                    <div class="grade-livro">
+                        <div class="cartao-livro">
+                            <h4>Como usar os módulos</h4>
+                            <ol>
+                                <li>Escolha um card de núcleo na tela principal.</li>
+                                <li>Use um atalho rápido ou digite sua pergunta.</li>
+                                <li>Pressione Enter para enviar ou Shift+Enter para quebrar linha.</li>
+                                <li>Use Esc para voltar ao início.</li>
+                            </ol>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Como verificar cotas</h4>
+                            <ol>
+                                <li>Veja a seção MÉTRICAS DE COTAS.</li>
+                                <li>Confira requisições, mensagens, tokens e falhas.</li>
+                                <li>Use AJUSTAR COTAS para mudar os limites locais.</li>
+                                <li>Use ZERAR HOJE para reiniciar a contagem diária local.</li>
+                            </ol>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Como usar métricas AfiliadoPro</h4>
+                            <ol>
+                                <li>Abra MÉTRICAS AFILIADOPRO.</li>
+                                <li>Registre cliques, leads e vendas pelos botões rápidos.</li>
+                                <li>Use CONFIGURAR para definir ticket, comissão, investimento e meta.</li>
+                                <li>Analise EPC, CPL, CPA, ROI e alertas antes de escalar campanhas.</li>
+                            </ol>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Como corrigir erros</h4>
+                            <ol>
+                                <li>Abra ERROS, RESTAURAÇÃO E CONSERTO.</li>
+                                <li>Clique em DIAGNÓSTICO.</li>
+                                <li>Leia causa provável e restauração sugerida.</li>
+                                <li>Clique em RESTAURAR para reconstruir painéis e módulo atual.</li>
+                                <li>Deixe AUTO ON para o sistema tentar restaurar e reenviar automaticamente quando for seguro.</li>
+                            </ol>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Atalhos úteis</h4>
+                            <ul>
+                                <li><b>Ctrl/Cmd + K:</b> focar a busca de módulos.</li>
+                                <li><b>Esc:</b> sair do chat e voltar ao início.</li>
+                                <li><b>RETOMAR:</b> abre o último módulo utilizado.</li>
+                                <li><b>HELP:</b> abre este livro técnico.</li>
+                            </ul>
+                        </div>
+                        <div class="cartao-livro">
+                            <h4>Como usar o Centro de Automação</h4>
+                            <ol>
+                                <li>Abra a seção CENTRO DE AUTOMAÇÃO pelo botão AUTO.</li>
+                                <li>Use EXECUTAR CICLO para rodar saúde, alertas e recomendações.</li>
+                                <li>Use BACKUP AGORA para criar snapshot local.</li>
+                                <li>Use RESTAURAR BACKUP para recuperar o último estado salvo.</li>
+                                <li>Use EXPORTAR JSON para baixar uma cópia de segurança.</li>
+                                <li>Use IMPORTAR JSON para restaurar uma cópia exportada.</li>
+                                <li>Digite na busca e pressione Enter para abrir o módulo recomendado.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="conteudo-livro" id="aba-help">
+                    <div class="lista-help">
+                        <div class="item-help"><b>O chat não responde:</b> execute DIAGNÓSTICO, verifique se está online e confira se o Apps Script está publicado e acessível.</div>
+                        <div class="item-help"><b>Erro de cota:</b> veja MÉTRICAS DE COTAS, reduza chamadas ou aguarde renovação da cota real do serviço.</div>
+                        <div class="item-help"><b>Métricas AfiliadoPro:</b> use + CLIQUE, + LEAD e + VENDA para registrar o funil diário; configure ticket, comissão, investimento e meta para calcular ROI.</div>
+                        <div class="item-help"><b>Histórico incorreto:</b> use LIMPAR para apagar conversas salvas localmente neste navegador.</div>
+                        <div class="item-help"><b>Interface travada:</b> use RESTAURAR na central de erros ou recarregue a página.</div>
+                        <div class="item-help"><b>Recuperação automática:</b> mantenha AUTO ON para diagnóstico silencioso, reconstrução da tela e reenvio controlado quando houver falha recuperável.</div>
+                        <div class="item-help"><b>Centro de Automação:</b> o sistema executa ciclos locais de saúde, backup, diário, alertas e recomendações sem depender de servidor externo.</div>
+                        <div class="item-help"><b>Backup local:</b> restaura dados salvos neste navegador; para guardar fora do navegador, use EXPORTAR JSON.</div>
+                        <div class="item-help"><b>Busca de módulo:</b> pesquise por nome, função ou palavra-chave; pressione Enter para abrir a recomendação automática.</div>
+                    </div>
+                </div>
+
+                <div class="controles-livro">
+                    <button class="botao-auto" onclick="registrarEstadoNoDiario()">REGISTRAR ESTADO</button>
+                    <button class="botao-auto" onclick="abrirLivroTecnico()">ABRIR LIVRO</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-artigos">
+            <div class="titulo-secao">ARTIGOS ATIVOS</div>
+            <div class="grade-artigos">
+                <div class="cartao-artigo"><div class="icone-artigo">✙</div><div class="texto-artigo">FÉ<br>Art. 2º</div></div>
+                <div class="cartao-artigo"><div class="icone-artigo">🛡️</div><div class="texto-artigo">OBEDIÊNCIA<br>Art. 11</div></div>
+                <div class="cartao-artigo"><div class="icone-artigo">🔒</div><div class="texto-artigo">SEGURANÇA<br>Art. 12</div></div>
+                <div class="cartao-artigo"><div class="icone-artigo">📄</div><div class="texto-artigo">CONFORMIDADE<br>Art. 23</div></div>
+                <div class="cartao-artigo"><div class="icone-artigo">👑</div><div class="texto-artigo">SOBERANIA<br>Art. 30</div></div>
+            </div>
+        </section>
+
+        <section class="grade-nucleos">
+            <div class="cartao-nucleo" data-modulo="juridico" data-tags="juridico direito protecao leis contratos defesa obediencia conformidade" onclick="abrirModulo('juridico')">
+                <div class="icone-nucleo">⚖️</div><h3 class="titulo-nucleo">JURÍDICO</h3><p class="desc-nucleo">Proteção Jurídica</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="financeiro" data-tags="financeiro dinheiro orcamento familia contas planejamento gestao" onclick="abrirModulo('financeiro')">
+                <div class="icone-nucleo">🧮</div><h3 class="titulo-nucleo">FINANCEIRO</h3><p class="desc-nucleo">Gestão Familiar</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="produtor" data-tags="produtor conteudo video foto roteiro criativo redes sociais camera" onclick="abrirModulo('produtor')">
+                <div class="icone-nucleo">📸</div><h3 class="titulo-nucleo">PRODUTOR</h3><p class="desc-nucleo">Conteúdo Criativo</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="estrategista" data-tags="estrategista planejamento estrategia metas plano decisao xadrez" onclick="abrirModulo('estrategista')">
+                <div class="icone-nucleo">♟️</div><h3 class="titulo-nucleo">ESTRATEGISTA</h3><p class="desc-nucleo">Planejamento</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="afiliadopro" data-tags="afiliado afiliadopro marketing etico vendas oferta divulgacao comissao" onclick="abrirModulo('afiliadopro')">
+                <div class="icone-nucleo">🤝</div><h3 class="titulo-nucleo">AFILIADOPRO</h3><p class="desc-nucleo">Marketing Ético</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="ads" data-tags="ads academico estudos faculdade programacao analise desenvolvimento sistemas" onclick="abrirModulo('ads')">
+                <div class="icone-nucleo">🎓</div><h3 class="titulo-nucleo">ADS ACADÊMICO</h3><p class="desc-nucleo">Suporte aos Estudos</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="saber" data-tags="saber conhecimento ciencia cultura pesquisa aprendizado historia escrita" onclick="abrirModulo('saber')">
+                <div class="icone-nucleo">📜🖋️</div><h3 class="titulo-nucleo">SABER / CONHECIMENTO</h3><p class="desc-nucleo">Ciência e Cultura</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="mentor" data-tags="mentor legado proposito familia orientacao vida conselho arvore" onclick="abrirModulo('mentor')">
+                <div class="icone-nucleo">🌳</div><h3 class="titulo-nucleo">MENTOR</h3><p class="desc-nucleo">Legado e Propósito</p>
+            </div>
+            <div class="cartao-nucleo" data-modulo="conselho" data-tags="conselho central reuniao decisao atas orientacoes nucleos painel" onclick="abrirModulo('conselho')">
+                <div class="icone-nucleo">👥</div><h3 class="titulo-nucleo">CONSELHO</h3><p class="desc-nucleo">Painel Central</p>
+            </div>
+            <div class="sem-resultados" id="sem-resultados">Nenhum módulo encontrado para essa busca.</div>
+        </section>
+
+        <nav class="navegacao-inferior">
+            <div class="item-nav ativo" onclick="irParaInicio()"><div class="icone-nav">🏠</div><div class="texto-nav">INÍCIO</div></div>
+            <div class="item-nav" onclick="abrirModulo('conselho')"><div class="icone-nav">👥</div><div class="texto-nav">CONSELHO</div></div>
+            <div class="item-nav" onclick="focarArtigos()"><div class="icone-nav">📖</div><div class="texto-nav">ARTIGOS</div></div>
+            <div class="item-nav" onclick="abrirLivroTecnico()"><div class="icone-nav">🧭</div><div class="texto-nav">HELP</div></div>
+        </nav>
+    </div>
+
+    <!-- ===== CHAT ===== -->
+    <div id="tela-chat">
+        <div class="chat-cabecalho">
+            <button class="chat-voltar" onclick="fecharChat()">←</button>
+            <span class="chat-icone" id="chat-icone">⚖️</span>
+            <div>
+                <div class="chat-titulo" id="chat-titulo">JURÍDICO</div>
+                <div class="chat-sub" id="chat-sub">Proteção Jurídica</div>
+            </div>
+            <div class="chat-status"><div class="chat-dot"></div><span>ATIVO</span></div>
+        </div>
+        <div class="chat-mensagens" id="chat-mensagens"></div>
+        <div class="atalhos-chat" id="atalhos-chat"></div>
+        <div class="chat-entrada">
+            <textarea id="campo-mensagem" rows="1" placeholder="Digite sua pergunta..."></textarea>
+            <button id="botao-enviar" onclick="enviarMensagem()">➤</button>
+        </div>
+    </div>
+</div>
+
+<script>
+// ══════════════════════════════════════════
+//  URL do seu Apps Script (já configurada)
+// ══════════════════════════════════════════
+const APPS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxmiqTyfYhxNwi9Qj6X_bOdadoPjy0gMrV0sduWFLc54mLg4DOv73zU4JHsG4DmGDnw1w/exec";
+
+// ══════════════════════════════════════════
+//  CAMADA ÚNICA DE COMUNICAÇÃO
+//  Interface → ConnectionManager → Túnel → Backend → Resposta → Interface
+// ══════════════════════════════════════════
+const CHAVE_LOGS_TUNEL = 'SOUSA2_LOGS_TUNEL';
+const MAX_LOGS_TUNEL = 40;
+
+function carregarLogsTunel() {
+    try { return JSON.parse(localStorage.getItem(CHAVE_LOGS_TUNEL)) || []; }
+    catch (e) { return []; }
+}
+function salvarLogsTunel(logs) {
+    localStorage.setItem(CHAVE_LOGS_TUNEL, JSON.stringify(logs.slice(0, MAX_LOGS_TUNEL)));
+}
+
+function renderizarLogsTunel() {
+    const container = document.getElementById('log-tunel');
+    if (!container) return;
+    const logs = ConnectionManager.getLogs();
+    if (!logs.length) {
+        container.innerHTML = '<div class="log-tunel-vazio">Nenhuma verificação registrada ainda. Use um dos comandos acima.</div>';
+        return;
+    }
+    container.innerHTML = logs.map(l => {
+        const lat = l.latencia != null ? ` · ${l.latencia}ms` : '';
+        return `<div class="linha-log-tunel ${l.ok ? 'ok' : 'falha'}">[${l.hora}] ${l.acao.toUpperCase()}${lat} — ${l.detalhe || (l.ok ? 'OK' : 'FALHA')}</div>`;
+    }).join('');
+}
+
+function atualizarIndicadorTunel(estado, textoExtra) {
+    const el = document.getElementById('indicador-tunel');
+    const texto = document.getElementById('indicador-tunel-texto');
+    const latEl = document.getElementById('latencia-tunel');
+    if (!el || !texto) return;
+    el.classList.remove('online', 'offline', 'verificando', 'atencao');
+    el.classList.add(estado);
+    const rotulos = {
+        online: 'TÚNEL: ONLINE',
+        offline: 'TÚNEL: OFFLINE',
+        verificando: 'TÚNEL: VERIFICANDO...',
+        atencao: 'TÚNEL: INSTÁVEL'
+    };
+    texto.textContent = textoExtra || rotulos[estado] || 'TÚNEL: DESCONHECIDO';
+    if (latEl) {
+        const est = ConnectionManager.getEstado();
+        latEl.textContent = est.ultimaVerificacao
+            ? `Última verificação: ${est.ultimaVerificacao.toLocaleTimeString('pt-BR')}${est.ultimaLatencia != null ? ' · ' + est.ultimaLatencia + 'ms' : ''}`
+            : 'Última verificação: nunca';
+    }
+}
+
+const ConnectionManager = (() => {
+    const ENDPOINT = APPS_SCRIPT_URL;
+    const TIMEOUT_PADRAO = 12000;
+    let estado = { status: 'desconhecido', ultimaVerificacao: null, ultimaLatencia: null, falhasSeguidas: 0 };
+    let logs = carregarLogsTunel();
+
+    function registrarLog(acao, ok, detalhe, latencia) {
+        logs.unshift({ hora: new Date().toLocaleTimeString('pt-BR'), acao, ok, detalhe: detalhe || '', latencia: latencia != null ? latencia : null });
+        logs = logs.slice(0, MAX_LOGS_TUNEL);
+        salvarLogsTunel(logs);
+        renderizarLogsTunel();
+    }
+
+    async function send(action, payload = {}, opcoes = {}) {
+        const timeout = opcoes.timeout || TIMEOUT_PADRAO;
+        const inicio = performance.now();
+
+        if (!navigator.onLine) {
+            estado.status = 'offline';
+            atualizarIndicadorTunel('offline');
+            registrarLog(action, false, 'Navegador está offline (hipótese mais simples verificada primeiro).', null);
+            throw new Error('offline');
+        }
+
+        atualizarIndicadorTunel('verificando');
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), timeout);
+        try {
+            const resposta = await fetch(ENDPOINT, {
+                method: 'POST',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+                body: JSON.stringify({
+                    action,
+                    module: payload.module !== undefined ? payload.module : (typeof moduloAtual !== 'undefined' ? moduloAtual : null),
+                    history: payload.history,
+                    payload,
+                    timestamp: Date.now()
+                }),
+                signal: controller.signal
+            });
+            clearTimeout(timer);
+            const latencia = Math.round(performance.now() - inicio);
+            const dados = await resposta.json();
+
+            if (dados && dados.ok) {
+                estado = { status: 'online', ultimaVerificacao: new Date(), ultimaLatencia: latencia, falhasSeguidas: 0 };
+                registrarLog(action, true, dados.mensagem || (action === 'chat' ? 'Resposta recebida.' : 'OK'), latencia);
+            } else {
+                estado.falhasSeguidas += 1;
+                estado.ultimaVerificacao = new Date();
+                estado.ultimaLatencia = latencia;
+                estado.status = estado.falhasSeguidas >= 2 ? 'offline' : 'atencao';
+                const motivo = (dados && dados.error) || 'Backend não reconheceu esta ação (handler pendente em SOUSA_Core.js).';
+                registrarLog(action, false, motivo, latencia);
+            }
+            atualizarIndicadorTunel(estado.status);
+            return dados;
+        } catch (e) {
+            clearTimeout(timer);
+            estado.falhasSeguidas += 1;
+            estado.status = 'offline';
+            estado.ultimaVerificacao = new Date();
+            const motivo = e.name === 'AbortError' ? `Sem resposta em ${timeout / 1000}s (timeout).` : (e.message || 'Falha na conexão com o núcleo.');
+            registrarLog(action, false, motivo, null);
+            atualizarIndicadorTunel('offline');
+            throw e;
+        }
+    }
+
+    return {
+        send,
+        getEstado: () => estado,
+        getLogs: () => logs
+    };
+})();
+
+function estadoBotao(id, ocupado) {
+    const btn = document.getElementById(id);
+    if (btn) btn.disabled = ocupado;
+}
+
+async function liberarEsteira() {
+    estadoBotao('btn-liberar-esteira', true);
+    try {
+        const dados = await ConnectionManager.send('liberar_esteira', {});
+        atualizarPainelAutomacaoGeral(dados && dados.ok ? 'Esteira liberada pelo túnel.' : 'Esteira: comando enviado, aguardando confirmação do backend.', dados && dados.ok ? 'ok' : 'atencao');
+    } catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-liberar-esteira', false); }
+}
+
+async function pingTunel() {
+    estadoBotao('btn-ping-tunel', true);
+    try { await ConnectionManager.send('ping', {}); }
+    catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-ping-tunel', false); }
+}
+
+async function reconectarTunel() {
+    estadoBotao('btn-reconectar', true);
+    try {
+        const dados = await ConnectionManager.send('reconectar', {});
+        if (dados && dados.ok) {
+            recuperacaoAutoEstado.tentativas = 0;
+            atualizarPainelRecuperacao('Reconexão manual concluída com sucesso.', 'ok');
+        }
+    } catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-reconectar', false); }
+}
+
+async function testarBackend() {
+    estadoBotao('btn-testar-backend', true);
+    try { await ConnectionManager.send('testar_backend', {}); }
+    catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-testar-backend', false); }
+}
+
+async function statusConexao() {
+    estadoBotao('btn-status-conexao', true);
+    try {
+        await ConnectionManager.send('status', {});
+    } catch (e) { /* já registrado */ }
+    finally {
+        estadoBotao('btn-status-conexao', false);
+        const est = ConnectionManager.getEstado();
+        alert(`STATUS DO TÚNEL\n\nSituação: ${est.status.toUpperCase()}\nÚltima verificação: ${est.ultimaVerificacao ? est.ultimaVerificacao.toLocaleTimeString('pt-BR') : 'nunca'}\nLatência: ${est.ultimaLatencia != null ? est.ultimaLatencia + 'ms' : '—'}\nFalhas seguidas: ${est.falhasSeguidas}`);
+    }
+}
+
+function alternarLogsTunel() {
+    const monitor = document.getElementById('monitor-tunel');
+    monitor.style.display = (monitor.style.display === 'none') ? 'block' : 'none';
+}
+
+async function reiniciarSessaoTunel() {
+    const confirmar = confirm('Isso reinicia a sessão local (histórico do módulo atual) e avisa o túnel. Continuar?');
+    if (!confirmar) return;
+    estadoBotao('btn-reiniciar-sessao', true);
+    try {
+        await ConnectionManager.send('reiniciar_sessao', {});
+        historico = [];
+        if (moduloAtual) {
+            document.getElementById('chat-mensagens').innerHTML = '';
+            salvarHistorico();
+            const info = INFO_MODULOS[moduloAtual];
+            adicionarBolha('assistente', `Sessão reiniciada pelo Painel Operacional. Módulo <b>${info.titulo}</b> pronto.`, info.emoji);
+        }
+    } catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-reiniciar-sessao', false); }
+}
+
+async function diagnosticoTunel() {
+    estadoBotao('btn-diagnostico-tunel', true);
+    try {
+        if (!navigator.onLine) return;
+        await ConnectionManager.send('ping', {});
+        if (ConnectionManager.getEstado().status === 'online') {
+            await ConnectionManager.send('testar_backend', {});
+        }
+    } catch (e) { /* já registrado */ }
+    finally { estadoBotao('btn-diagnostico-tunel', false); }
+}
+
+const INFO_MODULOS = {
+    juridico:     { emoji: '⚖️', titulo: 'JURÍDICO',           sub: 'Proteção Jurídica' },
+    financeiro:   { emoji: '🧮', titulo: 'FINANCEIRO',          sub: 'Gestão Familiar' },
+    produtor:     { emoji: '📸', titulo: 'PRODUTOR',            sub: 'Conteúdo Criativo' },
+    estrategista: { emoji: '♟️', titulo: 'ESTRATEGISTA',        sub: 'Planejamento' },
+    afiliadopro:  { emoji: '🤝', titulo: 'AFILIADOPRO',         sub: 'Marketing Ético' },
+    ads:          { emoji: '🎓', titulo: 'ADS ACADÊMICO',       sub: 'Suporte aos Estudos' },
+    saber:        { emoji: '📜', titulo: 'SABER/CONHECIMENTO',  sub: 'Ciência e Cultura' },
+    mentor:       { emoji: '🌳', titulo: 'MENTOR',              sub: 'Legado e Propósito' },
+    conselho:     { emoji: '👥', titulo: 'CONSELHO',            sub: 'Painel Central' },
+};
+
+const PROMPTS_RAPIDOS = {
+    juridico: [
+        'Analise esta situação juridicamente e indique riscos.',
+        'Crie um checklist de documentos necessários.',
+        'Resuma meus direitos e próximos passos.'
+    ],
+    financeiro: [
+        'Monte um plano financeiro familiar para este mês.',
+        'Organize minhas despesas por prioridade.',
+        'Crie uma estratégia para reduzir dívidas.'
+    ],
+    produtor: [
+        'Crie um roteiro curto para vídeo.',
+        'Gere ideias de conteúdo para esta semana.',
+        'Transforme esta mensagem em post.'
+    ],
+    estrategista: [
+        'Monte um plano de ação com prioridades.',
+        'Analise riscos, oportunidades e próximos passos.',
+        'Crie uma estratégia em etapas.'
+    ],
+    afiliadopro: [
+        'Crie uma oferta ética para este produto.',
+        'Monte uma sequência de divulgação.',
+        'Sugira argumentos de venda sem exageros.',
+        'Analise minhas métricas de cliques, leads, vendas, EPC, CPA e ROI.'
+    ],
+    ads: [
+        'Explique este assunto de ADS de forma simples.',
+        'Crie um plano de estudos.',
+        'Resolva este exercício passo a passo.'
+    ],
+    saber: [
+        'Pesquise e organize este tema em tópicos.',
+        'Explique com exemplos práticos.',
+        'Crie um resumo de estudo.'
+    ],
+    mentor: [
+        'Ajude-me a tomar uma decisão com sabedoria.',
+        'Organize uma orientação de vida e propósito.',
+        'Crie uma mensagem para minha família.'
+    ],
+    conselho: [
+        'Reúna os núcleos e faça uma orientação central.',
+        'Gere ata, decisão e próximos passos.',
+        'Avalie este caso por todos os módulos.'
+    ]
+};
+
+const CHAVE_BASE = 'SOUSA2_AUTOMACAO';
+const COTAS_PADRAO = { requisicoesDia: 100, mensagensDia: 300, tokensDia: 50000, falhasDia: 20 };
+const AFILIADOPRO_PADRAO = { ticketMedio: 97, comissaoPercentual: 50, investimento: 0, metaVendas: 10 };
+const RECUPERACAO_PADRAO = { ativa: true, maxTentativas: 3, intervaloBase: 2500, reenvioAutomatico: true };
+const AUTOMACAO_GERAL_PADRAO = { ativa: true, saude: true, backup: true, diario: true, alertas: true, recomendacoes: true, intervaloCiclo: 60000, intervaloBackup: 300000 };
+
+const ERROS_CATALOGO = {
+    rede: { titulo: 'Falha de conexão', causa: 'Internet instável, bloqueio de rede, CORS ou Apps Script indisponível.', solucao: 'Verifique a conexão, aguarde o status online e use RESTAURAR para reabrir o módulo atual.' },
+    api: { titulo: 'Erro do núcleo/API', causa: 'O servidor respondeu, mas informou erro interno, limite, permissão ou configuração incompleta.', solucao: 'Confira a URL do Apps Script, permissões de implantação e cotas do serviço.' },
+    resposta: { titulo: 'Resposta inválida', causa: 'O servidor não retornou JSON válido ou retornou dados fora do formato esperado.', solucao: 'Revise o retorno do Apps Script. O esperado é { ok: true, text: "mensagem" }.' },
+    cota: { titulo: 'Possível limite de cota', causa: 'Consumo diário elevado, excesso de chamadas ou limite do provedor atingido.', solucao: 'Reduza chamadas, ajuste cotas locais ou aguarde renovação da cota real do serviço.' },
+    local: { titulo: 'Falha local', causa: 'Problema no navegador, armazenamento local cheio ou dados corrompidos.', solucao: 'Use RESTAURAR para reconstruir a tela e, se necessário, LIMPAR ERROS ou LIMPAR histórico.' },
+    ok: { titulo: 'Diagnóstico concluído', causa: 'Nenhuma falha crítica local foi encontrada.', solucao: 'Sistema operacional. Continue usando normalmente.' }
+};
+
+let recuperacaoAutoEstado = { tentativas: 0, temporizador: null, ultimoTexto: '', ultimoModulo: '', emAndamento: false };
+let automacaoGeralEstado = { cicloTimer: null, backupTimer: null, ultimoBackup: null, ultimoDiario: '', ciclos: 0 };
+
+function chaveMetricasHoje() {
+    const agora = new Date();
+    return `${CHAVE_BASE}_METRICAS_${agora.getFullYear()}-${String(agora.getMonth() + 1).padStart(2, '0')}-${String(agora.getDate()).padStart(2, '0')}`;
+}
+
+function carregarConfigCotas() {
+    try { return { ...COTAS_PADRAO, ...JSON.parse(localStorage.getItem(`${CHAVE_BASE}_COTAS`) || '{}') }; }
+    catch { return { ...COTAS_PADRAO }; }
+}
+function salvarConfigCotas(c) { localStorage.setItem(`${CHAVE_BASE}_COTAS`, JSON.stringify(c)); }
+
+function carregarMetricasHoje() {
+    try { return JSON.parse(localStorage.getItem(chaveMetricasHoje()) || 'null') || { requisicoes: 0, mensagens: 0, tokens: 0, falhas: 0, modulos: {} }; }
+    catch { return { requisicoes: 0, mensagens: 0, tokens: 0, falhas: 0, modulos: {} }; }
+}
+function salvarMetricasHoje(m) { localStorage.setItem(chaveMetricasHoje(), JSON.stringify(m)); }
+
+function estimarTokens(t) { return Math.max(1, Math.ceil(String(t || '').length / 4)); }
+function numeroBR(v) { return Number(v || 0).toLocaleString('pt-BR'); }
+function percentual(v, l) { return l ? Math.min(100, Math.round((v / l) * 100)) : 0; }
+
+function atualizarBarra(id, v, l) {
+    const b = document.getElementById(id);
+    if (b) b.style.width = `${percentual(v, l)}%`;
+}
+
+function atualizarMetricasCotas() {
+    const m = carregarMetricasHoje();
+    const c = carregarConfigCotas();
+    const maior = Math.max(percentual(m.requisicoes, c.requisicoesDia), percentual(m.mensagens, c.mensagensDia), percentual(m.tokens, c.tokensDia), percentual(m.falhas, c.falhasDia));
+    document.getElementById('cota-requisicoes').textContent = numeroBR(m.requisicoes);
+    document.getElementById('cota-requisicoes-detalhe').textContent = `${numeroBR(m.requisicoes)} de ${numeroBR(c.requisicoesDia)} chamadas`;
+    atualizarBarra('barra-requisicoes', m.requisicoes, c.requisicoesDia);
+    document.getElementById('cota-mensagens').textContent = numeroBR(m.mensagens);
+    document.getElementById('cota-mensagens-detalhe').textContent = `${numeroBR(m.mensagens)} de ${numeroBR(c.mensagensDia)} mensagens`;
+    atualizarBarra('barra-mensagens', m.mensagens, c.mensagensDia);
+    document.getElementById('cota-tokens').textContent = numeroBR(m.tokens);
+    document.getElementById('cota-tokens-detalhe').textContent = `${numeroBR(m.tokens)} de ${numeroBR(c.tokensDia)} tokens estimados`;
+    atualizarBarra('barra-tokens', m.tokens, c.tokensDia);
+    document.getElementById('cota-falhas').textContent = numeroBR(m.falhas);
+    document.getElementById('cota-falhas-detalhe').textContent = m.falhas ? `${numeroBR(m.falhas)} falha(s) registradas hoje` : 'Nenhuma falha hoje';
+    atualizarBarra('barra-falhas', m.falhas, c.falhasDia);
+    const a = document.getElementById('alerta-cota');
+    a.className = 'alerta-cota';
+    if (maior >= 100) { a.classList.add('limite'); a.textContent = 'Limite local atingido ou excedido.'; }
+    else if (maior >= 80) { a.classList.add('atencao'); a.textContent = `Atenção: consumo local em ${maior}%.`; }
+    else { a.textContent = `Consumo local em ${maior}%. Valores estimados quando o servidor não retorna uso real.`; }
+}
+
+function registrarModuloCota(m, id, campo, v) {
+    if (!id) return;
+    m.modulos[id] = m.modulos[id] || { requisicoes: 0, mensagens: 0, tokens: 0, falhas: 0 };
+    m.modulos[id][campo] = Math.max(0, (m.modulos[id][campo] || 0) + v);
+}
+
+function registrarEnvioCota() {
+    const m = carregarMetricasHoje();
+    const corpo = JSON.stringify({ module: moduloAtual, history: historico });
+    const tp = estimarTokens(corpo);
+    m.requisicoes += 1; m.mensagens += 1; m.tokens += tp;
+    registrarModuloCota(m, moduloAtual, 'requisicoes', 1);
+    registrarModuloCota(m, moduloAtual, 'mensagens', 1);
+    registrarModuloCota(m, moduloAtual, 'tokens', tp);
+    salvarMetricasHoje(m);
+    atualizarMetricasCotas();
+    return tp;
+}
+
+function registrarRespostaCota(t, d, tp) {
+    const m = carregarMetricasHoje();
+    const uso = d?.usage || d?.uso || {};
+    const total = Number(uso.total_tokens || uso.totalTokens || uso.total || 0);
+    const inc = total > 0 ? total - tp : estimarTokens(t);
+    m.mensagens += 1; m.tokens = Math.max(0, m.tokens + inc);
+    registrarModuloCota(m, moduloAtual, 'mensagens', 1);
+    registrarModuloCota(m, moduloAtual, 'tokens', inc);
+    salvarMetricasHoje(m);
+    atualizarMetricasCotas();
+}
+
+function registrarFalhaCota() {
+    const m = carregarMetricasHoje();
+    m.falhas += 1;
+    registrarModuloCota(m, moduloAtual, 'falhas', 1);
+    salvarMetricasHoje(m);
+    atualizarMetricasCotas();
+}
+
+function configurarCotas() {
+    const a = carregarConfigCotas();
+    const r = prompt('Cota diária de requisições:', a.requisicoesDia); if (r === null) return;
+    const msg = prompt('Cota diária de mensagens:', a.mensagensDia); if (msg === null) return;
+    const tok = prompt('Cota diária de tokens:', a.tokensDia); if (tok === null) return;
+    const f = prompt('Limite de falhas:', a.falhasDia); if (f === null) return;
+    salvarConfigCotas({ requisicoesDia: parseInt(r, 10)||a.requisicoesDia, mensagensDia: parseInt(msg, 10)||a.mensagensDia, tokensDia: parseInt(tok, 10)||a.tokensDia, falhasDia: parseInt(f, 10)||a.falhasDia });
+    atualizarMetricasCotas();
+}
+
+function zerarMetricasHoje() {
+    if (confirm('Zerar métricas de cotas de hoje?')) {
+        salvarMetricasHoje({ requisicoes: 0, mensagens: 0, tokens: 0, falhas: 0, modulos: {} });
+        atualizarMetricasCotas();
+    }
+}
+
+function chaveAfiliadoHoje() { return chaveMetricasHoje().replace('_METRICAS_', '_AFILIADOPRO_'); }
+function carregarConfigAfiliadoPro() {
+    try { return { ...AFILIADOPRO_PADRAO, ...JSON.parse(localStorage.getItem(`${CHAVE_BASE}_AFILIADOPRO_CONFIG`) || '{}') }; }
+    catch { return { ...AFILIADOPRO_PADRAO }; }
+}
+function salvarConfigAfiliadoPro(c) { localStorage.setItem(`${CHAVE_BASE}_AFILIADOPRO_CONFIG`, JSON.stringify(c)); }
+function carregarAfiliadoHoje() {
+    try { return JSON.parse(localStorage.getItem(chaveAfiliadoHoje()) || 'null') || { cliques: 0, leads: 0, vendas: 0, eventos: [] }; }
+    catch { return { cliques: 0, leads: 0, vendas: 0, eventos: [] }; }
+}
+function salvarAfiliadoHoje(d) {
+    localStorage.setItem(chaveAfiliadoHoje(), JSON.stringify({ cliques: Math.max(0, d.cliques||0), leads: Math.max(0, d.leads||0), vendas: Math.max(0, d.vendas||0), eventos: (d.eventos||[]).slice(-80) }));
+}
+function moedaBR(v) { return Number(v || 0).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); }
+function taxa(n, d) { return d ? (n / d) * 100 : 0; }
+
+function atualizarMetricasAfiliadoPro() {
+    const d = carregarAfiliadoHoje();
+    const c = carregarConfigAfiliadoPro();
+    const receita = d.vendas * c.ticketMedio;
+    const comissao = receita * (c.comissaoPercentual / 100);
+    const inv = Number(c.investimento || 0);
+    const epc = d.cliques ? comissao / d.cliques : 0;
+    const cpl = d.leads ? inv / d.leads : 0;
+    const cpa = d.vendas ? inv / d.vendas : 0;
+    const roi = inv ? ((comissao - inv) / inv) * 100 : (comissao > 0 ? 100 : 0);
+    const convLead = taxa(d.leads, d.cliques);
+    const convVenda = taxa(d.vendas, d.cliques);
+    const progresso = percentual(d.vendas, c.metaVendas);
+
+    document.getElementById('af-cliques').textContent = numeroBR(d.cliques);
+    document.getElementById('af-cliques-det').textContent = `${numeroBR(d.cliques)} entrada(s) no funil`;
+    document.getElementById('af-leads').textContent = numeroBR(d.leads);
+    document.getElementById('af-leads-det').textContent = `${convLead.toFixed(1)}% clique → lead`;
+    document.getElementById('af-vendas').textContent = numeroBR(d.vendas);
+    document.getElementById('af-vendas-det').textContent = `${convVenda.toFixed(1)}% clique → venda`;
+    document.getElementById('af-comissao').textContent = moedaBR(comissao);
+    document.getElementById('af-comissao-det').textContent = `${c.comissaoPercentual}% de ${moedaBR(c.ticketMedio)}`;
+    document.getElementById('af-epc').textContent = moedaBR(epc);
+    document.getElementById('af-cpl').textContent = moedaBR(cpl);
+    document.getElementById('af-cpa').textContent = moedaBR(cpa);
+    document.getElementById('af-roi').textContent = `${roi.toFixed(1)}%`;
+    document.getElementById('af-roi-det').textContent = `Investimento: ${moedaBR(inv)}`;
+
+    document.getElementById('funil-cliques-valor').textContent = `${numeroBR(d.cliques)} cliques`;
+    document.getElementById('funil-leads-valor').textContent = `${numeroBR(d.leads)} leads`;
+    document.getElementById('funil-vendas-valor').textContent = `${numeroBR(d.vendas)} vendas`;
+    document.getElementById('funil-cliques').style.setProperty('--nivel', d.cliques ? '100%' : '0%');
+    document.getElementById('funil-leads').style.setProperty('--nivel', `${percentual(d.leads, Math.max(1, d.cliques))}%`);
+    document.getElementById('funil-vendas').style.setProperty('--nivel', `${progresso}%`);
+}
+
+function registrarAfiliado(campo, v) {
+    const d = carregarAfiliadoHoje();
+    if (!['cliques', 'leads', 'vendas'].includes(campo)) return;
+    d[campo] = Math.max(0, (d[campo] || 0) + v);
+    d.eventos = d.eventos || [];
+    d.eventos.push({ campo, valor: v, data: new Date().toISOString() });
+    salvarAfiliadoHoje(d);
+    atualizarMetricasAfiliadoPro();
+}
+
+function configurarAfiliadoPro() {
+    const a = carregarConfigAfiliadoPro();
+    const t = prompt('Ticket médio (R$):', a.ticketMedio); if (t === null) return;
+    const c = prompt('Comissão (%):', a.comissaoPercentual); if (c === null) return;
+    const i = prompt('Investimento diário (R$):', a.investimento); if (i === null) return;
+    const m = prompt('Meta de vendas:', a.metaVendas); if (m === null) return;
+    salvarConfigAfiliadoPro({ ticketMedio: parseFloat(String(t).replace(',', '.'))||a.ticketMedio, comissaoPercentual: parseFloat(String(c).replace(',', '.'))||a.comissaoPercentual, investimento: parseFloat(String(i).replace(',', '.'))||0, metaVendas: parseInt(m, 10)||a.metaVendas });
+    atualizarMetricasAfiliadoPro();
+}
+
+function zerarAfiliadoHoje() {
+    if (confirm('Zerar métricas AfiliadoPro de hoje?')) {
+        salvarAfiliadoHoje({ cliques: 0, leads: 0, vendas: 0, eventos: [] });
+        atualizarMetricasAfiliadoPro();
+    }
+}
+function abrirMetricasAfiliadoPro() { document.getElementById('metricas-afiliados').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+function carregarConfigAutomacaoGeral() {
+    try { return { ...AUTOMACAO_GERAL_PADRAO, ...JSON.parse(localStorage.getItem(`${CHAVE_BASE}_AUTOMACAO_GERAL`) || '{}') }; }
+    catch { return { ...AUTOMACAO_GERAL_PADRAO }; }
+}
+function salvarConfigAutomacaoGeral(c) { localStorage.setItem(`${CHAVE_BASE}_AUTOMACAO_GERAL`, JSON.stringify(c)); }
+function chaveBackupsSistema() { return `${CHAVE_BASE}_BACKUPS_SISTEMA`; }
+function carregarBackupsSistema() {
+    try { return JSON.parse(localStorage.getItem(chaveBackupsSistema()) || '[]'); }
+    catch { return []; }
+}
+function salvarBackupsSistema(b) { localStorage.setItem(chaveBackupsSistema(), JSON.stringify(b.slice(-5))); }
+
+function registrarLogAutomacao(t, tipo = 'ok') {
+    let logs = [];
+    try { logs = JSON.parse(localStorage.getItem(`${CHAVE_BASE}_LOG_AUTOMACAO`) || '[]'); } catch { logs = []; }
+    logs.push({ texto: String(t), tipo, data: new Date().toISOString() });
+    localStorage.setItem(`${CHAVE_BASE}_LOG_AUTOMACAO`, JSON.stringify(logs.slice(-40)));
+    renderizarLogAutomacao();
+}
+
+function renderizarLogAutomacao() {
+    const alvo = document.getElementById('log-automacao');
+    if (!alvo) return;
+    let logs = [];
+    try { logs = JSON.parse(localStorage.getItem(`${CHAVE_BASE}_LOG_AUTOMACAO`) || '[]'); } catch { logs = []; }
+    alvo.innerHTML = '';
+    logs.slice().reverse().slice(0, 10).forEach(l => {
+        const d = document.createElement('div');
+        d.className = `item-automacao ${l.tipo || 'ok'}`;
+        const h = new Date(l.data).toLocaleTimeString('pt-BR');
+        d.textContent = `${h} · ${l.texto}`;
+        alvo.appendChild(d);
+    });
+}
+
+function atualizarPainelAutomacaoGeral(m = 'Automação ativa.', tipo = 'ok') {
+    const c = carregarConfigAutomacaoGeral();
+    const b = carregarBackupsSistema();
+    const u = b[b.length - 1];
+    const r = ['saude', 'backup', 'diario', 'alertas', 'recomendacoes'].filter(k => c.ativa && c[k]).length;
+    const err = carregarErrosHoje().filter(e => e.tipo !== 'ok').length;
+    document.getElementById('auto-rotinas').textContent = `${r}/5`;
+    document.getElementById('auto-backup').textContent = u ? new Date(u.data).toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }) : 'Nenhum';
+    document.getElementById('auto-saude').textContent = !navigator.onLine || err >= 3 ? 'ATENÇÃO' : 'OK';
+    document.getElementById('auto-proxima').textContent = c.ativa ? 'Monitorar' : 'Pausado';
+    const s = document.getElementById('status-automacao');
+    s.className = 'status-automacao';
+    if (tipo === 'atencao') s.classList.add('atencao');
+    if (tipo === 'falha') s.classList.add('falha');
+    s.textContent = m;
+    renderizarLogAutomacao();
+}
+
+function coletarSnapshotSistema() {
+    const dados = {};
+    const ignorar = new Set([chaveBackupsSistema(), `${CHAVE_BASE}_TESTE_STORAGE`]);
+    Object.keys(localStorage).forEach(k => {
+        if (k.startsWith(CHAVE_BASE) && !ignorar.has(k)) dados[k] = localStorage.getItem(k);
+    });
+    return { versao: 'SOUSA 2.0', data: new Date().toISOString(), moduloAtual, online: navigator.onLine, dados };
+}
+
+function criarBackupAutomatico(origem = 'auto') {
+    try {
+        const bk = coletarSnapshotSistema();
+        const bks = carregarBackupsSistema();
+        bks.push(bk);
+        salvarBackupsSistema(bks);
+        registrarLogAutomacao(`Backup ${origem} criado.`, 'ok');
+        atualizarPainelAutomacaoGeral('Backup local criado.', 'ok');
+        return true;
+    } catch (e) {
+        registrarErroSistema('local', 'Falha ao criar backup.', e.message);
+        return false;
+    }
+}
+
+function restaurarUltimoBackup() {
+    const bks = carregarBackupsSistema();
+    const u = bks[bks.length - 1];
+    if (!u) { atualizarPainelAutomacaoGeral('Nenhum backup disponível.', 'atencao'); return; }
+    if (confirm('Restaurar último backup local?')) {
+        Object.entries(u.dados || {}).forEach(([k, v]) => localStorage.setItem(k, v));
+        iniciarAutomacoes();
+        atualizarPainelAutomacaoGeral('Backup restaurado.', 'ok');
+    }
+}
+
+function exportarBackupSistema() {
+    const bk = coletarSnapshotSistema();
+    const blob = new Blob([JSON.stringify(bk, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a'); a.href = url; a.download = `sousa2-backup-${new Date().toISOString().slice(0,10)}.json`;
+    document.body.appendChild(a); a.click(); a.remove();
+    URL.revokeObjectURL(url);
+    registrarLogAutomacao('Backup JSON exportado.', 'ok');
+}
+
+function importarBackupSistema(arq) {
+    if (!arq) return;
+    const r = new FileReader();
+    r.onload = () => {
+        try {
+            const b = JSON.parse(r.result);
+            if (!b || b.versao !== 'SOUSA 2.0' || !b.dados) throw new Error('Arquivo inválido.');
+            if (confirm('Importar backup JSON e substituir dados locais?')) {
+                Object.entries(b.dados).forEach(([k, v]) => { if (k.startsWith(CHAVE_BASE)) localStorage.setItem(k, v); });
+                iniciarAutomacoes();
+                atualizarPainelAutomacaoGeral('Backup importado com sucesso.', 'ok');
+            }
+        } catch (e) {
+            registrarErroSistema('local', 'Falha ao importar backup.', e.message);
+        }
+    };
+    r.readAsText(arq);
+}
+
+function registrarDiarioAutomaticoSeNecessario() {
+    const hoje = new Date().toISOString().slice(0, 10);
+    const chave = `${CHAVE_BASE}_ULTIMO_DIARIO_AUTO`;
+    if (localStorage.getItem(chave) === hoje) return;
+    localStorage.setItem(chave, hoje);
+    const m = carregarMetricasHoje(); const af = carregarAfiliadoHoje();
+    const regs = carregarDiarioLocal();
+    regs.push({ data: new Date().toLocaleDateString('pt-BR'), titulo: 'Diário automático', texto: `Abertura do dia: ${m.requisicoes} requisições, ${m.tokens} tokens, AfiliadoPro com ${af.cliques} cliques, ${af.leads} leads e ${af.vendas} vendas.` });
+    salvarDiarioLocal(regs);
+    renderizarDiarioLocal();
+    registrarLogAutomacao('Diário automático registrado.', 'ok');
+}
+
+function avaliarAlertasAutomaticos() {
+    const m = carregarMetricasHoje(); const c = carregarConfigCotas();
+    if (percentual(m.tokens, c.tokensDia) >= 90 || percentual(m.requisicoes, c.requisicoesDia) >= 90) {
+        registrarLogAutomacao('Alerta: cota diária acima de 90%.', 'atencao');
+    }
+}
+
+function recomendarModuloAutomatico() {
+    const b = document.getElementById('busca-modulos')?.value?.trim().toLowerCase();
+    if (!b || b.length < 4) return;
+    const mapa = [['juridico', ['lei','direito','contrato','processo']], ['financeiro', ['dinheiro','conta','orcamento','divida']], ['afiliadopro', ['afiliado','venda','lead','clique']], ['ads', ['ads','faculdade','programacao']], ['produtor', ['video','foto','post','roteiro']], ['conselho', ['decisao','conselho','reuniao']]];
+    const ach = mapa.find(([, t]) => t.some(x => b.includes(x)));
+    if (ach) {
+        document.getElementById('auto-proxima').textContent = INFO_MODULOS[ach[0]].titulo;
+        localStorage.setItem(`${CHAVE_BASE}_MODULO_RECOMENDADO`, ach[0]);
+    }
+}
+
+function abrirModuloRecomendado() {
+    const id = localStorage.getItem(`${CHAVE_BASE}_MODULO_RECOMENDADO`);
+    if (id && INFO_MODULOS[id]) abrirModulo(id);
+}
+
+function executarCicloAutomacao(origem = 'auto') {
+    const c = carregarConfigAutomacaoGeral();
+    if (!c.ativa) return;
+    if (c.saude) executarDiagnostico({ silencioso: true });
+    if (c.diario) registrarDiarioAutomaticoSeNecessario();
+    if (c.alertas) avaliarAlertasAutomaticos();
+    if (c.recomendacoes) recomendarModuloAutomatico();
+    atualizarPainelAutomacaoGeral(`Ciclo ${origem} executado.`, 'ok');
+}
+
+function alternarAutomacaoGeral() {
+    const c = carregarConfigAutomacaoGeral();
+    c.ativa = !c.ativa;
+    salvarConfigAutomacaoGeral(c);
+    if (c.ativa) iniciarTimersAutomacaoGeral(); else pararTimersAutomacaoGeral();
+    atualizarPainelAutomacaoGeral(c.ativa ? 'Automação ativada.' : 'Automação pausada.', c.ativa ? 'ok' : 'atencao');
+}
+
+function iniciarTimersAutomacaoGeral() {
+    pararTimersAutomacaoGeral();
+    const c = carregarConfigAutomacaoGeral();
+    if (!c.ativa) return;
+    automacaoGeralEstado.cicloTimer = setInterval(() => executarCicloAutomacao('auto'), c.intervaloCiclo);
+    if (c.backup) automacaoGeralEstado.backupTimer = setInterval(() => criarBackupAutomatico('auto'), c.intervaloBackup);
+}
+
+function pararTimersAutomacaoGeral() {
+    if (automacaoGeralEstado.cicloTimer) clearInterval(automacaoGeralEstado.cicloTimer);
+    if (automacaoGeralEstado.backupTimer) clearInterval(automacaoGeralEstado.backupTimer);
+}
+
+function abrirCentroAutomacao() { document.getElementById('centro-automacao').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+function chaveErrosHoje() { return chaveMetricasHoje().replace('_METRICAS_', '_ERROS_'); }
+function carregarErrosHoje() {
+    try { return JSON.parse(localStorage.getItem(chaveErrosHoje()) || '[]'); } catch { return []; }
+}
+function salvarErrosHoje(e) { localStorage.setItem(chaveErrosHoje(), JSON.stringify(e.slice(-30))); }
+
+function tipoErroPorMensagem(msg) {
+    const t = String(msg || '').toLowerCase();
+    if (t.includes('quota') || t.includes('cota') || t.includes('limit') || t.includes('429')) return 'cota';
+    if (t.includes('json') || t.includes('invalida')) return 'resposta';
+    if (t.includes('fetch') || t.includes('network') || t.includes('conexao')) return 'rede';
+    if (t.includes('storage')) return 'local';
+    return 'api';
+}
+
+function criarErroSistema(tipo, msg, det = '') {
+    const cat = ERROS_CATALOGO[tipo] || ERROS_CATALOGO.api;
+    return { tipo, titulo: cat.titulo, mensagem: String(msg || cat.titulo), detalhe: String(det || ''), causa: cat.causa, solucao: cat.solucao, modulo: moduloAtual || 'home', data: new Date().toISOString() };
+}
+
+function registrarErroSistema(tipo, msg, det = '') {
+    const e = carregarErrosHoje(); const err = criarErroSistema(tipo, msg, det);
+    e.push(err); salvarErrosHoje(e); renderizarErros(); return err;
+}
+function registrarEventoOk(msg) {
+    const e = carregarErrosHoje(); e.push(criarErroSistema('ok', msg || 'Diagnóstico concluído.'));
+    salvarErrosHoje(e); renderizarErros();
+}
+
+function mensagemErroHTML(e) {
+    return `<b>${escaparHTML(e.titulo)}</b>\n${escaparHTML(e.mensagem)}\n\nPossível causa: ${escaparHTML(e.causa)}\nPossível restauração: ${escaparHTML(e.solucao)}`;
+}
+
+function carregarConfigRecuperacao() {
+    try { return { ...RECUPERACAO_PADRAO, ...JSON.parse(localStorage.getItem(`${CHAVE_BASE}_RECUPERACAO`) || '{}') }; }
+    catch { return { ...RECUPERACAO_PADRAO }; }
+}
+function salvarConfigRecuperacao(c) { localStorage.setItem(`${CHAVE_BASE}_RECUPERACAO`, JSON.stringify(c)); }
+
+function atualizarPainelRecuperacao(m = 'Recuperação automática ativa.', est = 'ok') {
+    const c = carregarConfigRecuperacao();
+    const modo = document.getElementById('auto-recuperacao-modo');
+    const tent = document.getElementById('auto-recuperacao-tentativas');
+    const acao = document.getElementById('auto-recuperacao-acao');
+    const st = document.getElementById('auto-recuperacao-status');
+    if (!modo || !tent || !acao || !st) return;
+    modo.textContent = c.ativa ? 'ATIVO' : 'DESATIVADO';
+    tent.textContent = `${recuperacaoAutoEstado.tentativas} / ${c.maxTentativas}`;
+    acao.textContent = recuperacaoAutoEstado.emAndamento ? 'Recuperando' : 'Aguardando';
+    st.className = 'linha-recuperacao';
+    if (est === 'atencao') st.classList.add('atencao');
+    if (est === 'falha') st.classList.add('falha');
+    st.textContent = m;
+}
+
+function alternarRecuperacaoAutomatica() {
+    const c = carregarConfigRecuperacao(); c.ativa = !c.ativa; salvarConfigRecuperacao(c);
+    atualizarPainelRecuperacao(c.ativa ? 'Recuperação ativada.' : 'Recuperação desativada.', c.ativa ? 'ok' : 'atencao');
+}
+
+function agendarRecuperacaoAutomatica(erro, ctx = {}) {
+    const c = carregarConfigRecuperacao();
+    if (!c.ativa || erro.tipo === 'cota' || recuperacaoAutoEstado.tentativas >= c.maxTentativas) return;
+    if (recuperacaoAutoEstado.temporizador) clearTimeout(recuperacaoAutoEstado.temporizador);
+    recuperacaoAutoEstado.tentativas += 1;
+    recuperacaoAutoEstado.ultimoTexto = ctx.texto || recuperacaoAutoEstado.ultimoTexto || '';
+    recuperacaoAutoEstado.ultimoModulo = ctx.modulo || recuperacaoAutoEstado.ultimoModulo || moduloAtual || '';
+    recuperacaoAutoEstado.emAndamento = true;
+    const espera = c.intervaloBase * recuperacaoAutoEstado.tentativas;
+    atualizarPainelRecuperacao(`Tentativa de recuperação ${recuperacaoAutoEstado.tentativas} de ${c.maxTentativas}.`, 'atencao');
+    recuperacaoAutoEstado.temporizador = setTimeout(() => executarRecuperacaoAutomatica(erro, ctx), espera);
+}
+
+async function executarRecuperacaoAutomatica(erro, ctx = {}) {
+    recuperacaoAutoEstado.temporizador = null;
+    if (!navigator.onLine) { recuperacaoAutoEstado.emAndamento = false; return; }
+    executarDiagnostico({ silencioso: true });
+    tentarRestaurarSistema({ silencioso: true });
+    const mod = ctx.modulo || recuperacaoAutoEstado.ultimoModulo;
+    if (mod && INFO_MODULOS[mod] && moduloAtual !== mod) abrirModulo(mod);
+    const txt = ctx.texto || recuperacaoAutoEstado.ultimoTexto;
+    if (txt && moduloAtual) {
+        adicionarBolha('assistente', `Recuperação: reenviando solicitação...`, INFO_MODULOS[moduloAtual]?.emoji);
+        await processarMensagem(txt, { registrarUsuario: false, permitirRecuperacao: true });
+        return;
+    }
+    recuperacaoAutoEstado.emAndamento = false;
+    atualizarPainelRecuperacao('Restauração concluída.', 'ok');
+}
+
+function renderizarErros() {
+    const e = carregarErrosHoje(); const lista = document.getElementById('lista-erros');
+    const st = document.getElementById('status-restauracao');
+    const reais = e.filter(x => x.tipo !== 'ok'); const ult = e[e.length - 1];
+    document.getElementById('erros-hoje').textContent = numeroBR(reais.length);
+    document.getElementById('ultimo-erro-tipo').textContent = ult ? ult.titulo.replace('Falha de ', '') : 'Nenhum';
+    document.getElementById('status-restauro-curto').textContent = reais.length ? 'ATENÇÃO' : 'OK';
+    lista.innerHTML = '';
+    st.className = 'status-restauracao';
+    if (!ult) { st.textContent = 'Nenhum erro registrado. Sistema pronto.'; }
+    else { st.textContent = `${ult.titulo}: ${ult.solucao}`; if (ult.tipo !== 'ok') st.classList.add(reais.length >= 3 ? 'falha' : 'atencao'); }
+    e.slice().reverse().forEach(err => {
+        const item = document.createElement('div');
+        item.className = `item-erro ${err.tipo === 'ok' ? 'ok' : 'falha'}`;
+        const dt = new Date(err.data).toLocaleTimeString('pt-BR');
+        item.innerHTML = `<div class="erro-topo"><div class="erro-titulo">${escaparHTML(err.titulo)} · ${escaparHTML(err.modulo)}</div><div class="erro-data">${dt}</div></div><div class="erro-texto">${escaparHTML(err.mensagem)}</div><div class="erro-solucao">Causa: ${escaparHTML(err.causa)}<br>Restauração: ${escaparHTML(err.solucao)}</div>`;
+        lista.appendChild(item);
+    });
+}
+
+function executarDiagnostico(opcoes = {}) {
+    const problemas = [];
+    if (!navigator.onLine) problemas.push(criarErroSistema('rede', 'Navegador está offline.'));
+    if (!APPS_SCRIPT_URL || !APPS_SCRIPT_URL.startsWith('https://script.google.com/')) problemas.push(criarErroSistema('api', 'URL do Apps Script inválida.'));
+    try { localStorage.setItem(`${CHAVE_BASE}_TESTE`, '1'); localStorage.removeItem(`${CHAVE_BASE}_TESTE`); }
+    catch (e) { problemas.push(criarErroSistema('local', 'Storage indisponível.', e.message)); }
+    if (problemas.length) { salvarErrosHoje(carregarErrosHoje().concat(problemas)); }
+    else if (!opcoes.silencioso) { registrarEventoOk('Diagnóstico aprovado: sistema 100% operacional.'); }
+    renderizarErros();
+    return problemas.length;
+}
+
+function tentarRestaurarSistema(opcoes = {}) {
+    try {
+        atualizarPainelAutomatico(); atualizarMetricasCotas(); atualizarMetricasAfiliadoPro();
+        renderizarErros(); renderizarDiarioLocal(); filtrarModulos();
+        if (!opcoes.silencioso) registrarEventoOk('Restauração local executada com sucesso.');
+    } catch (e) {
+        registrarErroSistema('local', 'Falha ao restaurar.', e.message);
+    }
+}
+
+function limparErros() {
+    if (confirm('Limpar histórico de erros?')) { salvarErrosHoje([]); renderizarErros(); }
+}
+
+function trocarAbaLivro(aba) {
+    document.querySelectorAll('.aba-livro').forEach(b => b.classList.remove('ativa'));
+    document.querySelectorAll('.conteudo-livro').forEach(c => c.classList.remove('ativo'));
+    const idx = { tecnico: 0, diario: 1, tutorial: 2, help: 3 }[aba] ?? 0;
+    const btn = document.querySelectorAll('.aba-livro')[idx];
+    const cnt = document.getElementById(`aba-${aba}`);
+    if (btn) btn.classList.add('ativa');
+    if (cnt) cnt.classList.add('ativo');
+}
+function abrirLivroTecnico() { ativarNav('help'); trocarAbaLivro('tecnico'); document.getElementById('livro-tecnico').scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+
+function chaveDiarioLocal() { return `${CHAVE_BASE}_DIARIO_LOCAL`; }
+function carregarDiarioLocal() {
+    try { return JSON.parse(localStorage.getItem(chaveDiarioLocal()) || '[]'); } catch { return []; }
+}
+function salvarDiarioLocal(r) { localStorage.setItem(chaveDiarioLocal(), JSON.stringify(r.slice(-20))); }
+function renderizarDiarioLocal() {
+    const alvo = document.getElementById('diario-local'); if (!alvo) return;
+    alvo.innerHTML = '';
+    carregarDiarioLocal().slice().reverse().forEach(reg => {
+        const l = document.createElement('div'); l.className = 'linha-diario';
+        l.innerHTML = `<div class="data-diario">${escaparHTML(reg.data)}</div><div class="texto-diario"><b>${escaparHTML(reg.titulo)}:</b> ${escaparHTML(reg.texto)}</div>`;
+        alvo.appendChild(l);
+    });
+}
+function registrarEstadoNoDiario() {
+    const m = carregarMetricasHoje(); const af = carregarAfiliadoHoje();
+    const regs = carregarDiarioLocal();
+    regs.push({ data: new Date().toLocaleDateString('pt-BR'), titulo: 'Registro manual', texto: `Módulo: ${moduloAtual||'home'}; Requisições: ${m.requisicoes}; AfiliadoPro: ${af.cliques} cliques, ${af.vendas} vendas.` });
+    salvarDiarioLocal(regs); renderizarDiarioLocal(); trocarAbaLivro('diario');
+}
+
+function irParaInicio() { fecharChat(); }
+
+function chaveHistorico(id) { return `${CHAVE_BASE}_HISTORICO_${id}`; }
+function salvarHistorico() {
+    if (!moduloAtual) return;
+    localStorage.setItem(chaveHistorico(moduloAtual), JSON.stringify(historico.slice(-40)));
+    localStorage.setItem(`${CHAVE_BASE}_ULTIMO_MODULO`, moduloAtual);
+}
+function carregarHistorico(id) {
+    try { return JSON.parse(localStorage.getItem(chaveHistorico(id)) || '[]'); } catch { return []; }
+}
+
+function ativarNav(nome) {
+    document.querySelectorAll('.item-nav').forEach(i => i.classList.remove('ativo'));
+    const mapa = { inicio: 0, conselho: 1, artigos: 2, help: 3 };
+    const alvo = document.querySelectorAll('.item-nav')[mapa[nome] ?? 0];
+    if (alvo) alvo.classList.add('ativo');
+}
+
+function renderizarAtalhos(id) {
+    const barra = document.getElementById('atalhos-chat'); barra.innerHTML = '';
+    (PROMPTS_RAPIDOS[id] || []).forEach(t => {
+        const b = document.createElement('button'); b.className = 'chip-atalho'; b.type = 'button'; b.textContent = t;
+        b.onclick = () => { document.getElementById('campo-mensagem').value = t; enviarMensagem(); };
+        barra.appendChild(b);
+    });
+}
+
+function renderizarHistoricoSalvo(id) {
+    const salvo = carregarHistorico(id);
+    if (!salvo.length) return false;
+    historico = salvo;
+    salvo.forEach(msg => {
+        if (msg.role === 'user') adicionarBolha('usuario', escaparHTML(msg.content));
+        if (msg.role === 'assistant') adicionarBolha('assistente', formatarTexto(msg.content), INFO_MODULOS[id].emoji);
+    });
+    return true;
+}
+
+function abrirModulo(id) {
+    if (!INFO_MODULOS[id]) return;
+    moduloAtual = id; historico = [];
+    const info = INFO_MODULOS[id];
+    document.getElementById('chat-icone').textContent = info.emoji;
+    document.getElementById('chat-titulo').textContent = info.titulo;
+    document.getElementById('chat-sub').textContent = info.sub;
+    document.getElementById('tela-home').style.display = 'none';
+    document.getElementById('tela-chat').classList.add('visivel');
+    document.getElementById('chat-mensagens').innerHTML = '';
+    renderizarAtalhos(id);
+    ativarNav(id === 'conselho' ? 'conselho' : 'inicio');
+    history.replaceState(null, '', `#${id}`);
+    localStorage.setItem(`${CHAVE_BASE}_ULTIMO_MODULO`, id);
+    if (!renderizarHistoricoSalvo(id)) {
+        adicionarBolha('assistente', `Módulo <b>${info.titulo}</b> ativado. ${info.sub} — como posso ajudar você, Fundador Elias?`, info.emoji);
+    }
+    document.getElementById('campo-mensagem').focus();
+}
+
+function fecharChat() {
+    salvarHistorico();
+    document.getElementById('tela-chat').classList.remove('visivel');
+    document.getElementById('tela-home').style.display = 'block';
+    moduloAtual = null; historico = [];
+    ativarNav('inicio');
+    history.replaceState(null, '', location.pathname);
+}
+
+function adicionarBolha(papel, html, emoji) {
+    const c = document.getElementById('chat-mensagens');
+    const l = document.createElement('div'); l.className = `msg-linha ${papel}`;
+    if (papel === 'assistente') {
+        const em = document.createElement('span'); em.className = 'msg-emoji'; em.textContent = emoji || INFO_MODULOS[moduloAtual]?.emoji || '🤖';
+        l.appendChild(em);
+    }
+    const b = document.createElement('div'); b.className = `msg-bolha ${papel}`; b.innerHTML = html;
+    l.appendChild(b); c.appendChild(l); c.scrollTop = c.scrollHeight;
+}
+
+function mostrarDigitando() {
+    const c = document.getElementById('chat-mensagens');
+    const l = document.createElement('div'); l.className = 'msg-linha assistente'; l.id = 'linha-digitando';
+    const em = document.createElement('span'); em.className = 'msg-emoji'; em.textContent = INFO_MODULOS[moduloAtual]?.emoji || '🤖';
+    const ind = document.createElement('div'); ind.className = 'chat-digitando'; ind.innerHTML = '<div class="ponto"></div><div class="ponto"></div><div class="ponto"></div>';
+    l.appendChild(em); l.appendChild(ind); c.appendChild(l); c.scrollTop = c.scrollHeight;
+}
+function removerDigitando() { const el = document.getElementById('linha-digitando'); if (el) el.remove(); }
+function escaparHTML(t) { return String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#039;'); }
+function formatarTexto(t) { return escaparHTML(t).replace(/\*\*(.*?)\*\*/g, '<b>$1</b>').replace(/\*(.*?)\*/g, '<em>$1</em>'); }
+
+async function processarMensagem(texto, opcoes = {}) {
+    if (carregando || !texto) return;
+    carregando = true; document.getElementById('botao-enviar').disabled = true;
+    if (opcoes.registrarUsuario !== false) {
+        adicionarBolha('usuario', escaparHTML(texto));
+        historico.push({ role: 'user', content: texto });
+        salvarHistorico();
+    }
+    const tp = registrarEnvioCota();
+    mostrarDigitando();
+    try {
+        const dados = await ConnectionManager.send('chat', { module: moduloAtual, history: historico });
+        removerDigitando();
+        if (dados.ok) {
+            adicionarBolha('assistente', formatarTexto(dados.text));
+            historico.push({ role: 'assistant', content: dados.text });
+            salvarHistorico();
+            registrarRespostaCota(dados.text, dados, tp);
+            recuperacaoAutoEstado.tentativas = 0;
+            recuperacaoAutoEstado.emAndamento = false;
+        } else {
+            registrarFalhaCota();
+            const msg = dados.error || 'Erro na resposta.';
+            const err = registrarErroSistema(tipoErroPorMensagem(msg), msg);
+            adicionarBolha('assistente', mensagemErroHTML(err));
+            agendarRecuperacaoAutomatica(err, { texto, modulo: moduloAtual });
+        }
+    } catch (e) {
+        removerDigitando(); registrarFalhaCota();
+        const err = registrarErroSistema('rede', 'Falha na conexão com o núcleo.', e.message);
+        adicionarBolha('assistente', mensagemErroHTML(err));
+        agendarRecuperacaoAutomatica(err, { texto, modulo: moduloAtual });
+    } finally {
+        carregando = false;
+        document.getElementById('botao-enviar').disabled = false;
+        document.getElementById('campo-mensagem').focus();
+    }
+}
+
+async function enviarMensagem() {
+    if (carregando) return;
+    const c = document.getElementById('campo-mensagem'); const t = c.value.trim();
+    if (!t) return;
+    c.value = ''; c.style.height = 'auto';
+    recuperacaoAutoEstado.tentativas = 0;
+    recuperacaoAutoEstado.ultimoTexto = t;
+    recuperacaoAutoEstado.ultimoModulo = moduloAtual || '';
+    await processarMensagem(t, { registrarUsuario: true });
+}
+
+document.getElementById('campo-mensagem').addEventListener('keydown', e => {
+    if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); enviarMensagem(); }
+});
+document.getElementById('campo-mensagem').addEventListener('input', function() {
+    this.style.height = 'auto';
+    this.style.height = Math.min(this.scrollHeight, 100) + 'px';
+});
+
+function atualizarPainelAutomatico() {
+    const agora = new Date();
+    const hora = agora.getHours();
+    const saudacao = hora < 12 ? 'Bom dia,' : hora < 18 ? 'Boa tarde,' : 'Boa noite,';
+    document.getElementById('saudacao-auto').textContent = saudacao;
+    document.getElementById('relogio-sistema').textContent = agora.toLocaleString('pt-BR', {
+        weekday: 'long', day: '2-digit', month: 'long', year: 'numeric',
+        hour: '2-digit', minute: '2-digit', second: '2-digit'
+    });
+    const online = navigator.onLine;
+    document.getElementById('status-sistema').textContent = online ? 'SISTEMA OPERACIONAL ✅' : 'MODO OFFLINE ⚠';
+    document.getElementById('status-sistema').style.background = online ? '#102A10' : '#4a2d08';
+    document.getElementById('status-sistema').style.color = online ? '#48E048' : '#FFD480';
+    document.getElementById('indicador-online').textContent = online ? '☁️ NÚCLEO: ONLINE' : '☁️ NÚCLEO: AGUARDANDO CONEXÃO';
+}
+
+function filtrarModulos() {
+    const termo = document.getElementById('busca-modulos').value.trim().toLowerCase();
+    let visiveis = 0;
+    document.querySelectorAll('.cartao-nucleo').forEach(card => {
+        const texto = `${card.textContent} ${card.dataset.tags || ''}`.toLowerCase();
+        const mostrar = !termo || texto.includes(termo);
+        card.classList.toggle('oculto', !mostrar);
+        if (mostrar) visiveis++;
+    });
+    document.getElementById('sem-resultados').classList.toggle('visivel', visiveis === 0);
+    recomendarModuloAutomatico();
+}
+
+function abrirUltimoModulo() {
+    const ultimo = localStorage.getItem(`${CHAVE_BASE}_ULTIMO_MODULO`) || 'conselho';
+    abrirModulo(INFO_MODULOS[ultimo] ? ultimo : 'conselho');
+}
+
+function limparConversas() {
+    if (confirm('Limpar históricos salvos dos módulos neste navegador?')) {
+        Object.keys(INFO_MODULOS).forEach(id => localStorage.removeItem(chaveHistorico(id)));
+        historico = [];
+        if (moduloAtual) {
+            document.getElementById('chat-mensagens').innerHTML = '';
+            const info = INFO_MODULOS[moduloAtual];
+            adicionarBolha('assistente', `Histórico limpo. Módulo <b>${info.titulo}</b> pronto.`, info.emoji);
+        }
+    }
+}
+
+function focarArtigos() {
+    ativarNav('artigos');
+    document.querySelector('.secao-artigos').scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function iniciarTunelAutomatico() {
+    renderizarLogsTunel();
+    pingTunel();
+    setInterval(pingTunel, 45000);
+}
+
+function iniciarAutomacoes() {
+    atualizarPainelAutomatico();
+    iniciarTunelAutomatico();
+    atualizarMetricasCotas();
+    atualizarMetricasAfiliadoPro();
+    renderizarErros();
+    renderizarDiarioLocal();
+    atualizarPainelRecuperacao();
+    atualizarPainelAutomacaoGeral();
+    if (!carregarBackupsSistema().length) criarBackupAutomatico('inicial');
+    executarCicloAutomacao('inicial');
+    iniciarTimersAutomacaoGeral();
+    setInterval(atualizarPainelAutomatico, 1000);
+    window.addEventListener('online', () => {
+        atualizarPainelAutomatico();
+        tentarRestaurarSistema({ silencioso: true });
+    });
+    window.addEventListener('offline', () => {
+        atualizarPainelAutomatico();
+        const erro = registrarErroSistema('rede', 'Conexão perdida.');
+        agendarRecuperacaoAutomatica(erro, { texto: recuperacaoAutoEstado.ultimoTexto, modulo: recuperacaoAutoEstado.ultimoModulo });
+    });
+    document.getElementById('busca-modulos').addEventListener('input', filtrarModulos);
+    document.getElementById('busca-modulos').addEventListener('keydown', e => {
+        if (e.key === 'Enter') { e.preventDefault(); abrirModuloRecomendado(); }
+    });
+    document.getElementById('importar-backup').addEventListener('change', e => {
+        importarBackupSistema(e.target.files[0]); e.target.value = '';
+    });
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape' && moduloAtual) fecharChat();
+        if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+            e.preventDefault(); document.getElementById('busca-modulos').focus();
+        }
+    });
+    const moduloHash = location.hash.replace('#', '');
+    if (INFO_MODULOS[moduloHash]) abrirModulo(moduloHash);
+}
+
+iniciarAutomacoes();
+</script>
+</body>
+</html>

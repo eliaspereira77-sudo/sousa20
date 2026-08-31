@@ -1,0 +1,48 @@
+{
+  "projeto": "SOUSA 2.0",
+  "arquivo": "SOUSA_REGISTRO_MODULOS.json",
+  "versao": "1.0.0",
+  "descricao": "Registro central dos módulos, responsabilidades e arquivos relacionados do SOUSA 2.0.",
+
+  "regra": "Todo módulo deve possuir responsabilidade definida antes de alterações estruturais.",
+
+  "modulos": [
+    {
+      "id": "SOUSA_CORE",
+      "arquivo": "SOUSA_Core.js",
+      "responsabilidade": "Núcleo principal de comunicação, módulos e integração Gemini.",
+      "status": "ATIVO"
+    },
+    {
+      "id": "SOUSA_ADS_ACADEMICO",
+      "arquivo": "SOUSA_Core.js",
+      "responsabilidade": "Memória técnica, documentação, análise e evolução do sistema.",
+      "status": "ATIVO"
+    },
+    {
+      "id": "SOUSA_USB_MODULAR",
+      "arquivo": [
+        "SOUSA_USB_CORE.js",
+        "SOUSA_USB_LOG_ENGINE.js",
+        "SOUSA_USB_KNOWLEDGE_SYNC.js",
+        "SOUSA_USB_MEMORY_SYNC.js"
+      ],
+      "responsabilidade": "Recepção, registro, sincronização e evolução de componentes.",
+      "status": "ATIVO"
+    },
+    {
+      "id": "SOUSA_API_MANAGER",
+      "arquivo": "SOUSA_API_MANAGER_CONFIG.json",
+      "responsabilidade": "Gerenciamento inteligente de capacidades e recursos de IA.",
+      "status": "CONFIGURADO"
+    },
+    {
+      "id": "SOUSA_LOG_ENGINE",
+      "arquivo": "SOUSA_LOG_ENGINE.js",
+      "responsabilidade": "Registro técnico de eventos e atividades.",
+      "status": "ATIVO"
+    }
+  ],
+
+  "proximo_passo": "Criar motor operacional do API Manager seguindo fluxo LAB -> Teste -> Validação -> Produção"
+}

@@ -1,0 +1,12 @@
+﻿{
+    "categoria":  "MANUTENCAO",
+    "data":  "2026-08-28T13:34:33.2723042Z",
+    "destinatario":  "EQUIPE_MANUTENCAO",
+    "contrato":  "USB_MODULAR",
+    "versao":  "1.0.0",
+    "sincronizacao":  "FIO_CONDUTOR",
+    "capacidade":  "CAP_IME_DIAGNOSTICO",
+    "regra":  "DETECTAR_NAO_CORRIGIR_AUTOMATICAMENTE",
+    "status":  "ATIVO",
+    "nome":  "ÍMÃ DE DIAGNÓSTICO"
+}

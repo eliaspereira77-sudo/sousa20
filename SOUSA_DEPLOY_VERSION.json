@@ -1,0 +1,20 @@
+{
+  "sistema": "SOUSA 2.0",
+  "modulo": "USB_MODULAR",
+  "versao": "1.0.0",
+  "status": "VALIDADO",
+  "ambiente": "PRODUCAO",
+  "componentes": [
+    "VALIDATOR",
+    "DISCOVERY",
+    "ACTIVATION",
+    "CATALOG",
+    "HEALTH",
+    "MEMORY",
+    "KNOWLEDGE",
+    "AUTOMATION",
+    "EVOLUTION"
+  ],
+  "dataValidacao": "2026-07-31",
+  "responsavel": "Elias Pereira de Sousa"
+}

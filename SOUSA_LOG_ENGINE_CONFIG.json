@@ -1,0 +1,36 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_LOG_ENGINE",
+
+  "versao": "1.0.0",
+
+  "descricao": "Motor de registro cronologico das atividades, decisoes e evolucoes do SOUSA 2.0.",
+
+  "objetivo": "Registrar automaticamente tudo que for relevante para continuidade do projeto.",
+
+  "dados_registrados": [
+    "data",
+    "hora",
+    "minuto",
+    "segundo",
+    "modulo_responsavel",
+    "acao_executada",
+    "arquivo_relacionado",
+    "resultado",
+    "pendencias",
+    "decisao_fundador"
+  ],
+
+  "formatos_saida": [
+    "JSON",
+    "PDF",
+    "BRIEFING"
+  ],
+
+  "integracao": {
+    "memoria_tecnica": true,
+    "api_manager": true,
+    "modulos": true
+  }
+}

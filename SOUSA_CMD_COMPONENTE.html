@@ -1,0 +1,63 @@
+<div id="cmdMecanismo">
+
+<h3>Cadastro de Mecanismo Digital</h3>
+
+<input id="mecId"
+placeholder="ID do mecanismo">
+
+<input id="mecNome"
+placeholder="Nome">
+
+<input id="mecCategoria"
+placeholder="Categoria">
+
+<input id="mecVersao"
+placeholder="Versão">
+
+
+<button onclick="cadastrarMecanismo()">
+Cadastrar
+</button>
+
+
+<pre id="resultadoMecanismo"></pre>
+
+</div>
+
+
+<script>
+
+function cadastrarMecanismo(){
+
+const dados = {
+
+id:
+document.getElementById("mecId").value,
+
+nome:
+document.getElementById("mecNome").value,
+
+categoria:
+document.getElementById("mecCategoria").value,
+
+versao:
+document.getElementById("mecVersao").value
+
+};
+
+
+google.script.run
+.withSuccessHandler(function(res){
+
+document.getElementById(
+"resultadoMecanismo"
+).textContent =
+JSON.stringify(res,null,2);
+
+})
+.SOUSA_CMD_cadastrarMecanismo(dados);
+
+
+}
+
+</script>

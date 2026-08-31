@@ -1,0 +1,45 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "capacidade": "ESTRATEGIA_PUBLICACAO",
+
+  "versao": "1.0.0",
+
+  "descricao": "Analise estrategica para publicacao de livros, definicao de posicionamento, precificacao e divulgacao.",
+
+  "modulos_responsaveis": [
+    "SOUSA_PRODUTOR",
+    "SOUSA_ESTRATEGISTA",
+    "SOUSA_ADS_ACADEMICO"
+  ],
+
+  "funcoes": [
+    "Analisar publico alvo",
+    "Sugerir faixa de preco",
+    "Criar estrategia de lancamento",
+    "Preparar descricao comercial",
+    "Sugerir categorias e palavras chave",
+    "Criar plano de divulgacao",
+    "Gerar relatorios estrategicos"
+  ],
+
+  "entradas": [
+    "manuscrito",
+    "categoria_do_livro",
+    "publico_objetivo",
+    "dados_de_mercado"
+  ],
+
+  "saidas": [
+    "estrategia_publicacao",
+    "sugestao_preco",
+    "plano_divulgacao",
+    "briefing_comercial"
+  ],
+
+  "integracao_memoria": {
+    "registrar_decisoes": true,
+    "registrar_versoes": true,
+    "registrar_ponto_de_parada": true
+  }
+}

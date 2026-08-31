@@ -1,0 +1,39 @@
+{
+  "sistema": "SOUSA 2.0",
+  "tipo": "CONTRATO_MODULO",
+  "versao": "1.0.0",
+
+  "regras": {
+
+    "id": "obrigatorio",
+
+    "nome": "obrigatorio",
+
+    "categoria": "obrigatorio",
+
+    "contrato": "USB_MODULAR",
+
+    "versao_modulo": "obrigatorio",
+
+    "permissoes": "obrigatorio",
+
+    "origem": "obrigatorio",
+
+    "status_inicial": "AGUARDANDO_VALIDACAO"
+
+  },
+
+  "ciclo_vida": [
+
+    "IDENTIFICADO",
+
+    "AGUARDANDO_VALIDACAO",
+
+    "VALIDADO",
+
+    "ATIVO",
+
+    "BLOQUEADO"
+
+  ]
+}

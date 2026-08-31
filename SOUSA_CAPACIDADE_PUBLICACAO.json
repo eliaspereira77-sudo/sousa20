@@ -1,0 +1,59 @@
+﻿{
+  "capacidade": "PUBLICACAO_LIVRO",
+  "modulo_responsavel": [
+    "SOUSA_PRODUTOR",
+    "SOUSA_ADS_ACADEMICO"
+  ],
+
+  "descricao": "Transformacao de livros finalizados em produtos digitais e fisicos para publicacao.",
+
+  "formatos_saida": [
+    {
+      "formato": "EPUB",
+      "tipo": "EBOOK",
+      "descricao": "Livro digital para leitores eletronicos."
+    },
+    {
+      "formato": "PDF_DIGITAL",
+      "tipo": "EBOOK",
+      "descricao": "Arquivo digital para leitura e distribuicao."
+    },
+    {
+      "formato": "PDF_IMPRESSAO",
+      "tipo": "LIVRO_FISICO",
+      "descricao": "Arquivo preparado para impressao sob demanda."
+    },
+    {
+      "formato": "DOCX",
+      "tipo": "EDITAVEL",
+      "descricao": "Documento editavel para revisao e ajustes."
+    }
+  ],
+
+  "preparacao_impressao": {
+    "tamanho_pagina": true,
+    "controle_margens": true,
+    "sangria": true,
+    "numeracao_paginas": true,
+    "capa_completa": true,
+    "lombada": true
+  },
+
+  "metadados_publicacao": [
+    "titulo",
+    "subtitulo",
+    "autor",
+    "descricao",
+    "palavras_chave",
+    "categoria",
+    "versao",
+    "data_publicacao"
+  ],
+
+  "memoria_publicacao": {
+    "registrar_versao": true,
+    "registrar_data_hora": true,
+    "registrar_status": true,
+    "registrar_plataforma": true
+  }
+}

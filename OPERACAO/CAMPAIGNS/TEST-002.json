@@ -1,0 +1,9 @@
+{
+  "campaignId": "TEST-002",
+  "platform": "TEST",
+  "identity": "TEST",
+  "action": "TEST",
+  "status": "READY_FOR_EXECUTION",
+  "checkpoint": "GUARDIAN_APPROVED",
+  "updatedAt": "2026-08-11T14:51:37.178Z"
+}

@@ -1,0 +1,110 @@
+{
+  "sistema": "SOUSA 2.0",
+  "componente": "SOUSA IA",
+  "teste": "INTEGRACAO_CONSCIENCIA_360_3D",
+  "timestamp": "2026-08-26T14:17:25.156Z",
+  "modulos": [
+    {
+      "arquivo": "SOUSA_IA_NUCLEO_GAS.gs",
+      "existe": true,
+      "tamanho": 4356,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_CAPACIDADES_GAS.gs",
+      "existe": true,
+      "tamanho": 5946,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_MAPA_3D_GAS.gs",
+      "existe": true,
+      "tamanho": 2370,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_APRENDIZADO_CAPACIDADES_GAS.gs",
+      "existe": true,
+      "tamanho": 3166,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_PERFIL_CAPACIDADE_GAS.gs",
+      "existe": true,
+      "tamanho": 4306,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_GRAFO_RELACOES_360_GAS.gs",
+      "existe": true,
+      "tamanho": 4905,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_MEMORIA_CAPACIDADES_GAS.gs",
+      "existe": true,
+      "tamanho": 4680,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_CONSCIENCIA_GAS.gs",
+      "existe": true,
+      "tamanho": 3016,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_PAINEL_CONSCIENCIA_360_GAS.gs",
+      "existe": true,
+      "tamanho": 4143,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_ANALISADOR_SEMANTICO_GAS.gs",
+      "existe": true,
+      "tamanho": 7044,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_DETECTOR_MUDANCAS_GAS.gs",
+      "existe": true,
+      "tamanho": 5401,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_RECONCILIADOR_CONSCIENCIA_GAS.gs",
+      "existe": true,
+      "tamanho": 6791,
+      "estado": "ENCONTRADO"
+    },
+    {
+      "arquivo": "SOUSA_IA_ORQUESTRADOR_CONSCIENCIA_GAS.gs",
+      "existe": true,
+      "tamanho": 7626,
+      "estado": "ENCONTRADO"
+    }
+  ],
+  "estatisticas": {
+    "total": 13,
+    "encontrados": 13,
+    "ausentes": 0,
+    "vazios": 0
+  },
+  "seguranca": {
+    "somenteLeitura": true,
+    "apiExecutada": false,
+    "chaveAcessada": false,
+    "codigoAlterado": false
+  },
+  "cadeia": [
+    "NUCLEO",
+    "DESCOBERTA",
+    "PERFIL",
+    "MAPA_3D",
+    "GRAFO_360",
+    "MEMORIA",
+    "ANALISE_SEMANTICA",
+    "DETECTOR_MUDANCAS",
+    "RECONCILIACAO",
+    "ORQUESTRACAO"
+  ]
+}

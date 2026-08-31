@@ -1,0 +1,53 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "arquivo": "SOUSA_CATALOGO_APIS.json",
+
+  "versao": "1.0.0",
+
+  "descricao": "Cadastro dos recursos de IA disponiveis para o SOUSA_API_MANAGER.",
+
+  "regra_principal": "As chaves permanecem protegidas no cofre. O catalogo registra apenas capacidades e disponibilidade.",
+
+  "apis": [
+    {
+      "id": "GEMINI",
+      "provedor": "Google",
+      "status": "disponivel",
+      "capacidades": [
+        "TEXTO",
+        "ANALISE",
+        "CODIGO",
+        "DOCUMENTO_PDF"
+      ],
+      "prioridade": "alta"
+    },
+    {
+      "id": "VOYAGE_AI",
+      "provedor": "Voyage AI",
+      "status": "disponivel",
+      "capacidades": [
+        "EMBEDDING",
+        "BUSCA_MEMORIA"
+      ],
+      "prioridade": "alta"
+    },
+    {
+      "id": "MODELO_LOCAL",
+      "provedor": "Ollama/LLaMA",
+      "status": "disponivel",
+      "capacidades": [
+        "TEXTO",
+        "ANALISE",
+        "CODIGO"
+      ],
+      "prioridade": "media"
+    }
+  ],
+
+  "controle": {
+    "usar_cofre_chaves": true,
+    "avaliar_disponibilidade": true,
+    "registrar_escolha": true
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "nome": "SOUSA 2.0 — CONVERGÊNCIA 99,99%",
+  "tipo": "candidato_consolidado_final",
+  "fonte_oficial": "SOUSA_2.0_PRODUCAO",
+  "regra": "produção é a fonte de verdade; contribuições só entram quando não duplicam ou não degradam o núcleo",
+  "data_utc": "2026-08-20T15:31:41.955854+00:00",
+  "arquivos_copiados": 196,
+  "arquivos_excluidos": 78,
+  "reparos_encoding": [],
+  "cloud_sync": "PENDENTE — requer acesso/autorização ao projeto Google Apps Script/Google Cloud; nenhum segredo foi incorporado.",
+  "observacao": "Este pacote não substitui automaticamente a pasta local nem publica no Google Cloud.",
+  "exclusoes_adicionais": [
+    "SousaConfig.gs.js",
+    "SOUSA_APIS_CASCATA.gs.js",
+    "SOUSA_MARKETPLACE_CASCATA.gs.js",
+    "NucleoOrquestrador.js",
+    "NucleoOrquestrador_V2.js",
+    "SOUSA_AUTHORIZATION_GATE.js",
+    "SOUSA_COMMAND_LISTENER.js",
+    "SOUSA_COMMAND_ROUTER.js",
+    "SOUSA_MOBILE_GATEWAY.js",
+    "SOUSAILEON_ARM_V1.js",
+    "SOUSAILEON_ARM_V2.js",
+    "SOUSAILEON_BLOCK_MANAGER_V1.js",
+    "SOUSAILEON_COMMAND.js",
+    "MonitorSintaxe.js",
+    "SOUSA_STRUCTURE_SCANNER_v0.1.ps1"
+  ],
+  "seguranca": "Arquivo de configuração com credencial hard-coded excluído da candidatura; usar PropertiesService/Cofre.",
+  "sincronizador": "SOUSA_NUVEM_SINCRONIZADOR.gs.js",
+  "residuos_backup_adicionais_removidos": [
+    "SOUSA_APIS_CASCATA.gs.js.ANTES_CORRECAO_LIMPA"
+  ]
+}

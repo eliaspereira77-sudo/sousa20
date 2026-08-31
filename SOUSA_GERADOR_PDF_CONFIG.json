@@ -1,0 +1,44 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_GERADOR_PDF",
+
+  "versao": "1.0.0",
+
+  "descricao": "Gerador de documentos oficiais em formato PDF utilizando dados da memoria tecnica.",
+
+  "objetivo": "Transformar registros, briefings e conteúdos do SOUSA 2.0 em documentos permanentes.",
+
+  "entradas": [
+    "SOUSA_GERADOR_BRIEFING_CONFIG.json",
+    "SOUSA_MEMORIA_TECNICA.json",
+    "SOUSA_LOG_EVENTO_MODELO.json"
+  ],
+
+  "documentos": [
+    "RELATORIO_TECNICO",
+    "DIARIO_DE_BORDO",
+    "LIVRO_TECNICO",
+    "MANUAL_INSTITUCIONAL",
+    "EBOOK",
+    "PUBLICACAO_IMPRESSAO_SOB_DEMANDA"
+  ],
+
+  "metadados_obrigatorios": [
+    "data",
+    "hora",
+    "minuto",
+    "segundo",
+    "autor",
+    "versao",
+    "status"
+  ],
+
+  "formatacao": {
+    "pagina": "A4",
+    "titulo": true,
+    "indice": true,
+    "rodape": true,
+    "numeracao_paginas": true
+  }
+}

@@ -1,0 +1,1033 @@
+﻿===== SOUSA — DIAGNÓSTICO =====
+Data: 2026-08-31 08:37:10
+Raiz: C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO
+
+===== GIT =====
+## No commits yet on master
+A  .clasp.json
+A  .claspignore
+A  .claspignore.BACKUP_20260830_1128
+A  .claspignore.BACKUP_20260830_1130
+A  .claspignore.BACKUP_20260830_1140
+A  .gitignore
+A  .tmp.driveupload/44447
+A  .tmp.driveupload/44449
+A  .tmp.driveupload/44451
+A  .tmp.driveupload/44475
+A  .tmp.driveupload/44479
+A  .tmp.driveupload/44483
+A  .tmp.driveupload/44487
+A  .tmp.driveupload/44632
+A  .tmp.driveupload/44636
+A  .tmp.driveupload/44640
+A  .tmp.driveupload/44644
+A  .tmp.driveupload/44648
+A  .tmp.driveupload/44652
+A  .tmp.driveupload/44656
+A  .tmp.driveupload/44660
+A  .tmp.driveupload/44664
+A  .tmp.driveupload/44668
+A  .tmp.driveupload/57431
+A  .tmp.driveupload/57435
+A  .tmp.driveupload/57437
+AD .tmp.driveupload/57441
+AD .tmp.driveupload/57443
+AD .tmp.driveupload/57453
+AD .tmp.driveupload/57457
+AD .tmp.driveupload/57459
+AD .tmp.driveupload/57461
+AD .tmp.driveupload/57463
+AD .tmp.driveupload/57465
+AD .tmp.driveupload/57467
+AD .tmp.driveupload/57469
+AD .tmp.driveupload/57471
+AD .tmp.driveupload/57473
+AD .tmp.driveupload/57475
+AD .tmp.driveupload/57477
+AD .tmp.driveupload/57479
+AD .tmp.driveupload/57481
+AD .tmp.driveupload/57483
+AD .tmp.driveupload/57485
+A  07_LOG/FIO_CONDUTOR/diagnostico_interfaces_hibridas.json
+A  07_LOG/FIO_CONDUTOR/relatorio_engrenagem.json
+A  07_LOG/MonitorSintaxe/ALERTA_SOUSA.json
+A  07_LOG/MonitorSintaxe/Relatorio_Correcao.txt
+A  08_BLOCOS_SOUSA/BIBLIOTECA/CATALOGO_BLOCOS.json
+A  08_BLOCOS_SOUSA/COMANDOS_MOBILE/autorizacoes_pendentes.json
+A  08_BLOCOS_SOUSA/COMANDOS_MOBILE/fila_pendente.json
+A  08_BLOCOS_SOUSA/COMANDOS_MOBILE/resposta_comando.json
+A  API_MANAGER/SOUSA_IA.js
+A  BACKUP_GITHUB_CONFLITOS_20260825_120349/.gitignore
+A  BACKUP_GITHUB_CONFLITOS_20260825_120349/README.md
+A  CAMPAIGN_BRIDGE.js
+A  CAMPAIGN_CONTROLLER.js
+A  CAMPAIGN_GUARDIAN.js
+A  CAMPAIGN_PERSISTENCE.js
+A  CAMPAIGN_RUNTIME.js
+A  CAMPAIGN_STATE_MACHINE.js
+A  CENTRAL/SOUSA_CENTRAL.ps1
+A  COMANDO_SOUSAILEON.json
+A  CONFIG/SOUSA_MENU_CONFIG.json
+A  CONVERGENCIA_MANIFESTO.json
+A  CONVERGENCIA_RELATORIO.md
+A  DEPLOYMENTS_ANTES_LIMPEZA.txt
+A  INSTALAR_SOUSA_2.0.bat
+A  MAPA_CODIGOS_SOUSA20.csv
+A  MEMORIA/SOUSA_GERENCIADOR_MEMORIA.ps1
+A  MEMORIA/SOUSA_MEMORIA_AUTOMATICA.json
+A  MEMORIA/SOUSA_VISUALIZADOR_MEMORIA.ps1
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_COORDINATOR.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_COORDINATOR.js.pre-1.2.0
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_COORDINATOR.js.pre-cycle-fix-1.1.0
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_ENGINE.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_SANDBOX.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787511914822
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787512009114
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787516085749
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787516348616
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787516713106
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787516713350
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787517242207
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787517730422
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787517917534
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518463282
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518464663
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518956501
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518957403
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518957735
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518978286
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518978653
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787518978930
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787519161577
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787519162468
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787519918229
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787520192837
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787520194715
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-backup-1787520195066
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787512009119.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516085753.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516348619.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713109.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713353.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517242210.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517730425.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517917537.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518463289.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518464664.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518956504.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957405.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957738.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978290.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978655.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978932.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519161580.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519162470.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519918094.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520192704.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194087.js
+A  MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194927.js
+A  MEMORIA/core/capabilities/SOUSA_CAPABILITY_ADAPTER.BACKUP_2026-08-28.js
+A  MEMORIA/core/capabilities/SOUSA_CAPABILITY_ADAPTER.js
+A  MEMORIA/core/capabilities/SOUSA_CAPABILITY_HEALTH.js
+A  MEMORIA/core/capabilities/SOUSA_CAPABILITY_REGISTRY.js
+A  MEMORIA/core/capabilities/SOUSA_MAINTENANCE_AGENT.js
+A  MEMORIA/core/capabilities/SOUSA_MAINTENANCE_AGENT.js.pre-1.1.0
+A  MEMORIA/core/capabilities/SOUSA_MAINTENANCE_MISSION.js
+A  MEMORIA/core/capabilities/SOUSA_MAINTENANCE_ORCHESTRATOR.js
+A  MEMORIA/core/capabilities/SOUSA_MAINTENANCE_ORCHESTRATOR.js.pre-coordinator-1.1.0
+A  MEMORIA/core/capabilities/SOUSA_REPAIR_PIPELINE_STATUS.json
+A  MEMORIA/core/capabilities/SOUSA_RUNTIME_BRIDGE.js
+A  MEMORIA/core/capabilities/SOUSA_SELF_TEST_REPAIR.js
+A  MEMORIA/core/capabilities/SOUSA_TEAM_REGISTRY.js
+A  MEMORIA/core/capabilities/SOUSA_TEAM_REGISTRY.json
+A  MEMORIA/core/capabilities/SOUSA_TEAM_REGISTRY.json.pre-faxina-mecanico
+A  MEMORIA/core/capabilities/SOUSA_TEAM_TRIGGER.js
+A  MEMORIA/sandbox/repairs/SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z/SOUSA_CAPABILITY_ADAPTER.js
+A  Microsoft.PowerShell_profile.ps1
+A  MonitorSintaxe.js
+A  NucleoOrquestrador.js
+A  NucleoOrquestrador_V2.js
+A  OPERACAO/CAMPAIGNS/BRIDGE-001.json
+A  OPERACAO/CAMPAIGNS/RESUME-001.json
+A  OPERACAO/CAMPAIGNS/RUNTIME-001.json
+A  OPERACAO/CAMPAIGNS/TEST-001.json
+A  OPERACAO/CAMPAIGNS/TEST-002.json
+A  OPERACAO/SOUSA_REGISTRAR_EVENTO.ps1
+A  OPERACAO/SOUSA_REGISTRO_ATALHO.ps1
+A  OPERACAO/SOUSA_REGISTRO_AUTOMATICO.ps1
+A  PAINEL_SOUSA.json
+A  README.md
+A  RELATORIO_CAPACIDADES_AUTONOMAS_SOUSA_2.0.md.gdoc
+A  RELATORIO_UNIFICACAO.md
+A  SOUSA.bat
+A  SOUSAILEON_ARM_V1.js
+A  SOUSAILEON_ARM_V2.js
+A  SOUSAILEON_BLOCK_MANAGER_V1.js
+A  SOUSAILEON_COMMAND.js
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_ANTES_SENSOR_ATUALIZACAO.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_BOOT_AUTO.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_CONSELHO_SOUSA_IA.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_ENDPOINT_AUTO.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_PRE_GERENCIADOR_VERSAO.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_SENSOR_20260830_084949.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_SENSOR_FINAL_20260830_083551.html
+A  SOUSA_2.0_PAINEL_OPERACIONAL.html
+A  SOUSA_ADAPTADOR_FIO.js
+A  SOUSA_ADAPTADOR_HIBRIDO.js
+A  SOUSA_ADDON_DRIVE_GAS.gs
+A  SOUSA_APIS_CASCATA.js
+A  SOUSA_API_EXECUTOR_UNIVERSAL.js
+A  SOUSA_API_MANAGER.js
+A  SOUSA_API_MANAGER_CONFIG.json
+A  SOUSA_API_USB.js
+A  SOUSA_ARQUIVOS.txt
+A  SOUSA_AUDITORIA_USB.js
+A  SOUSA_AUTHORIZATION_GATE.js
+A  SOUSA_AUTONOMIA_CONTRATO.js
+A  SOUSA_AUTO_DIAGNOSTICO.js
+A  SOUSA_AUTO_EVOLUCAO.js
+A  SOUSA_AVATAR_CONTRATO.js
+A  SOUSA_Ativacao_Producao.js
+A  SOUSA_CACA_DEPENDENCIAS_ORFAS.js
+A  SOUSA_CANAIS_OPERACIONAIS.js
+A  SOUSA_CAPABILITY_DISCOVERY.js
+A  SOUSA_CAPACIDADES.js
+A  SOUSA_CAPACIDADE_ESTRATEGIA_PUBLICACAO.json
+A  SOUSA_CAPACIDADE_LIVRO.json
+A  SOUSA_CAPACIDADE_PUBLICACAO.json
+A  SOUSA_CATALOGO_APIS.json
+A  SOUSA_CATALOGO_CAPACIDADES.json
+A  SOUSA_CICLO_AUTONOMO.js
+A  SOUSA_CLASSIFICADOR_LACUNAS.js
+A  SOUSA_CMD_BRIDGE.js
+A  SOUSA_CMD_COMPONENTE.html
+A  SOUSA_CMD_INTERFACE.js
+A  SOUSA_CMD_Mecanismos.js
+A  SOUSA_COFRE_CHAVES.json
+A  SOUSA_COMMAND_EXTENSIONS.js
+A  SOUSA_COMMAND_LISTENER.js
+A  SOUSA_COMMAND_ROUTER.js
+A  SOUSA_CONFIG.js
+A  SOUSA_CONTINUITY_ENGINE.js
+A  SOUSA_CONTRATO_MODULO.json
+A  SOUSA_Core.BACKUP_ANTES_CONSELHO_SOUSA_IA.js
+A  SOUSA_Core.BACKUP_CONSELHO_SOUSA_IA.html.js
+A  SOUSA_Core.BACKUP_PRE_GERENCIADOR_VERSAO.js
+A  SOUSA_Core.BACKUP_PRE_INTEGRACAO_SOUSA_IA_20260830_101153.js
+A  SOUSA_Core.js
+A  SOUSA_DEPLOY_LOG.json
+A  SOUSA_DEPLOY_VERSION.json
+A  SOUSA_DEVICE_AUTH.js
+A  SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js
+A  SOUSA_DIAGNOSTICO_PORTAS.ps1
+A  SOUSA_DISCOVERY_REPORT.json
+A  SOUSA_DRIVE_PERSISTENCE.gs.js
+A  SOUSA_ENDPOINT_DISCOVERY.js
+A  SOUSA_FERRAMENTAS_COMPLETAS.js
+A  SOUSA_FIO_CONDUTOR.js
+A  SOUSA_FIO_CONDUTOR_REAL.js
+A  SOUSA_FLUXO_EDITORIAL_CONFIG.json
+A  SOUSA_GERADOR_BRIEFING_CONFIG.json
+A  SOUSA_GERADOR_PDF_CONFIG.json
+A  SOUSA_GERENCIADOR_VERSAO.js
+A  SOUSA_IA_ANALISADOR_SEMANTICO_GAS.gs
+A  SOUSA_IA_APRENDIZADO_CAPACIDADES_GAS.BACKUP_ANTES_CORRECAO.gs
+A  SOUSA_IA_APRENDIZADO_CAPACIDADES_GAS.gs
+A  SOUSA_IA_APRENDIZADO_ESTRATEGICO_RADAR_GAS.gs
+A  SOUSA_IA_AVATAR_TESTES.js
+A  SOUSA_IA_CAPACIDADES_GAS.gs
+A  SOUSA_IA_COMANDO_DIAGNOSTICO.js
+A  SOUSA_IA_COMPOSITOR.js
+A  SOUSA_IA_CONSCIENCIA_GAS.gs
+A  SOUSA_IA_DETECTOR_MUDANCAS_GAS.gs
+A  SOUSA_IA_DNA_MEMORIA_VOZ.js
+A  SOUSA_IA_FIO_CONDUTOR_COMPETENCIAS_GAS.gs
+A  SOUSA_IA_GRAFO_RELACOES_360_GAS.gs
+A  SOUSA_IA_IDENTIDADE.js
+A  SOUSA_IA_INDICE_CONSCIENCIA.js
+A  SOUSA_IA_INDICE_CONSCIENCIA.json
+A  SOUSA_IA_INTEGRACAO_FIO_CONDUTOR_GAS.gs
+A  SOUSA_IA_MAPA_3D_GAS.gs
+A  SOUSA_IA_MEMORIA_CAPACIDADES_GAS.gs
+A  SOUSA_IA_NUCLEO_GAS.gs
+A  SOUSA_IA_ORQUESTRADOR_CONSCIENCIA_GAS.gs
+A  SOUSA_IA_PAINEL_CONSCIENCIA_360_GAS.gs
+A  SOUSA_IA_PERFIL_CAPACIDADE_GAS.gs
+A  SOUSA_IA_PONTE_RADAR_360_GAS.gs
+A  SOUSA_IA_PROCESSAR_ACAO_GAS.gs
+A  SOUSA_IA_PROCESSAR_ACAO_GAS_v2_CORRIGIDA.gs
+A  SOUSA_IA_RECONCILIADOR_CONSCIENCIA_GAS.gs
+A  SOUSA_IA_REGISTRO_MESTRE_COMPETENCIAS_GAS.gs
+A  SOUSA_IA_RESULTADO_INTEGRACAO_CONSCIENCIA.json
+A  SOUSA_IA_TESTE_APRENDIZADO_CAPACIDADES_GAS.gs
+A  SOUSA_IA_TESTE_DESCoberta_CAPACIDADES.gs
+A  SOUSA_IA_TESTE_INTEGRACAO_CONSCIENCIA.js
+A  SOUSA_IA_TESTE_NUCLEO_GAS.gs
+A  SOUSA_IGNICAO_EQUIPE.js
+A  SOUSA_IME_CAPACIDADE.json
+A  "SOUSA_IME_DIAGNOSTICO (1).js"
+A  SOUSA_IME_DIAGNOSTICO.js
+A  SOUSA_INSPECIONAR_INTERFACES.js
+A  SOUSA_INTENCAO.js
+A  SOUSA_Interface.js
+A  SOUSA_LOG_ENGINE.js
+A  SOUSA_LOG_ENGINE_CONFIG.json
+A  SOUSA_LOG_EVENTO_API_MANAGER.json
+A  SOUSA_LOG_EVENTO_MODELO.json
+A  SOUSA_MANUTENCAO_OPERACIONAL.js
+A  SOUSA_MANUTENCAO_REFINO.js
+A  SOUSA_MANUTENCAO_RELATORIO.json
+A  SOUSA_MANUTENCAO_RELATORIO.md
+A  SOUSA_MAPA_CARREGAMENTO_REAL.js
+A  SOUSA_MAPA_CONSCIENCIA_IA.js
+A  SOUSA_MAPA_DEFINICOES_USB.js
+A  SOUSA_MAPA_FUNCIONAL.js
+A  SOUSA_MARKETPLACE_CASCATA.js
+A  SOUSA_MEDIA_INFERENCE_WORKER/.env.gdoc
+A  SOUSA_MEDIA_INFERENCE_WORKER/README.md.gdoc
+A  SOUSA_MEDIA_INFERENCE_WORKER/RUNBOOK.md.gdoc
+A  SOUSA_MEDIA_INFERENCE_WORKER/generate.py.gdoc
+A  SOUSA_MEDIA_INFERENCE_WORKER/requirements.txt.gdoc
+A  SOUSA_MEMORIA_EVENTOS.json
+A  SOUSA_MEMORIA_TECNICA.json
+A  SOUSA_MENU.ps1
+A  SOUSA_META_BUILDER.js
+A  SOUSA_MOBILE_GATEWAY.js
+A  SOUSA_Mecanismos.js
+A  SOUSA_NUVEM_SINCRONIZADOR.gs.js
+A  SOUSA_ORGANIZADOR.ps1
+A  SOUSA_ORQUESTRADOR.js
+A  SOUSA_Orquestrador_Recuperacao.js
+A  SOUSA_PLUG_AND_PLAY.BACKUP_2026-08-28.js
+A  SOUSA_PLUG_AND_PLAY.BACKUP_2026-08-28_03.js
+A  SOUSA_PLUG_AND_PLAY.js
+A  SOUSA_POLITICA.js
+A  SOUSA_PONTE_GLOBAL.js
+A  SOUSA_PROJETO_LIVRO_CONFIG.json
+A  SOUSA_PROTOCOLO_DAILEON.js
+A  SOUSA_RADAR_EXPANSAO_360.js
+A  SOUSA_REGISTRO_MODULOS.json
+A  "SOUSA_REGISTRY (1).js"
+A  SOUSA_REGISTRY.js
+A  SOUSA_RELATORIO_CHECKLIST_GERAL_20260829.md.gdoc
+A  SOUSA_RELATORIO_SINCRONIZACAO_GERAL_ABC_20260829.md.gdoc
+A  SOUSA_RUFLO_ADAPTER.js
+A  SOUSA_RUFLO_CARDAN.js
+A  SOUSA_SINCRONIZADOR_OFICIAL.py
+A  SOUSA_SOURCE_OF_TRUTH.json
+A  SOUSA_STRUCTURE_SCANNER_v0.1.ps1
+A  SOUSA_TESTE_FLUXO_CONTROLADO.js
+A  SOUSA_TESTE_PONTE_DEPENDENCIAS.js
+A  SOUSA_USB.js
+A  SOUSA_USB_ACTIVATION_MANAGER.js
+A  SOUSA_USB_ADAPTERS.js
+A  SOUSA_USB_API_GATEWAY.js
+A  SOUSA_USB_AUDITORIA_INTEGRACAO.js
+A  SOUSA_USB_AUTOMATION_BRIDGE.BACKUP_2026-08-28.js
+A  SOUSA_USB_AUTOMATION_BRIDGE.js
+A  SOUSA_USB_AUTO_MANAGER.js
+A  SOUSA_USB_AUTO_RECOVERY.js
+A  SOUSA_USB_AUTO_UPDATE.js
+A  SOUSA_USB_BOOT.js
+A  SOUSA_USB_CATALOG.js
+A  SOUSA_USB_CONTRATO.js
+A  SOUSA_USB_CORE.js
+A  SOUSA_USB_DISCOVERY.js
+A  SOUSA_USB_DISCOVERY_ENGINE.js
+A  SOUSA_USB_EVOLUTION_ENGINE.js
+A  SOUSA_USB_FILTER.js
+A  SOUSA_USB_HEALTH_CHECK.js
+A  SOUSA_USB_HEALTH_MONITOR.js
+A  SOUSA_USB_KNOWLEDGE_ENGINE.js
+A  SOUSA_USB_KNOWLEDGE_SYNC.js
+A  SOUSA_USB_LOG_ENGINE.js
+A  SOUSA_USB_MEMORIA.json
+A  SOUSA_USB_MEMORY_SYNC.js
+A  SOUSA_USB_MONITOR.js
+A  SOUSA_USB_ORCHESTRATOR.js
+A  SOUSA_USB_PERMISSION_MANAGER.js
+A  SOUSA_USB_PERSISTENCIA.js
+A  SOUSA_USB_PONTE_LOCAL.js
+A  SOUSA_USB_REGISTRY.BACKUP_2026-08-28.js
+A  SOUSA_USB_REGISTRY.js
+A  SOUSA_USB_SECURITY_GATE.js
+A  SOUSA_USB_SOUSA_IA.js
+A  SOUSA_USB_STATUS.js
+A  SOUSA_USB_STT.js
+A  SOUSA_USB_TESTES.js
+A  SOUSA_USB_TESTES_LIVE.js
+A  SOUSA_USB_TRANSPORTES.js
+A  SOUSA_USB_TTS_PIPER.js
+A  SOUSA_USB_UPDATE_MANAGER.js
+A  SOUSA_USB_VERSION_CONTROL.js
+A  SOUSA_VALIDAR_RUFLO.js
+A  SOUSA_VALIDATOR.js
+A  TESTE_API_MANAGER.js
+A  TESTE_CASCATA_UNIVERSAL.js
+A  TESTE_CORE_EXECUTOR.js
+A  TESTE_DEVICE_AUTH.gs.js
+A  TESTE_EXECUTOR_CEREBRAS.js
+A  TESTE_EXECUTOR_UNIVERSAL_GEMINI.js
+A  TESTE_GEMINI_REAL.js
+A  TESTE_SOUSA_LOG_ENGINE.js
+A  TESTE_SOUSA_USB_CORE.js
+A  TESTE_USB_ATIVACAO.js
+A  TESTE_USB_AUTO.js
+A  TESTE_USB_CATALOG.js
+A  TESTE_USB_FILTER.js
+A  TESTE_USB_FILTER_CENARIOS.js
+A  TESTE_USB_KNOWLEDGE.js
+A  TESTE_USB_PIPELINE_COMPLETO.js
+A  TOOLS_SOUSA/SCANNER/SOUSA_STRUCTURE_SCANNER_v0.1.ps1
+A  UNIFICACAO_CHECKLIST.json
+A  VALIDACAO_SINTAXE.json
+A  VALIDAR_SENSOR_ATUALIZACAO.ps1
+A  "appsscript (1).json"
+A  appsscript.json
+A  docs/ARQUITETURA_SOUSA_IA_2.0.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/AUDITORIA_100_USB_PNP.json
+A  docs/CONTRIBUICOES_CONSOLIDADAS/AUDITORIA_100_USB_PNP.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/DIRECAO_AVATAR_VOZ_STT_TTS_TELEGRAM.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/ENCAIXE_SOUZA_IA.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/RELATORIO_CHECKLIST_AS_3.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/RELATORIO_EXECUTOR_UNIVERSAL_APIS_FINAL.md
+A  docs/CONTRIBUICOES_CONSOLIDADAS/RELATORIO_TESTES_USB_UNIVERSAL.json
+A  docs/CONTRIBUICOES_CONSOLIDADAS/SOUSA_IA_IDENTIDADE.md
+A  docs/GUIA_INCORPORACAO_E_SINCRONIZACAO.md
+A  docs/MANUAL_FERRAMENTAS_E_PLUGINS.md
+A  docs/RELATORIO_ENGENHARIA_MISSAO_CRITICA_NASA.md
+A  docs/RELATORIO_TESTES_E_HOMOLOGACAO.md
+A  iniciar_servicos.ps1
+A  inventario_git.txt
+A  mapear_arxivisual.js
+A  node_modules/.package-lock.json
+A  npm-arvore.json
+A  package-lock.json
+A  package.json
+A  sousa20
+A  sousa20-antigo/README.md
+A  sousa20-antigo/app.py
+A  sousa20-antigo/requirements.txt
+A  sousa_cli.py
+A  sousa_meta_installer.sh
+?? .tmp.driveupload/57497
+?? .tmp.driveupload/57501
+?? .tmp.driveupload/57505
+?? .tmp.driveupload/57509
+?? .tmp.driveupload/57513
+?? .tmp.driveupload/57517
+?? .tmp.driveupload/57521
+?? .tmp.driveupload/57525
+?? .tmp.driveupload/57529
+?? .tmp.driveupload/57533
+?? .tmp.driveupload/57537
+?? .tmp.driveupload/57539
+?? .tmp.driveupload/57541
+?? .tmp.driveupload/57543
+?? .tmp.driveupload/57547
+?? .tmp.driveupload/57551
+?? .tmp.driveupload/57555
+?? .tmp.driveupload/57559
+?? .tmp.driveupload/57563
+?? .tmp.driveupload/57565
+?? .tmp.driveupload/57569
+?? .tmp.driveupload/57573
+?? .tmp.driveupload/57577
+?? .tmp.driveupload/57581
+?? .tmp.driveupload/57585
+?? .tmp.driveupload/57589
+?? .tmp.driveupload/57593
+?? .tmp.driveupload/57597
+?? .tmp.driveupload/57601
+?? .tmp.driveupload/57605
+?? .tmp.driveupload/57639
+?? .tmp.driveupload/57641
+?? .tmp.driveupload/57645
+?? .tmp.driveupload/57647
+?? .tmp.driveupload/57649
+?? .tmp.driveupload/57653
+?? .tmp.driveupload/57657
+?? .tmp.driveupload/57661
+?? .tmp.driveupload/57665
+?? .tmp.driveupload/57669
+?? .tmp.driveupload/57673
+?? .tmp.driveupload/57677
+?? .tmp.driveupload/57681
+?? .tmp.driveupload/57685
+?? .tmp.driveupload/57687
+?? .tmp.driveupload/57691
+?? .tmp.driveupload/57693
+?? .tmp.driveupload/57697
+?? .tmp.driveupload/57701
+?? .tmp.driveupload/57703
+?? .tmp.driveupload/57707
+?? .tmp.driveupload/57711
+?? .tmp.driveupload/57715
+?? .tmp.driveupload/57719
+?? .tmp.driveupload/57721
+?? .tmp.driveupload/57725
+?? .tmp.driveupload/57729
+?? .tmp.driveupload/57733
+?? .tmp.driveupload/57737
+?? .tmp.driveupload/57741
+?? .tmp.driveupload/57745
+?? .tmp.driveupload/57749
+?? .tmp.driveupload/57751
+?? .tmp.driveupload/57753
+?? .tmp.driveupload/57757
+?? .tmp.driveupload/57761
+?? .tmp.driveupload/57765
+?? .tmp.driveupload/57769
+?? .tmp.driveupload/57771
+?? .tmp.driveupload/57775
+?? .tmp.driveupload/57779
+?? .tmp.driveupload/57783
+?? .tmp.driveupload/57785
+?? .tmp.driveupload/57789
+?? .tmp.driveupload/57791
+?? .tmp.driveupload/57793
+?? .tmp.driveupload/57795
+?? .tmp.driveupload/57799
+?? .tmp.driveupload/57803
+?? .tmp.driveupload/57807
+?? .tmp.driveupload/57811
+?? .tmp.driveupload/57815
+?? .tmp.driveupload/57817
+?? .tmp.driveupload/57821
+?? .tmp.driveupload/57825
+?? .tmp.driveupload/57827
+?? .tmp.driveupload/57829
+?? .tmp.driveupload/57833
+?? .tmp.driveupload/57837
+?? .tmp.driveupload/57839
+?? .tmp.driveupload/57843
+?? .tmp.driveupload/57847
+?? .tmp.driveupload/57851
+?? .tmp.driveupload/57855
+?? .tmp.driveupload/57859
+?? .tmp.driveupload/57863
+?? .tmp.driveupload/57865
+?? .tmp.driveupload/57867
+?? .tmp.driveupload/57869
+?? .tmp.driveupload/57873
+?? .tmp.driveupload/57877
+?? .tmp.driveupload/57881
+?? .tmp.driveupload/57885
+?? .tmp.driveupload/57889
+?? .tmp.driveupload/57891
+?? .tmp.driveupload/57895
+?? .tmp.driveupload/57899
+?? .tmp.driveupload/57901
+?? .tmp.driveupload/57903
+?? .tmp.driveupload/57905
+?? .tmp.driveupload/57909
+?? .tmp.driveupload/57911
+?? .tmp.driveupload/57915
+?? .tmp.driveupload/57919
+?? .tmp.driveupload/57923
+?? .tmp.driveupload/57925
+?? .tmp.driveupload/57929
+?? .tmp.driveupload/57933
+?? .tmp.driveupload/57935
+?? .tmp.driveupload/57939
+?? .tmp.driveupload/57943
+?? .tmp.driveupload/57947
+?? .tmp.driveupload/57951
+?? .tmp.driveupload/57955
+?? .tmp.driveupload/57957
+?? .tmp.driveupload/57959
+?? .tmp.driveupload/57963
+?? .tmp.driveupload/57967
+?? .tmp.driveupload/57971
+?? .tmp.driveupload/57975
+?? .tmp.driveupload/57979
+?? .tmp.driveupload/57981
+?? .tmp.driveupload/57985
+?? .tmp.driveupload/57987
+?? .tmp.driveupload/57991
+?? .tmp.driveupload/57995
+?? .tmp.driveupload/57999
+?? .tmp.driveupload/58003
+?? .tmp.driveupload/58005
+?? .tmp.driveupload/58007
+?? .tmp.driveupload/58011
+?? .tmp.driveupload/58013
+?? .tmp.driveupload/58017
+?? .tmp.driveupload/58021
+?? .tmp.driveupload/58023
+?? .tmp.driveupload/58027
+?? .tmp.driveupload/58031
+?? .tmp.driveupload/58035
+?? .tmp.driveupload/58037
+?? .tmp.driveupload/58041
+?? .tmp.driveupload/58043
+?? .tmp.driveupload/58045
+?? .tmp.driveupload/58047
+?? .tmp.driveupload/58051
+?? .tmp.driveupload/58055
+?? .tmp.driveupload/58059
+?? .tmp.driveupload/58061
+?? .tmp.driveupload/58063
+?? .tmp.driveupload/58065
+?? .tmp.driveupload/58067
+?? .tmp.driveupload/58071
+?? .tmp.driveupload/58075
+?? .tmp.driveupload/58079
+?? .tmp.driveupload/58081
+?? .tmp.driveupload/58083
+?? .tmp.driveupload/58085
+?? .tmp.driveupload/58089
+?? .tmp.driveupload/58091
+?? .tmp.driveupload/58095
+?? .tmp.driveupload/58099
+?? .tmp.driveupload/58103
+?? .tmp.driveupload/58107
+?? .tmp.driveupload/58109
+?? .tmp.driveupload/58113
+?? .tmp.driveupload/58115
+?? .tmp.driveupload/58119
+?? .tmp.driveupload/58123
+?? .tmp.driveupload/58125
+?? .tmp.driveupload/58129
+?? .tmp.driveupload/58133
+?? .tmp.driveupload/58135
+?? .tmp.driveupload/58137
+?? .tmp.driveupload/58139
+?? .tmp.driveupload/58141
+?? .tmp.driveupload/58143
+?? .tmp.driveupload/58147
+?? .tmp.driveupload/58149
+?? .tmp.driveupload/58153
+?? .tmp.driveupload/58157
+?? .tmp.driveupload/58161
+?? .tmp.driveupload/58165
+?? .tmp.driveupload/58169
+?? .tmp.driveupload/58173
+?? .tmp.driveupload/58177
+?? .tmp.driveupload/58179
+?? .tmp.driveupload/58181
+?? .tmp.driveupload/58183
+?? .tmp.driveupload/58185
+?? .tmp.driveupload/58187
+?? .tmp.driveupload/58191
+?? .tmp.driveupload/58195
+?? .tmp.driveupload/58199
+?? .tmp.driveupload/58203
+?? .tmp.driveupload/58205
+?? .tmp.driveupload/58207
+?? .tmp.driveupload/58211
+?? .tmp.driveupload/58215
+?? .tmp.driveupload/58217
+?? .tmp.driveupload/58219
+?? .tmp.driveupload/58223
+?? .tmp.driveupload/58225
+?? .tmp.driveupload/58227
+?? .tmp.driveupload/58231
+?? .tmp.driveupload/58233
+?? .tmp.driveupload/58237
+?? .tmp.driveupload/58241
+?? .tmp.driveupload/58243
+?? .tmp.driveupload/58245
+?? .tmp.driveupload/58249
+?? .tmp.driveupload/58253
+?? .tmp.driveupload/58255
+?? .tmp.driveupload/58257
+?? .tmp.driveupload/58261
+?? .tmp.driveupload/58263
+?? .tmp.driveupload/58267
+?? .tmp.driveupload/58271
+?? .tmp.driveupload/58275
+?? .tmp.driveupload/58279
+?? .tmp.driveupload/58281
+?? .tmp.driveupload/58285
+?? .tmp.driveupload/58287
+?? .tmp.driveupload/58289
+?? .tmp.driveupload/58291
+?? .tmp.driveupload/58295
+?? .tmp.driveupload/58297
+?? .tmp.driveupload/58301
+?? .tmp.driveupload/58303
+?? .tmp.driveupload/58305
+?? .tmp.driveupload/58309
+?? .tmp.driveupload/58311
+?? .tmp.driveupload/58313
+?? .tmp.driveupload/58315
+?? .tmp.driveupload/58319
+?? .tmp.driveupload/58321
+?? .tmp.driveupload/58323
+?? .tmp.driveupload/58327
+?? .tmp.driveupload/58329
+?? .tmp.driveupload/58333
+?? .tmp.driveupload/58335
+?? .tmp.driveupload/58339
+?? .tmp.driveupload/58341
+?? .tmp.driveupload/58343
+?? .tmp.driveupload/58345
+?? .tmp.driveupload/58347
+?? .tmp.driveupload/58351
+?? .tmp.driveupload/58355
+?? .tmp.driveupload/58359
+?? .tmp.driveupload/58361
+?? .tmp.driveupload/58363
+?? .tmp.driveupload/58365
+?? .tmp.driveupload/58367
+?? .tmp.driveupload/58369
+?? .tmp.driveupload/58373
+?? .tmp.driveupload/58375
+?? .tmp.driveupload/58379
+?? .tmp.driveupload/58381
+?? .tmp.driveupload/58385
+?? .tmp.driveupload/58387
+?? .tmp.driveupload/58389
+?? .tmp.driveupload/58391
+?? .tmp.driveupload/58393
+?? .tmp.driveupload/58395
+?? .tmp.driveupload/58397
+?? .tmp.driveupload/58399
+?? .tmp.driveupload/58401
+?? .tmp.driveupload/58403
+?? .tmp.driveupload/58405
+?? .tmp.driveupload/58407
+?? .tmp.driveupload/58411
+?? .tmp.driveupload/58413
+?? .tmp.driveupload/58415
+?? .tmp.driveupload/58419
+?? .tmp.driveupload/58423
+?? .tmp.driveupload/58427
+?? .tmp.driveupload/58429
+?? .tmp.driveupload/58431
+?? .tmp.driveupload/58433
+?? .tmp.driveupload/58437
+?? .tmp.driveupload/58441
+?? .tmp.driveupload/58443
+?? .tmp.driveupload/58445
+?? .tmp.driveupload/58449
+?? .tmp.driveupload/58453
+?? .tmp.driveupload/58455
+?? .tmp.driveupload/58459
+?? .tmp.driveupload/58461
+?? .tmp.driveupload/58465
+?? .tmp.driveupload/58469
+?? .tmp.driveupload/58473
+?? .tmp.driveupload/58477
+?? .tmp.driveupload/58479
+?? .tmp.driveupload/58483
+?? .tmp.driveupload/58485
+?? .tmp.driveupload/58487
+?? .tmp.driveupload/58491
+?? .tmp.driveupload/58493
+?? .tmp.driveupload/58495
+?? .tmp.driveupload/58497
+?? .tmp.driveupload/58499
+?? .tmp.driveupload/58503
+?? .tmp.driveupload/58505
+?? .tmp.driveupload/58507
+?? .tmp.driveupload/58511
+?? .tmp.driveupload/58513
+?? .tmp.driveupload/58515
+?? .tmp.driveupload/58517
+?? .tmp.driveupload/58519
+?? .tmp.driveupload/58521
+?? .tmp.driveupload/58523
+?? .tmp.driveupload/58527
+?? .tmp.driveupload/58529
+?? .tmp.driveupload/58531
+?? .tmp.driveupload/58533
+?? .tmp.driveupload/58537
+?? .tmp.driveupload/58539
+?? .tmp.driveupload/58541
+?? .tmp.driveupload/58545
+?? .tmp.driveupload/58549
+?? .tmp.driveupload/58551
+?? .tmp.driveupload/58553
+?? .tmp.driveupload/58555
+?? .tmp.driveupload/58559
+?? .tmp.driveupload/58561
+?? .tmp.driveupload/58563
+?? .tmp.driveupload/58565
+?? .tmp.driveupload/58567
+?? .tmp.driveupload/58569
+?? .tmp.driveupload/58571
+?? .tmp.driveupload/58575
+?? .tmp.driveupload/58577
+?? .tmp.driveupload/58579
+?? .tmp.driveupload/58583
+?? .tmp.driveupload/58585
+?? .tmp.driveupload/58587
+?? .tmp.driveupload/58589
+?? .tmp.driveupload/58591
+?? .tmp.driveupload/58593
+?? .tmp.driveupload/58595
+?? .tmp.driveupload/58597
+?? .tmp.driveupload/58599
+?? .tmp.driveupload/58601
+?? .tmp.driveupload/58605
+?? .tmp.driveupload/58607
+?? SOUSA_DIAGNOSTICO_RESUMIDO.txt
+
+===== ÚLTIMO COMMIT =====
+fatal: your current branch 'master' does not have any commits yet
+
+===== ARQUIVOS =====
+Total de arquivos: 6008
+Total em bytes: 211830491
+
+===== ESTRUTURA PRINCIPAL =====
+.venv
+07_LOG
+08_BLOCOS_SOUSA
+API_MANAGER
+BACKUP_GITHUB_CONFLITOS_20260825_120349
+CENTRAL
+CONFIG
+docs
+MEMORIA
+node_modules
+OPERACAO
+SOUSA_MEDIA_INFERENCE_WORKER
+sousa20
+sousa20-antigo
+src
+TOOLS_SOUSA
+
+===== ARQUIVOS IMPORTANTES =====
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\.venv\Lib\site-packages\flask\sansio\README.md
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\.venv\Lib\site-packages\pip\_vendor\README.rst
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\API_MANAGER\SOUSA_IA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\appsscript.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\BACKUP_GITHUB_CONFLITOS_20260825_120349\README.md
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\CONFIG\SOUSA_MENU_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_COORDINATOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_SANDBOX.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787512009119.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516085753.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516348619.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713109.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713353.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517242210.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517730425.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517917537.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518463289.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518464664.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518956504.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957405.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957738.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978290.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978655.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978932.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519161580.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519162470.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519918094.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520192704.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194087.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194927.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_CAPABILITY_ADAPTER.BACKUP_2026-08-28.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_CAPABILITY_ADAPTER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_CAPABILITY_HEALTH.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_CAPABILITY_REGISTRY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_MAINTENANCE_AGENT.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_MAINTENANCE_MISSION.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_MAINTENANCE_ORCHESTRATOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_REPAIR_PIPELINE_STATUS.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_RUNTIME_BRIDGE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_SELF_TEST_REPAIR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_TEAM_REGISTRY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_TEAM_REGISTRY.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\core\capabilities\SOUSA_TEAM_TRIGGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\sandbox\repairs\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\SOUSA_CAPABILITY_ADAPTER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\MEMORIA\SOUSA_MEMORIA_AUTOMATICA.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\package.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\README.md
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_ANTES_SENSOR_ATUALIZACAO.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_BOOT_AUTO.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_CONSELHO_SOUSA_IA.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_ENDPOINT_AUTO.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_PRE_GERENCIADOR_VERSAO.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_SENSOR_20260830_084949.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.BACKUP_SENSOR_FINAL_20260830_083551.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_2.0_PAINEL_OPERACIONAL.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_ADAPTADOR_FIO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_ADAPTADOR_HIBRIDO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_ADDON_DRIVE_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_API_EXECUTOR_UNIVERSAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_API_MANAGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_API_MANAGER_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_API_USB.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_APIS_CASCATA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Ativacao_Producao.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AUDITORIA_USB.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AUTHORIZATION_GATE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AUTO_DIAGNOSTICO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AUTO_EVOLUCAO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AUTONOMIA_CONTRATO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_AVATAR_CONTRATO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CACA_DEPENDENCIAS_ORFAS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CANAIS_OPERACIONAIS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CAPABILITY_DISCOVERY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CAPACIDADE_ESTRATEGIA_PUBLICACAO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CAPACIDADE_LIVRO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CAPACIDADE_PUBLICACAO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CAPACIDADES.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CATALOGO_APIS.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CATALOGO_CAPACIDADES.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CICLO_AUTONOMO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CLASSIFICADOR_LACUNAS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CMD_BRIDGE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CMD_COMPONENTE.html
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CMD_INTERFACE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CMD_Mecanismos.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_COFRE_CHAVES.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_COMMAND_EXTENSIONS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_COMMAND_LISTENER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_COMMAND_ROUTER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CONFIG.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CONTINUITY_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_CONTRATO_MODULO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Core.BACKUP_ANTES_CONSELHO_SOUSA_IA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Core.BACKUP_CONSELHO_SOUSA_IA.html.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Core.BACKUP_PRE_GERENCIADOR_VERSAO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Core.BACKUP_PRE_INTEGRACAO_SOUSA_IA_20260830_101153.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Core.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DEPLOY_LOG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DEPLOY_VERSION.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DEVICE_AUTH.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DISCOVERY_REPORT.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_DRIVE_PERSISTENCE.gs.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_ENDPOINT_DISCOVERY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_FERRAMENTAS_COMPLETAS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_FIO_CONDUTOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_FIO_CONDUTOR_REAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_FLUXO_EDITORIAL_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_GERADOR_BRIEFING_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_GERADOR_PDF_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_GERENCIADOR_VERSAO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_ANALISADOR_SEMANTICO_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_APRENDIZADO_CAPACIDADES_GAS.BACKUP_ANTES_CORRECAO.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_APRENDIZADO_CAPACIDADES_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_APRENDIZADO_ESTRATEGICO_RADAR_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_AVATAR_TESTES.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_CAPACIDADES_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_COMANDO_DIAGNOSTICO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_COMPOSITOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_CONSCIENCIA_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_DETECTOR_MUDANCAS_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_DNA_MEMORIA_VOZ.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_FIO_CONDUTOR_COMPETENCIAS_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_GRAFO_RELACOES_360_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_IDENTIDADE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_INDICE_CONSCIENCIA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_INDICE_CONSCIENCIA.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_INTEGRACAO_FIO_CONDUTOR_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_MAPA_3D_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_MEMORIA_CAPACIDADES_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_NUCLEO_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_ORQUESTRADOR_CONSCIENCIA_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_PAINEL_CONSCIENCIA_360_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_PERFIL_CAPACIDADE_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_PONTE_RADAR_360_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_PROCESSAR_ACAO_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_PROCESSAR_ACAO_GAS_v2_CORRIGIDA.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_RECONCILIADOR_CONSCIENCIA_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_REGISTRO_MESTRE_COMPETENCIAS_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_RESULTADO_INTEGRACAO_CONSCIENCIA.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_TESTE_APRENDIZADO_CAPACIDADES_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_TESTE_DESCoberta_CAPACIDADES.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_TESTE_INTEGRACAO_CONSCIENCIA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IA_TESTE_NUCLEO_GAS.gs
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IGNICAO_EQUIPE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IME_CAPACIDADE.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IME_DIAGNOSTICO (1).js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_IME_DIAGNOSTICO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_INSPECIONAR_INTERFACES.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_INTENCAO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Interface.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_LOG_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_LOG_ENGINE_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_LOG_EVENTO_API_MANAGER.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_LOG_EVENTO_MODELO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MANUTENCAO_OPERACIONAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MANUTENCAO_REFINO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MANUTENCAO_RELATORIO.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MAPA_CARREGAMENTO_REAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MAPA_CONSCIENCIA_IA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MAPA_DEFINICOES_USB.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MAPA_FUNCIONAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MARKETPLACE_CASCATA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Mecanismos.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MEDIA_INFERENCE_WORKER\README.md.gdoc
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MEMORIA_EVENTOS.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MEMORIA_TECNICA.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_META_BUILDER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_MOBILE_GATEWAY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_NUVEM_SINCRONIZADOR.gs.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_ORQUESTRADOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_Orquestrador_Recuperacao.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PLUG_AND_PLAY.BACKUP_2026-08-28.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PLUG_AND_PLAY.BACKUP_2026-08-28_03.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PLUG_AND_PLAY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_POLITICA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PONTE_GLOBAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PROJETO_LIVRO_CONFIG.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_PROTOCOLO_DAILEON.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_RADAR_EXPANSAO_360.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_REGISTRO_MODULOS.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_REGISTRY (1).js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_REGISTRY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_RUFLO_ADAPTER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_RUFLO_CARDAN.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_SINCRONIZADOR_OFICIAL.py
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_SOURCE_OF_TRUTH.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_TESTE_FLUXO_CONTROLADO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_TESTE_PONTE_DEPENDENCIAS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_ACTIVATION_MANAGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_ADAPTERS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_API_GATEWAY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUDITORIA_INTEGRACAO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUTO_MANAGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUTO_RECOVERY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUTO_UPDATE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUTOMATION_BRIDGE.BACKUP_2026-08-28.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_AUTOMATION_BRIDGE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_BOOT.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_CATALOG.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_CONTRATO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_CORE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_DISCOVERY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_DISCOVERY_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_EVOLUTION_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_FILTER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_HEALTH_CHECK.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_HEALTH_MONITOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_KNOWLEDGE_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_KNOWLEDGE_SYNC.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_LOG_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_MEMORIA.json
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_MEMORY_SYNC.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_MONITOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_ORCHESTRATOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_PERMISSION_MANAGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_PERSISTENCIA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_PONTE_LOCAL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_REGISTRY.BACKUP_2026-08-28.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_REGISTRY.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_SECURITY_GATE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_SOUSA_IA.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_STATUS.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_STT.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_TESTES.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_TESTES_LIVE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_TRANSPORTES.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_TTS_PIPER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_UPDATE_MANAGER.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_USB_VERSION_CONTROL.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_VALIDAR_RUFLO.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\SOUSA_VALIDATOR.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\sousa20\README.md
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\sousa20-antigo\README.md
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\TESTE_SOUSA_LOG_ENGINE.js
+C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO\TESTE_SOUSA_USB_CORE.js

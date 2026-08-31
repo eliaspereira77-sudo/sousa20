@@ -1,0 +1,125 @@
+{
+  "sistema": "SOUSA 2.0",
+  "modulo": "SOUSA_MANUTENCAO_OPERACIONAL",
+  "versao": "1.1.0",
+  "inicio": "2026-08-30T12:32:54.319Z",
+  "modo": "DIAGNOSTICO_ASSISTIDO",
+  "regra": "DETECTAR_EVIDENCIAR_NAO_CORRIGIR_PRODUCAO",
+  "resumo": {
+    "PASS": 14,
+    "WARN": 0,
+    "FAIL": 0
+  },
+  "verificacoes": [
+    {
+      "status": "PASS",
+      "etapa": "ARQUIVO",
+      "mensagem": "SOUSA_IME_DIAGNOSTICO.js: encontrado",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.325Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "ARQUIVO",
+      "mensagem": "SOUSA_REGISTRY.js: encontrado",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.327Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "ARQUIVO",
+      "mensagem": "SOUSA_FIO_CONDUTOR.js: encontrado",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.327Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "ARQUIVO",
+      "mensagem": "SOUSA_FIO_CONDUTOR_REAL.js: encontrado",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.327Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "ARQUIVO",
+      "mensagem": "SOUSA_CAPABILITY_DISCOVERY.js: encontrado",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.328Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "SINTAXE",
+      "mensagem": "SOUSA_IME_DIAGNOSTICO.js: sintaxe válida",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.509Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "SINTAXE",
+      "mensagem": "SOUSA_REGISTRY.js: sintaxe válida",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.654Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "SINTAXE",
+      "mensagem": "SOUSA_FIO_CONDUTOR.js: sintaxe válida",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.789Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "SINTAXE",
+      "mensagem": "SOUSA_FIO_CONDUTOR_REAL.js: sintaxe válida",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:54.919Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "SINTAXE",
+      "mensagem": "SOUSA_CAPABILITY_DISCOVERY.js: sintaxe válida",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:55.061Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "CONTRATO_IME",
+      "mensagem": "Contrato do ÍMÃ validado pelo motor operacional.",
+      "evidencia": "{\"id\":\"CAP_IME_DIAGNOSTICO\",\"nome\":\"ÍMÃ DE DIAGNÓSTICO\",\"versao\":\"1.0.0\",\"contrato\":\"USB_MODULAR\",\"status\":\"ATIVO\",\"saudavel\":true,\"data\":\"2026-08-30T12:32:55.063Z\"}",
+      "data": "2026-08-30T12:32:55.063Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "REGISTRY",
+      "mensagem": "ÍMÃ → REGISTRY validado com sucesso.",
+      "evidencia": "{\"id\":\"CAP_IME_DIAGNOSTICO\",\"nome\":\"ÍMÃ DE DIAGNÓSTICO\",\"categoria\":\"MANUTENCAO\",\"contrato\":\"USB_MODULAR\",\"versao\":\"1.0.0\",\"status\":\"ATIVO\",\"data\":\"2026-08-30T12:32:55.064Z\"}",
+      "data": "2026-08-30T12:32:55.065Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "FIO_CONDUTOR",
+      "mensagem": "Componentes presentes: SOUSA_FIO_CONDUTOR.js, SOUSA_FIO_CONDUTOR_REAL.js",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:55.065Z"
+    },
+    {
+      "status": "PASS",
+      "etapa": "CAPABILITY_DISCOVERY",
+      "mensagem": "Componentes presentes: SOUSA_CAPABILITY_DISCOVERY.js",
+      "evidencia": null,
+      "data": "2026-08-30T12:32:55.066Z"
+    }
+  ],
+  "filaManutencao": [],
+  "evidencias": [
+    {
+      "etapa": "CONTRATO_IME",
+      "evidencia": "{\"id\":\"CAP_IME_DIAGNOSTICO\",\"nome\":\"ÍMÃ DE DIAGNÓSTICO\",\"versao\":\"1.0.0\",\"contrato\":\"USB_MODULAR\",\"status\":\"ATIVO\",\"saudavel\":true,\"data\":\"2026-08-30T12:32:55.063Z\"}"
+    },
+    {
+      "etapa": "REGISTRY",
+      "evidencia": "{\"id\":\"CAP_IME_DIAGNOSTICO\",\"nome\":\"ÍMÃ DE DIAGNÓSTICO\",\"categoria\":\"MANUTENCAO\",\"contrato\":\"USB_MODULAR\",\"versao\":\"1.0.0\",\"status\":\"ATIVO\",\"data\":\"2026-08-30T12:32:55.064Z\"}"
+    }
+  ],
+  "fim": "2026-08-30T12:32:55.066Z"
+}

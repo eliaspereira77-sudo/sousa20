@@ -1,0 +1,188 @@
+'use strict';
+
+/**
+ * SOUSA 2.0 — MAINTENANCE ORCHESTRATOR
+ * Versão 1.0.0
+ *
+ * Coordena:
+ * DIAGNÓSTICO → REPARO → TESTE → RETESTE → VALIDAÇÃO
+ *
+ * Não promove alterações para produção.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const SelfTest = require('./SOUSA_SELF_TEST_REPAIR.js');
+const Sandbox = require('./SOUSA_AUTO_REPAIR_SANDBOX.js');
+
+const CONFIG = {
+  version: '1.0.0',
+  maxRepairAttempts: 3
+};
+
+
+/**
+ * Verifica se o alvo existe.
+ */
+function validateTarget(target) {
+
+  if (!target) {
+    throw new Error('Target obrigatório.');
+  }
+
+  const absolute = path.resolve(target);
+
+  if (!fs.existsSync(absolute)) {
+    throw new Error(
+      `Target não encontrado: ${absolute}`
+    );
+  }
+
+  return absolute;
+}
+
+
+/**
+ * Diagnóstico inicial.
+ */
+function diagnose(target) {
+
+  return SelfTest.run(target);
+}
+
+
+/**
+ * Executa uma proposta de reparo
+ * exclusivamente no Sandbox.
+ */
+function repairInSandbox(target, repairedContent) {
+
+  return Sandbox.repair({
+    sourceFile: target,
+    repairedContent
+  });
+}
+
+
+/**
+ * Coordena uma missão de manutenção.
+ */
+function executeMission({
+  target,
+  repairedContent = null
+}) {
+
+  const startedAt = new Date().toISOString();
+
+  const absoluteTarget =
+    validateTarget(target);
+
+  /*
+   * ETAPA 1 — DIAGNÓSTICO
+   */
+
+  const diagnosis =
+    diagnose(absoluteTarget);
+
+  /*
+   * Se o código já está saudável,
+   * não inventamos uma correção.
+   */
+
+  if (diagnosis.success && !repairedContent) {
+
+    return {
+      success: true,
+      status: 'HEALTHY_NO_REPAIR_REQUIRED',
+
+      target: absoluteTarget,
+
+      diagnosis,
+
+      repair: {
+        executed: false
+      },
+
+      promotion: {
+        allowed: false
+      },
+
+      startedAt,
+      finishedAt: new Date().toISOString()
+    };
+  }
+
+  /*
+   * ETAPA 2 — REPARO CONTROLADO
+   */
+
+  if (!repairedContent) {
+
+    return {
+      success: false,
+      status: 'REPAIR_CONTENT_REQUIRED',
+
+      target: absoluteTarget,
+
+      diagnosis,
+
+      instruction:
+        'O agente de manutenção deve fornecer a correção para o Sandbox.',
+
+      promotion: {
+        allowed: false
+      },
+
+      startedAt,
+      finishedAt: new Date().toISOString()
+    };
+  }
+
+  /*
+   * ETAPA 3 — SANDBOX
+   */
+
+  const repair =
+    repairInSandbox(
+      absoluteTarget,
+      repairedContent
+    );
+
+  /*
+   * ETAPA 4 — RESULTADO
+   */
+
+  return {
+
+    success: repair.success,
+
+    status: repair.success
+      ? 'REPAIR_VALIDATED_IN_SANDBOX'
+      : 'REPAIR_FAILED',
+
+    target: absoluteTarget,
+
+    diagnosis,
+
+    repair,
+
+    promotion: {
+      allowed: false,
+      requiresValidator: true,
+      requiresProductionApproval: true
+    },
+
+    startedAt,
+    finishedAt: new Date().toISOString()
+  };
+}
+
+
+module.exports = {
+  CONFIG,
+  validateTarget,
+  diagnose,
+  repairInSandbox,
+  executeMission
+};

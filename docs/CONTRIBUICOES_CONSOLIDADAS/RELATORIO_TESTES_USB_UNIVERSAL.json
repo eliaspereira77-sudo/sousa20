@@ -1,0 +1,93 @@
+{
+  "ok": true,
+  "total": 16,
+  "aprovados": 16,
+  "falhas": [],
+  "itens": [
+    {
+      "nome": "bootstrap_adapters",
+      "ok": true,
+      "detalhe": "n=4"
+    },
+    {
+      "nome": "A_conectar_gemini_seed",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "B_nao_existia",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "B_conectar_X",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "B_executar_X",
+      "ok": true,
+      "detalhe": "{'ok': True, 'status': 'EXECUCAO_CONCLUIDA', 'provedor': 'PROVEDOR_TESTE_X', 'protocolo': 'TESTE_ECO', 'texto': '[ECO:PROVEDOR_TESTE_X] ping-universal', 'simulacao': True}"
+    },
+    {
+      "nome": "C_rejeita",
+      "ok": true,
+      "detalhe": "{'ok': False, 'motivo': 'PROTOCOLO_SEM_ADAPTADOR', 'protocolo': 'PROTOCOLO_INEXISTENTE_ZZZ'}"
+    },
+    {
+      "nome": "D_cascata",
+      "ok": true,
+      "detalhe": "EXECUCAO_CONCLUIDA {'tentativas': [{'id': 'PROVEDOR_TESTE_X', 'ok': True, 'status': 'EXECUCAO_CONCLUIDA'}], 'vencedor': 'PROVEDOR_TESTE_X'}"
+    },
+    {
+      "nome": "E_desconecta_X",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "E_conecta_Y",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "E_executa_Y",
+      "ok": true,
+      "detalhe": "{'ok': True, 'status': 'EXECUCAO_CONCLUIDA', 'provedor': 'OutraMarcaQualquer', 'protocolo': 'TESTE_ECO', 'texto': '[ECO:PROVEDOR_TESTE_Y] troca-luva', 'simulacao': True}"
+    },
+    {
+      "nome": "I_nao_seleciona_imagem",
+      "ok": true,
+      "detalhe": "['PROVEDOR_TESTE_Y', 'GEMINI']"
+    },
+    {
+      "nome": "J_conecta_custom",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "J_executa_custom",
+      "ok": true,
+      "detalhe": "{'ok': True, 'status': 'EXECUCAO_CONCLUIDA', 'provedor': 'CustomJ', 'texto': 'CUSTOM:hello-j'}"
+    },
+    {
+      "nome": "evidencia_executor_sem_nome_X",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "evidencia_executor_sem_protocolo_J",
+      "ok": true,
+      "detalhe": ""
+    },
+    {
+      "nome": "evidencia_executor_sem_switch_fornecedor",
+      "ok": true,
+      "detalhe": ""
+    }
+  ],
+  "prova_universalidade": {
+    "pergunta": "Consigo adicionar PROVEDOR_TESTE_X sem modificar o núcleo do Executor?",
+    "resposta": "SIM",
+    "evidencia": "conectar()+adapter TESTE_ECO; executor só resolve protocolo→adapter"
+  }
+}

@@ -1,0 +1,51 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_FLUXO_EDITORIAL",
+
+  "versao": "1.0.0",
+
+  "descricao": "Orquestracao do processo completo de transformacao de uma ideia ou manuscrito em produto editorial.",
+
+  "objetivo": "Coordenar criacao, preparacao, publicacao e estrategia comercial de livros.",
+
+  "etapas": [
+    {
+      "ordem": 1,
+      "nome": "PRODUCAO_LIVRO",
+      "funcao": "Criacao e organizacao da obra."
+    },
+    {
+      "ordem": 2,
+      "nome": "PREPARACAO_EDITORIAL",
+      "funcao": "Adequacao tecnica para ebook e impressao sob demanda."
+    },
+    {
+      "ordem": 3,
+      "nome": "ESTRATEGIA_PUBLICACAO",
+      "funcao": "Analise de mercado, preco e divulgacao."
+    },
+    {
+      "ordem": 4,
+      "nome": "GERACAO_DOCUMENTOS",
+      "funcao": "Criacao de arquivos finais e relatorios."
+    }
+  ],
+
+  "registros_obrigatorios": [
+    "autor",
+    "obra",
+    "versao",
+    "data",
+    "hora",
+    "status",
+    "proximo_passo"
+  ],
+
+  "integracao": {
+    "memoria_tecnica": true,
+    "log_engine": true,
+    "gerador_briefing": true,
+    "gerador_pdf": true
+  }
+}

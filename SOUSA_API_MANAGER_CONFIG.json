@@ -1,0 +1,58 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_API_MANAGER",
+
+  "versao": "1.0.0",
+
+  "descricao": "Gerenciador inteligente de recursos de IA do SOUSA 2.0.",
+
+  "objetivo": "Selecionar automaticamente o recurso mais adequado e generoso conforme a capacidade solicitada pelo modulo.",
+
+  "principios_decisao": [
+    {
+      "prioridade": 1,
+      "criterio": "GENEROSIDADE",
+      "descricao": "Maior capacidade, limites e qualidade disponiveis."
+    },
+    {
+      "prioridade": 2,
+      "criterio": "ADEQUACAO",
+      "descricao": "Escolher o recurso especializado para a tarefa."
+    },
+    {
+      "prioridade": 3,
+      "criterio": "DISPONIBILIDADE",
+      "descricao": "Verificar se o recurso esta ativo."
+    },
+    {
+      "prioridade": 4,
+      "criterio": "CUSTO",
+      "descricao": "Otimizar consumo quando houver alternativas."
+    },
+    {
+      "prioridade": 5,
+      "criterio": "VELOCIDADE",
+      "descricao": "Considerar tempo de resposta."
+    }
+  ],
+
+  "fluxo": [
+    "Modulo solicita capacidade",
+    "API_MANAGER consulta catalogo",
+    "API_MANAGER avalia recursos disponiveis",
+    "API_MANAGER escolhe recurso",
+    "Executa tarefa",
+    "Registra resultado na memoria tecnica"
+  ],
+
+  "registro_obrigatorio": [
+    "data",
+    "hora",
+    "modulo",
+    "capacidade_solicitada",
+    "recurso_escolhido",
+    "motivo_da_escolha",
+    "resultado"
+  ]
+}

@@ -1,0 +1,24 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+  "modulo_responsavel": "SOUSA_ADS_ACADEMICO",
+  "memoria_tecnica": {
+    "versao": "1.0.0",
+    "descricao": "Registro cronologico das evolucoes, testes, decisoes e pendencias do projeto."
+  },
+  "eventos": [
+    {
+      "data": "30/07/2026",
+      "hora": "",
+      "acao": "Criacao da Memoria Tecnica Viva",
+      "explicacao": "Definida a responsabilidade do modulo ADS pelo registro tecnico do SOUSA 2.0.",
+      "resultado": "Estrutura conceitual definida.",
+      "onde_parou": "Validacao da integracao Gemini apos autenticacao SOUSA_TUNNEL_KEY.",
+      "pendencias": [
+        "Criar SOUSA_LOG_ENGINE",
+        "Registrar eventos automaticamente",
+        "Gerar briefings e prompts sob demanda"
+      ],
+      "decisao_fundador": "Aguardando continuidade"
+    }
+  ]
+}

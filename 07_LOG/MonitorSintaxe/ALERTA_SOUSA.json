@@ -1,0 +1,8 @@
+{
+  "sistema": "SOUSA 2.0",
+  "modulo": "MonitorSintaxe",
+  "data": "26/08/2026, 10:35:09",
+  "status": "ALERTA",
+  "quantidadeErros": 1,
+  "relatorio": "07_LOG/MonitorSintaxe/Relatorio_Correcao.txt"
+}

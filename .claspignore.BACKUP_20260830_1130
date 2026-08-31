@@ -1,0 +1,67 @@
+﻿# ============================================================
+# SOUSA 2.0 — .CLASPIGNORE OFICIAL
+# Produção Apps Script
+# Oficina / backups / testes permanecem locais
+# ============================================================
+
+MonitorSintaxe*.js
+07_LOG/**
+*.log
+
+*_BACKUP_*
+*.BACKUP_*
+BACKUP_*/**
+BACKUP_*
+_ARQUIVO_HISTORICO/**
+*.OLD.js
+
+*.auto-repair-sandbox-*
+*.auto-repair-backup-*
+*.pre-*.js
+
+NucleoOrquestrador_V2.js
+NucleoOrquestrador.js
+
+SOUSA_AUTHORIZATION_GATE.js
+SOUSA_COMMAND_LISTENER.js
+SOUSA_COMMAND_ROUTER.js
+SOUSA_MOBILE_GATEWAY.js
+SOUSAILEON_ARM_V1.js
+SOUSAILEON_ARM_V2.js
+SOUSAILEON_BLOCK_MANAGER_V1.js
+SOUSAILEON_COMMAND.js
+
+CAMPAIGN_PERSISTENCE.js
+CAMPAIGN_RUNTIME.js
+CAMPAIGN_STATE_MACHINE.js
+
+SOUSA_APIS_CASCATA.gs.js
+SOUSA_MARKETPLACE_CASCATA.gs.js
+
+TESTE_*.js
+**/TESTE_*.js
+
+node_modules/**
+package-lock.json
+npm-arvore.json
+
+.venv/**
+*.py
+
+.tmp.driveupload/**
+BACKUP_GITHUB_CONFLITOS_*/
+sousa20-antigo/**
+sousa20/**
+TOOLS_SOUSA/**
+
+Microsoft.PowerShell_profile.ps1
+
+# ============================================================
+# PROTEÇÃO EXPLÍCITA — OFICINA AUTO-REPAIR
+# Não enviar sandboxes/backups para Apps Script
+# ============================================================
+MEMORIA\sandbox/**
+MEMORIA\core\capabilities\*.auto-repair-sandbox-*
+MEMORIA\core\capabilities\*.auto-repair-backup-*
+MEMORIA\core\capabilities\*.BACKUP_*
+MEMORIA\core\capabilities\*.pre-*.js

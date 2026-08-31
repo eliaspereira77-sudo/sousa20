@@ -1,0 +1,15 @@
+{
+  "sistema": "SOUSA 2.0",
+  "comando": {
+    "sistema": "SOUSA 2.0",
+    "origem": "smartphone",
+    "autorizacao": "Fundador",
+    "acao": "status",
+    "solicitacao": "verificar_sistema"
+  },
+  "resultado": {
+    "status": "APROVADO",
+    "motivo": "Comando autorizado pelo SOUSA 2.0."
+  },
+  "data": "09/08/2026, 07:41:32"
+}

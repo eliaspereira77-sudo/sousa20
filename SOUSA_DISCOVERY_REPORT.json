@@ -1,0 +1,694 @@
+﻿{
+    "files":  [
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.clasp.json",
+                      "name":  ".clasp.json",
+                      "size":  276,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore",
+                      "name":  ".claspignore",
+                      "size":  514,
+                      "extension":  ".claspignore"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore.bak_20260726_063002",
+                      "name":  ".claspignore.bak_20260726_063002",
+                      "size":  159,
+                      "extension":  ".bak_20260726_063002"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore.bak_20260726_072543",
+                      "name":  ".claspignore.bak_20260726_072543",
+                      "size":  184,
+                      "extension":  ".bak_20260726_072543"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore.bak_20260726_073545",
+                      "name":  ".claspignore.bak_20260726_073545",
+                      "size":  211,
+                      "extension":  ".bak_20260726_073545"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore.bak_20260726_074601",
+                      "name":  ".claspignore.bak_20260726_074601",
+                      "size":  235,
+                      "extension":  ".bak_20260726_074601"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\.claspignore.txt",
+                      "name":  ".claspignore.txt",
+                      "size":  203,
+                      "extension":  ".txt"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\appsscript.json",
+                      "name":  "appsscript.json",
+                      "size":  209,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\Code.gs.OLD.js",
+                      "name":  "Code.gs.OLD.js",
+                      "size":  15123,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\COMANDO_SOUSAILEON.json",
+                      "name":  "COMANDO_SOUSAILEON.json",
+                      "size":  118,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\Gemini.gs.OLD.js",
+                      "name":  "Gemini.gs.OLD.js",
+                      "size":  29,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\HTML SOUSA 2.0 TESTE ESTAVEL.html",
+                      "name":  "HTML SOUSA 2.0 TESTE ESTAVEL.html",
+                      "size":  116913,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\Microsoft.PowerShell_profile.ps1",
+                      "name":  "Microsoft.PowerShell_profile.ps1",
+                      "size":  2877,
+                      "extension":  ".ps1"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\MonitorSintaxe.js",
+                      "name":  "MonitorSintaxe.js",
+                      "size":  4349,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\NucleoOrquestrador.js",
+                      "name":  "NucleoOrquestrador.js",
+                      "size":  1312,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\NucleoOrquestrador_V2.js",
+                      "name":  "NucleoOrquestrador_V2.js",
+                      "size":  1830,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\PAINEL_SOUSA.html",
+                      "name":  "PAINEL_SOUSA.html",
+                      "size":  2661,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\PAINEL_SOUSA.html.bak_20260726_081648",
+                      "name":  "PAINEL_SOUSA.html.bak_20260726_081648",
+                      "size":  1842,
+                      "extension":  ".bak_20260726_081648"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\PAINEL_SOUSA.html.bak_encoding_20260726_082358",
+                      "name":  "PAINEL_SOUSA.html.bak_encoding_20260726_082358",
+                      "size":  2670,
+                      "extension":  ".bak_encoding_20260726_082358"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SousaConfig.gs.js",
+                      "name":  "SousaConfig.gs.js",
+                      "size":  2708,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSAILEON_ARM_V1.js",
+                      "name":  "SOUSAILEON_ARM_V1.js",
+                      "size":  2900,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSAILEON_ARM_V2.js",
+                      "name":  "SOUSAILEON_ARM_V2.js",
+                      "size":  2180,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSAILEON_BLOCK_MANAGER_V1.js",
+                      "name":  "SOUSAILEON_BLOCK_MANAGER_V1.js",
+                      "size":  1011,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSAILEON_COMMAND.js",
+                      "name":  "SOUSAILEON_COMMAND.js",
+                      "size":  1210,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_APIS_CASCATA.gs.js",
+                      "name":  "SOUSA_APIS_CASCATA.gs.js",
+                      "size":  2145,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_AUTHORIZATION_GATE.js",
+                      "name":  "SOUSA_AUTHORIZATION_GATE.js",
+                      "size":  1369,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_COMMAND_LISTENER.js",
+                      "name":  "SOUSA_COMMAND_LISTENER.js",
+                      "size":  1200,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_COMMAND_ROUTER.js",
+                      "name":  "SOUSA_COMMAND_ROUTER.js",
+                      "size":  1750,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_Connect_v1.gs.OLD.js",
+                      "name":  "SOUSA_Connect_v1.gs.OLD.js",
+                      "size":  20152,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_Core.js",
+                      "name":  "SOUSA_Core.js",
+                      "size":  24670,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_Core.js.bak_20260726_065426",
+                      "name":  "SOUSA_Core.js.bak_20260726_065426",
+                      "size":  21531,
+                      "extension":  ".bak_20260726_065426"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_DEVICE_AUTH.js",
+                      "name":  "SOUSA_DEVICE_AUTH.js",
+                      "size":  4774,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_Interface.js",
+                      "name":  "SOUSA_Interface.js",
+                      "size":  469,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_MARKETPLACE_CASCATA.gs.js",
+                      "name":  "SOUSA_MARKETPLACE_CASCATA.gs.js",
+                      "size":  1545,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_MOBILE_GATEWAY.js",
+                      "name":  "SOUSA_MOBILE_GATEWAY.js",
+                      "size":  1029,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_STRUCTURE_SCANNER_v0.1.ps1",
+                      "name":  "SOUSA_STRUCTURE_SCANNER_v0.1.ps1",
+                      "size":  1663,
+                      "extension":  ".ps1"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\SOUSA_VALIDATOR.js",
+                      "name":  "SOUSA_VALIDATOR.js",
+                      "size":  1399,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\TESTE_DEVICE_AUTH.gs.js",
+                      "name":  "TESTE_DEVICE_AUTH.gs.js",
+                      "size":  1104,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\MonitorSintaxe\\ALERTA_SOUSA.json",
+                      "name":  "ALERTA_SOUSA.json",
+                      "size":  201,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\MonitorSintaxe\\MonitorSintaxe.log",
+                      "name":  "MonitorSintaxe.log",
+                      "size":  202,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\MonitorSintaxe\\Relatorio_Correcao.txt",
+                      "name":  "Relatorio_Correcao.txt",
+                      "size":  152,
+                      "extension":  ".txt"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\SOUSAILEON\\SOUSAILEON_COMMAND.log",
+                      "name":  "SOUSAILEON_COMMAND.log",
+                      "size":  116,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\SOUSAILEON\\SOUSAILEON_EXECUCAO.log",
+                      "name":  "SOUSAILEON_EXECUCAO.log",
+                      "size":  192,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\BIBLIOTECA\\CATALOGO_BLOCOS.json",
+                      "name":  "CATALOGO_BLOCOS.json",
+                      "size":  919,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\autorizacoes_pendentes.json",
+                      "name":  "autorizacoes_pendentes.json",
+                      "size":  287,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\fila_pendente.json",
+                      "name":  "fila_pendente.json",
+                      "size":  143,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\resposta_comando.json",
+                      "name":  "resposta_comando.json",
+                      "size":  329,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_CHECKPOINT_ESTAVEL_23_07_2026\\HTML SOUSA 2.0 TESTE ESTAVEL.html",
+                      "name":  "HTML SOUSA 2.0 TESTE ESTAVEL.html",
+                      "size":  116913,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V1\\NucleoOrquestrador.js",
+                      "name":  "NucleoOrquestrador.js",
+                      "size":  1736,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V1\\PAINEL_SOUSA.html",
+                      "name":  "PAINEL_SOUSA.html",
+                      "size":  1842,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V1\\SOUSAILEON_ARM_V1.js",
+                      "name":  "SOUSAILEON_ARM_V1.js",
+                      "size":  2896,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V1\\SOUSAILEON_ARM_V2.js",
+                      "name":  "SOUSAILEON_ARM_V2.js",
+                      "size":  2176,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\MonitorSintaxe.js",
+                      "name":  "MonitorSintaxe.js",
+                      "size":  4349,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\NucleoOrquestrador.js",
+                      "name":  "NucleoOrquestrador.js",
+                      "size":  1312,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\PAINEL_SOUSA.html",
+                      "name":  "PAINEL_SOUSA.html",
+                      "size":  1842,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\SOUSAILEON_ARM_V1.js",
+                      "name":  "SOUSAILEON_ARM_V1.js",
+                      "size":  2896,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\SOUSAILEON_ARM_V2.js",
+                      "name":  "SOUSAILEON_ARM_V2.js",
+                      "size":  2176,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\SOUSAILEON_COMMAND.js",
+                      "name":  "SOUSAILEON_COMMAND.js",
+                      "size":  1210,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V3_SOUSAILEON\\SOUSAILEON_BLOCK_MANAGER_V1.js",
+                      "name":  "SOUSAILEON_BLOCK_MANAGER_V1.js",
+                      "size":  1011,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V1.js",
+                      "name":  "MonitorSintaxe_BACKUP_V1.js",
+                      "size":  782,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V3.js",
+                      "name":  "MonitorSintaxe_BACKUP_V3.js",
+                      "size":  3954,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V4.js",
+                      "name":  "MonitorSintaxe_BACKUP_V4.js",
+                      "size":  4467,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V5.js",
+                      "name":  "MonitorSintaxe_BACKUP_V5.js",
+                      "size":  4467,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V6.js",
+                      "name":  "MonitorSintaxe_BACKUP_V6.js",
+                      "size":  3694,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\MonitorSintaxe_BACKUP_V7.js",
+                      "name":  "MonitorSintaxe_BACKUP_V7.js",
+                      "size":  4349,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\NucleoOrquestrador.JS_BACKUP_ORIGEM",
+                      "name":  "NucleoOrquestrador.JS_BACKUP_ORIGEM",
+                      "size":  1312,
+                      "extension":  ".JS_BACKUP_ORIGEM"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\NucleoOrquestrador_BACKUP_V1.js",
+                      "name":  "NucleoOrquestrador_BACKUP_V1.js",
+                      "size":  1736,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\NucleoOrquestrador_BACKUP_V2.js",
+                      "name":  "NucleoOrquestrador_BACKUP_V2.js",
+                      "size":  1736,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\PAINEL_SOUSA_BACKUP_V1.html",
+                      "name":  "PAINEL_SOUSA_BACKUP_V1.html",
+                      "size":  1650,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\PAINEL_SOUSA_BACKUP_V2.html",
+                      "name":  "PAINEL_SOUSA_BACKUP_V2.html",
+                      "size":  1842,
+                      "extension":  ".html"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\SOUSAILEON_ARM_BACKUP_V1.js",
+                      "name":  "SOUSAILEON_ARM_BACKUP_V1.js",
+                      "size":  2896,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\SOUSA_Connect_v1_BACKUP_ANALISE.js",
+                      "name":  "SOUSA_Connect_v1_BACKUP_ANALISE.js",
+                      "size":  20152,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\SOUSA_Core_BACKUP_ADS_EVOLUTION.js",
+                      "name":  "SOUSA_Core_BACKUP_ADS_EVOLUTION.js",
+                      "size":  20242,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\SOUSA_Core_BACKUP_antes_ADS.js",
+                      "name":  "SOUSA_Core_BACKUP_antes_ADS.js",
+                      "size":  20242,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\SOUSA_DEVICE_AUTH_BACKUP_V1.js",
+                      "name":  "SOUSA_DEVICE_AUTH_BACKUP_V1.js",
+                      "size":  4774,
+                      "extension":  ".js"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\.clasp.json",
+                      "name":  ".clasp.json",
+                      "size":  276,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\.claspignore",
+                      "name":  ".claspignore",
+                      "size":  159,
+                      "extension":  ".claspignore"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\.claspignore.txt",
+                      "name":  ".claspignore.txt",
+                      "size":  215,
+                      "extension":  ".txt"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\COMANDO_SOUSAILEON.json",
+                      "name":  "COMANDO_SOUSAILEON.json",
+                      "size":  118,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\Microsoft.PowerShell_profile.ps1",
+                      "name":  "Microsoft.PowerShell_profile.ps1",
+                      "size":  2877,
+                      "extension":  ".ps1"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\NucleoOrquestrador.JS_BACKUP_ORIGEM",
+                      "name":  "NucleoOrquestrador.JS_BACKUP_ORIGEM",
+                      "size":  1312,
+                      "extension":  ".JS_BACKUP_ORIGEM"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\MonitorSintaxe\\ALERTA_SOUSA.json",
+                      "name":  "ALERTA_SOUSA.json",
+                      "size":  201,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\MonitorSintaxe\\MonitorSintaxe.log",
+                      "name":  "MonitorSintaxe.log",
+                      "size":  202,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\MonitorSintaxe\\Relatorio_Correcao.txt",
+                      "name":  "Relatorio_Correcao.txt",
+                      "size":  152,
+                      "extension":  ".txt"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\SOUSAILEON\\SOUSAILEON_COMMAND.log",
+                      "name":  "SOUSAILEON_COMMAND.log",
+                      "size":  116,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\SOUSAILEON\\SOUSAILEON_EXECUCAO.log",
+                      "name":  "SOUSAILEON_EXECUCAO.log",
+                      "size":  192,
+                      "extension":  ".log"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\BIBLIOTECA\\CATALOGO_BLOCOS.json",
+                      "name":  "CATALOGO_BLOCOS.json",
+                      "size":  919,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\autorizacoes_pendentes.json",
+                      "name":  "autorizacoes_pendentes.json",
+                      "size":  287,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\fila_pendente.json",
+                      "name":  "fila_pendente.json",
+                      "size":  143,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\resposta_comando.json",
+                      "name":  "resposta_comando.json",
+                      "size":  329,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V1\\ALERTA_SOUSA.json",
+                      "name":  "ALERTA_SOUSA.json",
+                      "size":  201,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V1\\COMANDO_SOUSAILEON.json",
+                      "name":  "COMANDO_SOUSAILEON.json",
+                      "size":  118,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V1\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V1\\SOUSA_PROFILE.ps1",
+                      "name":  "SOUSA_PROFILE.ps1",
+                      "size":  3885,
+                      "extension":  ".ps1"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V3_SOUSAILEON\\CATALOGO_BLOCOS.json",
+                      "name":  "CATALOGO_BLOCOS.json",
+                      "size":  919,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V1\\ALERTA_SOUSA.json",
+                      "name":  "ALERTA_SOUSA.json",
+                      "size":  201,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V1\\COMANDO_SOUSAILEON.json",
+                      "name":  "COMANDO_SOUSAILEON.json",
+                      "size":  118,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V1\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V1\\SOUSA_PROFILE.ps1",
+                      "name":  "SOUSA_PROFILE.ps1",
+                      "size":  3885,
+                      "extension":  ".ps1"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V2_SOUSAILEON\\PAINEL_SOUSA.json",
+                      "name":  "PAINEL_SOUSA.json",
+                      "size":  100,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V3_SOUSAILEON\\CATALOGO_BLOCOS.json",
+                      "name":  "CATALOGO_BLOCOS.json",
+                      "size":  919,
+                      "extension":  ".json"
+                  },
+                  {
+                      "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\TOOLS_SOUSA\\SCANNER\\SOUSA_STRUCTURE_SCANNER_v0.1.ps1",
+                      "name":  "SOUSA_STRUCTURE_SCANNER_v0.1.ps1",
+                      "size":  0,
+                      "extension":  ".ps1"
+                  }
+              ],
+    "extensions":  {
+                       ".bak_20260726_074601":  1,
+                       ".claspignore":  2,
+                       ".bak_20260726_065426":  1,
+                       ".json":  27,
+                       ".js":  44,
+                       ".bak_encoding_20260726_082358":  1,
+                       ".bak_20260726_073545":  1,
+                       ".ps1":  6,
+                       ".log":  6,
+                       ".bak_20260726_081648":  1,
+                       ".txt":  4,
+                       ".JS_BACKUP_ORIGEM":  2,
+                       ".bak_20260726_072543":  1,
+                       ".html":  7,
+                       ".bak_20260726_063002":  1
+                   },
+    "folders":  [
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_CHECKPOINT_ESTAVEL_23_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V1",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V2_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_OPERACIONAL_V3_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\TOOLS_SOUSA",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\MonitorSintaxe",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\07_LOG\\SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\APROVADOS",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\BIBLIOTECA",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\HISTORICO",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\08_BLOCOS_SOUSA\\TESTES",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_CHECKPOINT_ESTAVEL_23_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ESTAVEL_23_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V1",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V2_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_OPERACIONAL_V3_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_CHECKPOINT_ESTAVEL_23_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_ESTAVEL_23_07_2026",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V1",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V2_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\BACKUP_OPERACIONAL_V3_SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\MonitorSintaxe",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\07_LOG\\SOUSAILEON",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\APROVADOS",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\BIBLIOTECA",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\COMANDOS_MOBILE",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\HISTORICO",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\BACKUP_SEPARADO_24_07_2026\\BACKUP_ANTES_LIMPEZA_24_07_2026\\08_BLOCOS_SOUSA\\TESTES",
+                    "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO\\TOOLS_SOUSA\\SCANNER"
+                ],
+    "metadata":  {
+                     "scanner_version":  "0.1",
+                     "scan_timestamp":  "2026-07-26T11:49:39",
+                     "root_path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO"
+                 }
+}

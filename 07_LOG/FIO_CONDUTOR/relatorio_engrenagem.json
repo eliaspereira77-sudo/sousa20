@@ -1,0 +1,369 @@
+{
+  "sistema": "SOUSA 2.0",
+  "tipo": "FIO_CONDUTOR_REAL",
+  "data": "2026-08-26T13:33:17.265Z",
+  "resultados": [
+    {
+      "grupo": "NUCLEO",
+      "nome": "ORQUESTRADOR",
+      "arquivo": "SOUSA_ORQUESTRADOR.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_ORQUESTRADOR_criarCiclo",
+          "SOUSA_ORQUESTRADOR_planejarComposto",
+          "SOUSA_ORQUESTRADOR_executar",
+          "SOUSA_ORQUESTRADOR_porTexto",
+          "SOUSA_ORQUESTRADOR_porCanal",
+          "SOUSA_ORQUESTRADOR_fluxo"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "NUCLEO",
+      "nome": "REGISTRY",
+      "arquivo": "SOUSA_REGISTRY.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [],
+        "require": false
+      },
+      "status": "SEM_INTERFACE_DETECTAVEL"
+    },
+    {
+      "grupo": "NUCLEO",
+      "nome": "EXECUTOR",
+      "arquivo": "SOUSA_API_EXECUTOR_UNIVERSAL.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_API_EXECUTOR_UNIVERSAL",
+          "SOUSA_API_EXECUTOR_COM_CASCATA",
+          "SOUSA_API_EXECUTOR_normalizarContexto"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "AUTHORIZATION",
+      "arquivo": "SOUSA_AUTHORIZATION_GATE.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [],
+        "require": true
+      },
+      "status": "SEM_INTERFACE_DETECTAVEL"
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "GUARDIAN",
+      "arquivo": "CAMPAIGN_GUARDIAN.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [
+          "module.exports"
+        ],
+        "funcoes": [
+          "campaignGuardianCheck"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "RUNTIME",
+      "arquivo": "CAMPAIGN_RUNTIME.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [
+          "module.exports"
+        ],
+        "funcoes": [
+          "startCampaign"
+        ],
+        "require": true
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "MONITOR",
+      "arquivo": "MonitorSintaxe.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "analisarArquivo",
+          "diagnosticar",
+          "procurarArquivos"
+        ],
+        "require": true
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "DIAGNOSTICO",
+      "arquivo": "SOUSA_AUTO_DIAGNOSTICO.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_AUTO_DIAGNOSTICO"
+        ],
+        "require": true
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "MANUTENCAO",
+      "arquivo": "SOUSA_MANUTENCAO_REFINO.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_MANUTENCAO_diagnosticoCompleto",
+          "SOUSA_MANUTENCAO_refinarCascata",
+          "SOUSA_MANUTENCAO_sanitizarAmbiente",
+          "SOUSA_MANUTENCAO_convergirImplantacaoUnica",
+          "SOUSA_MANUTENCAO_executarCicloCompleto",
+          "SOUSA_MANUTENCAO_configurarTrigger"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "REPARO",
+      "arquivo": "MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_ENGINE.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [
+          "module.exports"
+        ],
+        "funcoes": [
+          "syntaxTest",
+          "deterministicRepair",
+          "createBackup",
+          "createSandboxFile",
+          "cleanupSandbox",
+          "repair"
+        ],
+        "require": true
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "SELF_TEST",
+      "arquivo": "MEMORIA/core/capabilities/SOUSA_SELF_TEST_REPAIR.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [
+          "module.exports"
+        ],
+        "funcoes": [
+          "syntaxTest",
+          "diagnose",
+          "run"
+        ],
+        "require": true
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "IA",
+      "arquivo": "API_MANAGER/SOUSA_IA.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [],
+        "require": false
+      },
+      "status": "SEM_INTERFACE_DETECTAVEL"
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "COMANDO",
+      "arquivo": "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_IA_comando",
+          "SOUSA_IA_status",
+          "SOUSA_IA_metricas",
+          "SOUSA_IA_diagnostico",
+          "SOUSA_IA_WATCHDOG_verificar",
+          "SOUSA_GUARDIAN_governar",
+          "SOUSA_GUARDIAN_status",
+          "SOUSA_CLI_executar"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "IDENTIDADE",
+      "arquivo": "SOUSA_IA_IDENTIDADE.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_IA_criarContextoIdentidade",
+          "SOUSA_IA_memoriaContrato"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "COMPOSITOR",
+      "arquivo": "SOUSA_IA_COMPOSITOR.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_IA_normalizarNecessidades",
+          "SOUSA_IA_listarRecursos",
+          "SOUSA_IA_scoreRecurso",
+          "SOUSA_IA_planejar",
+          "SOUSA_IA_prepararConsolidacao"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "DNA",
+      "arquivo": "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "SOUSA_IA_DNA_obter",
+          "SOUSA_IA_DNA_salvar",
+          "SOUSA_IA_DNA_mesclar",
+          "SOUSA_IA_DNA_resetar",
+          "SOUSA_IA_DNA_comoSystemInstruction",
+          "SOUSA_IA_MEMORIA_carregar",
+          "SOUSA_IA_MEMORIA_salvar",
+          "SOUSA_IA_aprenderExemplo",
+          "max",
+          "SOUSA_IA_aprenderCorrecao",
+          "SOUSA_IA_aprenderContexto",
+          "SOUSA_IA_MEMORIA_obterResumoParaPrompt",
+          "SOUSA_IA_MEMORIA_limpar",
+          "SOUSA_USB_ADAPTER_tts_eco",
+          "texto",
+          "SOUSA_USB_ADAPTER_tts_http_json",
+          "nomeVoice",
+          "SOUSA_IA_VOZ_bootstrapAdaptadores",
+          "SOUSA_IA_VOZ_conectar",
+          "SOUSA_IA_falar",
+          "SOUSA_IA_responder",
+          "testarSousaIAIdentidadeCompleta",
+          "check"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MEMORIA",
+      "nome": "CONTINUIDADE",
+      "arquivo": "SOUSA_CONTINUITY_ENGINE.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [
+          "ADS_CONTINUITY_ENGINE_generate",
+          "setupAutoTrigger"
+        ],
+        "require": false
+      },
+      "status": "PRONTO_PARA_ADAPTACAO"
+    },
+    {
+      "grupo": "MEMORIA",
+      "nome": "LOG",
+      "arquivo": "SOUSA_LOG_ENGINE.js",
+      "existe": true,
+      "sintaxe": {
+        "status": "OK"
+      },
+      "interface": {
+        "exports": [],
+        "funcoes": [],
+        "require": false
+      },
+      "status": "SEM_INTERFACE_DETECTAVEL"
+    }
+  ]
+}

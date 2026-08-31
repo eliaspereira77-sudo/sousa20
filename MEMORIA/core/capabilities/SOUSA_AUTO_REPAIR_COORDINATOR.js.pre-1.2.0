@@ -1,0 +1,120 @@
+﻿'use strict';
+
+/**
+ * SOUSA 2.0 — AUTO REPAIR COORDINATOR
+ * Versão 1.1.1
+ *
+ * Camada subordinada ao Maintenance Orchestrator.
+ *
+ * FLUXO:
+ * ORCHESTRATOR
+ *      ↓
+ * COORDINATOR
+ *      ↓
+ * DETECT → DIAGNOSE → AUTO REPAIR
+ *      ↓
+ * BACKUP → SANDBOX → VALIDATE
+ *      ↓
+ * PROMOTION_BLOCKED
+ *
+ * IMPORTANTE:
+ * O Coordinator NÃO chama SOUSA_TEAM_TRIGGER.
+ * A equipe chama o Orchestrator, que chama o Coordinator.
+ *
+ * Isso evita dependência circular.
+ */
+
+const AutoRepair =
+  require('./SOUSA_AUTO_REPAIR_ENGINE.js');
+
+const CONFIG = {
+  version: '1.1.1',
+  engineVersion: AutoRepair.CONFIG.version,
+  automatic: true,
+  sandboxFirst: true,
+  productionWrite: false,
+  automaticPromotion: false
+};
+
+
+function execute({
+  event = 'AUTO_REPAIR_EVENT',
+  target,
+  objective = 'Diagnosticar e reparar automaticamente com segurança'
+}) {
+
+  if (!target) {
+    throw new Error('Target obrigatório.');
+  }
+
+  /*
+   * O Coordinator não ativa a equipe.
+   *
+   * Ele recebe a missão do Orchestrator
+   * e executa a capacidade de autorreparo.
+   */
+
+  const repair =
+    AutoRepair.repair(target);
+
+  return {
+
+    success:
+      repair.success,
+
+    version:
+      CONFIG.version,
+
+    engineVersion:
+      CONFIG.engineVersion,
+
+    automatic:
+      CONFIG.automatic,
+
+    event,
+
+    objective,
+
+    diagnosis: {
+      status:
+        repair.before?.success
+          ? 'HEALTHY'
+          : 'ERROR_DETECTED',
+
+      target,
+
+      initialDiagnosis:
+        repair.before || null
+    },
+
+    repair,
+
+    chain: [
+      'TEAM_ACTIVATED',
+      'DETECT',
+      'DIAGNOSE',
+      'BACKUP',
+      'PROPOSE',
+      'SANDBOX',
+      'VALIDATE',
+      'PROMOTION_BLOCKED'
+    ],
+
+    safety: {
+      productionWrite:
+        CONFIG.productionWrite,
+
+      sandboxFirst:
+        CONFIG.sandboxFirst,
+
+      automaticPromotion:
+        CONFIG.automaticPromotion
+    }
+  };
+}
+
+
+module.exports = {
+  CONFIG,
+  execute
+};

@@ -1,0 +1,9 @@
+{
+  "campaignId": "RUNTIME-001",
+  "platform": "TEST",
+  "identity": "TEST",
+  "action": "TEST",
+  "status": "GUARDIAN_APPROVED",
+  "checkpoint": "GUARDIAN_APPROVED",
+  "updatedAt": "2026-08-11T15:02:53.383Z"
+}

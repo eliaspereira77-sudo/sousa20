@@ -1,0 +1,50 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "arquivo": "SOUSA_COFRE_CHAVES.json",
+
+  "versao": "1.0.0",
+
+  "descricao": "Controle seguro de referencias das chaves de APIs utilizadas pelo SOUSA 2.0.",
+
+  "regra_principal": "Chaves reais permanecem nas propriedades seguras do projeto. Modulos nunca acessam chaves diretamente.",
+
+  "local_armazenamento": {
+    "tipo": "SCRIPT_PROPERTIES",
+    "nome": "PropertiesService do Google Apps Script"
+  },
+
+  "apis": [
+    {
+      "id": "GEMINI",
+      "propriedade": "GEMINI_API_KEY",
+      "status": "configuravel",
+      "uso": [
+        "TEXTO",
+        "ANALISE",
+        "CODIGO",
+        "DOCUMENTO_PDF"
+      ]
+    },
+    {
+      "id": "VOYAGE_AI",
+      "propriedade": "VOYAGE_API_KEY",
+      "status": "configuravel",
+      "uso": [
+        "EMBEDDING",
+        "BUSCA_MEMORIA"
+      ]
+    }
+  ],
+
+  "seguranca": {
+    "nao_exibir_chaves": true,
+    "nao_gravar_chaves_em_logs": true,
+    "registrar_apenas_nome_api": true
+  },
+
+  "controle": {
+    "API_MANAGER_acesso": true,
+    "modulos_acesso": false
+  }
+}

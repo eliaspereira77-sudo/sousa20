@@ -1,0 +1,51 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_GESTOR_LIVROS",
+
+  "versao": "1.0.0",
+
+  "descricao": "Registro vivo de cada projeto de livro desenvolvido pelo SOUSA 2.0.",
+
+  "obra": {
+    "titulo": "",
+    "autor": "",
+    "categoria": "",
+    "publico_alvo": "",
+    "status": "EM_DESENVOLVIMENTO"
+  },
+
+  "controle_producao": {
+    "capitulos_total": 0,
+    "capitulos_concluidos": 0,
+    "ultima_versao": "",
+    "ultima_atualizacao": "",
+    "ponto_de_parada": "",
+    "proximo_passo": ""
+  },
+
+  "etapas_editoriais": [
+    "IDEIA",
+    "PLANEJAMENTO",
+    "ESCRITA",
+    "REVISAO",
+    "PREPARACAO_EDITORIAL",
+    "EBOOK",
+    "IMPRESSAO_SOB_DEMANDA",
+    "ESTRATEGIA_PUBLICACAO",
+    "DIVULGACAO"
+  ],
+
+  "memoria": {
+    "registrar_decisoes": true,
+    "registrar_alteracoes": true,
+    "registrar_historico": true
+  },
+
+  "saidas": [
+    "BRIEFING",
+    "RELATORIO",
+    "PDF",
+    "EBOOK"
+  ]
+}

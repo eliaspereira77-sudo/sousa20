@@ -1,0 +1,79 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+  "arquivo": "SOUSA_CATALOGO_CAPACIDADES.json",
+  "versao": "1.1.0",
+
+  "descricao": "Mapa central das capacidades utilizadas pelos modulos e recursos de IA disponiveis.",
+
+  "regra_principal": "Modulos solicitam capacidades. O SOUSA_API_MANAGER seleciona o recurso mais adequado e generoso.",
+
+  "capacidades": [
+    {
+      "id": "TEXTO",
+      "descricao": "Criacao, revisao e analise de textos."
+    },
+    {
+      "id": "ANALISE",
+      "descricao": "Interpretacao, comparacao e tomada de decisao."
+    },
+    {
+      "id": "CODIGO",
+      "descricao": "Desenvolvimento, revisao e explicacao de codigo."
+    },
+    {
+      "id": "IMAGEM",
+      "descricao": "Criacao e tratamento de imagens."
+    },
+    {
+      "id": "VIDEO",
+      "descricao": "Criacao de videos, roteiros, cenas e conteudo multimidia."
+    },
+    {
+      "id": "AUDIO",
+      "descricao": "Geracao e processamento de voz e audio."
+    },
+    {
+      "id": "EMBEDDING",
+      "descricao": "Criacao de vetores para memoria e busca semantica."
+    },
+    {
+      "id": "BUSCA_MEMORIA",
+      "descricao": "Recuperacao de conhecimento da memoria tecnica."
+    },
+    {
+      "id": "DOCUMENTO_PDF",
+      "descricao": "Geracao de relatorios e documentos oficiais."
+    },
+    {
+      "id": "AUTOMACAO",
+      "descricao": "Execucao de tarefas automaticas e integracoes."
+    },
+    {
+      "id": "PRODUCAO_LIVRO",
+      "descricao": "Criacao, organizacao, revisao e continuidade de livros."
+    },
+    {
+      "id": "PUBLICACAO_LIVRO",
+      "descricao": "Conversao de livros em ebook e formatos para impressao sob demanda."
+    }
+  ],
+
+  "modulos": {
+    "SOUSA_PRODUTOR": [
+      "VIDEO",
+      "IMAGEM",
+      "AUDIO",
+      "TEXTO",
+      "PRODUCAO_LIVRO",
+      "PUBLICACAO_LIVRO"
+    ],
+
+    "SOUSA_ADS_ACADEMICO": [
+      "CODIGO",
+      "DOCUMENTO_PDF",
+      "BUSCA_MEMORIA",
+      "ANALISE",
+      "PUBLICACAO_LIVRO"
+    ]
+  }
+}

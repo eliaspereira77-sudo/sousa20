@@ -1,0 +1,86 @@
+﻿'use strict';
+
+/**
+ * SOUSA 2.0 — AUTO REPAIR COORDINATOR
+ * Versão 1.1.0
+ *
+ * Coordena:
+ * EQUIPE -> DIAGNÓSTICO -> AUTO REPAIR ENGINE
+ *
+ * O Engine 1.1.0 é responsável pelo reparo determinístico.
+ * A produção permanece protegida.
+ */
+
+const TeamTrigger = require('./SOUSA_TEAM_TRIGGER.js');
+const AutoRepair = require('./SOUSA_AUTO_REPAIR_ENGINE.js');
+
+const CONFIG = {
+  version: '1.1.0',
+  engineVersion: AutoRepair.CONFIG.version,
+  automatic: true,
+  sandboxFirst: true,
+  productionWrite: false,
+  automaticPromotion: false
+};
+
+function execute({
+  event = 'AUTO_REPAIR_EVENT',
+  target,
+  objective = 'Diagnosticar e reparar automaticamente com segurança'
+}) {
+
+  if (!target) {
+    throw new Error('Target obrigatório.');
+  }
+
+  // 1. Ativa a equipe de manutenção.
+  const team = TeamTrigger.trigger({
+    event,
+    target,
+    objective
+  });
+
+  // 2. O Engine executa a detecção e o reparo.
+  const repair = AutoRepair.repair(target);
+
+  return {
+    success: repair.success,
+    version: CONFIG.version,
+    engineVersion: CONFIG.engineVersion,
+    automatic: CONFIG.automatic,
+
+    team: {
+      activated: team.activeTeam.length > 0,
+      members: team.activeTeam
+    },
+
+    diagnosis: {
+      status: team.mission.status,
+      target: team.mission.target,
+      initialDiagnosis: team.mission.diagnosis
+    },
+
+    repair,
+
+    chain: [
+      'TEAM_ACTIVATED',
+      'DETECT',
+      'BACKUP',
+      'PROPOSE',
+      'SANDBOX',
+      'VALIDATE',
+      'PROMOTION_BLOCKED'
+    ],
+
+    safety: {
+      productionWrite: CONFIG.productionWrite,
+      sandboxFirst: CONFIG.sandboxFirst,
+      automaticPromotion: CONFIG.automaticPromotion
+    }
+  };
+}
+
+module.exports = {
+  CONFIG,
+  execute
+};

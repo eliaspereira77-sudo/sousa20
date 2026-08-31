@@ -1,0 +1,259 @@
+{
+  "sistema": "SOUSA 2.0",
+  "tipo": "DIAGNOSTICO_INTERFACES_HIBRIDAS",
+  "data": "2026-08-26T13:39:53.049Z",
+  "resumo": {
+    "existentes": 17,
+    "commonjs": 4,
+    "googleAppsScript": 3,
+    "javascriptGlobal": 10,
+    "semExportacao": 10
+  },
+  "componentes": [
+    {
+      "grupo": "ORQUESTRADOR",
+      "nome": "ORQUESTRADOR",
+      "arquivo": "SOUSA_ORQUESTRADOR.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_ORQUESTRADOR_criarCiclo",
+        "SOUSA_ORQUESTRADOR_planejarComposto",
+        "SOUSA_ORQUESTRADOR_executar",
+        "SOUSA_ORQUESTRADOR_porTexto",
+        "SOUSA_ORQUESTRADOR_porCanal",
+        "SOUSA_ORQUESTRADOR_fluxo"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "AUTHORIZATION",
+      "arquivo": "SOUSA_AUTHORIZATION_GATE.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [],
+      "exports": []
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "GUARDIAN",
+      "arquivo": "CAMPAIGN_GUARDIAN.js",
+      "existe": true,
+      "formato": "COMMONJS",
+      "funcoes": [
+        "campaignGuardianCheck"
+      ],
+      "exports": [
+        "module.exports"
+      ]
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "RUNTIME",
+      "arquivo": "CAMPAIGN_RUNTIME.js",
+      "existe": true,
+      "formato": "COMMONJS",
+      "funcoes": [
+        "startCampaign"
+      ],
+      "exports": [
+        "module.exports"
+      ]
+    },
+    {
+      "grupo": "GUARDA",
+      "nome": "MONITOR",
+      "arquivo": "MonitorSintaxe.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "analisarArquivo",
+        "diagnosticar",
+        "procurarArquivos"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "DIAGNOSTICO",
+      "arquivo": "SOUSA_AUTO_DIAGNOSTICO.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_AUTO_DIAGNOSTICO"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "MANUTENCAO",
+      "arquivo": "SOUSA_MANUTENCAO_REFINO.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_MANUTENCAO_diagnosticoCompleto",
+        "SOUSA_MANUTENCAO_refinarCascata",
+        "SOUSA_MANUTENCAO_sanitizarAmbiente",
+        "SOUSA_MANUTENCAO_convergirImplantacaoUnica",
+        "SOUSA_MANUTENCAO_executarCicloCompleto",
+        "SOUSA_MANUTENCAO_configurarTrigger"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "REPARO",
+      "arquivo": "MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_ENGINE.js",
+      "existe": true,
+      "formato": "COMMONJS",
+      "funcoes": [
+        "syntaxTest",
+        "deterministicRepair",
+        "createBackup",
+        "createSandboxFile",
+        "cleanupSandbox",
+        "repair"
+      ],
+      "exports": [
+        "module.exports"
+      ]
+    },
+    {
+      "grupo": "MECANICO",
+      "nome": "SELF_TEST",
+      "arquivo": "MEMORIA/core/capabilities/SOUSA_SELF_TEST_REPAIR.js",
+      "existe": true,
+      "formato": "COMMONJS",
+      "funcoes": [
+        "syntaxTest",
+        "diagnose",
+        "run"
+      ],
+      "exports": [
+        "module.exports"
+      ]
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "IA",
+      "arquivo": "API_MANAGER/SOUSA_IA.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [],
+      "exports": []
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "COMANDO",
+      "arquivo": "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "existe": true,
+      "formato": "GOOGLE_APPS_SCRIPT",
+      "funcoes": [
+        "SOUSA_IA_comando",
+        "SOUSA_IA_status",
+        "SOUSA_IA_metricas",
+        "SOUSA_IA_diagnostico",
+        "SOUSA_IA_WATCHDOG_verificar",
+        "SOUSA_GUARDIAN_governar",
+        "SOUSA_GUARDIAN_status",
+        "SOUSA_CLI_executar"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "IDENTIDADE",
+      "arquivo": "SOUSA_IA_IDENTIDADE.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_IA_criarContextoIdentidade",
+        "SOUSA_IA_memoriaContrato"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "COMPOSITOR",
+      "arquivo": "SOUSA_IA_COMPOSITOR.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_IA_normalizarNecessidades",
+        "SOUSA_IA_listarRecursos",
+        "SOUSA_IA_scoreRecurso",
+        "SOUSA_IA_planejar",
+        "SOUSA_IA_prepararConsolidacao"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "SOUSA_IA",
+      "nome": "DNA",
+      "arquivo": "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "existe": true,
+      "formato": "GOOGLE_APPS_SCRIPT",
+      "funcoes": [
+        "SOUSA_IA_DNA_obter",
+        "SOUSA_IA_DNA_salvar",
+        "SOUSA_IA_DNA_mesclar",
+        "SOUSA_IA_DNA_resetar",
+        "SOUSA_IA_DNA_comoSystemInstruction",
+        "SOUSA_IA_MEMORIA_carregar",
+        "SOUSA_IA_MEMORIA_salvar",
+        "SOUSA_IA_aprenderExemplo",
+        "SOUSA_IA_aprenderCorrecao",
+        "SOUSA_IA_aprenderContexto",
+        "SOUSA_IA_MEMORIA_obterResumoParaPrompt",
+        "SOUSA_IA_MEMORIA_limpar",
+        "SOUSA_USB_ADAPTER_tts_eco",
+        "SOUSA_USB_ADAPTER_tts_http_json",
+        "SOUSA_IA_VOZ_bootstrapAdaptadores",
+        "SOUSA_IA_VOZ_conectar",
+        "SOUSA_IA_falar",
+        "SOUSA_IA_responder",
+        "testarSousaIAIdentidadeCompleta",
+        "check",
+        "max",
+        "texto",
+        "nomeVoice"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "MEMORIA",
+      "nome": "CONTINUIDADE",
+      "arquivo": "SOUSA_CONTINUITY_ENGINE.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "ADS_CONTINUITY_ENGINE_generate",
+        "setupAutoTrigger"
+      ],
+      "exports": []
+    },
+    {
+      "grupo": "MEMORIA",
+      "nome": "LOG",
+      "arquivo": "SOUSA_LOG_ENGINE.js",
+      "existe": true,
+      "formato": "GOOGLE_APPS_SCRIPT",
+      "funcoes": [],
+      "exports": []
+    },
+    {
+      "grupo": "EXECUTOR",
+      "nome": "EXECUTOR",
+      "arquivo": "SOUSA_API_EXECUTOR_UNIVERSAL.js",
+      "existe": true,
+      "formato": "JAVASCRIPT_GLOBAL",
+      "funcoes": [
+        "SOUSA_API_EXECUTOR_UNIVERSAL",
+        "SOUSA_API_EXECUTOR_COM_CASCATA",
+        "SOUSA_API_EXECUTOR_normalizarContexto"
+      ],
+      "exports": []
+    }
+  ]
+}

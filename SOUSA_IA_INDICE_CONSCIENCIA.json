@@ -1,0 +1,1960 @@
+{
+  "sistema": "SOUSA 2.0",
+  "componente": "SOUSA IA",
+  "tipo": "INDICE_CENTRAL_CONSCIENCIA",
+  "modo": "SOMENTE_LEITURA",
+  "timestamp": "2026-08-26T13:55:42.656Z",
+  "raiz": "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO",
+  "categorias": {
+    "MANUTENCAO": [
+      "08_BLOCOS_SOUSA\\BIBLIOTECA\\CATALOGO_BLOCOS.json",
+      "CAMPAIGN_GUARDIAN.js",
+      "COMANDO_SOUSAILEON.json",
+      "CONFIG\\SOUSA_MENU_CONFIG.json",
+      "CONVERGENCIA_MANIFESTO.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_COORDINATOR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_ENGINE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_SANDBOX.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787512009119.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516085753.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516348619.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713109.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713353.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517242210.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517730425.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517917537.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518463289.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518464664.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518956504.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957405.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957738.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978290.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978655.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978932.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519161580.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519162470.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519918094.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520192704.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194087.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194927.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_AGENT.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_MISSION.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_ORCHESTRATOR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_REPAIR_PIPELINE_STATUS.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_SELF_TEST_REPAIR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_TRIGGER.js",
+      "MonitorSintaxe.js",
+      "NucleoOrquestrador.js",
+      "NucleoOrquestrador_V2.js",
+      "SOUSAILEON_ARM_V2.js",
+      "SOUSA_2.0_PAINEL_OPERACIONAL.html",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_Ativacao_Producao.js",
+      "SOUSA_AUTO_DIAGNOSTICO.js",
+      "SOUSA_Core.js",
+      "SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js",
+      "SOUSA_DISCOVERY_REPORT.json",
+      "SOUSA_FIO_CONDUTOR.js",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_INSPECIONAR_INTERFACES.js",
+      "SOUSA_MANUTENCAO_REFINO.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_MAPA_FUNCIONAL.js",
+      "SOUSA_MOBILE_GATEWAY.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_TESTE_FLUXO_CONTROLADO.js",
+      "SOUSA_TESTE_PONTE_DEPENDENCIAS.js",
+      "SOUSA_USB_CORE.js",
+      "SOUSA_USB_HEALTH_MONITOR.js",
+      "SOUSA_USB_MONITOR.js",
+      "SOUSA_USB_STATUS.js",
+      "TESTE_USB_PIPELINE_COMPLETO.js"
+    ],
+    "INTERFACE": [
+      "08_BLOCOS_SOUSA\\BIBLIOTECA\\CATALOGO_BLOCOS.json",
+      "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\autorizacoes_pendentes.json",
+      "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\fila_pendente.json",
+      "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\resposta_comando.json",
+      "CONVERGENCIA_MANIFESTO.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_RUNTIME_BRIDGE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_SELF_TEST_REPAIR.js",
+      "NucleoOrquestrador_V2.js",
+      "PAINEL_SOUSA.json",
+      "SOUSAILEON_ARM_V1.js",
+      "SOUSAILEON_COMMAND.js",
+      "SOUSA_2.0_PAINEL_OPERACIONAL.html",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_Ativacao_Producao.js",
+      "SOUSA_AUTHORIZATION_GATE.js",
+      "SOUSA_AVATAR_CONTRATO.js",
+      "SOUSA_CAPACIDADES.js",
+      "SOUSA_CMD_BRIDGE.js",
+      "SOUSA_CMD_INTERFACE.js",
+      "SOUSA_COMMAND_EXTENSIONS.js",
+      "SOUSA_COMMAND_LISTENER.js",
+      "SOUSA_COMMAND_ROUTER.js",
+      "SOUSA_Core.js",
+      "SOUSA_DISCOVERY_REPORT.json",
+      "SOUSA_FIO_CONDUTOR.js",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_INSPECIONAR_INTERFACES.js",
+      "SOUSA_Interface.js",
+      "SOUSA_MOBILE_GATEWAY.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_RUFLO_ADAPTER.js",
+      "SOUSA_RUFLO_CARDAN.js",
+      "SOUSA_USB_SOUSA_IA.js"
+    ],
+    "IA": [
+      "API_MANAGER\\SOUSA_IA.js",
+      "docs\\CONTRIBUICOES_CONSOLIDADAS\\AUDITORIA_100_USB_PNP.json",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_AVATAR_CONTRATO.js",
+      "SOUSA_CAPACIDADES.js",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_IA_AVATAR_TESTES.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_COMPOSITOR.js",
+      "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "SOUSA_IA_IDENTIDADE.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_MANUTENCAO_REFINO.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_MAPA_FUNCIONAL.js",
+      "SOUSA_META_BUILDER.js",
+      "SOUSA_ORQUESTRADOR.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_PROTOCOLO_DAILEON.js",
+      "SOUSA_USB_BOOT.js",
+      "SOUSA_USB_PONTE_LOCAL.js",
+      "SOUSA_USB_SOUSA_IA.js"
+    ],
+    "SEGURANCA": [
+      "API_MANAGER\\SOUSA_IA.js",
+      "CONVERGENCIA_MANIFESTO.json",
+      "docs\\CONTRIBUICOES_CONSOLIDADAS\\AUDITORIA_100_USB_PNP.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_COORDINATOR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_ADAPTER.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_AGENT.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_ORCHESTRATOR.js",
+      "MEMORIA\\sandbox\\repairs\\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\\SOUSA_CAPABILITY_ADAPTER.js",
+      "SOUSA_2.0_PAINEL_OPERACIONAL.html",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_API_EXECUTOR_UNIVERSAL.js",
+      "SOUSA_API_USB.js",
+      "SOUSA_AUTHORIZATION_GATE.js",
+      "SOUSA_AUTONOMIA_CONTRATO.js",
+      "SOUSA_AUTO_DIAGNOSTICO.js",
+      "SOUSA_AVATAR_CONTRATO.js",
+      "SOUSA_CACA_DEPENDENCIAS_ORFAS.js",
+      "SOUSA_CANAIS_OPERACIONAIS.js",
+      "SOUSA_CAPACIDADES.js",
+      "SOUSA_CICLO_AUTONOMO.js",
+      "SOUSA_CONTRATO_MODULO.json",
+      "SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js",
+      "SOUSA_DISCOVERY_REPORT.json",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_IA_AVATAR_TESTES.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "SOUSA_IA_IDENTIDADE.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_INTENCAO.js",
+      "SOUSA_MANUTENCAO_REFINO.js",
+      "SOUSA_MAPA_CARREGAMENTO_REAL.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_MAPA_DEFINICOES_USB.js",
+      "SOUSA_MAPA_FUNCIONAL.js",
+      "SOUSA_ORQUESTRADOR.js",
+      "SOUSA_PLUG_AND_PLAY.js",
+      "SOUSA_POLITICA.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_RADAR_EXPANSAO_360.js",
+      "SOUSA_REGISTRY.js",
+      "SOUSA_RUFLO_ADAPTER.js",
+      "SOUSA_RUFLO_CARDAN.js",
+      "SOUSA_TESTE_PONTE_DEPENDENCIAS.js",
+      "SOUSA_USB.js",
+      "SOUSA_USB_API_GATEWAY.js",
+      "SOUSA_USB_CONTRATO.js",
+      "SOUSA_USB_DISCOVERY.js",
+      "SOUSA_USB_DISCOVERY_ENGINE.js",
+      "SOUSA_USB_FILTER.js",
+      "SOUSA_USB_HEALTH_CHECK.js",
+      "SOUSA_USB_KNOWLEDGE_ENGINE.js",
+      "SOUSA_USB_MEMORIA.json",
+      "SOUSA_USB_MEMORY_SYNC.js",
+      "SOUSA_USB_PERMISSION_MANAGER.js",
+      "SOUSA_USB_PERSISTENCIA.js",
+      "SOUSA_USB_REGISTRY.js",
+      "SOUSA_USB_SECURITY_GATE.js",
+      "SOUSA_USB_SOUSA_IA.js",
+      "SOUSA_USB_TESTES.js",
+      "SOUSA_USB_TRANSPORTES.js",
+      "TESTE_SOUSA_USB_CORE.js",
+      "TESTE_USB_ATIVACAO.js",
+      "TESTE_USB_AUTO.js",
+      "TESTE_USB_CATALOG.js",
+      "TESTE_USB_FILTER.js",
+      "TESTE_USB_FILTER_CENARIOS.js",
+      "TESTE_USB_KNOWLEDGE.js",
+      "TESTE_USB_PIPELINE_COMPLETO.js",
+      "UNIFICACAO_CHECKLIST.json"
+    ],
+    "MEMORIA": [
+      "API_MANAGER\\SOUSA_IA.js",
+      "appsscript.json",
+      "docs\\CONTRIBUICOES_CONSOLIDADAS\\AUDITORIA_100_USB_PNP.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_COORDINATOR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_ENGINE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_SANDBOX.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787512009119.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516085753.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516348619.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713109.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713353.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517242210.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517730425.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517917537.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518463289.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518464664.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518956504.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957405.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957738.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978290.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978655.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978932.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519161580.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519162470.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519918094.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520192704.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194087.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194927.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_ADAPTER.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_HEALTH.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_AGENT.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_MISSION.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_ORCHESTRATOR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_REPAIR_PIPELINE_STATUS.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_RUNTIME_BRIDGE.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_SELF_TEST_REPAIR.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_TEAM_TRIGGER.js",
+      "MEMORIA\\sandbox\\repairs\\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\\SOUSA_CAPABILITY_ADAPTER.js",
+      "MEMORIA\\SOUSA_MEMORIA_AUTOMATICA.json",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_APIS_CASCATA.js",
+      "SOUSA_API_MANAGER_CONFIG.json",
+      "SOUSA_Ativacao_Producao.js",
+      "SOUSA_CAPACIDADES.js",
+      "SOUSA_CAPACIDADE_ESTRATEGIA_PUBLICACAO.json",
+      "SOUSA_CAPACIDADE_LIVRO.json",
+      "SOUSA_CAPACIDADE_PUBLICACAO.json",
+      "SOUSA_CATALOGO_APIS.json",
+      "SOUSA_CATALOGO_CAPACIDADES.json",
+      "SOUSA_COFRE_CHAVES.json",
+      "SOUSA_CONTINUITY_ENGINE.js",
+      "SOUSA_Core.js",
+      "SOUSA_DISCOVERY_REPORT.json",
+      "SOUSA_DRIVE_PERSISTENCE.gs.js",
+      "SOUSA_FIO_CONDUTOR.js",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_FLUXO_EDITORIAL_CONFIG.json",
+      "SOUSA_GERADOR_BRIEFING_CONFIG.json",
+      "SOUSA_GERADOR_PDF_CONFIG.json",
+      "SOUSA_IA_AVATAR_TESTES.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "SOUSA_IA_IDENTIDADE.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_INSPECIONAR_INTERFACES.js",
+      "SOUSA_LOG_ENGINE_CONFIG.json",
+      "SOUSA_LOG_EVENTO_MODELO.json",
+      "SOUSA_MANUTENCAO_REFINO.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_MAPA_FUNCIONAL.js",
+      "SOUSA_MEMORIA_EVENTOS.json",
+      "SOUSA_MEMORIA_TECNICA.json",
+      "SOUSA_NUVEM_SINCRONIZADOR.gs.js",
+      "SOUSA_POLITICA.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_PROJETO_LIVRO_CONFIG.json",
+      "SOUSA_RUFLO_ADAPTER.js",
+      "SOUSA_USB_BOOT.js",
+      "SOUSA_USB_MEMORIA.json",
+      "SOUSA_USB_MEMORY_SYNC.js",
+      "SOUSA_USB_PERSISTENCIA.js",
+      "SOUSA_USB_TESTES_LIVE.js",
+      "SOUSA_USB_TTS_PIPER.js",
+      "TESTE_SOUSA_LOG_ENGINE.js"
+    ],
+    "EXECUCAO": [
+      "docs\\CONTRIBUICOES_CONSOLIDADAS\\AUDITORIA_100_USB_PNP.json",
+      "docs\\CONTRIBUICOES_CONSOLIDADAS\\RELATORIO_TESTES_USB_UNIVERSAL.json",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_ADAPTER.js",
+      "MEMORIA\\sandbox\\repairs\\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\\SOUSA_CAPABILITY_ADAPTER.js",
+      "SOUSAILEON_ARM_V1.js",
+      "SOUSAILEON_ARM_V2.js",
+      "SOUSA_ADAPTADOR_FIO.js",
+      "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "SOUSA_APIS_CASCATA.js",
+      "SOUSA_API_EXECUTOR_UNIVERSAL.js",
+      "SOUSA_API_USB.js",
+      "SOUSA_AUTO_DIAGNOSTICO.js",
+      "SOUSA_CACA_DEPENDENCIAS_ORFAS.js",
+      "SOUSA_CICLO_AUTONOMO.js",
+      "SOUSA_Core.js",
+      "SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js",
+      "SOUSA_FIO_CONDUTOR.js",
+      "SOUSA_FIO_CONDUTOR_REAL.js",
+      "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "SOUSA_IA_COMPOSITOR.js",
+      "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_INSPECIONAR_INTERFACES.js",
+      "SOUSA_MAPA_CARREGAMENTO_REAL.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_MAPA_DEFINICOES_USB.js",
+      "SOUSA_ORQUESTRADOR.js",
+      "SOUSA_PONTE_GLOBAL.js",
+      "SOUSA_PROTOCOLO_DAILEON.js",
+      "SOUSA_TESTE_FLUXO_CONTROLADO.js",
+      "SOUSA_TESTE_PONTE_DEPENDENCIAS.js",
+      "SOUSA_USB_ADAPTERS.js",
+      "SOUSA_USB_BOOT.js",
+      "SOUSA_USB_CONTRATO.js",
+      "SOUSA_USB_PERSISTENCIA.js",
+      "SOUSA_USB_PONTE_LOCAL.js",
+      "SOUSA_USB_REGISTRY.js",
+      "SOUSA_USB_SOUSA_IA.js",
+      "SOUSA_USB_STT.js",
+      "SOUSA_USB_TESTES.js",
+      "SOUSA_USB_TESTES_LIVE.js",
+      "SOUSA_USB_TRANSPORTES.js",
+      "SOUSA_USB_TTS_PIPER.js",
+      "TESTE_CASCATA_UNIVERSAL.js",
+      "TESTE_CORE_EXECUTOR.js",
+      "TESTE_EXECUTOR_CEREBRAS.js",
+      "TESTE_EXECUTOR_UNIVERSAL_GEMINI.js",
+      "UNIFICACAO_CHECKLIST.json"
+    ],
+    "CAPACIDADES": [
+      "mapear_arxivisual.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_ADAPTER.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_HEALTH.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_REGISTRY.js",
+      "MEMORIA\\core\\capabilities\\SOUSA_RUNTIME_BRIDGE.js",
+      "MEMORIA\\sandbox\\repairs\\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\\SOUSA_CAPABILITY_ADAPTER.js",
+      "SOUSA_AUTO_EVOLUCAO.js",
+      "SOUSA_CAPABILITY_DISCOVERY.js",
+      "SOUSA_CAPACIDADE_ESTRATEGIA_PUBLICACAO.json",
+      "SOUSA_FLUXO_EDITORIAL_CONFIG.json",
+      "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "SOUSA_RUFLO_ADAPTER.js",
+      "SOUSA_RUFLO_CARDAN.js",
+      "SOUSA_VALIDAR_RUFLO.js"
+    ]
+  },
+  "arquivos": [
+    {
+      "arquivo": "08_BLOCOS_SOUSA\\BIBLIOTECA\\CATALOGO_BLOCOS.json",
+      "tamanho": 919,
+      "sha256": "e6f52a538414eab81a1190145bed8cfd8de0fe8ea23e1059f390decdab1c9682",
+      "categorias": [
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\autorizacoes_pendentes.json",
+      "tamanho": 287,
+      "sha256": "da85b485b0cb254c87d0b2d3b293d10ad9c731ef7fa1e9c7349b1ebd87cb7de7",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\fila_pendente.json",
+      "tamanho": 143,
+      "sha256": "e221b5f74dc2842a3c38b0eff6b04aa5de3067ad62a15c9fc85ef336cef55600",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "08_BLOCOS_SOUSA\\COMANDOS_MOBILE\\resposta_comando.json",
+      "tamanho": 329,
+      "sha256": "b6b1df2ea3d66e737581245b4c1dbcf277cbca27d6cf33d138f87d2b02f71a04",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "API_MANAGER\\SOUSA_IA.js",
+      "tamanho": 9208,
+      "sha256": "b40a00a46502c7939dd9a466e5ced03131740b12944184c437698cba2189ae38",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "appsscript.json",
+      "tamanho": 209,
+      "sha256": "b3b1a4ae145bf7e4c052b296620fef1ce3225d1d83404231319e8ccc6b46e192",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "CAMPAIGN_GUARDIAN.js",
+      "tamanho": 907,
+      "sha256": "64a57e11b76a96bc537a46ca42bf708ff3e0b7d15bd619887a50d3f1df677d29",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "COMANDO_SOUSAILEON.json",
+      "tamanho": 118,
+      "sha256": "89c478603b6d8d1e21691cca7ad9e054ba475d7df20dde21e08fc8c38f7eceef",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "CONFIG\\SOUSA_MENU_CONFIG.json",
+      "tamanho": 794,
+      "sha256": "0434b8925f13396d9bba4e330f357fe28df51897dc51f6627814a3c2615ba2a1",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "CONVERGENCIA_MANIFESTO.json",
+      "tamanho": 1416,
+      "sha256": "e603de5cbc2fe60024a44f43bd67ec48968ca69d9a3d51139096fbf571cb6085",
+      "categorias": [
+        "SEGURANCA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "docs\\CONTRIBUICOES_CONSOLIDADAS\\AUDITORIA_100_USB_PNP.json",
+      "tamanho": 1096,
+      "sha256": "d2c9ebf4d11da78352148d5a5f80a88044d3f8f81ffad110db09bca68acc0c67",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "docs\\CONTRIBUICOES_CONSOLIDADAS\\RELATORIO_TESTES_USB_UNIVERSAL.json",
+      "tamanho": 2410,
+      "sha256": "195b5108aefe9f41909a0ddbf80b1432162e9ee05aedbc7c5742c2c96fbd1db0",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "mapear_arxivisual.js",
+      "tamanho": 4595,
+      "sha256": "79a15a79acdef335a91021344c598aa8f33f3fa31946a83b53f17b01a459b4ae",
+      "categorias": [
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_COORDINATOR.js",
+      "tamanho": 3155,
+      "sha256": "aada1c6983fb1e94969678947ca653a20b04e73e90868e081163d2d2809d6953",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_ENGINE.js",
+      "tamanho": 4580,
+      "sha256": "56e15efcfe839aaa08223f498e22676f6c6255264a8fb708ff11971f0bfd99c4",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_SANDBOX.js",
+      "tamanho": 3518,
+      "sha256": "db46be238c18ba4041daabb84933f75ecbf38a0d24e6655c334a45abb1675375",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js",
+      "tamanho": 155,
+      "sha256": "b4bc7ecfb332ecc0098ccaf852036139c0197479e04c84233bacda36397fd114",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787512009119.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516085753.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516348619.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713109.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787516713353.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517242210.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517730425.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787517917537.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518463289.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518464664.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518956504.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957405.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518957738.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978290.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978655.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787518978932.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519161580.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519162470.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787519918094.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520192704.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194087.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_AUTO_REPAIR_TESTE.js.auto-repair-sandbox-1787520194927.js",
+      "tamanho": 155,
+      "sha256": "68ee9bf4c26f8a2417480056bc8771c70fc33d47b4c4c7c7fe06e7c2272a39cc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_ADAPTER.js",
+      "tamanho": 4319,
+      "sha256": "d57cd5b4433a7404e40731b4395a0ed94f1fd06b1f398322ab7c221c29a53de9",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_HEALTH.js",
+      "tamanho": 1841,
+      "sha256": "a0f476affcc0ac37652d6567219c1bc7806334167498b36b8e505e73612a70f8",
+      "categorias": [
+        "MEMORIA",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_CAPABILITY_REGISTRY.js",
+      "tamanho": 5863,
+      "sha256": "b99f1cecdcec2407d2e5c391fb5c5498b8d8a6b09aa135f71c4619c2b3e717ec",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_AGENT.js",
+      "tamanho": 6625,
+      "sha256": "c4dcd7dd6a74b445ea3c3a985b16df5d6ebf55f65d4eba8c0dd3cca7c8d91075",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_MISSION.js",
+      "tamanho": 2391,
+      "sha256": "0c4625403512e5f5c0611f87ebdc092106baa62b1e8984cffb5fa904ecfa62df",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_MAINTENANCE_ORCHESTRATOR.js",
+      "tamanho": 3111,
+      "sha256": "4d9b5e500442049d1f4bda9771ce68931f4e74f613cc4b972aa375b750ef4282",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_REPAIR_PIPELINE_STATUS.json",
+      "tamanho": 499,
+      "sha256": "4d0389ca29a5c58e303783cafa3ba61dd6cef1b4dcaec013f08e3f7bc67e6d31",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_RUNTIME_BRIDGE.js",
+      "tamanho": 1016,
+      "sha256": "27094eb866f992e8babbb623e4ced32db86da3cf0a49412d6761aa4a42122f11",
+      "categorias": [
+        "MEMORIA",
+        "CAPACIDADES",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_SELF_TEST_REPAIR.js",
+      "tamanho": 3009,
+      "sha256": "fabf58e2177f283d712e91ba50d5ea0f67002d2527a15f0ddac418e0c0bc8fbc",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.js",
+      "tamanho": 2277,
+      "sha256": "27980381100a32998070902dc82befbe8419a49750eaad943893430699a7b548",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_TEAM_REGISTRY.json",
+      "tamanho": 1878,
+      "sha256": "61001b2f22d204124023a73fd8e8bc1a6c4e5eb13f9e5f4453eeef5930d21c69",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\core\\capabilities\\SOUSA_TEAM_TRIGGER.js",
+      "tamanho": 876,
+      "sha256": "b540355b37901d5c3b1493583d4093a24723a375789af095037fff97da7ff67a",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\sandbox\\repairs\\SOUSA_CAPABILITY_ADAPTER.js-2026-08-23T18-24-04-747Z\\SOUSA_CAPABILITY_ADAPTER.js",
+      "tamanho": 4319,
+      "sha256": "d57cd5b4433a7404e40731b4395a0ed94f1fd06b1f398322ab7c221c29a53de9",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "MEMORIA\\SOUSA_MEMORIA_AUTOMATICA.json",
+      "tamanho": 5827,
+      "sha256": "f396882afb2a0e36f9890fe6140f76ba7026daf2b09962ab9051202d4b373335",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "MonitorSintaxe.js",
+      "tamanho": 4349,
+      "sha256": "66f5160ce970907f6614abac00416d177686a214365f3b8771278a108bfe5a88",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "NucleoOrquestrador.js",
+      "tamanho": 1312,
+      "sha256": "37d32b49efce0462ee577d88ae6af81902769f86e38a1258ac6d3fa7e8ad0766",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "NucleoOrquestrador_V2.js",
+      "tamanho": 1923,
+      "sha256": "0c61c2c70447584d484b263ef2e09c1662aa91bd8d84fd83d6d1770582cf72de",
+      "categorias": [
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "PAINEL_SOUSA.json",
+      "tamanho": 100,
+      "sha256": "1b4eebc528ef235b84bfe8702b203b35357bf6687570e5e2ed356ca3db8bf3d7",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSAILEON_ARM_V1.js",
+      "tamanho": 2900,
+      "sha256": "4b62549ef466884ced7fdcbc282a159ba0bdbd8a794ed7be06a05e55ab7fd384",
+      "categorias": [
+        "EXECUCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSAILEON_ARM_V2.js",
+      "tamanho": 2180,
+      "sha256": "cb743b16d118255348ff344526c071c1d43863221ee3af24667e341646c0b79b",
+      "categorias": [
+        "EXECUCAO",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSAILEON_COMMAND.js",
+      "tamanho": 1210,
+      "sha256": "96ebac78efa76c23ad7be47d4c9322a39b70a15da312b90afab1f3003ec5b031",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_2.0_PAINEL_OPERACIONAL.html",
+      "tamanho": 114237,
+      "sha256": "ea612317aa11c085d386776316696caa67137e849b8130ad9c89fead9ab3d690",
+      "categorias": [
+        "SEGURANCA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_ADAPTADOR_FIO.js",
+      "tamanho": 7416,
+      "sha256": "98c441e7e2ccd709d641c8cfbad5444c5619400e54dd60ea079628039b441b5f",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_ADAPTADOR_HIBRIDO.js",
+      "tamanho": 8804,
+      "sha256": "6cbd6ff84899b96227872f5c890258f6972cc8b36d3f230106de62477b40cfc9",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_APIS_CASCATA.js",
+      "tamanho": 3510,
+      "sha256": "74a60df2dfbef3621fcf1acc17789b3e6836e795b6b6c06b191e931ccd74ac98",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_API_EXECUTOR_UNIVERSAL.js",
+      "tamanho": 6069,
+      "sha256": "dca3b70ffc92df0862649ebf9c878bb9a005d09bfbdbceb1e24fea5336e4eeed",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_API_MANAGER_CONFIG.json",
+      "tamanho": 1381,
+      "sha256": "c23ad136f48b598538ae239fcbc68c971b049496d7a7b046f979cf6fa23b2e35",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_API_USB.js",
+      "tamanho": 3926,
+      "sha256": "356f1c4f98e44c7af73596ac205e058c72966c4207a97fe6e2405165bba34f12",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_Ativacao_Producao.js",
+      "tamanho": 5033,
+      "sha256": "a1da6ea37cdda29a8991cffe593462d91a0e59e33d219ba846cc721de3d4420d",
+      "categorias": [
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_AUTHORIZATION_GATE.js",
+      "tamanho": 1369,
+      "sha256": "202a66c5dab9daea19d5113b43e48c850c34f2d335357e2811430b3a55f03075",
+      "categorias": [
+        "SEGURANCA",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_AUTONOMIA_CONTRATO.js",
+      "tamanho": 2454,
+      "sha256": "aebc3ccf829229c39cb5cb03a71542a9d787f0b5e063ee0477cd46e35ea559c5",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_AUTO_DIAGNOSTICO.js",
+      "tamanho": 1941,
+      "sha256": "b1b2680b7b9e103f10c4ff5ea5bf80b22bb06db50e9076f47dc805832a63a92e",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_AUTO_EVOLUCAO.js",
+      "tamanho": 4472,
+      "sha256": "5156563fc5ebd9a237045b58e3e95fbc30110094d73ca1dc8d55e6e6c6ebe990",
+      "categorias": [
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_AVATAR_CONTRATO.js",
+      "tamanho": 1879,
+      "sha256": "c5e7aedc99ba4cbbd9988b042404eae87e913bf6af21bfa261dead943d201f0b",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CACA_DEPENDENCIAS_ORFAS.js",
+      "tamanho": 3433,
+      "sha256": "575f9918003d96d3899bee5c584f3f457b3a6bd1dc207df6347654b3ce71835b",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CANAIS_OPERACIONAIS.js",
+      "tamanho": 1253,
+      "sha256": "dfa1593d7ca9928dca6b677d965a5135226befc5597c9e0961de560ebeff11b6",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CAPABILITY_DISCOVERY.js",
+      "tamanho": 2835,
+      "sha256": "ba0e688fd8d313d9feb6bb482ada034a5deb2b90380a7dbe877a6478681ee7c0",
+      "categorias": [
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CAPACIDADES.js",
+      "tamanho": 2108,
+      "sha256": "793fdf6744d6d46cc51cf9e8d3f8c72e2bf74369ec3a7a8f5b17dd4f66b5b855",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CAPACIDADE_ESTRATEGIA_PUBLICACAO.json",
+      "tamanho": 959,
+      "sha256": "1ec9f0da3de6b66a484773dec384d49af9a94dfe39d53bdec13b24c206334b44",
+      "categorias": [
+        "MEMORIA",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CAPACIDADE_LIVRO.json",
+      "tamanho": 767,
+      "sha256": "97a82b110dbe2b94b4c265cd4e6e97c809dd3606924293c4a04091cbe4ea8eda",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CAPACIDADE_PUBLICACAO.json",
+      "tamanho": 1300,
+      "sha256": "e57854cf2a5ba975c90f4662ff55c777b9a35d6b60d6c51c2e4da90d084046c8",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CATALOGO_APIS.json",
+      "tamanho": 1095,
+      "sha256": "4a5891631dd12eb366ad6f152f61ac5c6f09a029bb32de3e66545766ec3ca49e",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CATALOGO_CAPACIDADES.json",
+      "tamanho": 1941,
+      "sha256": "4ef3a91370f9b14f68660564a046f85116573c966112c6dd8665259a809f8969",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CICLO_AUTONOMO.js",
+      "tamanho": 1754,
+      "sha256": "199edd90b1fa89d268ce1f8f0178b616b1e9f1d724d2a700976603ea714efdc3",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CMD_BRIDGE.js",
+      "tamanho": 411,
+      "sha256": "bfde09a4bae5a39c0a74325a5d4260f5fff15abcbd72afbbaaf95d48117acc00",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CMD_INTERFACE.js",
+      "tamanho": 605,
+      "sha256": "7645acc84c817fb43942ce628b62b75618aa6e79e40a2b3b0311b1707a2a62e2",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_COFRE_CHAVES.json",
+      "tamanho": 1054,
+      "sha256": "904efc0e8b365d1e1f0ccedb35f5ae94c3aaa8418a24630aeabdc9fda4c73262",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_COMMAND_EXTENSIONS.js",
+      "tamanho": 658,
+      "sha256": "9584dcc814a23f56e146f92224256751bbc5030365842faff6ce43dbca47576a",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_COMMAND_LISTENER.js",
+      "tamanho": 1200,
+      "sha256": "7ccc59335cab6efa4235e812b1d6bfdc1a07c45d60a54ff7d4106f4802029237",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_COMMAND_ROUTER.js",
+      "tamanho": 1750,
+      "sha256": "17344275ba8b54d7a721bd8db25a35001f60bc5fb61c33a6407f16b2451dd09b",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CONTINUITY_ENGINE.js",
+      "tamanho": 1184,
+      "sha256": "88004a47fb9146620cd8fe681ae56116624da39064868ccb42df9010fed14769",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_CONTRATO_MODULO.json",
+      "tamanho": 526,
+      "sha256": "ff872011b6919cf66a7b2837f3ffa1859315b5f5e0aabe46b85b5723dcfa15ed",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_Core.js",
+      "tamanho": 26921,
+      "sha256": "4af1f575a5cefcdfed63cd47907de7113c0835e69896357a3f3fb05e8dee63d9",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_DIAGNOSTICO_DEPENDENCIAS_USB.js",
+      "tamanho": 1381,
+      "sha256": "d72ac7980a511a8246749e43233ab1b205eaac5f035a7bb8ac58c50fb77e7ff8",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_DISCOVERY_REPORT.json",
+      "tamanho": 43264,
+      "sha256": "78941c872b2d410c1995bc04ae7a4084e20c5a8cbf85e35a8ee57c088b4342a2",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_DRIVE_PERSISTENCE.gs.js",
+      "tamanho": 6571,
+      "sha256": "d7e7137a2417a32870ec70c3b7589accb386186317c8e8f534917fff8a9b6acf",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_FIO_CONDUTOR.js",
+      "tamanho": 4088,
+      "sha256": "a2a5d0047b1586c0c771b963349ca9db5232185ed2df1030055a29f100bc199a",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_FIO_CONDUTOR_REAL.js",
+      "tamanho": 7942,
+      "sha256": "1315ad66f83de7101fc68bdedc67c821cdfc675f9d547fa5a2a8f1030e7994aa",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_FLUXO_EDITORIAL_CONFIG.json",
+      "tamanho": 1096,
+      "sha256": "d2cedd86fe019e12635b60b8410c96cb189006f80b821b6609827846768d8ddd",
+      "categorias": [
+        "MEMORIA",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_GERADOR_BRIEFING_CONFIG.json",
+      "tamanho": 912,
+      "sha256": "fcc3cdc4a03189b728211b9874f386564830b8aac949519404d7b1ff98d38e5a",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_GERADOR_PDF_CONFIG.json",
+      "tamanho": 864,
+      "sha256": "a4d994d34561ecb0017e8055368939bfda90e916f6cbd7cf569e7d9ce44f7745",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_AVATAR_TESTES.js",
+      "tamanho": 1043,
+      "sha256": "850a8fea1b05b553ec9e9b03360514fb9c06d7093edf9dff67dcb57843158c8c",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_COMANDO_DIAGNOSTICO.js",
+      "tamanho": 10820,
+      "sha256": "53d869560799ceb759b15cc761412b5a6410ccde59b7ac805c646b52bac4008e",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_COMPOSITOR.js",
+      "tamanho": 3282,
+      "sha256": "3d9af364ad593117cc46e94ed1e02596d2bcf6af1a483003ebe56b9b53c9d845",
+      "categorias": [
+        "IA",
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+      "tamanho": 21189,
+      "sha256": "4ad603a82c9ac297ca02157c282e97649649af4ee62ac55983b362cf9435a2dd",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_IDENTIDADE.js",
+      "tamanho": 1144,
+      "sha256": "17761b8f794fa86801a013ec96b42310bd4586727e67e65f7b07d860fc752d34",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_IA_INDICE_CONSCIENCIA.js",
+      "tamanho": 5383,
+      "sha256": "5094027c9eb64bdd48b53732ff2bfbbc7bdc7936cdaee1f86865ab7b7d5c27c3",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "CAPACIDADES",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_INSPECIONAR_INTERFACES.js",
+      "tamanho": 1755,
+      "sha256": "d5792e9e26b09dfb79414f6911c4a5d705955c929c6b1a319fd1fb8151bb4fda",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_INTENCAO.js",
+      "tamanho": 2244,
+      "sha256": "f8b805e3e5b30c17d14e97534751876c6e6b53a5682f1cb356b3865b9ea72093",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_Interface.js",
+      "tamanho": 469,
+      "sha256": "a6dfa628bb14b2ec3e6b280c707bba2a1bec09012d2054ad8a7ff20ca39b255a",
+      "categorias": [
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_LOG_ENGINE_CONFIG.json",
+      "tamanho": 666,
+      "sha256": "a934316c2b5cb3abe77af196d3a1c46b17d7533d10e80627a4619225c435ce22",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_LOG_EVENTO_MODELO.json",
+      "tamanho": 662,
+      "sha256": "4c4eec15c8f61e6679280f0c2d2ebcd3b6bc1571395c26d1e3032f9aad595b59",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MANUTENCAO_REFINO.js",
+      "tamanho": 10602,
+      "sha256": "22bcf01c9400c0cda60508c55f100d8f8f4f2146f0c8377f504b0e4fce03c583",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MAPA_CARREGAMENTO_REAL.js",
+      "tamanho": 5285,
+      "sha256": "d88e8f411aec805033d1c4c4a057d0b8e9e29ecc5ee7bd2124716f51e3360e1a",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MAPA_CONSCIENCIA_IA.js",
+      "tamanho": 3814,
+      "sha256": "65523b291228efa8b7730e8e286d56bb204e037c1d2395aa35358b5210fca653",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MAPA_DEFINICOES_USB.js",
+      "tamanho": 3000,
+      "sha256": "5c25c07b00cf90b28839bcb5df83570223139f6f7fc6568e42cdac115b493dd6",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MAPA_FUNCIONAL.js",
+      "tamanho": 5265,
+      "sha256": "f93cb6e2384e87cd4f2830afbc9b4bbbef5e2b251bd3a908d088aaafbdc2435a",
+      "categorias": [
+        "IA",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MEMORIA_EVENTOS.json",
+      "tamanho": 748,
+      "sha256": "e003f151756420551ed3f31c5b87e54ef4b13a471570cd1ed63d166242bffc56",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MEMORIA_TECNICA.json",
+      "tamanho": 809,
+      "sha256": "5de19f5f1f343816a17ab680af022ef8c9f441269a625b64f4106d68be8d023c",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_META_BUILDER.js",
+      "tamanho": 1144,
+      "sha256": "1f7aa0234ec367774aac7168166a43b41bd467d55f77f5905880199b54ea8d44",
+      "categorias": [
+        "IA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_MOBILE_GATEWAY.js",
+      "tamanho": 1029,
+      "sha256": "5e3635f5a0ca02d52650ca6d1532d3db9c30b280c692f4c6c78f7bc4017ec942",
+      "categorias": [
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_NUVEM_SINCRONIZADOR.gs.js",
+      "tamanho": 839,
+      "sha256": "74aa4fc14267c0caeb0fbe37483bca66c496321236bda01f7f173ad7efe3342d",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_ORQUESTRADOR.js",
+      "tamanho": 4041,
+      "sha256": "5671874102112436f6842e4da5b3be20f48bffb68fe402d3978db6c19b99a746",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_PLUG_AND_PLAY.js",
+      "tamanho": 618,
+      "sha256": "1a3fed2c7861f803f6248ce3a8e2694cf09fc4b8ee018ab486733f83dc4536e5",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_POLITICA.js",
+      "tamanho": 6066,
+      "sha256": "88aa262d8815959d549e2cde6a8e2d240316d2c4ac56a430ce4993a34dc8449d",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_PONTE_GLOBAL.js",
+      "tamanho": 9557,
+      "sha256": "b2fa59d5661b623c4811246ea2d44901321e1c99d25afffe1d852826e54bb2a8",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA",
+        "MANUTENCAO",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_PROJETO_LIVRO_CONFIG.json",
+      "tamanho": 910,
+      "sha256": "80aafd5906f432da603bccffcc28a237a96b96245200d12b7efea6f6f5653049",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_PROTOCOLO_DAILEON.js",
+      "tamanho": 4213,
+      "sha256": "842b5ac5358c8d94a623aca5f522edb6dbf438d72a679e1faf91b6ce6328cc9d",
+      "categorias": [
+        "IA",
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_RADAR_EXPANSAO_360.js",
+      "tamanho": 4827,
+      "sha256": "a39765e423865e78ef1cc7a9cf2f6b2f96b8ba3194fe7a43d98222c083fb7941",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_REGISTRY.js",
+      "tamanho": 940,
+      "sha256": "3808e9b67aaa4ad6df1d8d16071eefd70763c852ce9b44f8b74918ba0f190c04",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_RUFLO_ADAPTER.js",
+      "tamanho": 4175,
+      "sha256": "ec9cecc5caab0eba93c369f5726efe5cd16a820963629b891c5d44571a4752e8",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA",
+        "CAPACIDADES",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_RUFLO_CARDAN.js",
+      "tamanho": 3034,
+      "sha256": "bdf2949ad1fd5cd1094f37cc4afa0fa73c9709616a1c09e2fa7e9bf11e8ef447",
+      "categorias": [
+        "SEGURANCA",
+        "CAPACIDADES",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_TESTE_FLUXO_CONTROLADO.js",
+      "tamanho": 2157,
+      "sha256": "93d3be9593eefa69ae1ee1c946931453014c1d881ffaf46d0f335bca73c5210b",
+      "categorias": [
+        "EXECUCAO",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_TESTE_PONTE_DEPENDENCIAS.js",
+      "tamanho": 6388,
+      "sha256": "3959e232db0cc9f3b33ac1d6963eb8607b4db74dfe8c09346f100e7a914a08b7",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB.js",
+      "tamanho": 1341,
+      "sha256": "9a5a2aa2ac7a6ed5565ece5e7cde5f11b9015dd53d3a92a838e1ec469db0ba4a",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_ADAPTERS.js",
+      "tamanho": 4115,
+      "sha256": "88cb5b54418aebe45610105519346221d8203ac214cc1373fa262dbc7adbaaa5",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_API_GATEWAY.js",
+      "tamanho": 844,
+      "sha256": "dad71d05a93196756e5fe766a5b164891343900fc0d75507c61000249ba60453",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_BOOT.js",
+      "tamanho": 3953,
+      "sha256": "e1a07f4c6ff858ddb8e37a2f6df1d492e74ca7b4096935b712fd7a0eb26bf08e",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_CONTRATO.js",
+      "tamanho": 4636,
+      "sha256": "212bee8bd335574e9d12ad463e9ca06fbdcd1b45481841cd21b23fc5de876ce2",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_CORE.js",
+      "tamanho": 976,
+      "sha256": "de6be20c694c7aecb8d2ff409226ebb9da3c4402a615afce189a9a41af0adcc4",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_DISCOVERY.js",
+      "tamanho": 754,
+      "sha256": "e8e5a4ced53d639deb6a67366007bb1eccf5ad57b6fe34e9fc006d365111ceb9",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_DISCOVERY_ENGINE.js",
+      "tamanho": 755,
+      "sha256": "e65db61241d0faac0ba44b201a065fc2608fbadb7911f23ab90955685e3bbecc",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_FILTER.js",
+      "tamanho": 871,
+      "sha256": "3c0444d9103e6d9fe65ec1ae7356aa6d22a7d8c0740d1ff27940d890d4763e85",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_HEALTH_CHECK.js",
+      "tamanho": 733,
+      "sha256": "7ccc245e42a53cd13af32a9b423abfab19542c71ec5187d8be2205e55d2b92be",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_HEALTH_MONITOR.js",
+      "tamanho": 628,
+      "sha256": "08ac4247e033523fd80217dfb4186b25c4659c0f30b57de1601d07437f8623b2",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_KNOWLEDGE_ENGINE.js",
+      "tamanho": 1110,
+      "sha256": "6086ec2614f2973b98cfca0494a1b8b578dde1b9d3b81e3f9a6a2da75f4f16b4",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_MEMORIA.json",
+      "tamanho": 357,
+      "sha256": "cc5930f622be2fb50246a1099b154e87c3949cfbec9cf08080fdde0ce605e088",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_MEMORY_SYNC.js",
+      "tamanho": 835,
+      "sha256": "30d81e0b3889c3fd60e800e9570a12df73bf8076226a162aba5a85dae0778041",
+      "categorias": [
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_MONITOR.js",
+      "tamanho": 863,
+      "sha256": "706e0ee913ad09e33e1732c1624bbaeb030ea24241960b1b067c8774578bc691",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_PERMISSION_MANAGER.js",
+      "tamanho": 689,
+      "sha256": "9359ff17d72267e28715809d79f74b5f45c6d4a2e7f8f70b76e625de4f3360a3",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_PERSISTENCIA.js",
+      "tamanho": 3856,
+      "sha256": "1e04ca2854ab9d6a523c16d11d92dd094b813d045bbb140939709fb2d66ad434",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_PONTE_LOCAL.js",
+      "tamanho": 6947,
+      "sha256": "433aee214ad750b015d7e0bb2aa65bad1aed31c4a3a5b9d8d6411367abb423d0",
+      "categorias": [
+        "IA",
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_REGISTRY.js",
+      "tamanho": 6174,
+      "sha256": "7589ab30c66f830cfe689cec09cc9d02fb9fac4cdabb0c931197504f9959d7bb",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_SECURITY_GATE.js",
+      "tamanho": 728,
+      "sha256": "502daf8ba111b263d98010dd65c27c816b499759fc65fcb4265856c99820fd89",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_SOUSA_IA.js",
+      "tamanho": 13491,
+      "sha256": "505036596588fd34aa0e3310113b7df9b2a48ae94187bb4fa3d5a9128acfd330",
+      "categorias": [
+        "IA",
+        "EXECUCAO",
+        "SEGURANCA",
+        "INTERFACE"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_STATUS.js",
+      "tamanho": 516,
+      "sha256": "82998852a375d6ea2b1b1b7bd3651d7dc47b06d8ab53a2e0ad872d2d42962c00",
+      "categorias": [
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_STT.js",
+      "tamanho": 5940,
+      "sha256": "9ef68fe05503e737a824aa508256aaf6302a06dc32e6ea5f7cb9b4260b8c8320",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_TESTES.js",
+      "tamanho": 7389,
+      "sha256": "16607598ce5d1b534195fe4114b42c82df79a676842feac1ca87ae8b6b660b83",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_TESTES_LIVE.js",
+      "tamanho": 6182,
+      "sha256": "ece5c2f2dcb20e1cc62e0764610352a7e5ff0f2be60277cd33542ed94ba29b27",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_TRANSPORTES.js",
+      "tamanho": 9738,
+      "sha256": "e9dbdc02360f1fec62d4ae006b9818f87edefe3260b8a7a3e85f93e8ff814b03",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_USB_TTS_PIPER.js",
+      "tamanho": 5555,
+      "sha256": "74e74a1f8cfbd1328e600e79eeb11b3fc431fdb33390f102d91c004b6fff2fb6",
+      "categorias": [
+        "EXECUCAO",
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "SOUSA_VALIDAR_RUFLO.js",
+      "tamanho": 1402,
+      "sha256": "8c021fe795dac610183a5349a25ed5ca9251f78d5b2bd4281b4d26801965d100",
+      "categorias": [
+        "CAPACIDADES"
+      ]
+    },
+    {
+      "arquivo": "TESTE_CASCATA_UNIVERSAL.js",
+      "tamanho": 1135,
+      "sha256": "c4321be650232b271fcaa4daa1568a66849006b6fd7d4e3b21aa812970f2e483",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "TESTE_CORE_EXECUTOR.js",
+      "tamanho": 328,
+      "sha256": "8e95bfe2b13a95a83384f06b1d6827e20603c5162d9febb0534b9842b03c8ce8",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "TESTE_EXECUTOR_CEREBRAS.js",
+      "tamanho": 494,
+      "sha256": "12f1a8c7383eefbed43e077e9a642dab45d8ccfb5bd8a182afd6c2a8ef40e6a9",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "TESTE_EXECUTOR_UNIVERSAL_GEMINI.js",
+      "tamanho": 454,
+      "sha256": "b933db371dd09b15a8b00868f53e9f9f255588f573879cc94ef7f5565b111305",
+      "categorias": [
+        "EXECUCAO"
+      ]
+    },
+    {
+      "arquivo": "TESTE_SOUSA_LOG_ENGINE.js",
+      "tamanho": 332,
+      "sha256": "84ad642981c79140b02c18e9f39d01f9fa0107193026337e4f6d384d0a3b4777",
+      "categorias": [
+        "MEMORIA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_SOUSA_USB_CORE.js",
+      "tamanho": 463,
+      "sha256": "894b9c7666125f77836364ce7fbbbab723f6821a3ba52589ab8843319b2f6f7b",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_ATIVACAO.js",
+      "tamanho": 493,
+      "sha256": "9320ba6fd7014844df24aa58b7261db979210eeb32f500ee06668e4ee4fbebf4",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_AUTO.js",
+      "tamanho": 517,
+      "sha256": "3e05dce220b37b839f02c9d6070f299a43de02f7bbc9b567463f10f8b7d778cb",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_CATALOG.js",
+      "tamanho": 621,
+      "sha256": "6e5fe438d242784d1699249f7703b725df073c57a47a73c1e34ea9a183b14db0",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_FILTER.js",
+      "tamanho": 388,
+      "sha256": "e1aabde18066465387781a23ad16305d77a137c8726aabe65f082d61c2057220",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_FILTER_CENARIOS.js",
+      "tamanho": 1069,
+      "sha256": "cfd42b56414d2a00e86959003d00ea2a52f540496aa5b7da0d45c58c648c51d5",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_KNOWLEDGE.js",
+      "tamanho": 492,
+      "sha256": "14cb4a6f6200f435ac661dbbd06d180d61940d5bd73f95bc73754a1d14dc9744",
+      "categorias": [
+        "SEGURANCA"
+      ]
+    },
+    {
+      "arquivo": "TESTE_USB_PIPELINE_COMPLETO.js",
+      "tamanho": 1725,
+      "sha256": "5732ee86b52dbf0d2daeb194f1e194e8cbf3910775110d5ef417a58bfd985427",
+      "categorias": [
+        "SEGURANCA",
+        "MANUTENCAO"
+      ]
+    },
+    {
+      "arquivo": "UNIFICACAO_CHECKLIST.json",
+      "tamanho": 1309,
+      "sha256": "8dcfc8aa403506b78cc53213a0195dff4bbe27f1ac5658bf5f47ef4ec1aec662",
+      "categorias": [
+        "EXECUCAO",
+        "SEGURANCA"
+      ]
+    }
+  ],
+  "estatisticas": {
+    "arquivosAnalisados": 224,
+    "arquivosRelacionados": 175,
+    "referenciasEncontradas": 352
+  }
+}

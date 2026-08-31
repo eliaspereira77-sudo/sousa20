@@ -1,0 +1,28 @@
+{
+  "status": "CANDIDATO_UNIFICADO",
+  "base_oficial": "SOUSA_2.0_PRODUCAO",
+  "production_zip_entries": 10529,
+  "production_residue_excluded": 10295,
+  "production_clean_entries": 234,
+  "converged_entries": 184,
+  "shared_paths": 171,
+  "shared_identical": 168,
+  "shared_different": 3,
+  "converged_only": 13,
+  "final_entries": 209,
+  "final_js_gs": 114,
+  "syntax_errors": 0,
+  "known_conflicts_removed": [
+    "src/SOUSA_Core_2.0_Consolidado_Turbinado.gs (monólito legado com duplicidades e credencial embutida)",
+    "src/SOUSA_CONFIG.js (roteamento/webhook duplicava doGet/doPost e funções globais)",
+    "src/SOUSA_API_EXECUTOR_UNIVERSAL.js (duplicata funcional do executor oficial; versão convergida no root)",
+    "src/SOUSA_POLITICA.js (duplicata funcional do motor oficial; versão convergida no root)",
+    "SOUSA_APIS_CASCATA.gs.js (variante paralela do catálogo oficial)",
+    "SOUSA_MARKETPLACE_CASCATA.gs.js (variante paralela do catálogo oficial)",
+    "SousaConfig.gs.js (configuração antiga com credencial embutida)",
+    "SOUSA_Orquestrador_Recuperacao (1).js e duplicatas exatas em src/"
+  ],
+  "unique_component_added": "SOUSA_MANUTENCAO_REFINO.js (movido de src/ e reparado sintaticamente)",
+  "webhook_verifier_added_to": "SOUSA_CONFIG.js",
+  "remote_sync_executed": false
+}

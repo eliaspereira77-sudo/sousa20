@@ -1,0 +1,48 @@
+﻿{
+  "projeto": "SOUSA 2.0",
+
+  "modulo": "SOUSA_GERADOR_BRIEFING",
+
+  "versao": "1.0.0",
+
+  "descricao": "Gerador de relatórios, briefings e prompts de continuidade a partir da memoria tecnica.",
+
+  "objetivo": "Permitir consulta sob demanda do estado atual do projeto.",
+
+  "entradas": [
+    "SOUSA_MEMORIA_TECNICA.json",
+    "SOUSA_LOG_EVENTO_MODELO.json",
+    "registros_eventos"
+  ],
+
+  "saidas": [
+    {
+      "tipo": "BRIEFING",
+      "formato": "TXT"
+    },
+    {
+      "tipo": "RELATORIO_TECNICO",
+      "formato": "PDF"
+    },
+    {
+      "tipo": "PROMPT_CONTINUIDADE",
+      "formato": "TXT"
+    }
+  ],
+
+  "conteudo_obrigatorio": [
+    "data_hora_geracao",
+    "resumo_do_projeto",
+    "ultimas_acoes",
+    "arquivos_criados",
+    "decisoes",
+    "pendencias",
+    "proximo_passo"
+  ],
+
+  "comando_solicitacao": [
+    "GERAR_BRIEFING",
+    "GERAR_RELATORIO",
+    "GERAR_PROMPT_CONTINUIDADE"
+  ]
+}

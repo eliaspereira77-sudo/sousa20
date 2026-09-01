@@ -66,6 +66,7 @@ media/generated/
 # Jupyter
 .ipynb_checkpoints/
 
+<<<<<<< HEAD
 # SOUSA data operacional (não versionar)
 data/ciclos/
 data/*.db
@@ -74,3 +75,8 @@ data/*.db-*
 
 .tmp.driveupload/
 node_modules/
+=======
+# SOUSA data (ciclos persistidos — não versionar conteúdo operacional)
+data/ciclos/
+!data/.gitkeep
+>>>>>>> origin/feature/omniroute-integration

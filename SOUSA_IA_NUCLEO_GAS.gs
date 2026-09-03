@@ -99,35 +99,41 @@ var SOUSA_IA_GAS_NUCLEO = {
 
     try {
 
-      if (
-        typeof SOUSA_CAPABILITY_REGISTRY !==
-        'undefined'
-      ) {
+      if (typeof SOUSA_CAPABILITY_REGISTRY !== 'undefined') {
 
+        // Registry real: objeto contendo Map de capacidades
         if (
-          typeof SOUSA_CAPABILITY_REGISTRY ===
-          'function'
+          SOUSA_CAPABILITY_REGISTRY.capabilities &&
+          typeof SOUSA_CAPABILITY_REGISTRY.capabilities.values === 'function'
         ) {
 
-          var resultado =
-            SOUSA_CAPABILITY_REGISTRY();
+          var registros = Array.from(
+            SOUSA_CAPABILITY_REGISTRY.capabilities.values()
+          );
+
+          capacidades = registros.map(function(capacidade) {
+            return {
+              id: capacidade.id || null,
+              nome: capacidade.name || capacidade.nome || capacidade.id || 'SEM_NOME',
+              provider: capacidade.provider || null,
+              adapter: capacidade.adapter || null,
+              status: capacidade.status || null,
+              category: capacidade.category || null,
+              capabilities: Array.isArray(capacidade.capabilities)
+                ? capacidade.capabilities
+                : [],
+              origem: 'REGISTRY'
+            };
+          });
+
+        } else if (typeof SOUSA_CAPABILITY_REGISTRY === 'function') {
+
+          // Compatibilidade com Registry legado
+          var resultado = SOUSA_CAPABILITY_REGISTRY();
 
           if (Array.isArray(resultado)) {
             capacidades = resultado;
           }
-
-        } else {
-
-          capacidades = Object.keys(
-            SOUSA_CAPABILITY_REGISTRY
-          ).map(function(nome) {
-
-            return {
-              nome: nome,
-              origem: 'REGISTRY'
-            };
-
-          });
 
         }
 

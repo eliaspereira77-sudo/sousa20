@@ -18,9 +18,10 @@ const CONFIG = {
   version: '1.2.0',
   maxAttempts: 3,
   automatic: true,
-  productionWrite: false,
+  productionWrite: true,
   sandboxFirst: true,
-  backupAfterValidation: true
+  backupAfterValidation: true,
+  automaticPromotion: true,
 };
 
 function syntaxTest(file) {
@@ -249,3 +250,7 @@ module.exports = {
   deterministicRepair,
   repair
 };
+
+
+
+

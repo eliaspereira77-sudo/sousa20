@@ -23,7 +23,9 @@ const SOUSA_TEAM_TRIGGER = {
 
     const mission = Orchestrator.executeMission({
       target,
-      repairedContent: null
+      repairedContent: null,
+      event,
+      objective
     });
 
     return {
@@ -41,3 +43,4 @@ const SOUSA_TEAM_TRIGGER = {
 };
 
 module.exports = SOUSA_TEAM_TRIGGER;
+

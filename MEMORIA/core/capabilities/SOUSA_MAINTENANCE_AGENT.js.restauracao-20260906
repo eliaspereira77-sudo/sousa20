@@ -1,0 +1,154 @@
+'use strict';
+
+/**
+ * SOUSA 2.0 — MAINTENANCE AGENT
+ * Versão 1.0.0
+ *
+ * Função:
+ * Preparar missões de manutenção para agentes de engenharia.
+ *
+ * Segurança:
+ * - não altera produção;
+ * - não executa código recebido;
+ * - trabalha com contexto controlado;
+ * - entrega a proposta ao Sandbox.
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const SelfTest = require('./SOUSA_SELF_TEST_REPAIR.js');
+const Sandbox = require('./SOUSA_AUTO_REPAIR_SANDBOX.js');
+
+const CONFIG = {
+  version: '1.0.0',
+  maxAttempts: 3,
+  mode: 'SAFE_SANDBOX'
+};
+
+
+/**
+ * Lê o alvo para análise.
+ */
+function inspect(target) {
+
+  const absoluteTarget = path.resolve(target);
+
+  if (!fs.existsSync(absoluteTarget)) {
+    throw new Error(
+      `Arquivo não encontrado: ${absoluteTarget}`
+    );
+  }
+
+  const content =
+    fs.readFileSync(absoluteTarget, 'utf8');
+
+  const test =
+    SelfTest.run(absoluteTarget);
+
+  return {
+    target: absoluteTarget,
+    size: content.length,
+    content,
+    test
+  };
+}
+
+
+/**
+ * Cria uma missão para o agente de engenharia.
+ */
+function createMission({
+  target,
+  objective
+}) {
+
+  if (!objective) {
+    throw new Error(
+      'Objetivo da manutenção é obrigatório.'
+    );
+  }
+
+  const inspection =
+    inspect(target);
+
+  return {
+    agent: 'SOUSA_MAINTENANCE_AGENT',
+    version: CONFIG.version,
+
+    missionId:
+      `MAINT-${Date.now()}`,
+
+    target: inspection.target,
+
+    objective,
+
+    currentState: {
+      syntaxHealthy:
+        inspection.test.success,
+
+      contentSize:
+        inspection.size
+    },
+
+    permissions: {
+      read: true,
+      sandboxWrite: true,
+      productionWrite: false,
+      executeUnknownCode: false
+    },
+
+    workflow: [
+      'INSPECT',
+      'DIAGNOSE',
+      'PROPOSE_REPAIR',
+      'SANDBOX_TEST',
+      'VALIDATE',
+      'PROMOTE_PENDING'
+    ]
+  };
+}
+
+
+/**
+ * Recebe uma proposta produzida pelo agente
+ * de engenharia e a envia ao Sandbox.
+ */
+function submitRepair({
+  target,
+  repairedContent,
+  objective
+}) {
+
+  const mission =
+    createMission({
+      target,
+      objective
+    });
+
+  const result =
+    Sandbox.repair({
+      sourceFile: mission.target,
+      repairedContent
+    });
+
+  return {
+    mission,
+
+    result,
+
+    promotion: {
+      allowed: false,
+      reason:
+        'A promoção depende do Validator e das políticas de produção.'
+    }
+  };
+}
+
+
+module.exports = {
+  CONFIG,
+  inspect,
+  createMission,
+  submitRepair
+};

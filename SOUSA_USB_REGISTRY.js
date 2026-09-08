@@ -197,8 +197,8 @@ function SOUSA_USB_semearCascataLegada() {
 
 /**
  * ==========================================================
- * NODE.JS BRIDGE — EXPORTS
- * Compatibilidade sem alterar o núcleo GAS/global
+ * NODE.JS BRIDGE ï¿½ EXPORTS
+ * Compatibilidade sem alterar o nï¿½cleo GAS/global
  * ==========================================================
  */
 if (typeof module !== "undefined" && module.exports) {

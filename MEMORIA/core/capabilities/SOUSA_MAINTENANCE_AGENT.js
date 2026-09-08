@@ -5,75 +5,38 @@
  * Versão 1.1.0
  *
  * Função:
- * Preparar e coordenar missões de manutenção segura.
- *
- * Capacidades ampliadas:
- * - inspeção;
- * - diagnóstico;
- * - reparo;
- * - higienização;
- * - identificação de duplicidades;
- * - identificação de resíduos;
- * - identificação de arquivos de quarentena;
- * - identificação de possíveis órfãos;
- * - proposta de limpeza;
- * - Sandbox;
- * - validação.
+ * Preparar missões de manutenção para agentes de engenharia.
  *
  * Segurança:
  * - não altera produção diretamente;
- * - não executa código recebido;
- * - não apaga arquivos automaticamente;
+ * - não executa código recebido durante inspeção;
  * - trabalha com contexto controlado;
- * - entrega alterações ao Sandbox/Validator.
+ * - reparos passam pelo Sandbox;
+ * - promoção pertence ao fluxo superior de Auto Repair.
  */
 
 const fs = require('fs');
 const path = require('path');
-const crypto = require('crypto');
 
 const SelfTest = require('./SOUSA_SELF_TEST_REPAIR.js');
 const Sandbox = require('./SOUSA_AUTO_REPAIR_SANDBOX.js');
 
 const CONFIG = {
   version: '1.1.0',
-  previousVersion: '1.0.0',
   maxAttempts: 3,
   mode: 'SAFE_SANDBOX',
-
-  capabilities: {
-    repair: true,
-    hygiene: true,
-    duplicateDetection: true,
-    residueDetection: true,
-    quarantineDetection: true,
-    orphanDetection: true,
-    noiseDetection: true,
-    incompatibilityDetection: true
-  },
-
+  productionWrite: false,
+  sandboxFirst: true,
+  automaticDeletion: false,
+  requiresValidation: true,
   safety: {
-    productionWrite: false,
-    automaticDeletion: false,
-    executeUnknownCode: false,
-    sandboxFirst: true
+    automaticDeletion: false
   }
 };
 
 
 /**
- * Calcula SHA-256 de um arquivo.
- */
-function hashFile(filePath) {
-  return crypto
-    .createHash('sha256')
-    .update(fs.readFileSync(filePath))
-    .digest('hex');
-}
-
-
-/**
- * Lê o alvo para análise.
+ * Inspeciona um arquivo sem disparar autorreparo.
  */
 function inspect(target) {
 
@@ -85,11 +48,19 @@ function inspect(target) {
     );
   }
 
+  const stat = fs.statSync(absoluteTarget);
+
+  if (stat.isDirectory()) {
+    throw new Error(
+      `inspect() espera um arquivo. Use inspectHygiene() para diretórios: ${absoluteTarget}`
+    );
+  }
+
   const content =
     fs.readFileSync(absoluteTarget, 'utf8');
 
   const test =
-    SelfTest.run(absoluteTarget);
+    SelfTest.syntaxTest(absoluteTarget);
 
   return {
     target: absoluteTarget,
@@ -104,137 +75,73 @@ function inspect(target) {
 
 
 /**
- * Inspeção de higiene do diretório do alvo.
+ * Inspeção de higiene.
  *
- * Esta função NÃO remove arquivos.
- * Apenas identifica candidatos para tratamento.
+ * Aceita arquivo OU diretório.
+ * Não remove arquivos automaticamente.
  */
 function inspectHygiene(target) {
 
-  const inspection = inspect(target);
+  const absoluteTarget = path.resolve(target);
+
+  if (!fs.existsSync(absoluteTarget)) {
+    throw new Error(
+      `Alvo não encontrado: ${absoluteTarget}`
+    );
+  }
+
+  const stat = fs.statSync(absoluteTarget);
+
+  const inspection = stat.isDirectory()
+    ? {
+        target: absoluteTarget,
+        directory: absoluteTarget,
+        name: path.basename(absoluteTarget),
+        extension: '',
+        size: 0,
+        content: null,
+        test: {
+          success: true,
+          skipped: true,
+          reason: 'Alvo é diretório; teste de sintaxe não se aplica.'
+        }
+      }
+    : inspect(absoluteTarget);
+
   const directory = inspection.directory;
 
   const files =
     fs.readdirSync(directory, { withFileTypes: true })
       .filter(entry => entry.isFile())
-      .map(entry => {
-        const filePath =
-          path.join(directory, entry.name);
+      .map(entry => entry.name);
 
-        let hash = null;
-
-        try {
-          hash = hashFile(filePath);
-        } catch (_) {
-          hash = null;
-        }
-
-        return {
-          name: entry.name,
-          path: filePath,
-          size: fs.statSync(filePath).size,
-          hash
-        };
-      });
-
-  const hashGroups = {};
-
-  for (const file of files) {
-    if (!file.hash) continue;
-
-    if (!hashGroups[file.hash]) {
-      hashGroups[file.hash] = [];
-    }
-
-    hashGroups[file.hash].push(file);
-  }
-
-  const duplicates =
-    Object.values(hashGroups)
-      .filter(group => group.length > 1);
-
-  const quarantineCandidates =
-    files.filter(file =>
-      /quarantine|quarentena|\.quarantine|\.quarantine-/i
-        .test(file.name)
+  const backups =
+    files.filter(name =>
+      /backup|\.BACKUP_|\.auto-repair-backup-|\.pre-|\.restauracao-|\.OLD/i.test(name)
     );
 
-  const residueCandidates =
-    files.filter(file =>
-      /backup|bak|old|tmp|temp|copy|copia|\.pre-|\.auto-repair-/i
-        .test(file.name)
+  const sandboxes =
+    files.filter(name =>
+      /sandbox|\.auto-repair-sandbox-/i.test(name)
     );
 
-  const noiseCandidates =
-    files.filter(file =>
-      /\.log$|\.tmp$|\.temp$|~$|\.cache$/i
-        .test(file.name)
-    );
-
-  const targetReferences =
-    files.filter(file =>
-      file.name !== inspection.name &&
-      file.name.includes(
-        path.basename(
-          inspection.name,
-          path.extname(inspection.name)
-        )
-      )
+  const tests =
+    files.filter(name =>
+      /TESTE|test/i.test(name)
     );
 
   return {
-    target: inspection.target,
-    directory,
-    inventory: {
+    ...inspection,
+
+    hygiene: {
+      directory,
       totalFiles: files.length,
-      totalBytes:
-        files.reduce(
-          (sum, file) => sum + file.size,
-          0
-        )
-    },
-
-    duplicates: {
-      detected: duplicates.length > 0,
-      groups: duplicates
-    },
-
-    quarantine: {
-      detected: quarantineCandidates.length > 0,
-      candidates: quarantineCandidates
-    },
-
-    residues: {
-      detected: residueCandidates.length > 0,
-      candidates: residueCandidates
-    },
-
-    noise: {
-      detected: noiseCandidates.length > 0,
-      candidates: noiseCandidates
-    },
-
-    possibleOrphans: {
-      detected: false,
-      candidates: [],
-      reason:
-        'Necessita análise de referências/dependências antes de qualquer classificação definitiva.'
-    },
-
-    possibleIncompatibilities: {
-      detected: false,
-      candidates: [],
-      reason:
-        'A incompatibilidade deve ser confirmada por validação técnica.'
-    },
-
-    relatedFiles: targetReferences,
-
-    safety: {
+      backups,
+      sandboxes,
+      tests,
       automaticDeletion: false,
-      productionWrite: false,
-      sandboxFirst: true,
-      requiresValidation: true
+      possibleOrphans: [],
+      possibleIncompatibilities: []
     }
   };
 }
@@ -276,10 +183,22 @@ function createMission({
         inspection.test.success,
 
       contentSize:
-        inspection.size
-    },
+        inspection.size,
 
-    hygiene,
+      hygiene: {
+        totalFiles:
+          hygiene.hygiene.totalFiles,
+
+        backups:
+          hygiene.hygiene.backups.length,
+
+        sandboxes:
+          hygiene.hygiene.sandboxes.length,
+
+        tests:
+          hygiene.hygiene.tests.length
+      }
+    },
 
     permissions: {
       read: true,
@@ -293,7 +212,7 @@ function createMission({
       'INSPECT',
       'DIAGNOSE',
       'CLASSIFY',
-      'PROPOSE_REPAIR_OR_HYGIENE',
+      'PROPOSE_REPAIR',
       'SANDBOX_TEST',
       'VALIDATE',
       'PROMOTE_PENDING'
@@ -326,6 +245,7 @@ function submitRepair({
 
   return {
     mission,
+
     result,
 
     promotion: {
@@ -339,9 +259,9 @@ function submitRepair({
 
 module.exports = {
   CONFIG,
-  hashFile,
   inspect,
   inspectHygiene,
   createMission,
   submitRepair
 };
+

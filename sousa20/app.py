@@ -1,11 +1,12 @@
 """
 SOUSA 2.0 - Entry Point Principal
-Sistema de IA Pessoal Avançado — automação 99,99% + expansão de capacidades
+Sistema de IA Pessoal AvanÃ§ado â€” automaÃ§Ã£o 99,99% + expansÃ£o de capacidades
 """
 
 import os
 from flask import Flask, request, jsonify
 from dotenv import load_dotenv
+from core.auth import require_auth
 
 load_dotenv()
 
@@ -77,7 +78,7 @@ def home():
         "system": "SOUSA 2.0",
         "status": "operational",
         "version": "0.5.1-capacidades",
-        "message": "SOUSA 2.0 — automação 99,99% + expansão externa de capacidades sob soberania",
+        "message": "SOUSA 2.0 â€” automaÃ§Ã£o 99,99% + expansÃ£o externa de capacidades sob soberania",
         "modules": {
             "core": "active",
             "soberania": "active",
@@ -103,38 +104,54 @@ def health():
 
 
 @app.route("/chat", methods=["POST"])
+@require_auth
 def chat():
     data = request.get_json() or {}
     message = data.get("message", "")
+
     if not message:
         return jsonify({"error": "message is required"}), 400
 
-    omniroute_base_url = os.getenv("OMNIROUTE_BASE_URL")
-    if omniroute_base_url and OmniRouteClient is not None:
+    # ================================================================
+    # ESTEIRA OFICIAL
+    # COMANDO -> SOUSA IA -> RUFLO -> CAPACIDADE -> VERIFICAÇÃO
+    # ================================================================
+    orch = get_orchestrator()
+
+    if orch is not None:
+        contexto = {
+            "intencao": message,
+            "texto": message,
+            "origem": "chat",
+            "sinal_risco": data.get("sinal_risco"),
+            "autorizada": bool(data.get("autorizada", False)),
+            "auth_id": data.get("auth_id"),
+            "capacidade": data.get("capacidade"),
+            "tentar_recuperacao": data.get("tentar_recuperacao", True),
+        }
+
         try:
-            client = OmniRouteClient(
-                api_key=os.getenv("OMNIROUTE_API_KEY", "local"),
-                model_name=os.getenv("OMNIROUTE_MODEL", "auto"),
-                base_url=omniroute_base_url,
-            )
+            resultado = orch.execute("ciclo_padrao", contexto)
+
             return jsonify({
                 "system": "SOUSA 2.0",
-                "response": client.generate(message),
-                "model": "omniroute",
+                "response": resultado,
+                "model": "sousa_ia_ruflo",
+                "entrada": "SOUSA IA",
+                "orquestrador": "Ruflo",
             })
-        except (OmniRouteUnavailableError, OmniRouteAPIError) as exc:
-            app.logger.warning("OmniRoute indisponível; usando Gemini: %s", exc)
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        return jsonify({"error": "GEMINI_API_KEY not configured"}), 500
-    if GeminiClient is None:
-        return jsonify({"error": "GeminiClient unavailable", "detail": _import_error}), 503
-    try:
-        client = GeminiClient(api_key=api_key)
-        return jsonify({"system": "SOUSA 2.0", "response": client.generate(message), "model": "gemini"})
-    except Exception as e:
-        return jsonify({"error": str(e)}), 500
+        except Exception as exc:
+            app.logger.exception("Falha na esteira SOUSA IA -> Ruflo")
+            return jsonify({
+                "error": "SOUSA IA/Ruflo execution failed",
+                "detail": str(exc),
+                "orquestrador": "Ruflo",
+            }), 500
+
+    return jsonify({
+        "error": "SOUSA IA/Ruflo indisponível"
+    }), 503
 
 
 @app.route("/ciclo", methods=["POST"])
@@ -162,6 +179,7 @@ def ciclo():
 
 
 @app.route("/status")
+@require_auth
 def status():
     orch = get_orchestrator()
     ruflo_status = orch.get_status() if orch else {"status": "unavailable"}
@@ -302,14 +320,14 @@ def capacidades():
         "capacidades": lista,
         "lacunas_e_oportunidades": lacunas,
         "fontes_externas": fontes,
-        "missao": "Operações externas ampliam e adaptam capacidades ao SOUSA 2.0",
+        "missao": "OperaÃ§Ãµes externas ampliam e adaptam capacidades ao SOUSA 2.0",
     })
 
 
 @app.route("/operacao-externa", methods=["POST"])
 def operacao_externa():
     """
-    Expansão de capacidades via fontes externas.
+    ExpansÃ£o de capacidades via fontes externas.
     operacao: mapear_lacunas | descobrir | adaptar | ampliar | integrar | ciclo_expansao | listar_fontes
     """
     data = request.get_json() or {}

@@ -1,16 +1,20 @@
-/**
- * SOUSA 2.0 — CAPABILITY REGISTRY
+﻿/**
+ * SOUSA 2.0 â€” CAPABILITY REGISTRY
  * Registro central de capacidades
- * Versão: 1.0.0
+ * VersÃ£o: 1.0.0
  *
- * Princípio:
+ * PrincÃ­pio:
  * Tecnologia externa != capacidade.
- * O Registry registra a CAPACIDADE e sua implementação/adaptador.
+ * O Registry registra a CAPACIDADE e sua implementaÃ§Ã£o/adaptador.
  */
 
 'use strict';
 
+const SOUSA_CONTRATO_UNIVERSAL_3D = require('../../SOUSA_CONTRATO_UNIVERSAL_3D.js');
+
 const SOUSA_CAPABILITY_REGISTRY = {
+
+  contrato_universal_3d: SOUSA_CONTRATO_UNIVERSAL_3D,
 
   version: '1.0.0',
 
@@ -74,7 +78,7 @@ const SOUSA_CAPABILITY_REGISTRY = {
     const item = this.get(id);
 
     if (!item) {
-      throw new Error(`Capacidade não encontrada: ${id}`);
+      throw new Error(`Capacidade nÃ£o encontrada: ${id}`);
     }
 
     item.status = status;
@@ -89,7 +93,7 @@ const SOUSA_CAPABILITY_REGISTRY = {
     if (!this.capabilities.has(id)) {
       return {
         success: false,
-        message: 'Capacidade não encontrada.'
+        message: 'Capacidade nÃ£o encontrada.'
       };
     }
 
@@ -127,7 +131,7 @@ const SOUSA_CAPABILITY_REGISTRY = {
         capability[field] === null
       ) {
         throw new Error(
-          `Campo obrigatório ausente no Registry: ${field}`
+          `Campo obrigatÃ³rio ausente no Registry: ${field}`
         );
       }
     }
@@ -267,12 +271,13 @@ for (const capability of SOUSA_INITIAL_CAPABILITIES) {
 
 
 /* =========================================================
-   EXPORTAÇÃO
+   EXPORTAÃ‡ÃƒO
    ========================================================= */
 
 if (typeof module !== 'undefined') {
   module.exports = {
     SOUSA_CAPABILITY_REGISTRY,
-    SOUSA_INITIAL_CAPABILITIES
+    SOUSA_INITIAL_CAPABILITIES,
+    SOUSA_CONTRATO_UNIVERSAL_3D
   };
 }

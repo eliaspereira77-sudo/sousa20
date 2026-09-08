@@ -326,11 +326,183 @@ function executar() {
     return resultados;
 }
 
+/*
+ * ============================================================
+ * INTEGRAÇÃO REAL DO FIO CONDUTOR
+ * ============================================================
+ * O mapeamento acima (mapear/imprimir/executar) NÃO é alterado.
+ *
+ * A partir daqui o Fio Condutor deixa de ser só auditor: ele
+ * monta um CONTEXTO COMPARTILHADO (via SOUSA_PONTE_GLOBAL) e
+ * carrega os módulos da cadeia INTENÇÃO → POLÍTICA →
+ * REGISTRY/USB → CICLO → EXECUTOR → ORQUESTRADOR dentro dele,
+ * na mesma ordem de dependência real (descoberta lendo os
+ * arquivos, não suposta): USB_CONTRATO (define SOUSA_USB_ESTADOS/
+ * normalizar/validarContrato, usados por USB_REGISTRY) →
+ * USB_REGISTRY → USB_ADAPTERS (define os adaptadores de
+ * protocolo, inclusive o TESTE_ECO, que não chama rede) →
+ * APIS_CASCATA → API_USB (ponte com a cascata legada) →
+ * REGISTRY (catálogo de componentes, usado quando necessário) →
+ * POLITICA → INTENCAO → CICLO_AUTONOMO → API_EXECUTOR_UNIVERSAL
+ * → ORQUESTRADOR.
+ *
+ * Nenhum arquivo original ganha module.exports novo. A ponte é
+ * só o SOUSA_FIO_CONDUTOR_REAL.js + SOUSA_PONTE_GLOBAL.js.
+ * ============================================================
+ */
+
+const ponteGlobal = require('./SOUSA_PONTE_GLOBAL.js');
+
+const MODULOS_FIO_INTEGRACAO = [
+    'SOUSA_USB_CONTRATO.js',
+    'SOUSA_USB_REGISTRY.js',
+    'SOUSA_USB_ADAPTERS.js',
+    'SOUSA_APIS_CASCATA.js',
+    'SOUSA_API_USB.js',
+    'SOUSA_REGISTRY.js',
+    'SOUSA_POLITICA.js',
+    'SOUSA_INTENCAO.js',
+    'SOUSA_CICLO_AUTONOMO.js',
+    'SOUSA_API_EXECUTOR_UNIVERSAL.js',
+    'SOUSA_ORQUESTRADOR.js'
+];
+
+const FUNCOES_CRITERIO_SUCESSO = [
+    'SOUSA_INTENCAO_receber',
+    'SOUSA_POLITICA_inferirCapacidade',
+    'SOUSA_POLITICA_selecionar',
+    'SOUSA_CICLO_criar',
+    'SOUSA_CICLO_mudarEstado',
+    'SOUSA_CICLO_registrarTentativa',
+    'SOUSA_USB_listar',
+    'SOUSA_API_EXECUTOR_UNIVERSAL',
+    'SOUSA_ORQUESTRADOR_porTexto'
+];
+
+function montarContextoIntegrado() {
+
+    const contexto = ponteGlobal.criarContextoBase();
+
+    const carregamentos = MODULOS_FIO_INTEGRACAO.map(function (arquivo) {
+        return ponteGlobal.carregarEmContexto(arquivo, contexto);
+    });
+
+    return { contexto, carregamentos };
+}
+
+function integrar() {
+
+    console.log('');
+    console.log('====================================================');
+    console.log(' SOUSA 2.0 - FIO CONDUTOR REAL');
+    console.log(' INTEGRAÇÃO OPERACIONAL (CONTEXTO COMPARTILHADO)');
+    console.log('====================================================');
+    console.log('');
+
+    const { contexto, carregamentos } = montarContextoIntegrado();
+
+    let bloqueio = null;
+
+    for (const c of carregamentos) {
+        const status = c.ok ? '[OK]' : '[ERRO]';
+        console.log(`${status} carregado no contexto -> ${c.arquivo}`);
+        if (!c.ok && !bloqueio) {
+            bloqueio = c;
+        }
+    }
+
+    console.log('');
+    console.log('----------------------------------------------------');
+    console.log(' VERIFICAÇÃO DAS FUNÇÕES ESSENCIAIS');
+    console.log('----------------------------------------------------');
+
+    const verificacao = {};
+    let conectadas = 0;
+
+    for (const nome of FUNCOES_CRITERIO_SUCESSO) {
+        const disponivel = typeof contexto[nome] === 'function';
+        verificacao[nome] = disponivel;
+        if (disponivel) conectadas++;
+        console.log(`${disponivel ? '[OK]' : '[--]'} ${nome}`);
+    }
+
+    console.log('');
+    console.log(`Funções conectadas: ${conectadas}/${FUNCOES_CRITERIO_SUCESSO.length}`);
+
+    let teste = null;
+
+    if (!bloqueio && conectadas === FUNCOES_CRITERIO_SUCESSO.length) {
+
+        console.log('');
+        console.log('----------------------------------------------------');
+        console.log(' TESTE CONTROLADO — SOUSA_ORQUESTRADOR_porTexto');
+        console.log(' (sem USB conectada -> não chama API externa real)');
+        console.log('----------------------------------------------------');
+
+        try {
+            const resultado = contexto.SOUSA_ORQUESTRADOR_porTexto(
+                'teste de integracao do fio condutor',
+                {}
+            );
+
+            teste = { ok: true, executou_sem_referencia_indefinida: true, resultado };
+
+            console.log('[OK] SOUSA_ORQUESTRADOR_porTexto executou sem "is not defined"');
+            console.log(`     status retornado: ${resultado && resultado.status}`);
+            console.log('     (status de negocio, nao de integracao — sem USB conectada e esperado SELECAO_FALHOU/SEM_RECURSO)');
+
+        } catch (erro) {
+            teste = { ok: false, erro: erro.message };
+            console.log(`[ERRO] ${erro.message}`);
+        }
+
+    } else {
+        console.log('');
+        console.log('[BLOQUEADO] Teste controlado não executado — nem todas as funções essenciais conectaram.');
+    }
+
+    console.log('');
+    console.log('====================================================');
+
+    const sucesso = !bloqueio &&
+        conectadas === FUNCOES_CRITERIO_SUCESSO.length &&
+        teste && teste.ok;
+
+    if (sucesso) {
+        console.log('FIO CONDUTOR: INTEGRADO');
+        console.log('CONTEXTO: COMPARTILHADO');
+        console.log('MÓDULOS ORIGINAIS: PRESERVADOS');
+    } else if (bloqueio) {
+        console.log(`STATUS: BLOQUEADO AO CARREGAR ${bloqueio.arquivo}`);
+        console.log(`ERRO: ${bloqueio.erro}`);
+    } else {
+        console.log('STATUS: INTEGRAÇÃO PARCIAL — ver funções [--] acima');
+    }
+
+    console.log('====================================================');
+    console.log('');
+
+    return {
+        ok: sucesso,
+        carregamentos,
+        verificacao,
+        conectadas,
+        total: FUNCOES_CRITERIO_SUCESSO.length,
+        bloqueio,
+        teste
+    };
+}
+
 module.exports = {
     executar,
-    mapear
+    mapear,
+    integrar,
+    montarContextoIntegrado,
+    MODULOS_FIO_INTEGRACAO,
+    FUNCOES_CRITERIO_SUCESSO
 };
 
 if (require.main === module) {
     executar();
+    integrar();
 }

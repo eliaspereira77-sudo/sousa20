@@ -1,7 +1,7 @@
 {
   "sistema": "SOUSA 2.0",
   "tipo": "FIO_CONDUTOR_REAL",
-  "data": "2026-08-26T13:33:17.265Z",
+  "data": "2026-09-06T12:29:05.021Z",
   "resultados": [
     {
       "grupo": "NUCLEO",
@@ -34,11 +34,13 @@
         "status": "OK"
       },
       "interface": {
-        "exports": [],
+        "exports": [
+          "module.exports"
+        ],
         "funcoes": [],
         "require": false
       },
-      "status": "SEM_INTERFACE_DETECTAVEL"
+      "status": "PRONTO_PARA_ADAPTACAO"
     },
     {
       "grupo": "NUCLEO",

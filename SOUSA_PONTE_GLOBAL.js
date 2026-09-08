@@ -125,6 +125,121 @@ function carregarGlobal(relativo) {
     };
 }
 
+/*
+ * ============================================================
+ * CONTEXTO COMPARTILHADO (adição mínima e compatível)
+ * ============================================================
+ *
+ * carregarGlobal() acima cria um sandbox NOVO por chamada —
+ * por isso módulos carregados separadamente não se enxergam
+ * (cada um é um contexto isolado).
+ *
+ * As duas funções abaixo permitem montar UM único contexto e
+ * carregar vários módulos DENTRO dele, em sequência, para que
+ * as funções globais de cada arquivo enxerguem as dos demais.
+ *
+ * Não alteram nem substituem carregarGlobal()/criarPonte().
+ * NÃO executam reparos. NÃO chamam API externa.
+ * ============================================================
+ */
+
+function criarContextoBase() {
+
+    const sandbox = {
+
+        console,
+
+        process: {
+            env: process.env,
+            version: process.version,
+            platform: process.platform
+        },
+
+        Buffer,
+
+        setTimeout,
+        clearTimeout,
+        setInterval,
+        clearInterval,
+
+        __filename: caminho('.'),
+        __dirname: RAIZ,
+
+        module: {
+            exports: {}
+        },
+
+        exports: {},
+
+        require: criarRequireControlado(RAIZ)
+
+    };
+
+    sandbox.global = sandbox;
+    sandbox.globalThis = sandbox;
+
+    vm.createContext(sandbox);
+
+    return sandbox;
+}
+
+function carregarEmContexto(relativo, contexto) {
+
+    if (!contexto) {
+        throw new Error(
+            'CONTEXTO_AUSENTE: chame criarContextoBase() antes.'
+        );
+    }
+
+    let codigo;
+
+    try {
+        codigo = ler(relativo);
+    } catch (erro) {
+        return {
+            ok: false,
+            arquivo: relativo,
+            erro: erro.message
+        };
+    }
+
+    // Cada arquivo carregado ganha seu próprio module.exports
+    // (evita que um módulo herde o export do módulo anterior),
+    // mas continua no MESMO objeto global/contexto.
+    contexto.__filename = caminho(relativo);
+    contexto.__dirname = path.dirname(caminho(relativo));
+    contexto.require = criarRequireControlado(contexto.__dirname);
+    contexto.module = { exports: {} };
+    contexto.exports = contexto.module.exports;
+
+    try {
+
+        const script = new vm.Script(
+            codigo,
+            {
+                filename: caminho(relativo),
+                displayErrors: true
+            }
+        );
+
+        script.runInContext(contexto);
+
+        return {
+            ok: true,
+            arquivo: relativo,
+            exports: contexto.module.exports
+        };
+
+    } catch (erro) {
+
+        return {
+            ok: false,
+            arquivo: relativo,
+            erro: erro.message
+        };
+    }
+}
+
 function obterFuncoes(contexto, nomes) {
 
     const resultado = {};
@@ -461,7 +576,9 @@ module.exports = {
     obterFuncoes,
     criarPonte,
     executar,
-    teste
+    teste,
+    criarContextoBase,
+    carregarEmContexto
 };
 
 if (require.main === module) {

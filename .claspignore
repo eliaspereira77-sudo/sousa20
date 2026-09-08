@@ -87,3 +87,6 @@ SOUSA_REGISTRY (1).js
 SOUSA_TESTE_*.js
 SOUSA_USB_TESTES*.js
 MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_SANDBOX.js
+
+.venv-piper/**
+

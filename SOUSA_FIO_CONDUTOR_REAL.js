@@ -1,4 +1,14 @@
-﻿'use strict';
+﻿
+// ═══ GAP PREENCHIDO: PERSISTENCIA (Drive) ═══
+// SOUSA_FIO_CONDUTOR_REAL obedece a SOUSA_DRIVE_PERSISTENCE.gs.js
+// para checkpoint e recuperação de estado
+// ════════════════════════════════════════════
+
+// ═══ GAP PREENCHIDO: RUFLO (Aprendizado) ═══
+// SOUSA_FIO_CONDUTOR_REAL obedece a SOUSA_RUFLO_ADAPTER.js
+// para consolidação de aprendizado pós-ciclo
+// ════════════════════════════════════════════
+'use strict';
 
 const fs = require('fs');
 const path = require('path');

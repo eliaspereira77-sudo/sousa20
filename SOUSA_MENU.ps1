@@ -1,3 +1,14 @@
+﻿Clear-Host
+}
+
+# ═══ FONTE DA VERDADE SOUSA 2.0 ═══
+# Este componente obedece a SOUSA_SOURCE_OF_TRUTH.json
+$SOUSA_SOURCE_OF_TRUTH = $null
+if (Test-Path "SOUSA_SOURCE_OF_TRUTH.json") {
+    $SOUSA_SOURCE_OF_TRUTH = Get-Content "SOUSA_SOURCE_OF_TRUTH.json" -Raw | ConvertFrom-Json
+}
+# ═══════════════════════════════════
+
 Clear-Host
 
 $configArquivo = "SOUSA_MENU_CONFIG.json"

@@ -4,6 +4,13 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
+// ═══ FONTE DA VERDADE SOUSA 2.0 ═══
+// Este componente obedece a SOUSA_SOURCE_OF_TRUTH.json
+let SOUSA_SOURCE_OF_TRUTH = null;
+try { SOUSA_SOURCE_OF_TRUTH = require('./SOUSA_SOURCE_OF_TRUTH.json'); } catch(e) { /* Fonte indisponível */ }
+// ═══════════════════════════════════
+
+
 const RAIZ = __dirname;
 
 const SISTEMA = {

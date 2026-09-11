@@ -1,1 +1,7 @@
-{"acao":"ABRIR_PASTA","alvo":"C:\Users\Dionisio Lima\Documents","autorizado":true}
+{
+    "acao": "ABRIR_PASTA",
+    "alvo": "ATUAL",
+    "autorizado": true,
+    "origem": "FUNDADOR",
+    "processado": true
+}

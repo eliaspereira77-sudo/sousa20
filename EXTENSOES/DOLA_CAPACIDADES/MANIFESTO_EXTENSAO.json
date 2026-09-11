@@ -1,0 +1,12 @@
+﻿{
+    "tipo":  "CAMADA_DE_EXTENSAO",
+    "autoridade":  "FUNDADOR",
+    "modificacao_identidade":  false,
+    "modificacao_nucleo":  false,
+    "nome_extensao":  "INTEGRACAO_CAPACIDADES_DOLA",
+    "versao":  "1.0.0",
+    "data_criacao":  "2026-09-10 10:52:49",
+    "heranca_habilidades":  true,
+    "identidade_sistema":  "SOUSA IA",
+    "principio":  "NAO_ALTERAR_NUCLO"
+}

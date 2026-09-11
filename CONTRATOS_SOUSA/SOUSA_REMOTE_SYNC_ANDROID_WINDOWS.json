@@ -1,0 +1,57 @@
+{
+  "contrato": "SOUSA_REMOTE_SYNC_ANDROID_WINDOWS",
+  "versao": "1.0.0",
+  "status": "CONTRATO_DE_IMPLEMENTACAO",
+  "finalidade": "Definir a capacidade de presenca, sincronizacao e operacao remota entre Android, nuvem SOUSA 2.0, Google Drive e PC Windows.",
+  "modelo": {
+    "android": "console de comando e acompanhamento",
+    "nuvem": "presenca logica permanente, coordenacao, estado e persistencia autorizada",
+    "pc_windows": "recurso de execucao e acesso a recursos locais",
+    "google_drive": "area operacional de persistencia e intercambio autorizada",
+    "rclone": "capacidade de transporte/sincronizacao, subordinada as regras do SOUSA"
+  },
+  "operacoes": {
+    "STATUS": "Consultar presenca, conectividade, ultima sincronizacao, pendencias, erros e saude.",
+    "PULL": "Trazer estado/arquivos autorizados da nuvem para o recurso local.",
+    "PUSH": "Enviar estado/arquivos autorizados para a nuvem.",
+    "SYNC": "Executar sincronizacao conforme politica do SOUSA, com verificacao e retorno.",
+    "EXECUTE_PC": "Solicitar execucao de operacao autorizada no PC Windows.",
+    "HEALTH": "Executar ou consultar diagnostico operacional remoto."
+  },
+  "fluxo": [
+    "Android envia intencao",
+    "SOUSA autentica e identifica origem",
+    "SOUSA consulta estado e politicas",
+    "SOUSA seleciona capacidade adequada",
+    "rclone/API/worker executa quando aplicavel",
+    "SOUSA verifica resultado",
+    "SOUSA registra estado e evento",
+    "Android recebe resultado resumido e acionavel"
+  ],
+  "regras": [
+    "O fundador nao deve digitar repetidamente credenciais ja autorizadas.",
+    "Segredos nao devem ser gravados no codigo-fonte.",
+    "Nenhuma operacao remota deve ser executada fora das autorizacoes vigentes.",
+    "O rclone nao decide politica; apenas executa a capacidade de transporte que lhe for delegada.",
+    "O PC desligado nao significa SOUSA desligado.",
+    "Toda operacao deve possuir identificacao, estado e resultado verificavel.",
+    "Conflitos de sincronizacao nao devem ser silenciosamente sobrescritos.",
+    "A interface Android deve esconder a complexidade operacional."
+  ],
+  "estados": ["OFFLINE", "ONLINE", "SINCRONIZANDO", "AGUARDANDO", "ERRO", "ATENCAO", "BLOQUEADO"],
+  "credenciais": {
+    "principio": "Reutilizar autorizacoes existentes quando tecnicamente possivel.",
+    "armazenamento": "Cofre/gerenciador de segredos ou mecanismo seguro equivalente.",
+    "proibido": ["senha em codigo", "token em arquivo publico", "credencial em log", "credencial enviada sem necessidade"]
+  },
+  "criterio_de_prontidao": [
+    "Android consegue consultar STATUS",
+    "SOUSA identifica Android e PC",
+    "SOUSA detecta PC online/offline",
+    "SYNC possui execucao e retorno verificavel",
+    "falhas e conflitos sao reportados",
+    "credenciais sao tratadas de forma segura",
+    "EXECUTE_PC possui autorizacao e retorno",
+    "HEALTH produz relatorio operacional remoto"
+  ]
+}

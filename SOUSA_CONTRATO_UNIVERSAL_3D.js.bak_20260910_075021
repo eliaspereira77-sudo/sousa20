@@ -1,0 +1,103 @@
+﻿
+// ============================================================
+// SOUSA 2.0 — REGRA DE EVOLUÇÃO SEM DUPLICAÇÃO
+// ID: SOUSA-EVD-001
+// ============================================================
+
+const SOUSA_EVOLUCAO_SEM_DUPLICACAO = Object.freeze({
+
+  id: "SOUSA-EVD-001",
+  nome: "Evolução sem Duplicação",
+  versao: "1.0.0",
+  status: "ATIVA",
+
+  principio:
+    "CRIAR NÃO É PROIBIDO. DUPLICAR É PROIBIDO.",
+
+  prioridade: Object.freeze([
+    "REFINAR",
+    "ATUALIZAR",
+    "CORRIGIR",
+    "INTEGRAR",
+    "AMPLIAR_CAPACIDADE",
+    "REUTILIZAR",
+    "CRIAR_SE_LACUNA_COMPROVADA"
+  ]),
+
+  regra:
+    "Toda capacidade existente deve ser preferencialmente refinada, " +
+    "atualizada, corrigida, integrada ou ampliada antes da criação " +
+    "de uma capacidade equivalente.",
+
+  criacao_nova:
+    "Uma nova capacidade poderá ser criada quando houver lacuna " +
+    "funcional comprovada que não possa ser resolvida pelo " +
+    "refino, atualização, correção, integração ou ampliação " +
+    "do que já existe.",
+
+  proibicoes: Object.freeze({
+    duplicar_funcao_existente: true,
+    criar_modulo_equivalente: true,
+    criar_agente_equivalente: true,
+    criar_worker_equivalente: true,
+    criar_conector_equivalente: true,
+    criar_contrato_paralelo: true,
+    criar_so_para_evitar_refino: true
+  }),
+
+  autorizacoes: Object.freeze({
+    refinar: true,
+    atualizar: true,
+    corrigir: true,
+    integrar: true,
+    ampliar: true,
+    criar_por_lacuna: true,
+    inovar_por_lacuna: true
+  }),
+
+  criterio:
+    "O objetivo não é impedir crescimento do SOUSA 2.0. " +
+    "O objetivo é garantir que seu crescimento ocorra por evolução " +
+    "inteligente do ecossistema, evitando duplicação, fragmentação " +
+    "e desperdício de capacidade.",
+
+  soberania_fundador: true,
+  preservar_source_of_truth: true
+});
+
+
+// ============================================================
+// VALIDADOR
+// ============================================================
+
+function SOUSA_VALIDAR_EVOLUCAO(decisao = {}) {
+
+  const bloqueios = [];
+
+  if (
+    decisao.duplicacao === true &&
+    decisao.lacuna_comprovada !== true
+  ) {
+    bloqueios.push(
+      "DUPLICAÇÃO SEM LACUNA COMPROVADA"
+    );
+  }
+
+  if (
+    decisao.recurso_existente === true &&
+    decisao.refino_atualizacao_integracao !== true &&
+    decisao.criar_novo === true
+  ) {
+    bloqueios.push(
+      "EVOLUÇÃO DO EXISTENTE NÃO TENTADA"
+    );
+  }
+
+  return Object.freeze({
+    valido: bloqueios.length === 0,
+    bloqueado: bloqueios.length > 0,
+    bloqueios,
+    regra: "SOUSA-EVD-001"
+  });
+}
+

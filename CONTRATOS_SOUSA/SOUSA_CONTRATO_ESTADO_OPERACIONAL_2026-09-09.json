@@ -1,0 +1,53 @@
+{
+  "contrato": "SOUSA_CONTRATO_ESTADO_OPERACIONAL",
+  "versao": "1.0.0",
+  "data_referencia": "2026-09-09",
+  "status": "ESPECIFICACAO_BASE",
+  "finalidade": "Definir o estado operacional e as capacidades que o SOUSA 2.0 deve consolidar, monitorar e disponibilizar remotamente ao fundador.",
+  "principios": [
+    "Fonte da Verdade unica",
+    "Soberania Humana",
+    "Automacao alvo de 99.99 por cento com 0.01 por cento de controle humano",
+    "Cada componente deve possuir sentido, funcao, contexto e razao de existir",
+    "Adaptacao das capacidades ao que ja existe",
+    "Nenhum agente isolado; capacidades compartilhadas sob orquestracao do SOUSA",
+    "O smartphone e console de comando, nao a oficina",
+    "O PC e recurso operacional, nao o proprio SOUSA",
+    "A nuvem mantem a presenca logica do SOUSA independentemente do estado do PC"
+  ],
+  "capacidades_obrigatorias": {
+    "sousa_ia": "Interpretar intencao natural e coordenar capacidades disponiveis.",
+    "presenca_remota": "Identificar origem de acesso, recursos disponiveis e estado online/offline.",
+    "sincronizacao": "Disponibilizar sincronizacao governada entre PC, nuvem e demais pontos autorizados.",
+    "operacao_remota": "Permitir que uma intencao recebida no Android resulte em operacao autorizada no PC ou na nuvem.",
+    "saude_operacional": "Monitorar componentes, servicos, conectividade, armazenamento, APIs, processos, sincronizacao, erros e alertas.",
+    "resposta": "Informar resultado, estado, falha, alerta ou necessidade de intervencao humana.",
+    "credenciais": "Reutilizar autorizacoes existentes quando possivel e manter segredos fora do codigo-fonte.",
+    "autorreparo": "Acionar diagnostico, recuperacao e reparo somente dentro das politicas autorizadas."
+  },
+  "estado_atual": {
+    "existente_ou_base_existente": [
+      "SOUSA 2.0", "SOUSA LAB", "SOUSA IA", "Fonte da Verdade",
+      "arquitetura Plug and Play", "API Manager", "catalogos de APIs e capacidades",
+      "Ruflo Lab e Capability Registry", "mecanismos de diagnostico e reparo",
+      "Google Drive", "GitHub", "rclone", "PC Windows", "Painel Operacional",
+      "base de voz e avatar"
+    ],
+    "em_consolidacao": [
+      "presenca remota permanente", "identificacao Android/PC", "estado online/offline",
+      "canal remoto seguro", "comando Android -> SOUSA -> PC", "retorno PC -> SOUSA -> Android",
+      "sincronizacao como capacidade nativa governada pelo SOUSA",
+      "monitoramento de saude unificado", "relatorio remoto de saude",
+      "gerenciamento unificado de credenciais", "orquestracao ponta a ponta"
+    ],
+    "nao_pronto": [
+      "Jarvis plenamente operacional 24/7", "controle remoto completo do PC",
+      "diagnostico remoto completo", "execucao remota universal",
+      "autorreparo totalmente autonomo", "sincronizacao bidirecional inteligente totalmente governada",
+      "reconhecimento completo do contexto do dispositivo"
+    ]
+  },
+  "regra_de_interface": "A interface deve ser consolidada por ultimo. A capacidade deve existir antes da apresentacao visual.",
+  "criterio_de_prontidao": "Nenhuma capacidade sera declarada pronta apenas por existir em conceito, contrato ou codigo; deve possuir caminho operacional verificavel e retorno de estado.",
+  "governanca": "Alteracoes estruturais relevantes devem respeitar a autorizacao soberana do fundador e a Fonte da Verdade."
+}

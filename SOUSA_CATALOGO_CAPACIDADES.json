@@ -1,7 +1,7 @@
 {
     "projeto":  "SOUSA 2.0",
     "arquivo":  "SOUSA_CATALOGO_CAPACIDADES.json",
-    "versao":  "1.2.0",
+    "versao":  "1.2.1",
     "descricao":  "Mapa central das capacidades utilizadas pelos modulos e recursos de IA disponiveis.",
     "regra_principal":  "Modulos solicitam capacidades. O SOUSA_API_MANAGER seleciona o recurso mais adequado e generoso.",
     "capacidades":  [
@@ -59,13 +59,13 @@
                         },
                         {
                             "id":  "GROK",
-                            "descricao":  "Motor cognitivo Grok (xAI) - raciocínio, linguagem, código e análise",
-                            "arquitetura":  "SOUSA -> API_MANAGER / CASCATA -> GROK (xAI)",
-                            "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA",
-                            "provedor":  "xAI",
+                            "descricao":  "Capacidades comportamentais inspiradas no Grok — raciocínio direto, análise crítica, anti falso-positivo. NÃO é API xAI.",
+                            "tipo":  "CAPACIDADE_COMPORTAMENTAL",
+                            "arquitetura":  "SOUSA IA absorve comportamentos via adapter de capacidades (sem chamada externa)",
+                            "principio":  "CAPACIDADE_RECONHECIDA_NAO_PROVEDOR",
+                            "exige_chave":  false,
                             "modulos":  [
-                                            "SOUSA_GROK_ADAPTER.json",
-                                            "SOUSA_APIS_CASCATA.js"
+                                            "SOUSA_GROK_ADAPTER.json"
                                         ]
                         },
                         {

@@ -1,0 +1,23 @@
+﻿{
+    "migracao":  {
+                     "validacao_pre_migracao":  true,
+                     "backup_automatico":  true,
+                     "restauracao_automatica":  true
+                 },
+    "principio":  "PORTABILIDADE TOTAL",
+    "ambientes_suportados":  [
+                                 "WINDOWS",
+                                 "LINUX",
+                                 "MACOS",
+                                 "ANDROID",
+                                 "GAS",
+                                 "WEB"
+                             ],
+    "regras":  [
+                   "Nenhum caminho absoluto hardcoded",
+                   "Usar variáveis de ambiente para caminhos",
+                   "Dados sensíveis em cofre (não em código)",
+                   "Dependências gerenciadas por package manager",
+                   "Configuração externa em JSON/YAML"
+               ]
+}

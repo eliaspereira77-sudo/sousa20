@@ -8,6 +8,15 @@
  */
 
 var SOUSA_APIS_CASCATA = [    {
+      prioridade: 8,
+      nome: "PERPLEXITY",
+      api_key: "PERPLEXITY_API_KEY",
+      modelo: "pplx-7b-online",
+      endereco: "https://api.perplexity.ai",
+      protocolo: "OPENAI_CHAT_COMPLETIONS",
+      tipo: "API_CLOUD",
+      status: "ATIVO"
+    },    {
       prioridade: 7,
       nome: "QWEN",
       api_key: "QWEN_API_KEY",
@@ -129,4 +138,5 @@ function SOUSA_USB_inicializar(opcoes) {
     seed: seed
   };
 }
+
 

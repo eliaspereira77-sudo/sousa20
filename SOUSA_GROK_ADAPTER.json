@@ -1,0 +1,67 @@
+{
+  "meta": {
+    "id": "SOUSA_GROK_ADAPTER",
+    "version": "1.0.0",
+    "phase": "INTEGRACAO_INICIAL",
+    "source_of_truth_ref": "SOUSA_SOURCE_OF_TRUTH.json",
+    "principio": "NAO_DUPLICAR"
+  },
+  "identidade": {
+    "nome": "Grok (xAI) como Motor Cognitivo acoplado ao SOUSA IA",
+    "funcao": "Camada de raciocínio, linguagem, código e análise — capacidade plugável",
+    "integracao": "FIO_CONDUTOR",
+    "provedor": "xAI",
+    "principio_acoplamento": "ACOPLAMENTO_SEM_DEPENDENCIA"
+  },
+  "mapeamento_capacidades": {
+    "raciocinio_logico": "SOUSA_IA.PROCESSADOR_CENTRAL",
+    "linguagem_natural": "CONSOLE_JOYSTICK",
+    "codigo_programacao": "SOUSA_LAB.OFICINA",
+    "analise_estrategica": "ESTRATEGISTA",
+    "agente_autonomo": "FIO_CONDUTOR.EXECUCAO",
+    "memoria_contexto": "RUFLO_ADAPTADO.MEMORIA_HIBRIDA",
+    "ferramentas_externas": "API_MANAGER.EXECUTOR_UNIVERSAL",
+    "busca_e_conhecimento": "USB_KNOWLEDGE_ENGINE"
+  },
+  "comportamento_jarvis": {
+    "ativado": true,
+    "principio": "O desktop é uma superfície. O ecossistema inteiro é o território.",
+    "atua_em": ["NUVEM", "LOCAL", "DRIVE", "CODIGO", "APIS", "AGENTES", "MEMORIA", "PRODUCAO", "LAB", "CONSELHO"]
+  },
+  "agentes_que_podem_usar_grok": {
+    "CAO_DE_GUARDA": "análise de anomalias e risco",
+    "MECANICO_FAXINEIRO": "diagnóstico e manutenção de código",
+    "SOUSAILEON": "orquestração e coordenação",
+    "MONITOR_SINTAXE": "validação de código",
+    "ESTRATEGISTA": "análise de mercado e copy",
+    "CONSELHO": "diálogo soberano com o Fundador"
+  },
+  "api": {
+    "nome": "GROK",
+    "api_key_cofre": "XAI_API_KEY",
+    "modelo_padrao": "grok-4.5",
+    "modelos_alternativos": ["grok-4.1-fast", "grok-4.3", "grok-code-fast-1"],
+    "endereco": "https://api.x.ai/v1",
+    "protocolo": "OPENAI_CHAT_COMPLETIONS",
+    "tipo": "API_CLOUD"
+  },
+  "regras_de_operacao": {
+    "R001": "NUNCA criar outra Fonte da Verdade",
+    "R002": "SEMPRE consultar SOUSA_SOURCE_OF_TRUTH.json",
+    "R003": "NUNCA duplicar capacidade do Registry",
+    "R004": "SEMPRE passar pelo Fio Condutor",
+    "R005": "NUNCA invadir competência alheia",
+    "R006": "SEMPRE registrar ciclos de operação",
+    "R007": "SEMPRE preservar a estrutura existente",
+    "R008": "NUNCA agir além da autorização",
+    "R009": "SEMPRE aprender e alimentar RUFLO",
+    "R010": "Soberania do Fundador é princípio absoluto",
+    "R011": "Grok é capacidade acoplada — não substitui SOUSA IA"
+  },
+  "estado": {
+    "fase": "INTEGRACAO_INICIAL",
+    "prioridade_zero": "REGISTRAR_NA_CASCATA_E_CATALOGO",
+    "nao_criar_do_zero": true,
+    "nao_alterar_nucleo": true
+  }
+}

@@ -40,6 +40,21 @@ const CONFIG = {
 
 // ═══ MAPEAMENTO DE CAPACIDADES JARVIS → MÓDULOS SOUSA ═══
 const MAPEAMENTO_CAPACIDADES = {
+  VOZ_CLONADA_FUNDADOR: {
+    capacidade: 'Voz clonada do Fundador (TTS + STT + DNA)',
+    modulo: 'SOUSA_IA_DNA_MEMORIA_VOZ + TTS_PIPER + STT',
+    origem: './SOUSA_IA_DNA_MEMORIA_VOZ.js',
+    principio: 'IDENTIDADE_PRESERVADA',
+    status: 'OPERACIONAL'
+  },
+  AVATAR_DIGITAL_3D: {
+    capacidade: 'Representacao visual digital do SOUSA IA',
+    modulo: 'SOUSA_AVATAR_CONTRATO + MAPA_3D',
+    origem: './SOUSA_AVATAR_CONTRATO.js',
+    principio: 'INTERFACE_SEPARADA_DA_INTELIGENCIA',
+    status: 'OPERACIONAL'
+  },
+
   WORKFLOW_AUTOMATION_RUFLO: {
     capacidade: 'Automacao de workflows via RUFLO (caixa de transmissao)',
     modulo: 'SOUSA_RUFLO_CARDAN + SOUSA_RUFLO_ADAPTER',
@@ -221,5 +236,6 @@ module.exports = {
   statusJarvis,
   registrarLog
 };
+
 
 

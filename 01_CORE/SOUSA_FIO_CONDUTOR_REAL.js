@@ -20,6 +20,12 @@ let SOUSA_SOURCE_OF_TRUTH = null;
 try { SOUSA_SOURCE_OF_TRUTH = require('../00_GOVERNANCA/../00_GOVERNANCA/SOUSA_SOURCE_OF_TRUTH.json'); } catch(e) { /* Fonte indisponível */ }
 // ═══════════════════════════════════
 
+// ═══ COMPORTAMENTO JARVIS (ITEM 6) ═══
+// SOUSA IA adquire comportamento JARVIS preservando identidade
+// Mapeamento: 9 capacidades → módulos SOUSA existentes
+const SOUSA_COMPORTAMENTO_JARVIS_REF = '../SOUSA_COMPORTAMENTO_JARVIS.js';
+// ═══════════════════════════════════════
+
 
 const RAIZ = __dirname;
 
@@ -523,3 +529,4 @@ if (require.main === module) {
     executar();
     integrar();
 }
+

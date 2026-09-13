@@ -1,10 +1,11 @@
 ﻿/**
 
-
+ */
 // ═══ FONTE DA VERDADE SOUSA 2.0 ═══
 // Este componente obedece a SOUSA_SOURCE_OF_TRUTH.json
 let SOUSA_SOURCE_OF_TRUTH = null;
-try { SOUSA_SOURCE_OF_TRUTH = require('./SOUSA_SOURCE_OF_TRUTH.json'); } catch(e) { /* Fonte indisponível */ }
+try { SOUSA_SOURCE_OF_TRUTH = require('./SOUSA_SOURCE_OF_TRUTH.json'); } catch(e) { /* Fonte indisponivel */ }
+// GAS não suporta require() - Fonte carregada via propriedades globais ou DriveApp
 // ═══════════════════════════════════
 
 /**

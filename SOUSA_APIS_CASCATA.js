@@ -1,4 +1,4 @@
-/**
+﻿/**
  * ==========================================================
  * SOUSA 2.0 — CASCATA DE APIS E INICIALIZAÇÃO PLUG AND PLAY
  * ==========================================================
@@ -7,7 +7,16 @@
  * ==========================================================
  */
 
-var SOUSA_APIS_CASCATA = [
+var SOUSA_APIS_CASCATA = [    {
+      prioridade: 7,
+      nome: "QWEN",
+      api_key: "QWEN_API_KEY",
+      modelo: "qwen-plus",
+      endereco: "https://dashscope-intl.aliyuncs.com/compatible-mode/v1",
+      protocolo: "OPENAI_CHAT_COMPLETIONS",
+      tipo: "API_CLOUD",
+      status: "ATIVO"
+    },
   {
     prioridade: 1,
     nome: "GEMINI",
@@ -120,3 +129,4 @@ function SOUSA_USB_inicializar(opcoes) {
     seed: seed
   };
 }
+

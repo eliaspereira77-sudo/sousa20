@@ -80,3 +80,8 @@ node_modules/
 data/ciclos/
 !data/.gitkeep
 >>>>>>> origin/feature/omniroute-integration
+
+SOUSA_GITHUB_REF/
+
+# Backups grandes
+*.zip

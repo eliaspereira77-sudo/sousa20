@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 — CASCATA DE APIS E INICIALIZAÇÃO PLUG AND PLAY
  * ==========================================================
@@ -38,6 +38,16 @@ var SOUSA_APIS_CASCATA = [    {
   },
   {
     prioridade: 2,
+    nome: "GROK",
+    api_key: "XAI_API_KEY",
+    modelo: "grok-4.5",
+    endereco: "https://api.x.ai/v1",
+    protocolo: "OPENAI_CHAT_COMPLETIONS",
+    tipo: "API_CLOUD",
+    status: "ATIVO"
+  },
+  {
+    prioridade: 3,
     nome: "GROQ",
     api_key: "GROQ_API_KEY",
     modelo: "llama-3.3-70b-versatile",
@@ -47,7 +57,7 @@ var SOUSA_APIS_CASCATA = [    {
     status: "ATIVO"
   },
   {
-    prioridade: 3,
+    prioridade: 4,
     nome: "CEREBRAS",
     api_key: "CEREBRAS_API_KEY",
     modelo: "llama3.3-70b",
@@ -57,7 +67,7 @@ var SOUSA_APIS_CASCATA = [    {
     status: "ATIVO"
   },
   {
-    prioridade: 4,
+    prioridade: 5,
     nome: "DEEPSEEK",
     api_key: "DEEPSEEK_API_KEY",
     modelo: "deepseek-chat",
@@ -67,7 +77,7 @@ var SOUSA_APIS_CASCATA = [    {
     status: "ATIVO"
   },
   {
-    prioridade: 5,
+    prioridade: 6,
     nome: "MISTRAL",
     api_key: "MISTRAL_API_KEY",
     modelo: "mistral-small-latest",
@@ -77,7 +87,7 @@ var SOUSA_APIS_CASCATA = [    {
     status: "ATIVO"
   },
   {
-    prioridade: 6,
+    prioridade: 7,
     nome: "OPENROUTER",
     api_key: "OPENROUTER_API_KEY",
     modelo: "meta-llama/llama-3.3-70b-instruct",
@@ -138,5 +148,4 @@ function SOUSA_USB_inicializar(opcoes) {
     seed: seed
   };
 }
-
 

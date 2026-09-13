@@ -20,6 +20,13 @@ let SOUSA_SOURCE_OF_TRUTH = null;
 try { SOUSA_SOURCE_OF_TRUTH = require('../00_GOVERNANCA/../00_GOVERNANCA/SOUSA_SOURCE_OF_TRUTH.json'); } catch(e) { /* Fonte indisponível */ }
 // ═══════════════════════════════════
 
+
+// ═══ RUFLO — CAIXA DE TRANSMISSÃO (ITEM RUFLO) ═══
+// SOUSA acopla-se ao RUFLO via CARDAN. Não contém RUFLO.
+// Arquitetura: SOUSA → CARDAN → ADAPTADOR → RUFLO (externo)
+const SOUSA_RUFLO_CARDAN_REF = '../SOUSA_RUFLO_CARDAN.js';
+const SOUSA_RUFLO_ADAPTER_REF = '../SOUSA_RUFLO_ADAPTER.js';
+// ═══════════════════════════════════════════════════════
 // ═══ COMPORTAMENTO JARVIS (ITEM 6) ═══
 // SOUSA IA adquire comportamento JARVIS preservando identidade
 // Mapeamento: 9 capacidades → módulos SOUSA existentes
@@ -529,4 +536,5 @@ if (require.main === module) {
     executar();
     integrar();
 }
+
 

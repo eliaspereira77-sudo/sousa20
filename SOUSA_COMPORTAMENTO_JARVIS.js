@@ -94,6 +94,14 @@ const MAPEAMENTO_CAPACIDADES = {
     origem: './SOUSA_CONSTITUIÇÃO.js',
     status: 'MAPEADO'
   }
+,
+  WORKFLOW_AUTOMATION: {
+    capacidade: 'Automação de workflows via RUFLO (caixa de transmissão)',
+    modulo: 'SOUSA_RUFLO_CARDAN + SOUSA_RUFLO_ADAPTER',
+    origem: './SOUSA_RUFLO_CARDAN.js',
+    principio: 'ACOPLAMENTO_SEM_DEPENDENCIA',
+    status: 'ACOPLADO_VIA_CARDAN'
+  }
 };
 
 /**
@@ -198,3 +206,4 @@ module.exports = {
   statusJarvis,
   registrarLog
 };
+

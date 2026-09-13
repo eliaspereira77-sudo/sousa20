@@ -56,6 +56,12 @@
                         {
                             "id":  "QWEN",
                             "descricao":  "Motor cognitivo Qwen 3.8 - raciocínio, linguagem e código"
+                        },
+                        {
+                            "descricao":  "Motor de workflows acoplado via CARDAN. SOUSA não contém RUFLO — acopla-se a ele como caixa de transmissão.",
+                            "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA",
+                            "arquitetura":  "SOUSA → CARDAN → ADAPTADOR → RUFLO",
+                            "id":  "RUFLO"
                         }
                     ],
     "modulos":  {

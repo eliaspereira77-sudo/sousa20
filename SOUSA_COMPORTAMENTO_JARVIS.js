@@ -40,6 +40,21 @@ const CONFIG = {
 
 // ═══ MAPEAMENTO DE CAPACIDADES JARVIS → MÓDULOS SOUSA ═══
 const MAPEAMENTO_CAPACIDADES = {
+  WORKFLOW_AUTOMATION_RUFLO: {
+    capacidade: 'Automacao de workflows via RUFLO (caixa de transmissao)',
+    modulo: 'SOUSA_RUFLO_CARDAN + SOUSA_RUFLO_ADAPTER',
+    origem: './SOUSA_RUFLO_CARDAN.js',
+    principio: 'ACOPLAMENTO_SEM_DEPENDENCIA',
+    status: 'ACOPLADO_VIA_CARDAN'
+  },
+  AGENTES_AUTONOMOS_OPENMANUS: {
+    capacidade: 'Delegacao para agentes autonomos via OpenManus',
+    modulo: 'SOUSA_OPENMANUS_CARDAN + SOUSA_OPENMANUS_ADAPTER',
+    origem: './SOUSA_OPENMANUS_CARDAN.js',
+    principio: 'ACOPLAMENTO_SEM_DEPENDENCIA',
+    status: 'ACOPLADO_VIA_CARDAN'
+  },
+
   PERCEPCAO_INTEGRAL: {
     capacidade: 'Percepção integral do ambiente',
     modulo: 'SOUSA_IA_CAPACIDADES_GAS',
@@ -206,4 +221,5 @@ module.exports = {
   statusJarvis,
   registrarLog
 };
+
 

@@ -62,6 +62,12 @@
                             "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA",
                             "arquitetura":  "SOUSA → CARDAN → ADAPTADOR → RUFLO",
                             "id":  "RUFLO"
+                        },
+                        {
+                            "id":  "OPENMANUS",
+                            "descricao":  "Motor de agentes autonomos acoplado via CARDAN. Delegacao multi-agente externa.",
+                            "arquitetura":  "SOUSA -\u003e CARDAN_OPENMANUS -\u003e ADAPTADOR -\u003e OPENMANUS",
+                            "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA"
                         }
                     ],
     "modulos":  {

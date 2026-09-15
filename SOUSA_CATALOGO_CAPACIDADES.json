@@ -91,6 +91,12 @@
                                             "SOUSA_IA_AVATAR_TESTES.js",
                                             "SOUSA_IA_MAPA_3D_GAS.gs"
                                         ]
+                        },
+                        {
+                            "id":  "VALIDADOR_UNIVERSAL",
+                            "descricao":  "Validador que materializa EXECUTAR != CONCLUIR. So declara concluido com evidencia real. Estados de verdade.",
+                            "arquitetura":  "SOUSA -\u003e VALIDADOR -\u003e Evidencia Real -\u003e Estado de Verdade",
+                            "principio":  "EXECUTAR_DIFERENTE_CONCLUIR"
                         }
                     ],
     "modulos":  {

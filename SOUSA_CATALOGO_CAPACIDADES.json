@@ -1,130 +1,148 @@
 {
-    "projeto":  "SOUSA 2.0",
-    "arquivo":  "SOUSA_CATALOGO_CAPACIDADES.json",
-    "versao":  "1.2.1",
-    "descricao":  "Mapa central das capacidades utilizadas pelos modulos e recursos de IA disponiveis.",
-    "regra_principal":  "Modulos solicitam capacidades. O SOUSA_API_MANAGER seleciona o recurso mais adequado e generoso.",
-    "capacidades":  [
-                        {
-                            "id":  "TEXTO",
-                            "descricao":  "Criacao, revisao e analise de textos."
-                        },
-                        {
-                            "id":  "ANALISE",
-                            "descricao":  "Interpretacao, comparacao e tomada de decisao."
-                        },
-                        {
-                            "id":  "CODIGO",
-                            "descricao":  "Desenvolvimento, revisao e explicacao de codigo."
-                        },
-                        {
-                            "id":  "IMAGEM",
-                            "descricao":  "Criacao e tratamento de imagens."
-                        },
-                        {
-                            "id":  "VIDEO",
-                            "descricao":  "Criacao de videos, roteiros, cenas e conteudo multimidia."
-                        },
-                        {
-                            "id":  "AUDIO",
-                            "descricao":  "Geracao e processamento de voz e audio."
-                        },
-                        {
-                            "id":  "EMBEDDING",
-                            "descricao":  "Criacao de vetores para memoria e busca semantica."
-                        },
-                        {
-                            "id":  "BUSCA_MEMORIA",
-                            "descricao":  "Recuperacao de conhecimento da memoria tecnica."
-                        },
-                        {
-                            "id":  "DOCUMENTO_PDF",
-                            "descricao":  "Geracao de relatorios e documentos oficiais."
-                        },
-                        {
-                            "id":  "AUTOMACAO",
-                            "descricao":  "Execucao de tarefas automaticas e integracoes."
-                        },
-                        {
-                            "id":  "PRODUCAO_LIVRO",
-                            "descricao":  "Criacao, organizacao, revisao e continuidade de livros."
-                        },
-                        {
-                            "id":  "PUBLICACAO_LIVRO",
-                            "descricao":  "Conversao de livros em ebook e formatos para impressao sob demanda."
-                        },
-                        {
-                            "id":  "QWEN",
-                            "descricao":  "Motor cognitivo Qwen 3.8 - raciocínio, linguagem e código"
-                        },
-                        {
-                            "id":  "GROK",
-                            "descricao":  "Capacidades comportamentais inspiradas no Grok — raciocínio direto, análise crítica, anti falso-positivo. NÃO é API xAI.",
-                            "tipo":  "CAPACIDADE_COMPORTAMENTAL",
-                            "arquitetura":  "SOUSA IA absorve comportamentos via adapter de capacidades (sem chamada externa)",
-                            "principio":  "CAPACIDADE_RECONHECIDA_NAO_PROVEDOR",
-                            "exige_chave":  false,
-                            "modulos":  [
-                                            "SOUSA_GROK_ADAPTER.json"
-                                        ]
-                        },
-                        {
-                            "descricao":  "Motor de workflows acoplado via CARDAN. SOUSA não contém RUFLO — acopla-se a ele como caixa de transmissão.",
-                            "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA",
-                            "arquitetura":  "SOUSA → CARDAN → ADAPTADOR → RUFLO",
-                            "id":  "RUFLO"
-                        },
-                        {
-                            "id":  "OPENMANUS",
-                            "descricao":  "Motor de agentes autonomos acoplado via CARDAN. Delegacao multi-agente externa.",
-                            "arquitetura":  "SOUSA -> CARDAN_OPENMANUS -> ADAPTADOR -> OPENMANUS",
-                            "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA"
-                        },
-                        {
-                            "id":  "VOZ_CLONADA",
-                            "descricao":  "Sistema de voz clonada do Fundador (TTS Piper + STT + DNA de voz)",
-                            "arquitetura":  "SOUSA -> DNA_MEMORIA_VOZ -> TTS_PIPER/STT -> Voz Clonada",
-                            "principio":  "IDENTIDADE_PRESERVADA",
-                            "modulos":  [
-                                            "SOUSA_IA_DNA_MEMORIA_VOZ.js",
-                                            "SOUSA_USB_TTS_PIPER.js",
-                                            "SOUSA_USB_STT.js",
-                                            "voice/clone.py"
-                                        ]
-                        },
-                        {
-                            "id":  "AVATAR_DIGITAL",
-                            "descricao":  "Representacao visual digital do SOUSA IA (Avatar + Mapa 3D)",
-                            "arquitetura":  "SOUSA -> AVATAR_CONTRATO -> MAPA_3D -> Interface Visual",
-                            "principio":  "INTERFACE_SEPARADA_DA_INTELIGENCIA",
-                            "modulos":  [
-                                            "SOUSA_AVATAR_CONTRATO.js",
-                                            "SOUSA_IA_AVATAR_TESTES.js",
-                                            "SOUSA_IA_MAPA_3D_GAS.gs"
-                                        ]
-                        },
-                        {
-                            "id":  "VALIDADOR_UNIVERSAL",
-                            "descricao":  "Validador que materializa EXECUTAR != CONCLUIR. So declara concluido com evidencia real. Estados de verdade.",
-                            "arquitetura":  "SOUSA -\u003e VALIDADOR -\u003e Evidencia Real -\u003e Estado de Verdade",
-                            "principio":  "EXECUTAR_DIFERENTE_CONCLUIR"
-                        }
-                    ],
-    "modulos":  {
-                    "SOUSA_PRODUTOR":  [
-                                           "VIDEO",
-                                           "IMAGEM",
-                                           "AUDIO",
-                                           "TEXTO",
-                                           "PRODUCAO_LIVRO",
-                                           "PUBLICACAO_LIVRO"
-                                       ],
-                    "SOUSA_ADS_ACADEMICO":  [
-                                                "CODIGO",
-                                                "DOCUMENTO_PDF",
-                                                "BUSCA_MEMORIA",
-                                                "ANALISE",
-                                                "PUBLICACAO_LIVRO"
-                                            ]
-                }
+  "projeto": "SOUSA 2.0",
+  "arquivo": "SOUSA_CATALOGO_CAPACIDADES.json",
+  "versao": "1.2.1",
+  "descricao": "Mapa central das capacidades utilizadas pelos modulos e recursos de IA disponiveis.",
+  "regra_principal": "Modulos solicitam capacidades. O SOUSA_API_MANAGER seleciona o recurso mais adequado e generoso.",
+  "capacidades": [
+    {
+      "id": "TEXTO",
+      "descricao": "Criacao, revisao e analise de textos."
+    },
+    {
+      "id": "ANALISE",
+      "descricao": "Interpretacao, comparacao e tomada de decisao."
+    },
+    {
+      "id": "CODIGO",
+      "descricao": "Desenvolvimento, revisao e explicacao de codigo."
+    },
+    {
+      "id": "IMAGEM",
+      "descricao": "Criacao e tratamento de imagens."
+    },
+    {
+      "id": "VIDEO",
+      "descricao": "Criacao de videos, roteiros, cenas e conteudo multimidia."
+    },
+    {
+      "id": "AUDIO",
+      "descricao": "Geracao e processamento de voz e audio."
+    },
+    {
+      "id": "EMBEDDING",
+      "descricao": "Criacao de vetores para memoria e busca semantica."
+    },
+    {
+      "id": "BUSCA_MEMORIA",
+      "descricao": "Recuperacao de conhecimento da memoria tecnica."
+    },
+    {
+      "id": "DOCUMENTO_PDF",
+      "descricao": "Geracao de relatorios e documentos oficiais."
+    },
+    {
+      "id": "AUTOMACAO",
+      "descricao": "Execucao de tarefas automaticas e integracoes."
+    },
+    {
+      "id": "PRODUCAO_LIVRO",
+      "descricao": "Criacao, organizacao, revisao e continuidade de livros."
+    },
+    {
+      "id": "PUBLICACAO_LIVRO",
+      "descricao": "Conversao de livros em ebook e formatos para impressao sob demanda."
+    },
+    {
+      "id": "QWEN",
+      "descricao": "Motor cognitivo Qwen 3.8 - raciocínio, linguagem e código"
+    },
+    {
+      "id": "GROK",
+      "descricao": "Capacidades comportamentais inspiradas no Grok — raciocínio direto, análise crítica, anti falso-positivo. NÃO é API xAI.",
+      "tipo": "CAPACIDADE_COMPORTAMENTAL",
+      "arquitetura": "SOUSA IA absorve comportamentos via adapter de capacidades (sem chamada externa)",
+      "principio": "CAPACIDADE_RECONHECIDA_NAO_PROVEDOR",
+      "exige_chave": false,
+      "modulos": [
+        "SOUSA_GROK_ADAPTER.json"
+      ]
+    },
+    {
+      "descricao": "Motor de workflows acoplado via CARDAN. SOUSA não contém RUFLO — acopla-se a ele como caixa de transmissão.",
+      "principio": "ACOPLAMENTO_SEM_DEPENDENCIA",
+      "arquitetura": "SOUSA → CARDAN → ADAPTADOR → RUFLO",
+      "id": "RUFLO"
+    },
+    {
+      "id": "OPENMANUS",
+      "descricao": "Motor de agentes autonomos acoplado via CARDAN. Delegacao multi-agente externa.",
+      "arquitetura": "SOUSA -> CARDAN_OPENMANUS -> ADAPTADOR -> OPENMANUS",
+      "principio": "ACOPLAMENTO_SEM_DEPENDENCIA"
+    },
+    {
+      "id": "VOZ_CLONADA",
+      "descricao": "Sistema de voz clonada do Fundador (TTS Piper + STT + DNA de voz)",
+      "arquitetura": "SOUSA -> DNA_MEMORIA_VOZ -> TTS_PIPER/STT -> Voz Clonada",
+      "principio": "IDENTIDADE_PRESERVADA",
+      "modulos": [
+        "SOUSA_IA_DNA_MEMORIA_VOZ.js",
+        "SOUSA_USB_TTS_PIPER.js",
+        "SOUSA_USB_STT.js",
+        "voice/clone.py"
+      ]
+    },
+    {
+      "id": "AVATAR_DIGITAL",
+      "descricao": "Representacao visual digital do SOUSA IA (Avatar + Mapa 3D)",
+      "arquitetura": "SOUSA -> AVATAR_CONTRATO -> MAPA_3D -> Interface Visual",
+      "principio": "INTERFACE_SEPARADA_DA_INTELIGENCIA",
+      "modulos": [
+        "SOUSA_AVATAR_CONTRATO.js",
+        "SOUSA_IA_AVATAR_TESTES.js",
+        "SOUSA_IA_MAPA_3D_GAS.gs"
+      ]
+    },
+    {
+      "id": "VALIDADOR_UNIVERSAL",
+      "descricao": "Validador que materializa EXECUTAR != CONCLUIR. So declara concluido com evidencia real. Estados de verdade.",
+      "arquitetura": "SOUSA -> VALIDADOR -> Evidencia Real -> Estado de Verdade",
+      "principio": "EXECUTAR_DIFERENTE_CONCLUIR"
+    },
+    {
+      "id": "GUARDIAO_SOBERANIA",
+      "descricao": "Protege soberania do Fundador sobre diagnóstico/recuperação/integração",
+      "principio": "SOBERANIA-DIAG",
+      "tipo": "JARVIS_PROTECAO"
+    },
+    {
+      "id": "RECONHECEDOR_AMBIENTE",
+      "descricao": "Detecta ambiente operacional (Desktop, Drive, Mobile, Nuvem)",
+      "principio": "CONHECER_AMBIENTE_ANTES_DE_AGIR",
+      "tipo": "JARVIS_14"
+    },
+    {
+      "id": "DETECTOR_PRESENCA",
+      "descricao": "Detecta presença e modo do Fundador (Vigilante, Movel, Completo)",
+      "principio": "ADAPTAR_COMPORTAMENTO_AO_CONTEXTO",
+      "tipo": "JARVIS_15"
+    }
+  ],
+  "modulos": {
+    "SOUSA_PRODUTOR": [
+      "VIDEO",
+      "IMAGEM",
+      "AUDIO",
+      "TEXTO",
+      "PRODUCAO_LIVRO",
+      "PUBLICACAO_LIVRO"
+    ],
+    "SOUSA_ADS_ACADEMICO": [
+      "CODIGO",
+      "DOCUMENTO_PDF",
+      "BUSCA_MEMORIA",
+      "ANALISE",
+      "PUBLICACAO_LIVRO"
+    ]
+  }
 }

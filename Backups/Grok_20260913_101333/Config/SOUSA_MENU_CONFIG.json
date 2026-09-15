@@ -1,0 +1,36 @@
+{
+  "projeto": "SOUSA 2.0",
+  "arquivo": "SOUSA_MENU_CONFIG.json",
+  "versao": "1.0.0",
+
+  "menu": [
+    {
+      "opcao": "1",
+      "nome": "Registrar evento",
+      "acao": "SOUSA_REGISTRO_ATALHO.ps1",
+      "status": "ATIVO"
+    },
+    {
+      "opcao": "2",
+      "nome": "Backup",
+      "acao": "sousa-backup",
+      "status": "ATIVO"
+    },
+    {
+      "opcao": "3",
+      "nome": "Monitor",
+      "acao": "sousa-monitor",
+      "status": "ATIVO"
+    },
+    {
+      "opcao": "4",
+      "nome": "Status",
+      "acao": "sousa-status",
+      "status": "ATIVO"
+    }
+  ],
+
+  "regra": "Novos módulos devem ser adicionados pela configuração antes de alterar o núcleo.",
+
+  "proximo_passo": "Integrar leitura automática do menu pelo SOUSA_MENU_V1.3.ps1"
+}

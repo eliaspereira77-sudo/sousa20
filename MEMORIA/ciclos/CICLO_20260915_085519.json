@@ -1,0 +1,15 @@
+﻿{
+    "ciclo_id":  "20260915_085519",
+    "timestamp":  "2026-09-15 08:55:55",
+    "tipo":  "COMANDO_MAXIMO",
+    "ambiente":  "Microsoft Windows 11 Home Single Language",
+    "total_arquivos":  8794,
+    "total_pastas":  1509,
+    "modulos_integros":  8,
+    "modulos_falha":  0,
+    "modulos_ausente":  6,
+    "verdades_fixas":  30,
+    "tamanho_final_mb":  494.94,
+    "duracao_segundos":  35.8,
+    "status":  "CONCLUIDO_VERIFICADO"
+}

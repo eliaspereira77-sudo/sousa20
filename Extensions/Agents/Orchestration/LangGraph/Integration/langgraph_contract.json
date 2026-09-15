@@ -1,0 +1,36 @@
+{
+  "id": "langgraph-integration",
+  "version": "1.0.0",
+  "timestamp": "2026-09-15T06:14:17-03:00",
+  "status": "connected",
+  "role": "Primary Orchestrator",
+  "identity_preserved": true,
+  "principle": "LangGraph orquestra o ciclo. Não substitui o núcleo SOUSA.",
+  "maps_to_cycle": {
+    "RECEBIDA": "entry_node",
+    "PLANEJANDO": "plan_node",
+    "EXECUTANDO": "execute_node",
+    "VERIFICANDO": "verify_node",
+    "RECUPERANDO": "recover_node",
+    "CONSOLIDANDO": "consolidate_node",
+    "REGISTRANDO": "register_node",
+    "CONCLUIDA": "end_node",
+    "AGUARDANDO_AUTORIZACAO": "human_in_the_loop",
+    "FALHA": "failure_node"
+  },
+  "agents_connected": [
+    "specialist-research",
+    "specialist-code",
+    "specialist-voice",
+    "specialist-desktop",
+    "crewai-roles",
+    "openmanus-core",
+    "ruflo-workflow"
+  ],
+  "rules": {
+    "primary_orchestrator": true,
+    "does_not_replace_sousa_core": true,
+    "human_in_the_loop_for_authorization": true,
+    "free_open_source_only": true
+  }
+}

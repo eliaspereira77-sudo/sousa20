@@ -1,0 +1,71 @@
+﻿{
+  "version": "2.0.0-OperationalCycle",
+  "timestamp": "2026-09-15T06:21:07.180-03:00",
+  "identity_preserved": true,
+  "principle": "Toda intenção deve percorrer o ciclo completo. Nenhuma etapa pode ser pulada sem registro.",
+  "primary_orchestrator": "langgraph-orchestrator",
+  "stages": [
+    {
+      "id": "intention",
+      "name": "INTENÇÃO",
+      "description": "Recebe e interpreta a intenção do Fundador",
+      "folder": "Intention",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "plan",
+      "name": "PLANO",
+      "description": "Gera plano de execução usando agentes disponíveis",
+      "folder": "Plan",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "execute",
+      "name": "EXECUÇÃO",
+      "description": "Executa o plano com agentes especializados",
+      "folder": "Execute",
+      "orchestrator": ["langgraph-orchestrator", "crewai-roles", "openmanus-core"]
+    },
+    {
+      "id": "verify",
+      "name": "VERIFICAÇÃO",
+      "description": "Verifica se o resultado corresponde à intenção",
+      "folder": "Verify",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "recover",
+      "name": "RECUPERAÇÃO",
+      "description": "Diagnostica e corrige falhas (Wolverine)",
+      "folder": "Recover",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "consolidate",
+      "name": "CONSOLIDAÇÃO",
+      "description": "Reutiliza, integra ou cria apenas se necessário",
+      "folder": "Consolidate",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "register",
+      "name": "REGISTRO",
+      "description": "Registra decisões, resultados e aprendizados",
+      "folder": "Register",
+      "orchestrator": "langgraph-orchestrator"
+    },
+    {
+      "id": "learn",
+      "name": "APRENDIZADO",
+      "description": "Atualiza memória operacional e playbooks",
+      "folder": "Learn",
+      "orchestrator": "langgraph-orchestrator"
+    }
+  ],
+  "rules": {
+    "no_skip_without_log": true,
+    "verification_mandatory": true,
+    "recovery_before_alert": true,
+    "primary_engine": "LangGraph"
+  }
+}

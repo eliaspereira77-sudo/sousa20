@@ -1,0 +1,177 @@
+﻿# ============================================================
+# SOUSA 2.0 — .CLASPIGNORE OFICIAL
+# Produção Apps Script
+# Oficina / backups / testes permanecem locais
+# ============================================================
+
+MonitorSintaxe*.js
+07_LOG/**
+*.log
+
+*_BACKUP_*
+*.BACKUP_*
+BACKUP_*/**
+BACKUP_*
+_ARQUIVO_HISTORICO/**
+*.OLD.js
+
+*.auto-repair-sandbox-*
+*.auto-repair-backup-*
+*.pre-*.js
+
+NucleoOrquestrador_V2.js
+NucleoOrquestrador.js
+
+SOUSA_AUTHORIZATION_GATE.js
+SOUSA_COMMAND_LISTENER.js
+SOUSA_COMMAND_ROUTER.js
+SOUSA_MOBILE_GATEWAY.js
+SOUSAILEON_ARM_V1.js
+SOUSAILEON_ARM_V2.js
+SOUSAILEON_BLOCK_MANAGER_V1.js
+SOUSAILEON_COMMAND.js
+
+CAMPAIGN_PERSISTENCE.js
+CAMPAIGN_RUNTIME.js
+CAMPAIGN_STATE_MACHINE.js
+
+SOUSA_APIS_CASCATA.gs.js
+SOUSA_MARKETPLACE_CASCATA.gs.js
+
+TESTE_*.js
+**/TESTE_*.js
+
+node_modules/**
+package-lock.json
+npm-arvore.json
+
+.venv/**
+*.py
+
+.tmp.driveupload/**
+BACKUP_GITHUB_CONFLITOS_*/
+sousa20-antigo/**
+sousa20/**
+TOOLS_SOUSA/**
+
+Microsoft.PowerShell_profile.ps1
+
+# ============================================================
+# PROTEÇÃO EXPLÍCITA — OFICINA AUTO-REPAIR
+# Não enviar sandboxes/backups para Apps Script
+# ============================================================
+MEMORIA\sandbox/**
+MEMORIA\core\capabilities\*.auto-repair-sandbox-*
+MEMORIA\core\capabilities\*.auto-repair-backup-*
+MEMORIA\core\capabilities\*.BACKUP_*
+MEMORIA\core\capabilities\*.pre-*.js
+
+# ============================================================
+# AUTO-REPAIR — PADRÕES NORMALIZADOS
+# ============================================================
+MEMORIA/sandbox/**
+MEMORIA/core/capabilities/*.auto-repair-sandbox-*
+MEMORIA/core/capabilities/*.auto-repair-backup-*
+MEMORIA/core/capabilities/*.BACKUP_*
+MEMORIA/core/capabilities/*.pre-*.js
+
+# ============================================================
+# PROTEÇÃO — TESTES / DIAGNÓSTICOS DE BANCADA
+# Permanecem locais; não fazem parte do deploy de produção
+# ============================================================
+MEMORIA/core/capabilities/*TESTE*.js
+SOUSA_IA_*TESTE*.js
+SOUSA_IME_DIAGNOSTICO (1).js
+SOUSA_REGISTRY (1).js
+SOUSA_TESTE_*.js
+SOUSA_USB_TESTES*.js
+MEMORIA/core/capabilities/SOUSA_AUTO_REPAIR_SANDBOX.js
+
+.venv-piper/**
+
+
+# ============================================================
+# SOUSA 2.0 — DUPLICATAS .GS COMPROVADAMENTE IDENTICAS AO .JS
+# O .JS permanece como representação oficial do deploy.
+# Os .GS continuam preservados localmente.
+# ============================================================
+
+# ============================================================
+# SOUSA 2.0 — ÁREAS FORA DO DEPLOY DE PRODUÇÃO
+# PRESERVADAS LOCALMENTE — NÃO APAGAR
+# ============================================================
+
+# Quarentena e backups
+.QUARENTENA_SOUSA/**
+BACKUP_GITHUB_CONFLITOS_20260825_120349/**
+*.BACKUP*
+*.backup*
+*.bak*
+*.pre-*
+*.restauracao-*
+*.auto-repair-*
+*.auto-repair-backup-*
+*.auto-repair-sandbox-*
+
+# Memória / histórico / artefatos de manutenção
+MEMORIA/**
+07_LOG/**
+08_BLOCOS_SOUSA/**
+DEPLOYMENTS_ANTES_LIMPEZA.txt
+inventario_git.txt
+rclone_*.log
+SOUSA_DIVERGENCIAS.txt
+
+# Pacote/documentação que não pertence ao runtime GAS
+pacote_oficial/**
+docs/**
+distribution/**
+ruflo/**
+scripts/**
+core/**
+EXTENSOES/**
+
+# Ambientes Python / Node
+.venv/**
+.venv-piper/**
+node_modules/**
+.tmp.driveupload/**
+
+# Projetos/árvores antigas
+sousa20-antigo/**
+sousa20/**
+
+# Arquivos de sistema/Git
+.git/**
+.github/**
+.gitignore
+
+# Artefatos locais e arquivos que não são código GAS de produção
+*.py
+*.pyc
+*.pyi
+*.md
+*.txt
+*.docx
+*.pdf
+*.csv
+*.zip
+*.wav
+*.sh
+*.bat
+*.ps1
+*.gdoc
+
+# Arquivos de teste
+TESTE_*
+SOUSA_TESTE_*
+*_TESTE_*
+*_TESTES_*
+SOUSA_IA_TESTE_*
+
+# Configurações/artefatos locais que não devem entrar no GAS
+SOUSA_COFRE_CHAVES.json
+SOUSA_SOURCE_OF_TRUTH.json
+SOUSA_USB_MEMORIA.json
+SOUSA_ARQUIVOS.txt
+

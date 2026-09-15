@@ -1,0 +1,75 @@
+{
+  "name": "SOUSA-2.0-ULTIMATE-MEMORY-USB",
+  "targetEnvironment": "HYBRID_MESH",
+  "selectedModuleIds": [
+    "mod-core",
+    "mod-bridge",
+    "mod-automation",
+    "mod-security"
+  ],
+  "maxCapacityMb": 512,
+  "securityLevel": "MILITARY_AES256",
+  "autoDeploymentEnabled": true,
+  "modules": [
+    {
+      "id": "mod-core",
+      "name": "Núcleo Neural de Conhecimento",
+      "shortDesc": "Base de conhecimento expandida com embeddings dinâmicos e vetorização a quente.",
+      "category": "core",
+      "iconName": "Brain",
+      "weightKb": 1024,
+      "required": true,
+      "status": "READY",
+      "capabilities": [
+        "Vetorização RAG local",
+        "Memória episódica contínua",
+        "Ajuste contextual automático"
+      ]
+    },
+    {
+      "id": "mod-bridge",
+      "name": "Ponte Inter-Ambientes (Multi-Node Bridge)",
+      "shortDesc": "Permite sincronização transparente entre Nuvem, Containers e Edge Local.",
+      "category": "bridge",
+      "iconName": "Network",
+      "weightKb": 512,
+      "required": true,
+      "status": "READY",
+      "capabilities": [
+        "Tunneling seguro P2P",
+        "Handshake de baixa latência",
+        "Zero-Trust Protocol"
+      ]
+    },
+    {
+      "id": "mod-automation",
+      "name": "Executor de Automações & Workflows",
+      "shortDesc": "Capacidade de rodar agentes autônomos e rotinas diretamente do dispositivo.",
+      "category": "automation",
+      "iconName": "Cpu",
+      "weightKb": 768,
+      "required": false,
+      "status": "READY",
+      "capabilities": [
+        "Pipeline de gatilhos automáticos",
+        "Orquestração de microsserviços",
+        "Fila prioritária"
+      ]
+    },
+    {
+      "id": "mod-security",
+      "name": "Cofre Criptográfico Zero-Trust",
+      "shortDesc": "Proteção pós-quântica para credenciais, chaves de API e identidades do SOUSA 2.0.",
+      "category": "security",
+      "iconName": "ShieldCheck",
+      "weightKb": 384,
+      "required": true,
+      "status": "READY",
+      "capabilities": [
+        "Criptografia AES-256-GCM + Kyber",
+        "Auto-destruição em caso de violação",
+        "Hardware Token Auth"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+﻿{
+    "version":  "2.1-Grok-Adapted",
+    "timestamp":  "2026-09-13T10:15:31.0213185-03:00",
+    "identity_preserved":  true,
+    "dna_locked":  true,
+    "source":  "Grok by xAI",
+    "mode":  "Extension Only - Never modify Core/DNA",
+    "path":  "C:\\Users\\Dionisio Lima\\OneDrive\\Área de Trabalho\\SOUSA_2.0_PRODUCAO",
+    "cognitive":  [
+                      {
+                          "description":  "Raciocínio profundo e truth-seeking",
+                          "name":  "AdvancedReasoning",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Memória de contexto longo",
+                          "name":  "LongContextMemory",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Fluência nativa em português",
+                          "name":  "MultilingualNative",
+                          "enabled":  true
+                      }
+                  ],
+    "search":  [
+                   {
+                       "description":  "Busca web em tempo real",
+                       "name":  "WebSearch",
+                       "enabled":  true
+                   },
+                   {
+                       "description":  "Busca avançada no X",
+                       "name":  "XKeywordSearch",
+                       "enabled":  true
+                   },
+                   {
+                       "description":  "Busca semântica no X",
+                       "name":  "XSemanticSearch",
+                       "enabled":  true
+                   },
+                   {
+                       "description":  "Busca de usuários no X",
+                       "name":  "XUserSearch",
+                       "enabled":  true
+                   },
+                   {
+                       "description":  "Extração de threads",
+                       "name":  "XThreadFetch",
+                       "enabled":  true
+                   }
+               ],
+    "execution":  [
+                      {
+                          "description":  "Execução segura de código",
+                          "name":  "CodeExecutionSandbox",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Leitura e edição de arquivos",
+                          "name":  "FileSystemOperations",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Workflows Ruflo",
+                          "name":  "WorkflowAutomationRuflo",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Agentes OpenManus",
+                          "name":  "AutonomousAgentsOpenManus",
+                          "enabled":  true
+                      }
+                  ],
+    "documents":  [
+                      {
+                          "description":  "Documentos Word",
+                          "name":  "DOCX_Handler",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "PDFs",
+                          "name":  "PDF_Handler",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "Planilhas Excel",
+                          "name":  "XLSX_Handler",
+                          "enabled":  true
+                      },
+                      {
+                          "description":  "PowerPoint",
+                          "name":  "PPTX_Handler",
+                          "enabled":  true
+                      }
+                  ],
+    "multimedia":  [
+                       {
+                           "description":  "Geração de imagens (Grok Imagine)",
+                           "name":  "ImageGeneration",
+                           "enabled":  true
+                       },
+                       {
+                           "description":  "Edição de imagens",
+                           "name":  "ImageEditing",
+                           "enabled":  true
+                       },
+                       {
+                           "description":  "Áudio e vídeo",
+                           "name":  "FFmpegProcessing",
+                           "enabled":  true
+                       },
+                       {
+                           "description":  "Avatar 3D + lip-sync",
+                           "name":  "AvatarDigital3D",
+                           "enabled":  true
+                       }
+                   ],
+    "voice":  [
+                  {
+                      "engines":  [
+                                      "Chatterbox",
+                                      "Qwen3-TTS",
+                                      "ElevenLabs",
+                                      "Cartesia"
+                                  ],
+                      "description":  "TTS com voz clonada do fundador",
+                      "name":  "VozClonadaFundador",
+                      "enabled":  true
+                  }
+              ],
+    "connected_tools":  [
+                            {
+                                "description":  "Repositórios GitHub",
+                                "name":  "GitHub",
+                                "enabled":  true
+                            },
+                            {
+                                "description":  "E-mails",
+                                "name":  "Gmail",
+                                "enabled":  true
+                            },
+                            {
+                                "description":  "Google Drive",
+                                "name":  "GoogleDrive",
+                                "enabled":  true
+                            },
+                            {
+                                "description":  "Agenda",
+                                "name":  "GoogleCalendar",
+                                "enabled":  true
+                            }
+                        ],
+    "protection_rules":  {
+                             "never_modify_core":  true,
+                             "fallback_to_original":  true,
+                             "never_touch_dna_folder":  true,
+                             "extensions_only":  true,
+                             "never_overwrite_identity":  true
+                         }
+}

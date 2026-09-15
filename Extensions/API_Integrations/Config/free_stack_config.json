@@ -1,0 +1,60 @@
+﻿{
+    "version":  "2.1-FreeStack-PowerShell",
+    "timestamp":  "2026-09-14T06:19:26-03:00",
+    "priority":  "open-source + free generous quotas",
+    "identity_preserved":  true,
+    "platform":  "Windows/PowerShell",
+    "tts":  {
+                "primary":  "Chatterbox",
+                "fallback":  [
+                                 "Qwen3-TTS",
+                                 "Kokoro-82M",
+                                 "OpenVoice-v2"
+                             ],
+                "type":  "self-host",
+                "license":  "MIT / Apache 2.0",
+                "notes":  "Clonagem de voz ilimitada no dispositivo"
+            },
+    "llm":  {
+                "gateway":  "LiteLLM",
+                "providers":  [
+                                  {
+                                      "name":  "Groq",
+                                      "quota":  "Até 14.400 req/dia (modelos menores)",
+                                      "free":  true
+                                  },
+                                  {
+                                      "name":  "OpenRouter",
+                                      "quota":  "50-1000 req/dia nos modelos :free",
+                                      "free":  true
+                                  },
+                                  {
+                                      "name":  "Google Gemini",
+                                      "quota":  "Generosa (AI Studio)",
+                                      "free":  true
+                                  },
+                                  {
+                                      "name":  "Ollama",
+                                      "quota":  "Ilimitado (local)",
+                                      "free":  true
+                                  }
+                              ]
+            },
+    "search":  {
+                   "primary":  "Tavily",
+                   "quota":  "1.000 créditos/mês",
+                   "fallback":  [
+                                    "DuckDuckGo",
+                                    "SearXNG self-host"
+                                ],
+                   "free":  true
+               },
+    "agents":  {
+                   "frameworks":  [
+                                      "LangGraph",
+                                      "CrewAI",
+                                      "OpenManus"
+                                  ],
+                   "type":  "open-source"
+               }
+}

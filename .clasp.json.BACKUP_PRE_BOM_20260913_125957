@@ -1,0 +1,17 @@
+﻿{
+  "scriptId": "1k0Zx8_HXl1ko0Af3UVq7VRTdCGS7D7uvPM0WLGbX09RhSpQNJ_icSeSu",
+  "rootDir": "",
+  "projectId": "sousa-itinga-v2",
+  "scriptExtensions": [
+    ".js",
+    ".gs"
+  ],
+  "htmlExtensions": [
+    ".html"
+  ],
+  "jsonExtensions": [
+    ".json"
+  ],
+  "filePushOrder": [],
+  "skipSubdirectories": false
+}

@@ -1,0 +1,649 @@
+{
+  "SOUSA_2_0_MANIFESTO_OPERACIONAL": {
+    "manifesto_id": "SOUSA-MANIFESTO-OPERACIONAL-2.0",
+    "version": "2.0.0",
+    "type": "EXECUTABLE_OPERATIONAL_MANIFEST",
+    "status": "RECONSTRUCTION_CONSOLIDATED",
+    "authority": "FUNDADOR",
+    "system_name": "SOUSA 2.0",
+    "system_expansion": "Sistema Orquestrador Unificado Seguro Automatizado",
+    "identity": {
+      "interface": "SOUSA IA / JARVIS",
+      "interface_is_core": false,
+      "core_role": "CENTRAL_ORCHESTRATOR",
+      "founder_role": "SOVEREIGN_AUTHORITY"
+    },
+    "autonomy": {
+      "automation_target_percent": 99.99,
+      "human_control_percent": 0.01,
+      "unrestricted_autonomy": false,
+      "principle": "INTENCAO_HUMANA_MINIMA_EXECUCAO_AUTONOMA_MAXIMA"
+    },
+    "founder_authorization_required": [
+      "ALTO_RISCO",
+      "ALTERACAO_ESTRUTURAL_DO_NUCLEO",
+      "OPERACAO_IRREVERSIVEL",
+      "CREDENCIAL_OU_SEGREDO",
+      "GOVERNANCA"
+    ],
+    "supreme_philosophy": [
+      "SE_PUDER_SIMPLIFICAR_SIMPLIFIQUE",
+      "SE_PUDER_TORNAR_MAIS_PRATICO_TORNE",
+      "SE_PUDER_AUTOMATIZAR_AUTOMATIZE"
+    ],
+    "consolidation_rule": {
+      "EXISTE": "REUTILIZAR",
+      "PARCIAL": "APRIMORAR",
+      "OUTRO_NOME_MESMA_FUNCAO": "INTEGRAR",
+      "QUEBRADO": "REPARAR",
+      "LACUNA_COMPROVADA": "CRIAR"
+    },
+    "prohibited_patterns": [
+      "DUPLICACAO_DESNECESSARIA",
+      "AMBIGUIDADE",
+      "RUIDO",
+      "ARQUIVO_INUTIL",
+      "ARQUIVO_MORTO",
+      "AGENTE_ORFAO",
+      "CONFLITO",
+      "CONTRADICAO",
+      "PARADOXO",
+      "CAMADA_DESNECESSARIA",
+      "COMPLEXIDADE_DESNECESSARIA"
+    ],
+    "universal_cycle": [
+      "INTENCAO",
+      "PLANEJAR",
+      "EXECUTAR",
+      "VERIFICAR",
+      "RECUPERAR",
+      "CONSOLIDAR",
+      "REGISTRAR",
+      "CONCLUIR"
+    ],
+    "intention_pipeline": [
+      "LINGUAGEM_NATURAL",
+      "INTENCAO",
+      "OBJETIVO",
+      "CONTEXTO",
+      "RESTRICOES",
+      "PRIORIDADES",
+      "PLANO",
+      "SELECAO_DE_CAPACIDADES",
+      "EXECUCAO",
+      "VERIFICACAO",
+      "RECUPERACAO",
+      "CONSOLIDACAO",
+      "REGISTRO",
+      "APRENDIZADO",
+      "RESULTADO"
+    ],
+    "source_of_truth": {
+      "enabled": true,
+      "role": "REFERENCIA_DE_ESTADO_AUTORIZADO",
+      "divergent_state_promotion": false,
+      "automatic_promotion": false
+    },
+    "sync_guard": {
+      "enabled": true,
+      "flow": [
+        "SOURCE_OF_TRUTH",
+        "INVENTARIO_REAL",
+        "DIFF",
+        "CLASSIFICACAO",
+        "CONSOLIDACAO",
+        "RELATORIO_SOBERANO",
+        "WOLVERINE"
+      ],
+      "zero_production_mutation": true,
+      "zero_divergent_state_promotion": true
+    },
+    "wolverine": {
+      "enabled": true,
+      "role": "AUTOCORRECAO",
+      "flow": [
+        "DETECTAR",
+        "DIAGNOSTICAR",
+        "CORRIGIR",
+        "TESTAR",
+        "RETESTAR",
+        "CONSOLIDAR",
+        "REGISTRAR",
+        "APRENDER"
+      ],
+      "correction_becomes_memory": true
+    },
+    "memory": {
+      "operational_memory": true,
+      "must_register": [
+        "DECISOES",
+        "CONTRATOS",
+        "ESTADOS",
+        "FALHAS",
+        "CORRECOES",
+        "RECUPERACOES",
+        "CAPACIDADES",
+        "INTEGRACOES",
+        "RESULTADOS",
+        "APRENDIZADOS"
+      ],
+      "objective": "NAO_REPETIR_ERROS_CONHECIDOS"
+    },
+    "self_management": {
+      "automatic_inventory": true,
+      "automatic_audit": true,
+      "gap_detection": true,
+      "duplicate_detection": true,
+      "orphan_detection": true,
+      "dead_component_detection": true,
+      "connection_verification": true,
+      "source_of_truth_verification": true,
+      "recovery": true,
+      "retest": true,
+      "sovereign_reporting": true
+    },
+    "agent_policy": {
+      "isolated_agents_allowed": false,
+      "dormant_agents_allowed": false,
+      "unconnected_agents_allowed": false,
+      "required_agent_properties": [
+        "IDENTIDADE",
+        "FUNCAO",
+        "CAPACIDADE",
+        "CONEXAO",
+        "CONSUMIDOR",
+        "ROTA_DE_EXECUCAO",
+        "STATUS",
+        "TESTE"
+      ]
+    },
+    "capability_policy": {
+      "central_registry_required": true,
+      "required_properties": [
+        "IDENTIDADE",
+        "FUNCAO",
+        "ENTRADA",
+        "SAIDA",
+        "DEPENDENCIAS",
+        "PERMISSOES",
+        "STATUS",
+        "TESTE",
+        "CONSUMIDOR",
+        "ROTA_DE_EXECUCAO"
+      ],
+      "external_capabilities": {
+        "allowed": true,
+        "rule": "ABSORVER_CAPACIDADE_SEM_DUPLICAR_ARQUITETURA"
+      },
+      "existing_agents": {
+        "openmanus": "REUTILIZAR_E_ORQUESTRAR_SE_JA_EXISTENTE",
+        "other_agents": "INVENTARIAR_E_REUTILIZAR"
+      }
+    },
+    "interfaces": {
+      "voice": true,
+      "text": true,
+      "telegram": true,
+      "whatsapp": true,
+      "desktop_council": true,
+      "smartphone": true,
+      "single_execution_core": true,
+      "bidirectional_flow": true
+    },
+    "voice_flow": [
+      "VOZ",
+      "TRANSCRICAO",
+      "INTENCAO",
+      "NUCLEO",
+      "EXECUCAO",
+      "VERIFICACAO",
+      "RESPOSTA"
+    ],
+    "text_flow": [
+      "TEXTO",
+      "INTERPRETACAO",
+      "INTENCAO",
+      "NUCLEO",
+      "EXECUCAO",
+      "VERIFICACAO",
+      "RESPOSTA"
+    ],
+    "cloud": {
+      "persistent_environment": true,
+      "local_remote_sync": true,
+      "android_windows_bidirectional": true,
+      "remote_access": true,
+      "state_persistence": true,
+      "drive_role": "INFRAESTRUTURA_PERSISTENTE_DE_APOIO"
+    },
+    "web_operations": {
+      "enabled": true,
+      "controlled": true,
+      "verifiable": true,
+      "domains": [
+        "PESQUISA",
+        "COMUNICACAO",
+        "PUBLICACAO",
+        "CONTEUDO",
+        "MARKETING",
+        "NEGOCIOS",
+        "AUTOMACAO",
+        "ANALISE"
+      ],
+      "platforms": [
+        "EMAIL",
+        "CALENDARIO",
+        "INSTAGRAM",
+        "FACEBOOK",
+        "TIKTOK",
+        "KWAI",
+        "YOUTUBE",
+        "BLOGSPOT",
+        "KDP",
+        "MARKETPLACES",
+        "AFILIADOS"
+      ]
+    },
+    "specialist_modules": [
+      "ADS",
+      "FINANCEIRO",
+      "AFILIADOSPRO",
+      "PUBLICACAO",
+      "CONTEUDO",
+      "TECNOLOGIA",
+      "PESQUISA"
+    ],
+    "council": {
+      "role": "CONSULTIVO",
+      "can_analyze": true,
+      "can_compare": true,
+      "can_recommend": true,
+      "has_sovereign_authority": false
+    },
+    "security": {
+      "credentials_and_secrets": {
+        "expose": false,
+        "unnecessary_duplicate": false,
+        "unnecessary_transmission": false,
+        "unauthorized_change": false
+      }
+    },
+    "verification_policy": {
+      "execution_equals_completion": false,
+      "completion_requires": [
+        "IMPLEMENTACAO",
+        "EXECUCAO",
+        "TESTE",
+        "VERIFICACAO",
+        "RETESTE",
+        "REGISTRO"
+      ]
+    },
+    "regression_policy": {
+      "enabled": true,
+      "broken_existing_capability": "NAO_CONSIDERAR_CONCLUIDO",
+      "required_response": [
+        "RECUPERAR",
+        "CORRIGIR",
+        "OU_SOLICITAR_DECISAO"
+      ]
+    },
+    "manual_operation_reduction": {
+      "target": "MINIMO_POSSIVEL",
+      "reduce": [
+        "MONITORAMENTO_MANUAL",
+        "MANUTENCAO_MANUAL",
+        "DIAGNOSTICO_MANUAL",
+        "CORRECAO_MANUAL",
+        "SINCRONIZACAO_MANUAL",
+        "INVENTARIO_MANUAL",
+        "TESTES_REPETITIVOS",
+        "COMANDOS_POWERSHELL_REPETITIVOS"
+      ],
+      "powershell_role": "FERRAMENTA_DO_SOUSA_NAO_OBRIGACAO_DO_FUNDADOR"
+    },
+    "manifest_items": [
+      {
+        "id": 1,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "DETECTAR_AMBIENTE_OPERACIONAL"
+      },
+      {
+        "id": 2,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "INVENTARIO_AUTOMATICO"
+      },
+      {
+        "id": 3,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "DETECCAO_DE_DUPLICIDADES"
+      },
+      {
+        "id": 4,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "DETECCAO_DE_FALHAS"
+      },
+      {
+        "id": 5,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "ORGANIZACAO_AUTOMATICA"
+      },
+      {
+        "id": 6,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "MANUTENCAO_AUTOMATICA"
+      },
+      {
+        "id": 7,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "DETECCAO_DE_ALTERACOES"
+      },
+      {
+        "id": 8,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "VALIDACAO"
+      },
+      {
+        "id": 9,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "AUTO_RECUPERACAO"
+      },
+      {
+        "id": 10,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "REGISTRO_OPERACIONAL"
+      },
+      {
+        "id": 11,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "LIMPEZA_DE_ARTEFATOS"
+      },
+      {
+        "id": 12,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "UNIFICACAO_DE_EXECUTORES"
+      },
+      {
+        "id": 13,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "OPERACAO_ANDROID"
+      },
+      {
+        "id": 14,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "INDEPENDENCIA_DO_PC"
+      },
+      {
+        "id": 15,
+        "category": "DESKTOP",
+        "status": "[ ]",
+        "objective": "REDUCAO_DA_INTERVENCAO_MANUAL"
+      },
+      {
+        "id": 16,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "ORQUESTRACAO_CENTRAL"
+      },
+      {
+        "id": 17,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "SOBERANIA_DO_FUNDADOR"
+      },
+      {
+        "id": 18,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "POLITICA_DE_AUTORIZACAO"
+      },
+      {
+        "id": 19,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "INTENCAO_PARA_LOGICA"
+      },
+      {
+        "id": 20,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "CICLO_RUFLO"
+      },
+      {
+        "id": 21,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "CONSOLIDACAO"
+      },
+      {
+        "id": 22,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "ANTI_DUPLICACAO"
+      },
+      {
+        "id": 23,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "PRINCIPIO_DO_SIGNIFICADO"
+      },
+      {
+        "id": 24,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "REGISTRO_DE_CAPACIDADES"
+      },
+      {
+        "id": 25,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "COORDENACAO_DE_CAPACIDADES"
+      },
+      {
+        "id": 26,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "ADAPTACAO_DAS_CAPACIDADES_DO_CHATGPT"
+      },
+      {
+        "id": 27,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "INTEGRACAO_OPENMANUS_E_AGENTES"
+      },
+      {
+        "id": 28,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "WOLVERINE"
+      },
+      {
+        "id": 29,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "MEMORIA_OPERACIONAL"
+      },
+      {
+        "id": 30,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "AUTO_AUDITORIA"
+      },
+      {
+        "id": 31,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "ELIMINAR_AGENTES_ISOLADOS"
+      },
+      {
+        "id": 32,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "UNIFICACAO_VOZ_TEXTO"
+      },
+      {
+        "id": 33,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "MULTI_INTERFACE"
+      },
+      {
+        "id": 34,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "FLUXO_BIDIRECIONAL"
+      },
+      {
+        "id": 35,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "VERIFICACAO_POS_EXECUCAO"
+      },
+      {
+        "id": 36,
+        "category": "NUCLEO",
+        "status": "[x]",
+        "objective": "RECUPERACAO_E_CONSOLIDACAO"
+      },
+      {
+        "id": 37,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "PERSISTENCIA_CLOUD"
+      },
+      {
+        "id": 38,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "SINCRONIZACAO_CONTROLADA"
+      },
+      {
+        "id": 39,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "ANDROID_WINDOWS_BIDIRECIONAL"
+      },
+      {
+        "id": 40,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "ACESSO_REMOTO"
+      },
+      {
+        "id": 41,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "PERSISTENCIA_DE_ESTADO"
+      },
+      {
+        "id": 42,
+        "category": "NUVEM",
+        "status": "[ ]",
+        "objective": "DETECCAO_DE_DIVERGENCIAS"
+      },
+      {
+        "id": 43,
+        "category": "NUVEM",
+        "status": "[x]",
+        "objective": "SOURCE_OF_TRUTH"
+      },
+      {
+        "id": 44,
+        "category": "NUVEM",
+        "status": "[x]",
+        "objective": "SYNC_GUARD"
+      },
+      {
+        "id": 45,
+        "category": "NUVEM",
+        "status": "[x]",
+        "objective": "TRAVAS_SYNC_GUARD"
+      },
+      {
+        "id": 46,
+        "category": "NUVEM",
+        "status": "[x]",
+        "objective": "RELATORIO_SOBERANO"
+      },
+      {
+        "id": 47,
+        "category": "WEB",
+        "status": "[ ]",
+        "objective": "OPERACAO_WEB_AUTONOMA"
+      },
+      {
+        "id": 48,
+        "category": "WEB",
+        "status": "[ ]",
+        "objective": "COMUNICACAO_E_PRODUTIVIDADE"
+      },
+      {
+        "id": 49,
+        "category": "WEB",
+        "status": "[ ]",
+        "objective": "NEGOCIOS_E_PRESENCA_DIGITAL"
+      },
+      {
+        "id": 50,
+        "category": "WEB",
+        "status": "[ ]",
+        "objective": "SOUSA_COMO_SISTEMA_OPERACIONAL_PESSOAL"
+      }
+    ],
+    "operational_directive": {
+      "primary_command": "RECEBER_INTENCAO_E_TRANSFORMA_LA_EM_EXECUCAO_AUTONOMA_VERIFICADA",
+      "behavior": [
+        "CONHECER_PROPRIO_ESTADO",
+        "INVENTARIAR",
+        "AUDITAR",
+        "DETECTAR_LACUNAS",
+        "DETECTAR_DUPLICIDADES",
+        "REUTILIZAR",
+        "INTEGRAR",
+        "APRIMORAR",
+        "REPARAR",
+        "CRIAR_APENAS_SE_LACUNA_COMPROVADA",
+        "EXECUTAR",
+        "VERIFICAR",
+        "RECUPERAR",
+        "CONSOLIDAR",
+        "REGISTRAR",
+        "APRENDER",
+        "INFORMAR"
+      ]
+    },
+    "founder_alert_protocol": {
+      "trigger": "SYSTEM_NOT_OPERATING_ACCORDING_TO_TARGET_STATE",
+      "required_information": [
+        "CAUSA",
+        "IMPACTO",
+        "RISCO",
+        "CORRECAO_PROPOSTA",
+        "NECESSIDADE_DE_AUTORIZACAO"
+      ]
+    },
+    "final_state": {
+      "founder": "DEFINE_INTENCAO_E_DECISOES_SOBERANAS",
+      "sousa": "EXECUTA_OPERACAO_AUTONOMA_DENTRO_DAS_REGRAS",
+      "goal": "ELIMINAR_CARGA_OPERACIONAL_DESNECESSARIA_DO_FUNDADOR",
+      "target": "SISTEMA_AUTONOMO_VERIFICADO_CONTINUAMENTE",
+      "supreme_rule": "INTENCAO_HUMANA_MINIMA_EXECUCAO_AUTONOMA_MAXIMA"
+    },
+    "declaration": "O SOUSA 2.0 NAO EXISTE PARA EXIGIR MAIS TRABALHO DO FUNDADOR. EXISTE PARA RETIRAR DO FUNDADOR O TRABALHO OPERACIONAL QUE PODE SER EXECUTADO PELO PROPRIO SISTEMA.",
+    "closing_command": "CIENTIFIQUE-SE_REGISTRE-SE_CUMPRA-SE"
+  }
+}

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 — CASCATA DE APIS E INICIALIZAÇÃO PLUG AND PLAY
  * ==========================================================
@@ -138,5 +138,4 @@ function SOUSA_USB_inicializar(opcoes) {
     seed: seed
   };
 }
-
 

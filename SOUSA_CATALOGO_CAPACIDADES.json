@@ -1,7 +1,7 @@
-﻿{
+{
     "projeto":  "SOUSA 2.0",
     "arquivo":  "SOUSA_CATALOGO_CAPACIDADES.json",
-    "versao":  "1.1.0",
+    "versao":  "1.2.1",
     "descricao":  "Mapa central das capacidades utilizadas pelos modulos e recursos de IA disponiveis.",
     "regra_principal":  "Modulos solicitam capacidades. O SOUSA_API_MANAGER seleciona o recurso mais adequado e generoso.",
     "capacidades":  [
@@ -58,6 +58,17 @@
                             "descricao":  "Motor cognitivo Qwen 3.8 - raciocínio, linguagem e código"
                         },
                         {
+                            "id":  "GROK",
+                            "descricao":  "Capacidades comportamentais inspiradas no Grok — raciocínio direto, análise crítica, anti falso-positivo. NÃO é API xAI.",
+                            "tipo":  "CAPACIDADE_COMPORTAMENTAL",
+                            "arquitetura":  "SOUSA IA absorve comportamentos via adapter de capacidades (sem chamada externa)",
+                            "principio":  "CAPACIDADE_RECONHECIDA_NAO_PROVEDOR",
+                            "exige_chave":  false,
+                            "modulos":  [
+                                            "SOUSA_GROK_ADAPTER.json"
+                                        ]
+                        },
+                        {
                             "descricao":  "Motor de workflows acoplado via CARDAN. SOUSA não contém RUFLO — acopla-se a ele como caixa de transmissão.",
                             "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA",
                             "arquitetura":  "SOUSA → CARDAN → ADAPTADOR → RUFLO",
@@ -66,13 +77,13 @@
                         {
                             "id":  "OPENMANUS",
                             "descricao":  "Motor de agentes autonomos acoplado via CARDAN. Delegacao multi-agente externa.",
-                            "arquitetura":  "SOUSA -\u003e CARDAN_OPENMANUS -\u003e ADAPTADOR -\u003e OPENMANUS",
+                            "arquitetura":  "SOUSA -> CARDAN_OPENMANUS -> ADAPTADOR -> OPENMANUS",
                             "principio":  "ACOPLAMENTO_SEM_DEPENDENCIA"
                         },
                         {
                             "id":  "VOZ_CLONADA",
                             "descricao":  "Sistema de voz clonada do Fundador (TTS Piper + STT + DNA de voz)",
-                            "arquitetura":  "SOUSA -\u003e DNA_MEMORIA_VOZ -\u003e TTS_PIPER/STT -\u003e Voz Clonada",
+                            "arquitetura":  "SOUSA -> DNA_MEMORIA_VOZ -> TTS_PIPER/STT -> Voz Clonada",
                             "principio":  "IDENTIDADE_PRESERVADA",
                             "modulos":  [
                                             "SOUSA_IA_DNA_MEMORIA_VOZ.js",
@@ -84,7 +95,7 @@
                         {
                             "id":  "AVATAR_DIGITAL",
                             "descricao":  "Representacao visual digital do SOUSA IA (Avatar + Mapa 3D)",
-                            "arquitetura":  "SOUSA -\u003e AVATAR_CONTRATO -\u003e MAPA_3D -\u003e Interface Visual",
+                            "arquitetura":  "SOUSA -> AVATAR_CONTRATO -> MAPA_3D -> Interface Visual",
                             "principio":  "INTERFACE_SEPARADA_DA_INTELIGENCIA",
                             "modulos":  [
                                             "SOUSA_AVATAR_CONTRATO.js",

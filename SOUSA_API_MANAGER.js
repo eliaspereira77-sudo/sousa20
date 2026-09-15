@@ -1,12 +1,12 @@
-﻿
+
 // =====================================================
-// SOUSA 2.0 â€” API MANAGER INTEGRADO
-// SeleÃ§Ã£o inteligente + COFRE + CASCATA
+// SOUSA 2.0 — API MANAGER INTEGRADO
+// Seleção inteligente + COFRE + CASCATA
 // =====================================================
 
 function SOUSA_API_MANAGER_selecionar(capacidade) {
 
-  const capacidadeNormalizada = capacidade.toUpperCase();
+  const capacidadeNormalizada = String(capacidade || "TEXTO").toUpperCase();
 
   const disponiveis = [];
 
@@ -41,6 +41,10 @@ function SOUSA_API_MANAGER_selecionar(capacidade) {
 
   }
 
+  // Menor prioridade numérica = maior preferência (igual SOUSA_API_EXECUTOR_COM_CASCATA)
+  disponiveis.sort(function (a, b) {
+    return (a.prioridade || 100) - (b.prioridade || 100);
+  });
 
   const escolhido = disponiveis[0];
 
@@ -57,7 +61,9 @@ function SOUSA_API_MANAGER_selecionar(capacidade) {
 
     credencial: "ENCONTRADA",
 
-    status: "PRONTO PARA EXECUÃ‡ÃƒO"
+    status: "PRONTO PARA EXECUCAO",
+
+    candidatos: disponiveis.length
 
   };
 

@@ -85,3 +85,6 @@ SOUSA_GITHUB_REF/
 
 # Backups grandes
 *.zip
+
+# Modelos grandes (usar Git LFS ou download separado)
+models/*.onnx

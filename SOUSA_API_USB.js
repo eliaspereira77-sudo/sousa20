@@ -200,7 +200,6 @@ function SOUSA_API_USB_executar(selecao, contexto) {
   if (preparado.protocolo === "ANTHROPIC_MESSAGES") {
 
     if (typeof SOUSA_ADAPTER_ANTHROPIC_MESSAGES_execute === "function") {
-      // Preferir adaptador dedicado quando disponível
       var contrato = SOUSA_API_USB_obterContrato(preparado.provedor);
       return SOUSA_ADAPTER_ANTHROPIC_MESSAGES_execute(
         {
@@ -219,7 +218,6 @@ function SOUSA_API_USB_executar(selecao, contexto) {
       );
     }
 
-    // Fallback inline (mesmo contrato do adaptador)
     const chave =
       obterChaveAPI(
         SOUSA_API_USB_obterContrato(preparado.provedor).api_key

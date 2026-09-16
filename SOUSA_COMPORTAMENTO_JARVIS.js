@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 — SOUSA_COMPORTAMENTO_JARVIS
  * ==========================================================
@@ -23,6 +23,7 @@
  * 7. Ação proativa             → SOUSA_CICLO_AUTONOMO
  * 8. Adaptação                 → SOUSA_PLUG_AND_PLAY
  * 9. Soberania Fundador        → SOUSA_CONSTITUIÇÃO + SOUSA_POLITICA
+ * + MOTOR_COGNITIVO_CLAUDE     → SOUSA_ADAPTER_ANTHROPIC_MESSAGES
  * ==========================================================
  */
 
@@ -131,6 +132,16 @@ const MAPEAMENTO_CAPACIDADES = {
     origem: './SOUSA_RUFLO_CARDAN.js',
     principio: 'ACOPLAMENTO_SEM_DEPENDENCIA',
     status: 'ACOPLADO_VIA_CARDAN'
+  },
+  MOTOR_COGNITIVO_CLAUDE: {
+    capacidade: 'Motor cognitivo Claude (Anthropic Messages API)',
+    modulo: 'SOUSA_ADAPTER_ANTHROPIC_MESSAGES + CASCATA + USB',
+    origem: './SOUSA_ADAPTER_ANTHROPIC_MESSAGES.js',
+    principio: 'PROVEDOR_PLUGAVEL_VIA_USB',
+    protocolo: 'ANTHROPIC_MESSAGES',
+    chave_cofre: 'ANTHROPIC_API_KEY',
+    prioridade_cascata: 2,
+    status: 'OPERACIONAL'
   }
 };
 
@@ -236,6 +247,3 @@ module.exports = {
   statusJarvis,
   registrarLog
 };
-
-
-

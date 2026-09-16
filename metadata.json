@@ -1,0 +1,6 @@
+{
+  "name": "SOUSA 2.0",
+  "description": "Sistema de IA Pessoal Avançado e Painel Operacional SOUSA 2.0",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

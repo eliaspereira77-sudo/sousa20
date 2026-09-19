@@ -1,6 +1,6 @@
 {
   "name": "SOUSA 2.0",
-  "description": "Sistema de IA Pessoal Avançado e Painel Operacional SOUSA 2.0",
-  "requestFramePermissions": [],
+  "description": "SOUSA 2.0 - Sistema Orquestrador Unificado Seguro Automatizado",
+  "requestFramePermissions": ["microphone"],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

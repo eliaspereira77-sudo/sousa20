@@ -59,3 +59,13 @@ function SOUSA_AVATAR_ttsContrato(texto, preferencias) {
     texto: String(texto || ""), preferencias: preferencias || {}
   };
 }
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    SOUSA_AVATAR_V1: SOUSA_AVATAR_V1,
+    SOUSA_AVATAR_receberEvento: SOUSA_AVATAR_receberEvento,
+    SOUSA_AVATAR_estadoParaCiclo: SOUSA_AVATAR_estadoParaCiclo,
+    SOUSA_AVATAR_prepararSaida: SOUSA_AVATAR_prepararSaida,
+    SOUSA_AVATAR_ttsContrato: SOUSA_AVATAR_ttsContrato
+  };
+}

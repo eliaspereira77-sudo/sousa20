@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 — CARDÃ RUFLO
  * ==========================================================
@@ -142,6 +142,21 @@ var SOUSA_RUFLO_CARDAN = {
       ok: true,
       cardan: "SOUSA_RUFLO_CARDAN",
       versao: this.versao,
+      manifesto_alinhamento: "2.4.0",
+      status_treinamento: "ALINHADO_E_TREINADO_AO_MANIFESTO_2_4_0",
+      organismo_unico: true,
+      ciclo_operacional_8_etapas: [
+        "PERCEBER",
+        "ENTENDER",
+        "PLANEJAR",
+        "EXECUTAR",
+        "VERIFICAR",
+        "RECUPERAR",
+        "CONSOLIDAR",
+        "APRENDER"
+      ],
+      regra_de_ouro: "A mesma falha repetida 2x+ = falha de aprendizado, não de execução. NÃO REPETIR.",
+      protecao_legal: "BLOQUEAR_PREVENTIVAMENTE_SE_CONTRARIAR_A_LEI",
       estado: this.estado,
       conectado:
         !!this.adaptador
@@ -166,4 +181,8 @@ function SOUSA_RUFLO_CARDAN_status() {
 
   return SOUSA_RUFLO_CARDAN.status();
 
+}
+
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = SOUSA_RUFLO_CARDAN;
 }

@@ -1,4 +1,4 @@
-﻿{
+{
     "projeto":  "SOUSA 2.0",
     "arquivo":  "SOUSA_COFRE_CHAVES.json",
     "versao":  "1.0.0",
@@ -47,6 +47,67 @@
                                  "TEXTO",
                                  "ANALISE",
                                  "CODIGO"
+                             ]
+                 },
+                 {
+                     "status":  "configuravel",
+                     "propriedade":  "MERCADO_LIVRE_API_KEY",
+                     "id":  "MERCADO_LIVRE",
+                     "categoria":  "MARKETPLACE",
+                     "prioridade":  1,
+                     "uso":  [
+                                 "CATALOGO",
+                                 "PRECIFICACAO",
+                                 "DROPSHIPPING",
+                                 "ARBITRAGEM"
+                             ]
+                 },
+                 {
+                     "status":  "configuravel",
+                     "propriedade":  "SHOPEE_API_KEY",
+                     "id":  "SHOPEE",
+                     "categoria":  "MARKETPLACE",
+                     "prioridade":  2,
+                     "uso":  [
+                                 "CATALOGO",
+                                 "VENDAS",
+                                 "DROPSHIPPING",
+                                 "AFILIADOS"
+                             ]
+                 },
+                 {
+                     "status":  "configuravel",
+                     "propriedade":  "TEMU_API_KEY",
+                     "id":  "TEMU",
+                     "categoria":  "MARKETPLACE",
+                     "prioridade":  3,
+                     "uso":  [
+                                 "PRODUTOS_FORNECEDOR",
+                                 "ARBITRAGEM",
+                                 "DROPSHIPPING"
+                             ]
+                 },
+                 {
+                     "status":  "configuravel",
+                     "propriedade":  "MAGALU_AFILIADO_TAG",
+                     "id":  "MAGALU",
+                     "categoria":  "AFILIADOS",
+                     "prioridade":  4,
+                     "uso":  [
+                                 "LINK_AFILIADO",
+                                 "COMMISSION_TRACKING"
+                             ]
+                 },
+                 {
+                     "status":  "configuravel",
+                     "propriedade":  "AMAZON_ASSOCIATE_TAG",
+                     "id":  "AMAZON",
+                     "categoria":  "AFILIADOS",
+                     "prioridade":  5,
+                     "uso":  [
+                                 "LINK_AFILIADO",
+                                 "ASSOCIADOS",
+                                 "ARBITRAGEM"
                              ]
                  }
              ],

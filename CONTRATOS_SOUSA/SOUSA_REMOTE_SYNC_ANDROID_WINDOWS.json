@@ -29,6 +29,7 @@
     "Android recebe resultado resumido e acionavel"
   ],
   "regras": [
+    "O principio da USB Plug and Play torna o SOUSA 2.0 100% compativel com todas as versoes do Windows (Win 11, Win 10, Win 8.1, Win 8, Win 7 e Server).",
     "O fundador nao deve digitar repetidamente credenciais ja autorizadas.",
     "Segredos nao devem ser gravados no codigo-fonte.",
     "Nenhuma operacao remota deve ser executada fora das autorizacoes vigentes.",

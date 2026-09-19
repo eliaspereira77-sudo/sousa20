@@ -1,0 +1,66 @@
+{
+  "name": "SOUSA_2.0_MCP",
+  "version": "1.0.0",
+  "description": "Model Context Protocol para integração do SOUSA 2.0",
+  "capabilities": {
+    "tools": [
+      {
+        "name": "ping",
+        "description": "Verificar conexão com o SOUSA",
+        "parameters": {}
+      },
+      {
+        "name": "status",
+        "description": "Retornar estado do sistema",
+        "parameters": {}
+      },
+      {
+        "name": "diagnostico",
+        "description": "Executar diagnóstico completo",
+        "parameters": {
+          "nivel": "rapido|completo|profundo"
+        }
+      },
+      {
+        "name": "chat_conselho",
+        "description": "Interação conversacional",
+        "parameters": {
+          "mensagem": "string"
+        }
+      },
+      {
+        "name": "executar_modulo",
+        "description": "Executar módulo específico",
+        "parameters": {
+          "modulo": "string",
+          "acao": "string",
+          "dados": "object"
+        }
+      }
+    ],
+    "resources": [
+      {
+        "name": "catalogo_capacidades",
+        "description": "Lista de capacidades do SOUSA",
+        "path": "SOUSA_CATALOGO_CAPACIDADES.json"
+      },
+      {
+        "name": "logs_sistema",
+        "description": "Logs recentes do sistema",
+        "path": "07_LOG/"
+      },
+      {
+        "name": "manifesto_antigravity",
+        "description": "Manifesto de Adaptação das Capacidades do Antigravity ao SOUSA 2.0",
+        "path": "MANIFESTO_ANTIGRAVITY_SOUSA20.md"
+      }
+    ]
+  },
+  "connection": {
+    "type": "stdio",
+    "command": "node",
+    "args": [
+      "SOUSA_MCP_SERVER.js"
+    ]
+  }
+}

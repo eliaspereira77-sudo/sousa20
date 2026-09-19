@@ -71,3 +71,13 @@ function SOUSA_AUTONOMIA_concluir(contexto, resultado) {
     timestamp: new Date().toISOString()
   };
 }
+
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    SOUSA_AUTONOMIA_V1: SOUSA_AUTONOMIA_V1,
+    SOUSA_AUTONOMIA_criarContexto: SOUSA_AUTONOMIA_criarContexto,
+    SOUSA_AUTONOMIA_pedirAutorizacao: SOUSA_AUTONOMIA_pedirAutorizacao,
+    SOUSA_AUTONOMIA_registrarEtapa: SOUSA_AUTONOMIA_registrarEtapa,
+    SOUSA_AUTONOMIA_concluir: SOUSA_AUTONOMIA_concluir
+  };
+}

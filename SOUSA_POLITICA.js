@@ -192,4 +192,12 @@ function SOUSA_POLITICA_proximoFallback(capacidade, excluirIds, contexto) {
   };
 }
 
+if (typeof module !== "undefined" && module.exports) {
+  module.exports = {
+    SOUSA_POLITICA_inferirCapacidade: SOUSA_POLITICA_inferirCapacidade,
+    SOUSA_POLITICA_selecionarUsb: typeof SOUSA_POLITICA_selecionarUsb !== "undefined" ? SOUSA_POLITICA_selecionarUsb : null,
+    SOUSA_POLITICA_decidirFallback: typeof SOUSA_POLITICA_decidirFallback !== "undefined" ? SOUSA_POLITICA_decidirFallback : null
+  };
+}
+
 

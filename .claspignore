@@ -1,100 +1,23 @@
-﻿# SOUSA 2.0 - .claspignore CORRIGIDO (sem arquivos extras)
+# ============================================================
+# SOUSA 2.0 — .claspignore (WHITELIST)
+# ============================================================
+# NADA entra no GAS, exceto a identidade operacional.
+# ============================================================
 
-# === AMBIENTES VIRTUAIS (RECURSIVO) ===
-.venv/**
-.venv-piper/**
-node_modules/**
+**
 
-# === PASTAS QUE NÃO DEVEM ENTRAR NO GAS ===
-pacote_oficial/**
-docs/**
-scripts/**
-avatar/**
-voice/**
-usb/**
-ruflo/**
-core/**
-Extensions/**
-EXTENSOES/**
-sousa20/**
-sousa20-antigo/**
-BACKUP_GITHUB_CONFLITOS*/**
-TOOLS_SOUSA/**
-08_BLOCOS_SOUSA/**
-.QUARENTENA_SOUSA/**
-MEMORIA/**
-00_GOVERNANCA/**
-07_LOG/**
+!appsscript.json
 
-# === ARQUIVOS TEMPORÁRIOS ===
-*.BACKUP*
-*.BK_*
-*.bak*
-*.pre-*
-*.restauracao-*
-*.auto-repair-*
-*.auto-repair-backup-*
-*.auto-repair-sandbox-*
-BACKUP_*/**
-_ARQUIVO_HISTORICO/**
+!01_CORE/
+!01_CORE/**
 
-# === LOGS E TEMPORÁRIOS ===
-*.log
-.tmp.driveupload/**
-
-# === DOCUMENTOS E DADOS ===
-*.pdf
-*.docx
-*.zip
-*.md
-*.txt
-*.csv
-*.wav
-*.gdoc
-*.json
-
-# === SCRIPTS LOCAIS ===
-*.ps1
-*.bat
-*.sh
-*.py
-*.pyc
-*.pyi
-
-# === TESTES ===
-TESTE_*
-test_*
-SOUSA_TESTE_*
-*_TESTE_*
-*_TESTES_*
-
-# === CONFIGS LOCAIS ===
-.git/**
-.github/**
-.gitignore
-_params.json
-SOUSA_COFRE_CHAVES.json
-SOUSA_SOURCE_OF_TRUTH.json
-SOUSA_USB_MEMORIA.json
-SOUSA_ARQUIVOS.txt
-SOUSA_DIVERGENCIAS.txt
-DEPLOYMENTS_ANTES_LIMPEZA.txt
-inventario_git.txt
-rclone_*.log
-
-# === MÓDULOS QUE NÃO SÃO PARA PRODUÇÃO GAS ===
-MonitorSintaxe*.js
-NucleoOrquestrador*.js
-SOUSA_AUTHORIZATION_GATE.js
-SOUSA_COMMAND_LISTENER.js
-SOUSA_COMMAND_ROUTER.js
-SOUSA_MOBILE_GATEWAY.js
-SOUSAILEON_*.js
-CAMPAIGN_PERSISTENCE.js
-CAMPAIGN_RUNTIME.js
-CAMPAIGN_STATE_MACHINE.js
-
-# === IMPORTANTE: NÃO EXCLUIR ===
-# appsscript.json (manifesto)
-# *.gs essenciais
-# SOUSA_Core.js e módulos principais
+!SOUSA_APIS_CASCATA.js
+!SOUSA_API_EXECUTOR_UNIVERSAL.js
+!SOUSA_USB_ADAPTERS.js
+!SOUSA_USB_REGISTRY.js
+!SOUSA_USB_CONTRATO.js
+!SOUSA_USB_TRANSPORTES.js
+!SOUSA_USB_BOOT.js
+!SOUSA_VALIDACAO_CASCATA.js
+!SOUSA_ADAPTER_ANTHROPIC_MESSAGES.js
+!SOUSA_API_MANAGER.js

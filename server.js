@@ -1779,6 +1779,19 @@ app.get(['/auth/callback', '/auth/callback/'], (req, res) => {
   `);
 });
 
+// Suporte à biblioteca D3 local em /vendor/d3.min.js
+app.get('/vendor/d3.min.js', (req, res) => {
+  const d3LocalPath = path.join(__dirname, 'vendor', 'd3.min.js');
+  if (fs.existsSync(d3LocalPath)) {
+    return res.sendFile(d3LocalPath);
+  }
+  const d3NpmPath = path.join(__dirname, 'node_modules', 'd3', 'dist', 'd3.min.js');
+  if (fs.existsSync(d3NpmPath)) {
+    return res.sendFile(d3NpmPath);
+  }
+  res.redirect('https://cdn.jsdelivr.net/npm/d3@7');
+});
+
 // Arquivos estáticos
 app.use(express.static(__dirname));
 

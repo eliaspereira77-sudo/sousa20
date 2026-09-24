@@ -189,6 +189,33 @@ function SOUSA_API_EXECUTOR_COM_CASCATA(capacidade, contexto, opcoes) {
 
 /** Alias legado */
 function SOUSA_API_EXECUTOR_normalizarContexto(contexto) {
-  return SOUSA_USB_normalizarContexto(contexto);
+  if (typeof SOUSA_USB_normalizarContexto === "function") {
+    return SOUSA_USB_normalizarContexto(contexto);
+  }
+  if (typeof require === "function") {
+    try {
+      var t = require("./SOUSA_USB_TRANSPORTES.js");
+      if (typeof SOUSA_USB_normalizarContexto === "function") {
+        return SOUSA_USB_normalizarContexto(contexto);
+      }
+      if (t && typeof t.SOUSA_USB_normalizarContexto === "function") {
+        return t.SOUSA_USB_normalizarContexto(contexto);
+      }
+    } catch (e) {}
+  }
+  var ctx = contexto || {};
+  var systemInstruction = ctx.systemInstruction || ctx.system || null;
+  var history = Array.isArray(ctx.history) ? ctx.history : null;
+  var texto = ctx.texto || ctx.prompt || "";
+  if (!texto && systemInstruction && history && history.length) {
+    var histTxt = history.map(function (msg) {
+      var papel = (msg.role === "assistant" || msg.role === "model") ? "ASSISTENTE" : "USUÁRIO";
+      return papel + ": " + (msg.content || "");
+    }).join("\n");
+    texto = systemInstruction + "\n\nHISTÓRICO:\n" + histTxt;
+  } else if (!texto && systemInstruction) {
+    texto = systemInstruction;
+  }
+  return { texto: texto, prompt: texto, systemInstruction: systemInstruction, history: history };
 }
 

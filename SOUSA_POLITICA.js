@@ -93,6 +93,24 @@ function SOUSA_POLITICA_cooldown(provedorOuUsbId, motivo, duracaoSegundos) {
 function SOUSA_POLITICA_selecionar(capacidade, contexto) {
   var cap = String(capacidade || "TEXTO").toUpperCase();
 
+  // Se modo for teste controlado ou autogestão de integridade, direciona para o adaptador de loopback de teste
+  if (contexto && (contexto.modo === "TESTE_CONTROLADO" || contexto.autogestao === true)) {
+    return {
+      ok: true,
+      origem: "TESTE_CONTROLADO",
+      capacidade: cap,
+      recurso_escolhido: "USB_TESTE_ECO",
+      usb: {
+        id: "USB_TESTE_ECO",
+        provedor: "TESTE_ECO",
+        protocolo: "TESTE_ECO",
+        capacidades: [cap],
+        estado: "OPERACIONAL"
+      },
+      politica: "TESTE_CONTROLADO_POLITICA"
+    };
+  }
+
   // Registry dinâmico: seleciona diretamente o melhor
   // recurso operacional fora de cooldown.
   if (typeof SOUSA_USB_listar === "function") {

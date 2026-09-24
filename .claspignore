@@ -1,16 +1,11 @@
-# ============================================================
-# SOUSA 2.0 — .claspignore (WHITELIST)
-# ============================================================
-# NADA entra no GAS, exceto a identidade operacional.
-# ============================================================
-
+# SOUSA 2.0 — whitelist GAS
 **
 
 !appsscript.json
-
 !01_CORE/
 !01_CORE/**
 
+!SOUSA_IDENTIDADE.js
 !SOUSA_APIS_CASCATA.js
 !SOUSA_API_EXECUTOR_UNIVERSAL.js
 !SOUSA_USB_ADAPTERS.js

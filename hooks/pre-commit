@@ -1,0 +1,23 @@
+#!/bin/sh
+# SOUSA 2.0 — pre-commit: recusa arquivo que nao e identidade
+# Instalar: cp hooks/pre-commit .git/hooks/pre-commit && chmod +x .git/hooks/pre-commit
+
+STAGED=$(git diff --cached --name-only)
+[ -z "$STAGED" ] && exit 0
+
+FAIL=0
+for f in $STAGED; do
+  case "$f" in
+    *.BACKUP*|*.BK_*|*_BACKUP*|BACKUP_*/*|Backups/*|TESTE_*|SOUSA_TESTE_*|*.pdf|*.docx|*.zip|.env|.sousa_redes_credenciais.json|07_LOG/*|Extensions/*|CAMPAIGN_*)
+      echo "SOUSA IDENTIDADE: RECUSADO $f"
+      FAIL=1
+      ;;
+  esac
+done
+
+if [ "$FAIL" = "1" ]; then
+  echo "Commit abortado. So identidade SOUSA entra."
+  echo "Use: bash scripts/SOUSA_GUARD_ARQUIVOS.sh git-add"
+  exit 1
+fi
+exit 0

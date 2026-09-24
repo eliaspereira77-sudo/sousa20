@@ -1,84 +1,63 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-venv/
-.env/
-env/
-ENV/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Environment variables
+# Segredos
 .env
 .env.local
 *.local
-
-# Logs
-*.log
-logs/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Secrets and keys
 *.pem
 *.key
 secrets/
-config/secrets*
+.sousa_redes_credenciais.json
 
-# Media / temporary
+# Deps
+node_modules/
+venv/
+.venv/
+.venv-*/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Logs / temp
+*.log
 temp/
 tmp/
-media/generated/
+.tmp.driveupload/
+
+# SUJEIRA
+*.BACKUP*
+*.BK_*
+*_BACKUP*
+*.bak
+BACKUP_*/
+Backups/
+
+TESTE_*
+SOUSA_TESTE_*
+*_TESTE_*
+test_*
+
+*.pdf
+*.docx
+*.zip
 *.mp3
 *.wav
 *.mp4
 
-# Jupyter
-.ipynb_checkpoints/
+07_LOG/
+Extensions/
+EXTENSOES/
+MEMORIA/
+TOOLS_SOUSA/
+pacote_oficial/
+sousa20-antigo/
+SOUSA_GITHUB_REF/
+.QUARENTENA_SOUSA/
+08_BLOCOS_SOUSA/
 
-# SOUSA data operacional (não versionar)
+models/*.onnx
 data/ciclos/
 data/*.db
-data/*.db-*
-!data/.gitkeep
-
-.tmp.driveupload/
-node_modules/
-
-SOUSA_GITHUB_REF/
-
-# Backups grandes
-*.zip
-
-# Modelos grandes (usar Git LFS ou download separado)
-models/*.onnx
+__pycache__/
+*.py[cod]

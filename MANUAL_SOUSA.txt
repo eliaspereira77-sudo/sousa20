@@ -1,0 +1,136 @@
+﻿# MANUAL SOUSA 2.0
+# Guia de Operação Soberana
+# Versão: 1.0 | Data: 2026-09-25
+# Autor: Elias Pereira de Sousa
+# Propósito: Este manual pertence ao SOUSA 2.0 e deve ser consultado
+# sempre que houver dúvida sobre operação, sincronização ou manutenção.
+
+## 1. O QUE É O SOUSA 2.0
+
+O SOUSA 2.0 é um ecossistema multimodular onde cada módulo é um agente
+sob comando e coordenação da SOUSA IA. Não é apenas uma fábrica de
+ferramentas - é um sistema vivo com memória soberana, agentes autônomos
+e capacidade de gerar novas ferramentas sob demanda.
+
+## 2. COMANDOS ESSENCIAIS (Use sempre estes)
+
+### 2.1 Iniciar o SOUSA
+cd "C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO"
+node 01_CORE/SOUSA_MEMORIA_SOBERANA.js
+
+### 2.2 Ver estado atual (onde parou)
+type SOUSA_MEMORIA\estado_atual.json
+
+### 2.3 Ver erros aprendidos (o que NÃO repetir)
+type SOUSA_MEMORIA\erros_aprendidos\registro.json
+
+### 2.4 Ver histórico de sessões
+dir SOUSA_MEMORIA\historico
+
+### 2.5 Sincronizar com GitHub (puxar novidades)
+git pull origin main
+
+### 2.6 Sincronizar com GitHub (enviar mudanças)
+git add -A
+git commit -m "Descricao da mudanca"
+git push origin main
+
+### 2.7 Resolver conflitos de git (se aparecer CONFLICT)
+git merge --abort
+git reset --hard origin/main
+
+### 2.8 Ver últimos commits
+git log --oneline -5
+
+### 2.9 Ver status do repositório
+git status
+
+## 3. ESTRUTURA DE PASTAS
+
+SOUSA_2.0_PRODUCAO/
+├── 01_CORE/                    # Núcleo do SOUSA
+│   ├── SOUSA_MEMORIA_SOBERANA.js  # Cérebro de memória
+│   └── SOUSA_Gemini_CLIENT.js     # Cliente de API
+├── SOUSA_MEMORIA/              # Memória persistente
+│   ├── identidade.json         # Quem é o SOUSA (nunca muda)
+│   ├── estado_atual.json       # Onde parou (atualiza sempre)
+│   ├── erros_aprendidos/       # Erros e lições
+│   ├── historico/              # Log de sessões
+│   └── ferramentas_geradas/    # Registro de ferramentas criadas
+├── agentes/                    # Agentes autônomos
+│   ├── ADS.txt
+│   ├── JARVIS.txt
+│   └── ... (outros agentes)
+├── Extensions/                 # Extensões e integrações
+├── MANIFESTO_SOUSA_50.md       # Princípios inegociáveis
+├── ESTADO_SOUSA.md             # Estado atual do projeto
+└── MANUAL_SOUSA.txt            # Este arquivo
+
+## 4. SOLUÇÃO DE PROBLEMAS COMUNS
+
+### Problema: "git pull" dá conflito
+Solução:
+  git merge --abort
+  git reset --hard origin/main
+  git pull origin main
+
+### Problema: "node" não é reconhecido
+Solução: Node.js não está instalado ou não está no PATH.
+  1. Baixe em: https://nodejs.org/
+  2. Instale com opções padrão
+  3. Reinicie o PowerShell
+
+### Problema: Pasta travada pelo OneDrive
+Solução:
+  Stop-Process -Name "OneDrive" -Force
+  (faça o que precisa)
+  Start-Process "C:\Users\Dionisio Lima\AppData\Local\Microsoft\OneDrive\OneDrive.exe"
+
+### Problema: Quero voltar pro último estado bom
+Solução:
+  git log --oneline -10  (veja os commits)
+  git reset --hard [hash-do-commit]
+
+### Problema: Quero apagar tudo e recomeçar do GitHub
+Solução:
+  git fetch origin
+  git reset --hard origin/main
+
+## 5. REGRAS DE OURO (Leia antes de qualquer ação)
+
+1. SEMPRE consulte SOUSA_MEMORIA/estado_atual.json antes de começar
+2. SEMPRE registre erros em SOUSA_MEMORIA/erros_aprendidos/registro.json
+3. NUNCA altere MANIFESTO_SOUSA_50.md sem autorização explícita
+4. NUNCA force push sem backup local
+5. SEMPRE faça commit com mensagem descritiva
+6. Se travar por mais de 10 minutos, pare e consulte este manual
+
+## 6. FLUXO DIÁRIO RECOMENDADO
+
+Manhã (ao ligar o PC):
+  1. cd "C:\Users\Dionisio Lima\OneDrive\Área de Trabalho\SOUSA_2.0_PRODUCAO"
+  2. git pull origin main
+  3. node 01_CORE/SOUSA_MEMORIA_SOBERANA.js
+  4. Leia o "Próximo passo" mostrado
+
+Durante o trabalho:
+  - Execute o próximo passo
+  - Se errar, registre em erros_aprendidos
+  - Se concluir, atualize estado_atual.json
+
+Noite (antes de desligar):
+  1. git add -A
+  2. git commit -m "Resumo do dia"
+  3. git push origin main
+
+## 7. CONTATO E SUPORTE
+
+Este manual é soberano. Se algo não estiver aqui:
+1. Consulte SOUSA_MEMORIA/erros_aprendidos/registro.json
+2. Consulte MANIFESTO_SOUSA_50.md
+3. Se ainda não resolver, registre o problema em estado_atual.json
+   e aguarde próxima sessão com contexto completo.
+
+---
+FIM DO MANUAL
+Este arquivo deve ser versionado no GitHub junto com o repositório.

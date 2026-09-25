@@ -1,0 +1,17 @@
+﻿{
+  "data": "2026-09-25",
+  "sessoes": [
+    {
+      "inicio": "manha",
+      "local": "Açougue (smartphone)",
+      "acoes": ["Atualizou manifesto 50 itens", "Tentou instalar Vosk", "Descobriu bloqueios Python 3.14"],
+      "licao": "Memoria soberana eh essencial"
+    },
+    {
+      "inicio": "tarde",
+      "local": "Desktop Windows 11",
+      "acoes": ["Criou estrutura de memoria soberana", "Preparou terreno para instalador"],
+      "licao": "SOUSA eh FABRICA de ferramentas, nao ferramenta unica"
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+﻿{
+  "erros": [
+    {
+      "data": "2026-09-25",
+      "contexto": "Termux",
+      "erro": "Vosk nao instala em Python 3.14",
+      "causa": "Pacote Vosk nao publicado para Python 3.14",
+      "licao": "Usar Whisper no desktop ou speechrecognition puro no Termux",
+      "evitar_de": "tentar pip install vosk em Python 3.14"
+    },
+    {
+      "data": "2026-09-25",
+      "contexto": "Google Cloud",
+      "erro": "Nao consegue API Gemini",
+      "causa": "Google exige cartao de credito",
+      "licao": "Usar cascata de 9 APIs alternativas (Groq, OpenRouter, Cerebras, etc)",
+      "evitar_de": "tentar Gemini direto com Google"
+    },
+    {
+      "data": "2026-09-25",
+      "contexto": "Qoder Mobile",
+      "erro": "App bloqueado no Brasil",
+      "causa": "Restricao geografica",
+      "licao": "Usar Qoder Desktop (liberado) ou Aider no Termux",
+      "evitar_de": "tentar instalar Qoder Mobile no celular"
+    }
+  ]
+}

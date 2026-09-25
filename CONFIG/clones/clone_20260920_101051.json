@@ -1,0 +1,14 @@
+{
+    "Hardware": {
+        "CPU": "Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz",
+        "RAM_GB": "7,89"
+    },
+    "Software": {
+        "OS": "Microsoft Windows 11 Home Single Language",
+        "Python": "Python 3.14.6"
+    },
+    "Network": {
+        "Hostname": "DESKTOP-MQDG3GM"
+    },
+    "Timestamp": "2026-09-20 10:10:51"
+}

@@ -1,0 +1,7 @@
+﻿=== SOUSA 2.0 — SISTEMA OPERACIONAL ===
+Fundador: ELIAS PEREIRA DE SOUSA — FUNDADOR
+Data: 2026-09-21 10:13:48
+Local: PC de Mesa / OneDrive
+Status: ✅ ATIVO — ESTRUTURA MONTADA
+Estrutura: SISTEMA | ARQUIVOS | RELATORIOS | IGNICOES | BACKUP
+========================================

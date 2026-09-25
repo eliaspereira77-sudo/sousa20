@@ -1,0 +1,15 @@
++ sousa_*.py
++ *.ps1
++ requirements.txt
++ rclone_filtro.txt
++ *.json
++ *.yml
++ *.yaml
++ *.md
++ config/**
++ scripts/**
++ docs/**
++ core/**
++ agentes/**
++ estado/**
+- *

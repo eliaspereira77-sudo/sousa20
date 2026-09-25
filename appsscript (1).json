@@ -1,0 +1,43 @@
+{
+  "timeZone": "America/Sao_Paulo",
+  "dependencies": {},
+  "exceptionLogging": "STACKDRIVER",
+  "runtimeVersion": "V8",
+  "webapp": {
+    "executeAs": "USER_DEPLOYING",
+    "access": "ANYONE_ANONYMOUS"
+  },
+  "oauthScopes": [
+    "https://www.googleapis.com/auth/script.external_request",
+    "https://www.googleapis.com/auth/drive.file",
+    "https://www.googleapis.com/auth/script.scriptapp"
+  ],
+  "addOns": {
+    "common": {
+      "name": "SOUSA 2.0",
+      "logoUrl": "https://www.gstatic.com/images/icons/material/system/1x/smart_toy_black_48dp.png",
+      "layoutProperties": {
+        "primaryColor": "#1a1a1a",
+        "secondaryColor": "#f4b400"
+      },
+      "homepageTrigger": {
+        "runFunction": "onHomepage"
+      },
+      "universalActions": [
+        {
+          "label": "Abrir Painel SOUSA",
+          "runFunction": "onHomepage"
+        },
+        {
+          "label": "Rodar Diagnóstico (Módulo ADS)",
+          "runFunction": "onExecutarDiagnosticoRapido"
+        }
+      ]
+    },
+    "drive": {
+      "onItemsSelected": {
+        "runFunction": "onDriveItemsSelected"
+      }
+    }
+  }
+}

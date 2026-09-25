@@ -1,0 +1,32 @@
+{
+    "sistema": {
+        "versao": "3.0",
+        "nome": "SOUSA IA CONSELHO",
+        "fundador": "Sir Elias",
+        "modo_jarvis": true
+    },
+    "telegram": {
+        "token": "",
+        "perfis": [],
+        "ativo": false
+    },
+    "google_drive": {
+        "remote_rclone": "sousa_drive",
+        "pasta_backup": "SOUSA_2.0_PRODUCAO"
+    },
+    "hardware": {},
+    "clone_pc": {
+        "Hardware": {
+            "CPU": "Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz",
+            "RAM_GB": "7,89"
+        },
+        "Software": {
+            "OS": "Microsoft Windows 11 Home Single Language",
+            "Python": "Python 3.14.6"
+        },
+        "Network": {
+            "Hostname": "DESKTOP-MQDG3GM"
+        },
+        "Timestamp": "2026-09-20 10:10:51"
+    }
+}

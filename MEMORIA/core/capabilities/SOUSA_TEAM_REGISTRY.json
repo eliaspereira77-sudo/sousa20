@@ -1,0 +1,79 @@
+{
+  "version": "1.0.0",
+  "members": [
+    {
+      "id": "cao-de-guarda",
+      "name": "Cão de Guarda",
+      "role": "integrity_monitor",
+      "status": "ACTIVE",
+      "responsibilities": [
+        "monitorar_integridade",
+        "detectar_anomalias",
+        "acionar_diagnostico",
+        "proteger_arquitetura"
+      ]
+    },
+    {
+      "id": "sousaileon",
+      "name": "SOUSAILEON",
+      "role": "maintenance_coordinator",
+      "status": "ACTIVE",
+      "responsibilities": [
+        "coordenar_manutencao",
+        "receber_diagnosticos",
+        "acionar_mecanico",
+        "acompanhar_reparo"
+      ]
+    },
+    {
+      "id": "mecanico",
+      "name": "Mecânico",
+      "role": "repair_engine",
+      "status": "ACTIVE",
+      "responsibilities": [
+        "propor_reparos",
+        "trabalhar_em_sandbox",
+        "corrigir_componentes",
+        "preparar_promocao",
+        "faxina_higienizacao",
+        "limpeza_componentes",
+        "organizacao_residuos"
+      ]
+    },
+    {
+      "id": "monitor-sintaxe",
+      "name": "Monitor de Sintaxe",
+      "role": "syntax_validator",
+      "status": "ACTIVE",
+      "module": "SOUSA_SELF_TEST_REPAIR.js",
+      "responsibilities": [
+        "testar_sintaxe",
+        "diagnosticar_falhas",
+        "retestar_componentes"
+      ]
+    },
+    {
+      "id": "orquestrador-manutencao",
+      "name": "Orquestrador de Manutenção",
+      "role": "maintenance_orchestrator",
+      "status": "ACTIVE",
+      "module": "SOUSA_MAINTENANCE_ORCHESTRATOR.js",
+      "responsibilities": [
+        "coordenar_fluxo",
+        "executar_missoes",
+        "encaminhar_reparos"
+      ]
+    }
+  ],
+  "workflow": [
+    "CAO_DE_GUARDA",
+    "MONITOR_SINTAXE",
+    "SOUSAILEON",
+    "MECANICO",
+    "SANDBOX",
+    "VALIDACAO",
+    "PROMOCAO"
+  ],
+  "createdAt": "2026-08-23T18:51:11.154Z",
+  "updatedAt": "2026-08-23T20:41:09.319Z"
+}

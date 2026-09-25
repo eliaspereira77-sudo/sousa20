@@ -1,0 +1,2 @@
+﻿# AGENTE: MONITOR_DE_SINTAXE
+# Função: Corrigir • Padronizar • Preservar sentido

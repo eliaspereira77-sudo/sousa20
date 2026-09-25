@@ -1,0 +1,10 @@
++ sousa_*.py
++ *.ps1
++ requirements.txt
++ *.json
++ *.yml
++ *.md
++ config/**
++ scripts/**
++ docs/**
+- *

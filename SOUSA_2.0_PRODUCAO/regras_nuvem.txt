@@ -1,0 +1,36 @@
+# SOUSA 2.0 - Filtros de sincronização rclone
+# + = incluir | - = excluir (ordem importa)
+
+# Código e configuração
++ sousa_*.py
++ *.py
++ *.ps1
++ *.bat
++ requirements.txt
++ regras_nuvem.txt
++ .env.example
++ *.json
++ *.yml
++ *.yaml
++ *.md
++ *.txt
+
+# Pastas oficiais
++ config/**
++ scripts/**
++ docs/**
++ core/**
++ agentes/**
++ estado/**
+
+# Excluir o resto (venv, cache, secrets, etc.)
+- .venv/**
+- .venv-*/**
+- __pycache__/**
+- *.pyc
+- .git/**
+- node_modules/**
+- .env
+- *.log
+- .tmp/**
+- *

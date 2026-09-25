@@ -1,0 +1,22 @@
+{
+  "version": "1.1.0",
+  "status": "OPERATIONAL_VALIDATED",
+  "automaticRepair": true,
+  "sandboxFirst": true,
+  "productionWrite": false,
+  "automaticPromotion": false,
+  "chain": [
+    "TEAM_ACTIVATED",
+    "DETECT",
+    "BACKUP",
+    "PROPOSE",
+    "SANDBOX",
+    "VALIDATE",
+    "PROMOTION_BLOCKED"
+  ],
+  "lastTest": {
+    "target": "SOUSA_AUTO_REPAIR_TESTE.js",
+    "result": "REPAIR_VALIDATED_PENDING_PROMOTION",
+    "deterministicRepair": "FIXED_DETERMINISTIC_CONSOLE_LOG_PARENTHESES"
+  }
+}

@@ -1,0 +1,33 @@
+{
+    "sistema": "SOUSA 2.0",
+    "modulo": "SOUSAILEON ARM",
+    "tipo": "Catalogo de Blocos de Codigo",
+    "versao": "V1",
+
+    "blocos": [
+        {
+            "nome": "MonitorSintaxe",
+            "arquivo": "MonitorSintaxe.js",
+            "funcao": "Deteccao de erros",
+            "status": "ATIVO"
+        },
+        {
+            "nome": "NucleoOrquestrador",
+            "arquivo": "NucleoOrquestrador.js",
+            "funcao": "Decisao e coordenacao",
+            "status": "ATIVO"
+        },
+        {
+            "nome": "SOUSAILEON_COMMAND",
+            "arquivo": "SOUSAILEON_COMMAND.js",
+            "funcao": "Controle do braco",
+            "status": "VALIDADO"
+        },
+        {
+            "nome": "SOUSAILEON_ARM_V2",
+            "arquivo": "SOUSAILEON_ARM_V2.js",
+            "funcao": "Execucao de tarefas",
+            "status": "VALIDADO"
+        }
+    ]
+}

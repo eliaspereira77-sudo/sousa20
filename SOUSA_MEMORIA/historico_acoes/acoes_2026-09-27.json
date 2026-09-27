@@ -1,0 +1,23 @@
+[
+  {
+    "timestamp": "2026-09-27T15:59:04.097824",
+    "agente": "PRODUTOR",
+    "acao": "Geração de vídeo com edge-tts",
+    "resultado": "Vídeo gerado com sucesso em 2 segundos",
+    "sucesso": true,
+    "licao_aprendida": "edge-tts é a solução mais rápida e leve para TTS em ambiente restrito",
+    "metricas": {
+      "tempo_segundos": 2,
+      "custo": 0
+    }
+  },
+  {
+    "timestamp": "2026-09-27T15:59:04.102599",
+    "agente": "ESTRATEGISTA",
+    "acao": "Tentativa de usar API paga de vídeo",
+    "resultado": "Falha: Violação da regra de soberania",
+    "sucesso": false,
+    "licao_aprendida": "Nunca sugerir ferramentas pagas. Sempre buscar alternativa open-source primeiro.",
+    "metricas": {}
+  }
+]

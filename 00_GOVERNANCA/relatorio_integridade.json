@@ -1,0 +1,1961 @@
+{
+  "data": "2026-09-27T15:50:01.148872",
+  "total_problemas": 391,
+  "problemas": [
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "appsscript.json.BK_PRE_EXECAPI_20260913_144451",
+      "descricao": "Conteúdo idêntico a: appsscript.json"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "appsscript.json.BK_PRE_FIX_20260913_151228",
+      "descricao": "Conteúdo idêntico a: appsscript.json.BK_PRE_EXECAPI_20260913_144510"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "SOUSA_COMPORTAMENTO_JARVIS.js.BACKUP_PRE_OPERAR_20260913_130602",
+      "descricao": "Conteúdo idêntico a: SOUSA_COMPORTAMENTO_JARVIS.js.BACKUP_PRE_OPERAR_20260913_130406"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "SOUSA_COMPORTAMENTO_JARVIS.js.BACKUP_PRE_OPERAR_v2_20260913_132334",
+      "descricao": "Conteúdo idêntico a: SOUSA_COMPORTAMENTO_JARVIS.js.BACKUP_PRE_OPERAR_20260913_130406"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "SOUSA_IA_IDENTIDADE.js",
+      "descricao": "Conteúdo idêntico a: SOUSA_CONSTITUIÇÃO.js"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "SOUSA_IGNICAO_EQUIPE.js.BACKUP_PRE_OPERAR_20260913_134116",
+      "descricao": "Conteúdo idêntico a: SOUSA_IGNICAO_EQUIPE.js"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\requirements.txt",
+      "descricao": "Conteúdo idêntico a: requirements.txt"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "tools\\piper\\pt_BR-faber-medium.onnx",
+      "descricao": "Conteúdo idêntico a: models\\pt_BR-faber-medium.onnx"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "tools\\piper\\pt_BR-faber-medium.onnx.json",
+      "descricao": "Conteúdo idêntico a: models\\pt_BR-faber-medium.onnx.json"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\avatar\\multilingual.py",
+      "descricao": "Conteúdo idêntico a: avatar\\multilingual.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\config\\settings.py",
+      "descricao": "Conteúdo idêntico a: CONFIG\\settings.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\core\\gemini_client.py",
+      "descricao": "Conteúdo idêntico a: core\\gemini_client.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\distribution\\global_publish.py",
+      "descricao": "Conteúdo idêntico a: distribution\\global_publish.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\architecture.md",
+      "descricao": "Conteúdo idêntico a: docs\\architecture.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\GOVERNANCA.md",
+      "descricao": "Conteúdo idêntico a: docs\\GOVERNANCA.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\RUFLO.md",
+      "descricao": "Conteúdo idêntico a: docs\\RUFLO.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\SOBERANIA.md",
+      "descricao": "Conteúdo idêntico a: docs\\SOBERANIA.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\USB_ENRIQUECIMENTO.md",
+      "descricao": "Conteúdo idêntico a: docs\\USB_ENRIQUECIMENTO.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\docs\\WORKFLOW_GITHUB.md",
+      "descricao": "Conteúdo idêntico a: docs\\WORKFLOW_GITHUB.md"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\ruflo\\orchestrator.py",
+      "descricao": "Conteúdo idêntico a: ruflo\\orchestrator.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\ruflo\\persistencia.py",
+      "descricao": "Conteúdo idêntico a: ruflo\\persistencia.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\ruflo\\__init__.py",
+      "descricao": "Conteúdo idêntico a: ruflo\\__init__.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\scripts\\run_ciclo.py",
+      "descricao": "Conteúdo idêntico a: scripts\\run_ciclo.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\usb\\enriquecimento.py",
+      "descricao": "Conteúdo idêntico a: usb\\enriquecimento.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\usb\\__init__.py",
+      "descricao": "Conteúdo idêntico a: usb\\__init__.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "sousa20\\voice\\clone.py",
+      "descricao": "Conteúdo idêntico a: voice\\clone.py"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\Calendar.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\CodeExecution.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\DOCX.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\FFmpeg.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\FileOperations.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\GitHub.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\Gmail.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\ImageEditing.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\ImageGeneration.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\PDF.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\PPTX.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\VoiceCloned.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\WebSearch.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\XLSX.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Extensions\\GrokBridge\\Skills\\XSearch.stub",
+      "descricao": "Conteúdo idêntico a: Extensions\\GrokBridge\\Skills\\Avatar3D.stub"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Backups\\Grok_20260913_101530\\Config\\SOUSA_MENU_CONFIG.json",
+      "descricao": "Conteúdo idêntico a: CONFIG\\SOUSA_MENU_CONFIG.json"
+    },
+    {
+      "tipo": "DUPLICIDADE",
+      "arquivo": "Backups\\Grok_20260913_101333\\Config\\SOUSA_MENU_CONFIG.json",
+      "descricao": "Conteúdo idêntico a: CONFIG\\SOUSA_MENU_CONFIG.json"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "app.py:14",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "app.py:91",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "coracao_sousa.py:1",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "coracao_sousa.py:4",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "main.py:2",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "main.py:5",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "main.py:6",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "main.py:86",
+      "descricao": "TODO/FIXME pendente: print(\"🟢 Módulos: TODOS CONECTADOS\")"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\modulo_ads.py:39",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\modulo_ads.py:125",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\omniroute_client.py:182",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\omniroute_client.py:183",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\soberania.py:103",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\soberania.py:211",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\__init__.py:15",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "core\\__init__.py:16",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "pacote_oficial\\sousa_cli.py:3",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "pacote_oficial\\sousa_cli.py:4",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\handlers.py:23",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\orchestrator.py:66",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\orchestrator.py:68",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\orchestrator.py:124",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\orchestrator.py:126",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\persistencia.py:17",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:15",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:17",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:40",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:42",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:71",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:72",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:73",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:125",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:126",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "ruflo\\politica.py:127",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "scripts\\run_ciclo.py:51",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\app.py:115",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\app.py:117",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\app.py:118",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:14",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:16",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:59",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:61",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:112",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:114",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:218",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:220",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:249",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:251",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:327",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "SOUSA_2.0_PRODUCAO\\app.py:329",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "usb\\enriquecimento.py:59",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "usb\\enriquecimento.py:93",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\motor_evolucao_mercado.py:67",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\motor_evolucao_mercado.py:85",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\motor_evolucao_mercado.py:110",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\motor_evolucao_mercado.py:129",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\validador_integridade.py:84",
+      "descricao": "TODO/FIXME pendente: \"\"\"Detecta código comentado, TODOs antigos, import"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\validador_integridade.py:101",
+      "descricao": "TODO/FIXME pendente: # TODOs antigos"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\validador_integridade.py:102",
+      "descricao": "TODO/FIXME pendente: if \"TODO\" in line or \"FIXME\" in line:"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\validador_integridade.py:106",
+      "descricao": "TODO/FIXME pendente: \"descricao\": f\"TODO/FIXME pendente: {line.strip()["
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\validador_integridade.py:121",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\agents\\PRODUTOR.py:8",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "src\\core\\agents\\PRODUTOR.py:10",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\automacao.py:22",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\automacao.py:41",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\automacao.py:51",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\automacao.py:114",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\automacao.py:168",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\auto_evolucao.py:172",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\equipe_manutencao.py:149",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\equipe_manutencao.py:218",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\memoria.py:41",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\memoria.py:43",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\memoria.py:108",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\memoria.py:110",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\memoria.py:199",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\omniroute_client.py:182",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\omniroute_client.py:183",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\registro_capacidades.py:138",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\soberania.py:120",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\core\\sousa_ia.py:23",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\handlers.py:49",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\orchestrator.py:66",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\orchestrator.py:68",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\orchestrator.py:124",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\orchestrator.py:126",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\ruflo\\persistencia.py:17",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\scripts\\run_ciclo.py:51",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\usb\\enriquecimento.py:59",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\usb\\enriquecimento.py:93",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "ENTULHO",
+      "arquivo": "sousa20\\usb\\operacoes_externas.py:34",
+      "descricao": "Comentário longo (possível código morto)"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\00_SOUSA_IA_CONSELHO.txt",
+      "descricao": "Agente 00_SOUSA_IA_CONSELHO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ADS.txt",
+      "descricao": "Agente ADS menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\AFILIADOSPRO.txt",
+      "descricao": "Agente AFILIADOSPRO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\CAO_DE_GUARDA.txt",
+      "descricao": "Agente CAO_DE_GUARDA menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\ESTRATEGISTA.txt",
+      "descricao": "Agente ESTRATEGISTA menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\FINANCEIRO.txt",
+      "descricao": "Agente FINANCEIRO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURIDICO.txt",
+      "descricao": "Agente JURIDICO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\JURÍDICO.txt",
+      "descricao": "Agente JURÍDICO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MECANICO_FAXINEIRO.txt",
+      "descricao": "Agente MECANICO_FAXINEIRO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MENTOR.txt",
+      "descricao": "Agente MENTOR menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\MONITOR_DE_SINTAXE.txt",
+      "descricao": "Agente MONITOR_DE_SINTAXE menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\PRODUTOR.txt",
+      "descricao": "Agente PRODUTOR menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de SABER: 'saber'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de SABER: 'conhecimento'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SABER_CONHECIMENTO.txt",
+      "descricao": "Agente SABER_CONHECIMENTO menciona competência de SABER: 'aprendizado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de ESTRATEGISTA: 'estrategista'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de ESTRATEGISTA: 'estratégia'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de ESTRATEGISTA: 'mercado'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de ESTRATEGISTA: 'tendência'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de PRODUTOR: 'produtor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de PRODUTOR: 'vídeo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de PRODUTOR: 'conteúdo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de FINANCEIRO: 'financeiro'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de FINANCEIRO: 'roi'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de FINANCEIRO: 'custo'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de FINANCEIRO: 'receita'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de CÃO_DE_GUARDA: 'cão'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de CÃO_DE_GUARDA: 'guarda'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de CÃO_DE_GUARDA: 'soberania'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de CÃO_DE_GUARDA: 'validação'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de MONITOR_SINTAXE: 'monitor'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de MONITOR_SINTAXE: 'sintaxe'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de SABER: 'memória'"
+    },
+    {
+      "tipo": "VIOLAÇÃO_COMPETÊNCIA",
+      "arquivo": "agentes\\SOUSAILEON.txt",
+      "descricao": "Agente SOUSAILEON menciona competência de SABER: 'aprendizado'"
+    }
+  ]
+}

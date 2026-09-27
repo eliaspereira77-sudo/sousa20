@@ -1,0 +1,20 @@
+﻿[
+    {
+        "data_registro":  "2026-07-30T00:00:00",
+        "contexto":  "Criação da Memória Técnica Viva (30/07/2026)",
+        "licao":  "O módulo ADS deve registrar eventos técnicos automaticamente. Pendências históricas: Criar SOUSA_LOG_ENGINE, Registrar eventos automaticamente, Gerar briefings sob demanda.",
+        "agente_origem":  "ADS_ACADEMICO"
+    },
+    {
+        "data_registro":  "2026-09-27T16:04:41",
+        "contexto":  "Consolidação de Memória (28/09/2026)",
+        "licao":  "Unificar todos os sistemas de registro (Diário de Bordo, Livro Técnico, Livro Operacional, Tutorial) em um único Núcleo LTM. Zero fragmentação.",
+        "agente_origem":  "FUNDADOR"
+    },
+    {
+        "data_registro":  "2026-09-27T16:04:41",
+        "contexto":  "Arquitetura de Memória",
+        "licao":  "Todo evento, erro, decisão ou capacidade deve ser registrado no LTM. Arquivos soltos na raiz são considerados entulho.",
+        "agente_origem":  "SOUSA_IA"
+    }
+]

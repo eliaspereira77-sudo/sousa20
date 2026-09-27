@@ -1,0 +1,17 @@
+{
+  "sistema": "SOUSA 2.0",
+  "modulo": "USB_MODULAR",
+  "versao": "1.0.0",
+  "ultimaAtualizacao": "2026-07-31",
+  "mecanismos": [
+    {
+      "id": "MEC-001",
+      "nome": "Gemini Adapter",
+      "categoria": "IA",
+      "contrato": "USB_MODULAR",
+      "status": "VALIDADO",
+      "versao": "1.0.0",
+      "origem": "FUNDADOR"
+    }
+  ]
+}

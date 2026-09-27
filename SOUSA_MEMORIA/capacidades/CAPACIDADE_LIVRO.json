@@ -1,0 +1,30 @@
+﻿{
+  "capacidade": "PRODUCAO_LIVRO",
+  "modulo_responsavel": [
+    "SOUSA_PRODUTOR",
+    "SOUSA_ADS_ACADEMICO"
+  ],
+  "descricao": "Criacao, organizacao, revisao e publicacao de livros com memoria de contexto.",
+
+  "funcoes": [
+    "Criar estrutura de livro",
+    "Organizar capitulos",
+    "Registrar decisoes do autor",
+    "Manter continuidade de escrita",
+    "Gerar revisoes",
+    "Exportar PDF e DOCX"
+  ],
+
+  "estrutura_projeto": {
+    "ideia_inicial": "Registro da concepcao do livro",
+    "capitulos": "Textos organizados por secao",
+    "revisoes": "Historico de alteracoes",
+    "versoes": "Controle de edicoes"
+  },
+
+  "integracao_memoria": {
+    "usar_memoria_tecnica": true,
+    "registrar_autoria": true,
+    "registrar_ponto_de_parada": true
+  }
+}

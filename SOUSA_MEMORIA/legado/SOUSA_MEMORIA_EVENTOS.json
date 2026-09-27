@@ -1,0 +1,30 @@
+# SOUSA_REGISTRO_AUTOMATICO.ps1
+# Registro automático SOUSA 2.0
+
+$data = Get-Date -Format "dd/MM/yyyy"
+$hora = Get-Date -Format "HH:mm:ss"
+
+$registro = @{
+    projeto = "SOUSA 2.0"
+    data = $data
+    hora = $hora
+    modulo = "SOUSA_ADS_ACADEMICO"
+    acao = "Registro automatico"
+    resultado = "Executado com sucesso"
+    observacao = "Evento registrado pelo SOUSA_REGISTRO_AUTOMATICO"
+}
+
+$arquivo = "SOUSA_MEMORIA_EVENTOS.json"
+
+if (Test-Path $arquivo) {
+    $historico = Get-Content $arquivo -Raw | ConvertFrom-Json
+} else {
+    $historico = @()
+}
+
+$novo = @($historico) + $registro
+
+$novo | ConvertTo-Json -Depth 5 | Out-File $arquivo -Encoding UTF8
+
+Write-Host "Registro SOUSA 2.0 criado:"
+Write-Host $arquivo

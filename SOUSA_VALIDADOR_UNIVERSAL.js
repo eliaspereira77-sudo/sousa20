@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 - VALIDADOR UNIVERSAL
  * Materializa o principio EXECUTAR != CONCLUIR

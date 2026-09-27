@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA_IA.js
  * Camada de Inteligência, Contexto e Coordenação

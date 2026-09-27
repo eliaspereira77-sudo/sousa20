@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 /**
  * SOUSA 2.0 — PLUG AND PLAY

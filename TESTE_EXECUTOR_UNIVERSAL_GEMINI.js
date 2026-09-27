@@ -1,4 +1,4 @@
-﻿function TESTE_EXECUTOR_UNIVERSAL_GEMINI() {
+function TESTE_EXECUTOR_UNIVERSAL_GEMINI() {
 
   const selecao =
     SOUSA_API_MANAGER_selecionar("CODIGO");

@@ -1,4 +1,4 @@
-﻿function runCampaignStep(context) {
+function runCampaignStep(context) {
   var previous = loadCampaignState(context.campaignId);
 
   var guardian = campaignGuardianCheck(context);

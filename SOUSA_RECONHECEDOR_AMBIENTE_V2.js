@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - RECONHECEDOR DE AMBIENTE AUTOMÁTICO
  * Detecta e registra qualquer ambiente local automaticamente
  */

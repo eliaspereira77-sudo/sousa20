@@ -1,4 +1,4 @@
-﻿function TESTE_CASCATA_UNIVERSAL() {
+function TESTE_CASCATA_UNIVERSAL() {
 
   Logger.log("========================================");
   Logger.log("SOUSA 2.0 - TESTE UNIVERSAL DA CASCATA");

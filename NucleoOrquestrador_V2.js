@@ -1,4 +1,4 @@
-﻿/*
+/*
 ==========================================================
 âš™ï¸ SOUSA 2.0 - NÃšCLEO ORQUESTRADOR
 Leitor de Alertas do CÃ£o de Guarda

@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA IA — RECONCILIADOR DE CONSCIÊNCIA GAS
  *
  * Função:

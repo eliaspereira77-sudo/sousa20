@@ -1,4 +1,4 @@
-﻿$arquivo = ".\SOUSA_2.0_PAINEL_OPERACIONAL.html"
+$arquivo = ".\SOUSA_2.0_PAINEL_OPERACIONAL.html"
 
 $texto = Get-Content $arquivo -Raw -Encoding UTF8
 

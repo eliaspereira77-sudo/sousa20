@@ -1,4 +1,4 @@
-﻿# ANDROID_APK_FACTORY.psm1
+# ANDROID_APK_FACTORY.psm1
 # Especialista em geração de APKs standalone. Zero dependência da Play Store.
 
 function Get-APKFactoryStatus {

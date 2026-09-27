@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - FAXINEIRO AUTONOMO
  * ==========================================================
  * Motor de limpeza automatica.

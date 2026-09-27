@@ -1,4 +1,4 @@
-﻿var SOUSA_RADAR_EXPANSAO_360 = {
+var SOUSA_RADAR_EXPANSAO_360 = {
   versao: "1.0.0",
   estado: "OPERACIONAL",
 

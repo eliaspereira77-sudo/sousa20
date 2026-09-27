@@ -1,4 +1,4 @@
-﻿# SOUSA 2.0 - Script de Migração Universal
+# SOUSA 2.0 - Script de Migração Universal
 # Este script permite migrar o SOUSA para qualquer ambiente
 
 param(

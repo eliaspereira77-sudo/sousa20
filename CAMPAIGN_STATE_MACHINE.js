@@ -1,4 +1,4 @@
-﻿const STATES = Object.freeze({
+const STATES = Object.freeze({
   CREATED: 'CREATED',
   GUARDIAN_APPROVED: 'GUARDIAN_APPROVED',
   RUNNING: 'RUNNING',

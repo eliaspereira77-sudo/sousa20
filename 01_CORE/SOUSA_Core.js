@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - CORE / MOTOR DO TUNEL
  * Braço Operacional do SOUSA IA / JARVIS
  * Implementado: 2026-09-15

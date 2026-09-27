@@ -1,4 +1,4 @@
-﻿function TESTE_EXECUTOR_CEREBRAS() {
+function TESTE_EXECUTOR_CEREBRAS() {
 
   const selecao = {
     recurso_escolhido: "CEREBRAS",

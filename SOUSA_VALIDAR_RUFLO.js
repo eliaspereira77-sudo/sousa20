@@ -1,4 +1,4 @@
-﻿const https = require("https");
+const https = require("https");
 
 const url = "https://raw.githubusercontent.com/ruvnet/ruflo/main/package.json";
 

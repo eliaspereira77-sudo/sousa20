@@ -1,4 +1,4 @@
-﻿# ═══ FONTE DA VERDADE SOUSA 2.0 ═══
+# ═══ FONTE DA VERDADE SOUSA 2.0 ═══
 $SOUSA_SOURCE_OF_TRUTH = $null
 $sourceOfTruthPath = Join-Path $PSScriptRoot "00_GOVERNANCA\SOUSA_SOURCE_OF_TRUTH.json"
 if (Test-Path $sourceOfTruthPath) {

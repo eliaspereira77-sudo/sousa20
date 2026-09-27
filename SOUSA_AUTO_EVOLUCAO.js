@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 — AUTO EVOLUÇÃO
  * Primeira camada: visão interna + preparação da visão externa.
  * Não altera produção automaticamente.

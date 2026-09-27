@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0
  * SOUSA_MANUTENCAO_OPERACIONAL.js
  *

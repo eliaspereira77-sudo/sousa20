@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - DETECTOR DE PRESENCA DO FUNDADOR (JARVIS 15)
  * Detecta onde o Fundador está e adapta comportamento
  */

@@ -1,4 +1,4 @@
-﻿function campaignBridge(context) {
+function campaignBridge(context) {
   if (!context || !context.campaignId) {
     return {
       status: 'BLOCKED',

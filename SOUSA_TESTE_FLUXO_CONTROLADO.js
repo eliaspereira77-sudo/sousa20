@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 
 const ponte = require('./SOUSA_PONTE_GLOBAL.js');
 

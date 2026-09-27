@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 — GERENCIADOR OFICIAL DE ATUALIZAÇÕES
  * Detecta: versão, deployment, URL operacional e divergência.
  * NÃO faz deploy automaticamente.

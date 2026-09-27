@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - RECONHECEDOR DE AMBIENTE (JARVIS 14)
  * Versão Desktop - Detecta automaticamente o ambiente operacional
  */

@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
     Auditor de Operacionalidade e Integracao - SOUSA 2.0
 #>

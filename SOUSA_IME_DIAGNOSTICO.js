@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA_IME_DIAGNOSTICO.js
  * Capacidade operacional: IMÃ DE DIAGNÓSTICO
  *

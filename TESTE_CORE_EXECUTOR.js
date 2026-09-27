@@ -1,4 +1,4 @@
-﻿function TESTE_CORE_EXECUTOR() {
+function TESTE_CORE_EXECUTOR() {
   const payload = {
     module: "mentor",
     history: [

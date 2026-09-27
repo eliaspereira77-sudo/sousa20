@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 — DESCOBERTA DO ENDPOINT OPERACIONAL
  *
  * O painel não deve precisar conhecer manualmente a URL.

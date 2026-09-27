@@ -1,0 +1,8 @@
+﻿{
+    "TotalFiles":  315,
+    "FlawsFound":  1,
+    "FlawDetails":  [
+                        "BOM_EM_SCRIPT: VISION_INTERNAL_360.psm1"
+                    ],
+    "Timestamp":  "2026-09-27T11:12:23.1038860Z"
+}

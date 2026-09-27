@@ -1,4 +1,4 @@
-﻿# SOUSA 2.0 - Grok Extension Bridge
+# SOUSA 2.0 - Grok Extension Bridge
 # NÃO modifica DNA, Core ou Identidade
 
 function Initialize-GrokBridge {

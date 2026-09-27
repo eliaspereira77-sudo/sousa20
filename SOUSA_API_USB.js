@@ -1,4 +1,4 @@
-﻿/**
+/**
  * ==========================================================
  * SOUSA 2.0 — USB DE APIs
  * Contrato único de conexão com recursos de IA

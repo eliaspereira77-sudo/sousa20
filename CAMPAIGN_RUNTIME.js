@@ -1,4 +1,4 @@
-﻿const { campaignGuardianCheck } = require('./CAMPAIGN_GUARDIAN.js');
+const { campaignGuardianCheck } = require('./CAMPAIGN_GUARDIAN.js');
 const { saveCampaignState, loadCampaignState } = require('./CAMPAIGN_PERSISTENCE.js');
 const { STATES, transitionCampaignState } = require('./CAMPAIGN_STATE_MACHINE.js');
 

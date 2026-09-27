@@ -1,4 +1,4 @@
-﻿function validarComandoValidator(comando) {
+function validarComandoValidator(comando) {
 
     var resultado = {
         sistema: "SOUSA 2.0",

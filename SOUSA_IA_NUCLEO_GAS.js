@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA IA — NÚCLEO GAS
  * Consciência 360° / Plug & Play / Capability Registry
  *

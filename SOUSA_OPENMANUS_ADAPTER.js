@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - ADAPTADOR OPENMANUS
  * Traduz o contrato normalizado para o motor externo OpenManus.
  */

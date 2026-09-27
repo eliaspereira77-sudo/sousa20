@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - GUARDIAO DA SOBERANIA
  * Emenda Constitucional SOBERANIA-DIAG
  */

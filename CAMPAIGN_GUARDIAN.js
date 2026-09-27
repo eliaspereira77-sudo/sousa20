@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 — CAMPAIGN GUARDIAN
  * Barreira preventiva e monitoramento operacional de campanhas.
  */

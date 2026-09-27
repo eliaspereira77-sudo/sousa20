@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - CARDAN OPENMANUS
  * Junta de transmissao entre o SOUSA e o OpenManus.
  * O SOUSA nao contem o OpenManus; acopla-se a ele.

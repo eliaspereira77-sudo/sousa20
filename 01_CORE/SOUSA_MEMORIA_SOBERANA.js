@@ -1,4 +1,4 @@
-﻿/**
+/**
  * SOUSA 2.0 - MEMORIA SOBERANA
  * O cerebro persistente do SOUSA.
  * Nao depende de IA externa, nuvem ou ferramenta terceira.

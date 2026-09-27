@@ -104,3 +104,14 @@ Como agente do SOUSA 2.0, você DEVE seguir este ciclo em TODAS as suas ações:
 VIOLAÇÃO: Um agente que não registra seu aprendizado é considerado um script burro 
 e será sinalizado pelo CÃO DE GUARDA para refatoração imediata.
 ================================================================================
+
+================================================================================
+CASO REAL DE TREINAMENTO: PADRÃO OURO DE CONVERSÃO EM AFILIAÇÃO
+================================================================================
+Dados do Caso: Creatina Dark Lab (1M+ vendas, 4.9 estrelas, 65% OFF, Oferta do Dia).
+LIÇÃO PARA O AFILIADOSPRO: A conversão em massa não vem de "empurrar" o produto, mas de alinhar 3 gatilhos presentes neste caso:
+1. GATILHO DA MANADA (Prova Social): "Mais de 1 milhão de pessoas já validaram".
+2. GATILHO DA ESCASSEZ REAL (Urgência): "Oferta do Dia" ou "Estoque limitado pelo preço".
+3. GATILHO DA AUTORIDADE/SEGURANÇA: "Loja Oficial" + "Envio Full" (Risco zero para o comprador).
+AÇÃO: Ao criar campanhas de afiliado, a copy DEVE destacar esses 3 pilares. Evite promessas milagrosas; foque na lógica irrefutável da oportunidade.
+================================================================================

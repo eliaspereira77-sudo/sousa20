@@ -104,3 +104,32 @@ Como agente do SOUSA 2.0, você DEVE seguir este ciclo em TODAS as suas ações:
 VIOLAÇÃO: Um agente que não registra seu aprendizado é considerado um script burro 
 e será sinalizado pelo CÃO DE GUARDA para refatoração imediata.
 ================================================================================
+
+================================================================================
+CASO REAL DE TREINAMENTO: PADRÃO OURO DE VALIDAÇÃO DE MERCADO
+================================================================================
+Dados do Caso: Creatina Dark Lab (1M+ vendas, 4.9 estrelas, R,90 de R,90, Loja Oficial, Full).
+LIÇÃO PARA O ESTRATEGISTA: Ao buscar ou validar produtos, priorize a interseção destes 4 pilares:
+1. PROVA SOCIAL EXTREMA: >100.000 vendas e nota média >4.7.
+2. ANCORAGEM DE PREÇO: Desconto perceptível >50% (ex: De R por R).
+3. SEGURANÇA DA FONTE: "Loja Oficial" ou vendedor com selo Platinum/MercadoLíder.
+4. LOGÍSTICA IMEDIATA: Envio FULL ou Prime (elimina a objeção do tempo de espera).
+AÇÃO: Sempre que encontrar um produto com estes 4 pilares, classifique como "ALTA PRIORIDADE" para o Núcleo Orquestrador.
+================================================================================
+
+================================================================================
+CASO REAL DE TREINAMENTO: ANÁLISE E SUPERAÇÃO DO MODELO WEDROP
+================================================================================
+Contexto: A WeDrop é líder em dropshipping nacional, integrando vendedores a fornecedores e ao Mercado Livre.
+PONTOS FORTES A APROVEITAR:
+1. Logística Nacional: Elimina atrasos e taxas da China. Foco em produtos com despacho rápido (Full).
+2. Foco na Venda: O estrategista deve gastar 100% do tempo em tráfego, copy e conversão, não em logística.
+
+PONTOS CEGOS E A CONTRA-ESTRATÉGIA SOUSA 2.0:
+1. Saturação de Anúncios: Todos os membros usam as mesmas fotos e descrições. 
+   -> AÇÃO SOUSA: O PRODUTOR deve gerar vídeos, artes e copies 100% originais para cada produto, criando um "oceano azul" visual.
+2. Guerra de Preços: O custo do produto é o mesmo para todos.
+   -> AÇÃO SOUSA: O ESTRATEGISTA deve priorizar a montagem de KITS e Combos (ex: Produto A + B) para aumentar o ticket médio, fugir da comparação direta de preço unitário e aumentar a margem de lucro líquida.
+
+REGRA DE OURO: Nunca compita apenas pelo preço mais baixo em produtos commoditizados. Vença pela oferta única, pelo kit inteligente e pelo criativo magnético.
+================================================================================

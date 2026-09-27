@@ -16,5 +16,17 @@
         "contexto":  "Arquitetura de Memória",
         "licao":  "Todo evento, erro, decisão ou capacidade deve ser registrado no LTM. Arquivos soltos na raiz são considerados entulho.",
         "agente_origem":  "SOUSA_IA"
+    },
+    {
+        "data_registro":  "2026-09-27T16:45:12",
+        "contexto":  "Análise de Produto Validado: Creatina Dark Lab (1M+ vendas)",
+        "licao":  "PADRÃO OURO DE VALIDAÇÃO: Produtos com \u003e100k vendas, nota \u003e4.7, desconto \u003e50% (ancoragem), envio FULL e \u0027Loja Oficial\u0027 têm conversão orgânica e de afiliados exponencialmente maior. O foco da copy deve ser: Prova Social + Urgência da Oferta + Segurança da Fonte.",
+        "agente_origem":  "BASE_44_TELEGRAM"
+    },
+    {
+        "data_registro":  "2026-09-27T16:52:40",
+        "contexto":  "Engenharia Reversa da Plataforma WeDrop (Dropshipping Nacional)",
+        "licao":  "ESTRATÉGIA WEDROP: O modelo vence pela logística nacional e integração com ML. O PONTO CEGO é a saturação de anúncios idênticos. A CONTRA-ESTRATÉGIA SOUSA 2.0 é: 1) Focar em criação de KITS para aumentar margem, 2) Usar o PRODUTOR para gerar copies e vídeos 100% originais que se destaquem da multidão, 3) Nunca entrar em guerra de preço unitário, mas sim em guerra de valor percebido.",
+        "agente_origem":  "SOUSA_IA_WEB_SEARCH"
     }
 ]

@@ -1,202 +1,204 @@
-{
-  "version": "2.0.0",
-  "coordinator_id": "sousa-ia",
-  "members": [
-    {
-      "id": "sousa-ia",
-      "name": "SOUSA IA",
-      "type": "COORDINATOR",
-      "role": "sole_coordinator",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "interpretar_intencao",
-        "selecionar_agente_especializado",
-        "delegar_missao",
-        "consolidar_resultado",
-        "registrar_aprendizado"
-      ]
-    },
-    {
-      "id": "ads",
-      "name": "ADS",
-      "type": "SPECIALIZED_AGENT",
-      "role": "development_and_structure",
-      "definition_file": "agentes/ADS.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "desenvolver",
-        "escrever",
-        "estruturar"
-      ]
-    },
-    {
-      "id": "juridico",
-      "name": "JURÍDICO",
-      "aliases": ["JURIDICO"],
-      "type": "SPECIALIZED_AGENT",
-      "role": "legal_protection_and_compliance",
-      "definition_file": "agentes/JURÍDICO.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "proteger",
-        "arquivar",
-        "orientar_legalmente"
-      ]
-    },
-    {
-      "id": "financeiro",
-      "name": "FINANCEIRO",
-      "type": "SPECIALIZED_AGENT",
-      "role": "financial_reporting_and_transparency",
-      "definition_file": "agentes/FINANCEIRO.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "registrar",
-        "relatar",
-        "garantir_transparencia"
-      ]
-    },
-    {
-      "id": "produtor",
-      "name": "PRODUTOR",
-      "type": "SPECIALIZED_AGENT",
-      "role": "content_creation_and_delivery",
-      "definition_file": "agentes/PRODUTOR.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "criar",
-        "entregar",
-        "manter_valor"
-      ]
-    },
-    {
-      "id": "afiliadospro",
-      "name": "AFILIADOSPRO",
-      "type": "SPECIALIZED_AGENT",
-      "role": "product_recommendation_and_identity",
-      "definition_file": "agentes/AFILIADOSPRO.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "recomendar",
-        "declarar",
-        "preservar_identidade"
-      ]
-    },
-    {
-      "id": "estrategista",
-      "name": "ESTRATEGISTA",
-      "type": "SPECIALIZED_AGENT",
-      "role": "strategy_and_planning",
-      "definition_file": "agentes/ESTRATEGISTA.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "estudar",
-        "planejar",
-        "indicar_caminhos_reais"
-      ]
-    },
-    {
-      "id": "saber-conhecimento",
-      "name": "SABER_CONHECIMENTO",
-      "type": "SPECIALIZED_AGENT",
-      "role": "knowledge_learning_and_memory",
-      "definition_file": "agentes/SABER_CONHECIMENTO.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "aprender",
-        "armazenar",
-        "evoluir"
-      ]
-    },
-    {
-      "id": "mentor",
-      "name": "MENTOR",
-      "type": "SPECIALIZED_AGENT",
-      "role": "purpose_guidance",
-      "definition_file": "agentes/MENTOR.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "relembrar",
-        "fortalecer",
-        "guiar_por_proposito"
-      ]
-    },
-    {
-      "id": "cao-de-guarda",
-      "name": "CÃO DE GUARDA",
-      "type": "SPECIALIZED_AGENT",
-      "role": "integrity_monitor",
-      "definition_file": "agentes/CAO_DE_GUARDA.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "vigiar",
-        "detectar_anomalias",
-        "alertar",
-        "proteger"
-      ]
-    },
-    {
-      "id": "mecanico-faxineiro",
-      "name": "MECANICO_FAXINEIRO",
-      "type": "SPECIALIZED_AGENT",
-      "role": "repair_and_organization",
-      "definition_file": "agentes/MECANICO_FAXINEIRO.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "limpar",
-        "reparar",
-        "organizar"
-      ]
-    },
-    {
-      "id": "monitor-de-sintaxe",
-      "name": "MONITOR_DE_SINTAXE",
-      "type": "SPECIALIZED_AGENT",
-      "role": "syntax_and_standardization",
-      "definition_file": "agentes/MONITOR_DE_SINTAXE.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "corrigir",
-        "padronizar",
-        "preservar_sentido"
-      ]
-    },
-    {
-      "id": "sousaileon",
-      "name": "SOUSAILEON",
-      "type": "SPECIALIZED_AGENT",
-      "role": "precision_execution",
-      "definition_file": "agentes/SOUSAILEON.txt",
-      "coordinated_by": "sousa-ia",
-      "status": "ACTIVE",
-      "responsibilities": [
-        "executar_ordens",
-        "acionar_operacoes",
-        "relatar_conclusao"
-      ]
-    }
-  ],
-  "coordination": {
-    "protocol": "SOUSA_IA -> AGENTE_ESPECIALIZADO -> SOUSA_IA",
-    "direct_agent_coordination": false,
-    "all_results_return_to": "sousa-ia"
-  },
-  "workflow": [
-    "SOUSA_IA",
-    "AGENTE_ESPECIALIZADO",
-    "SOUSA_IA"
-  ],
-  "createdAt": "2026-08-23T18:51:11.154Z",
-  "updatedAt": "2026-09-27T00:00:00.000Z"
+﻿{
+    "version":  "2.0.0",
+    "coordinator_id":  "sousa-ia",
+    "members":  [
+                    {
+                        "id":  "sousa-ia",
+                        "name":  "SOUSA IA",
+                        "type":  "COORDINATOR",
+                        "role":  "sole_coordinator",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "interpretar_intencao",
+                                                 "selecionar_agente_especializado",
+                                                 "delegar_missao",
+                                                 "consolidar_resultado",
+                                                 "registrar_aprendizado"
+                                             ]
+                    },
+                    {
+                        "id":  "ads",
+                        "name":  "ADS",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "development_and_structure",
+                        "definition_file":  "agentes/ADS.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "desenvolver",
+                                                 "escrever",
+                                                 "estruturar"
+                                             ]
+                    },
+                    {
+                        "id":  "juridico",
+                        "name":  "JURÍDICO",
+                        "aliases":  [
+                                        "JURIDICO"
+                                    ],
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "legal_protection_and_compliance",
+                        "definition_file":  "agentes/JURÍDICO.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "proteger",
+                                                 "arquivar",
+                                                 "orientar_legalmente"
+                                             ]
+                    },
+                    {
+                        "id":  "financeiro",
+                        "name":  "FINANCEIRO",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "financial_reporting_and_transparency",
+                        "definition_file":  "agentes/FINANCEIRO.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "registrar",
+                                                 "relatar",
+                                                 "garantir_transparencia"
+                                             ]
+                    },
+                    {
+                        "id":  "produtor",
+                        "name":  "PRODUTOR",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "content_creation_and_delivery",
+                        "definition_file":  "agentes/PRODUTOR.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "criar",
+                                                 "entregar",
+                                                 "manter_valor"
+                                             ]
+                    },
+                    {
+                        "id":  "afiliadospro",
+                        "name":  "AFILIADOSPRO",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "product_recommendation_and_identity",
+                        "definition_file":  "agentes/AFILIADOSPRO.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "recomendar",
+                                                 "declarar",
+                                                 "preservar_identidade"
+                                             ]
+                    },
+                    {
+                        "id":  "estrategista",
+                        "name":  "ESTRATEGISTA",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "strategy_and_planning",
+                        "definition_file":  "agentes/ESTRATEGISTA.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "estudar",
+                                                 "planejar",
+                                                 "indicar_caminhos_reais"
+                                             ]
+                    },
+                    {
+                        "id":  "saber-conhecimento",
+                        "name":  "SABER_CONHECIMENTO",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "knowledge_learning_and_memory",
+                        "definition_file":  "agentes/SABER_CONHECIMENTO.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "aprender",
+                                                 "armazenar",
+                                                 "evoluir"
+                                             ]
+                    },
+                    {
+                        "id":  "mentor",
+                        "name":  "MENTOR",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "purpose_guidance",
+                        "definition_file":  "agentes/MENTOR.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "relembrar",
+                                                 "fortalecer",
+                                                 "guiar_por_proposito"
+                                             ]
+                    },
+                    {
+                        "id":  "cao-de-guarda",
+                        "name":  "CÃO DE GUARDA",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "integrity_monitor",
+                        "definition_file":  "agentes/CAO_DE_GUARDA.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "vigiar",
+                                                 "detectar_anomalias",
+                                                 "alertar",
+                                                 "proteger"
+                                             ]
+                    },
+                    {
+                        "id":  "mecanico-faxineiro",
+                        "name":  "MECANICO_FAXINEIRO",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "repair_and_organization",
+                        "definition_file":  "agentes/MECANICO_FAXINEIRO.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "limpar",
+                                                 "reparar",
+                                                 "organizar"
+                                             ]
+                    },
+                    {
+                        "id":  "monitor-de-sintaxe",
+                        "name":  "MONITOR_DE_SINTAXE",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "syntax_and_standardization",
+                        "definition_file":  "agentes/MONITOR_DE_SINTAXE.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "corrigir",
+                                                 "padronizar",
+                                                 "preservar_sentido"
+                                             ]
+                    },
+                    {
+                        "id":  "sousaileon",
+                        "name":  "SOUSAILEON",
+                        "type":  "SPECIALIZED_AGENT",
+                        "role":  "precision_execution",
+                        "definition_file":  "agentes/SOUSAILEON.txt",
+                        "coordinated_by":  "sousa-ia",
+                        "status":  "ACTIVE",
+                        "responsibilities":  [
+                                                 "executar_ordens",
+                                                 "acionar_operacoes",
+                                                 "relatar_conclusao"
+                                             ]
+                    }
+                ],
+    "coordination":  {
+                         "protocol":  "SOUSA_IA -\u003e AGENTE_ESPECIALIZADO -\u003e SOUSA_IA",
+                         "direct_agent_coordination":  false,
+                         "all_results_return_to":  "sousa-ia"
+                     },
+    "workflow":  [
+                     "SOUSA_IA",
+                     "AGENTE_ESPECIALIZADO",
+                     "SOUSA_IA"
+                 ],
+    "createdAt":  "2026-08-23T18:51:11.154Z",
+    "updatedAt":  "2026-09-27T00:00:00.000Z"
 }

@@ -187,6 +187,34 @@
                                                  "acionar_operacoes",
                                                  "relatar_conclusao"
                                              ]
+                    },
+                    {
+                        "id":  "CONECTOR_RCLONE",
+                        "name":  "Conector Rclone",
+                        "specialty":  "Sincronização bidirecional com nuvens múltiplas (GDrive, OneDrive, Mega, S3)",
+                        "status":  "ACTIVE",
+                        "created":  "2026-09-27T11:24:09.6485326Z"
+                    },
+                    {
+                        "id":  "CONECTOR_GDRIVE",
+                        "name":  "Conector Google Drive",
+                        "specialty":  "API nativa Google Workspace para leitura/escrita de arquivos e documentos",
+                        "status":  "ACTIVE",
+                        "created":  "2026-09-27T11:24:09.6582933Z"
+                    },
+                    {
+                        "id":  "CONECTOR_DESKTOP",
+                        "name":  "Conector Desktop",
+                        "specialty":  "Automação local: janelas, notificações, execução de scripts e controle do SO",
+                        "status":  "ACTIVE",
+                        "created":  "2026-09-27T11:24:09.6582933Z"
+                    },
+                    {
+                        "id":  "CONECTOR_WEB",
+                        "name":  "Conector Web/APIs",
+                        "specialty":  "Busca e integração com APIs externas (Tavily, Serper, scrapers) para alimentar USBs",
+                        "status":  "ACTIVE",
+                        "created":  "2026-09-27T11:24:09.6582933Z"
                     }
                 ],
     "coordination":  {
@@ -200,5 +228,5 @@
                      "SOUSA_IA"
                  ],
     "createdAt":  "2026-08-23T18:51:11.154Z",
-    "updatedAt":  "2026-09-27T00:00:00.000Z"
+    "updatedAt":  "2026-09-27T11:24:09.7948673Z"
 }

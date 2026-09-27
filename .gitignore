@@ -104,3 +104,6 @@ models/*.onnx
 # Bloqueio de backups manuais (SoT é o Git)
 *.BACKUP_*
 *.BK_*
+.tmp.drivedownload/
+*.tmp
+desktop.ini

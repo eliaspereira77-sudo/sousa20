@@ -9,12 +9,12 @@ function Sync-RcloneSoT {
     $SoTPath = Join-Path $PSScriptRoot "..\..\..\00_GOVERNANCA"
     
     if ($Direction -eq "push") {
-        rclone sync $SoTPath "$RemoteName:/SOUSA_2.0/00_GOVERNANCA" --progress
+        rclone sync $SoTPath "${RemoteName}:/SOUSA_2.0/00_GOVERNANCA" --progress
     } elseif ($Direction -eq "pull") {
-        rclone sync "$RemoteName:/SOUSA_2.0/00_GOVERNANCA" $SoTPath --progress
+        rclone sync "${RemoteName}:/SOUSA_2.0/00_GOVERNANCA" $SoTPath --progress
     } else {
-        rclone sync $SoTPath "$RemoteName:/SOUSA_2.0/00_GOVERNANCA" --progress
-        rclone sync "$RemoteName:/SOUSA_2.0/00_GOVERNANCA" $SoTPath --progress
+        rclone sync $SoTPath "${RemoteName}:/SOUSA_2.0/00_GOVERNANCA" --progress
+        rclone sync "${RemoteName}:/SOUSA_2.0/00_GOVERNANCA" $SoTPath --progress
     }
     
     Write-Host "[RCLONE] Sincronização concluída." -ForegroundColor Green
@@ -73,3 +73,4 @@ function Search-WebConnector {
 }
 
 Export-ModuleMember -Function Sync-RcloneSoT, Get-GoogleDriveStatus, Read-GoogleDriveFile, Get-DesktopEnvironment, Invoke-DesktopAutomation, Search-WebConnector
+

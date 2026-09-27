@@ -66,7 +66,6 @@ media/generated/
 # Jupyter
 .ipynb_checkpoints/
 
-<<<<<<< HEAD
 # SOUSA data operacional (nÃ£o versionar)
 data/ciclos/
 data/*.db
@@ -75,11 +74,8 @@ data/*.db-*
 
 .tmp.driveupload/
 node_modules/
-=======
-# SOUSA data (ciclos persistidos â€” nÃ£o versionar conteÃºdo operacional)
-data/ciclos/
-!data/.gitkeep
->>>>>>> origin/feature/omniroute-integration
+.venv/
+.venv-piper/
 
 SOUSA_GITHUB_REF/
 
@@ -88,3 +84,23 @@ SOUSA_GITHUB_REF/
 
 # Modelos grandes (usar Git LFS ou download separado)
 models/*.onnx
+
+# Bloqueio de backups manuais (SoT é o Git)
+*.BACKUP_*
+*.BK_*
+
+# Bloqueio de backups manuais (SoT é o Git)
+*.BACKUP_*
+*.BK_*
+
+# Bloqueio de backups manuais (SoT é o Git)
+*.BACKUP_*
+*.BK_*
+
+# Bloqueio de backups manuais (SoT é o Git)
+*.BACKUP_*
+*.BK_*
+
+# Bloqueio de backups manuais (SoT é o Git)
+*.BACKUP_*
+*.BK_*

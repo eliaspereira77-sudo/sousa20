@@ -1,11 +1,8 @@
-﻿Clear-Host
-}
-
-# ═══ FONTE DA VERDADE SOUSA 2.0 ═══
-# Este componente obedece a SOUSA_SOURCE_OF_TRUTH.json
+﻿# ═══ FONTE DA VERDADE SOUSA 2.0 ═══
 $SOUSA_SOURCE_OF_TRUTH = $null
-if (Test-Path "SOUSA_SOURCE_OF_TRUTH.json") {
-    $SOUSA_SOURCE_OF_TRUTH = Get-Content "SOUSA_SOURCE_OF_TRUTH.json" -Raw | ConvertFrom-Json
+$sourceOfTruthPath = Join-Path $PSScriptRoot "00_GOVERNANCA\SOUSA_SOURCE_OF_TRUTH.json"
+if (Test-Path $sourceOfTruthPath) {
+    $SOUSA_SOURCE_OF_TRUTH = Get-Content $sourceOfTruthPath -Raw | ConvertFrom-Json
 }
 # ═══════════════════════════════════
 

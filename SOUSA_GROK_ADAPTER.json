@@ -3,13 +3,14 @@
     "id": "SOUSA_GROK_ADAPTER",
     "version": "1.1.0",
     "phase": "CAPACIDADES_ADAPTADAS",
-    "source_of_truth_ref": "SOUSA_SOURCE_OF_TRUTH.json",
+    "source_of_truth_ref": "00_GOVERNANCA/SOUSA_SOURCE_OF_TRUTH.json",
     "principio": "NAO_DUPLICAR"
   },
   "identidade": {
     "nome": "Capacidades Grok adaptadas à SOUSA IA",
     "funcao": "Registro e mapeamento de comportamentos/capacidades inspirados no Grok — sem motor de API externo",
     "integracao": "FIO_CONDUTOR",
+    "coordenacao": "SOUSA IA",
     "principio_acoplamento": "CAPACIDADE_RECONHECIDA_NAO_PROVEDOR",
     "aviso": "NÃO é integração de API xAI. NÃO exige chave. NÃO chama api.x.ai."
   },
@@ -62,7 +63,7 @@
     "MECANICO_FAXINEIRO": "diagnóstico honesto de código",
     "MONITOR_SINTAXE": "validação clara",
     "ESTRATEGISTA": "análise crítica de opções",
-    "SOUSAILEON": "orquestração com prioridade ao resultado funcional"
+    "SOUSAILEON": "execução operacional com prioridade ao resultado funcional"
   },
   "regras_de_operacao": {
     "R001": "NUNCA criar outra Fonte da Verdade",

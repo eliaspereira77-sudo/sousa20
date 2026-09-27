@@ -3,13 +3,14 @@
     "id": "SOUSA_QWEN_ADAPTER",
     "version": "3.8.0",
     "phase": "REFINO_INTEGRACAO",
-    "source_of_truth_ref": "SOUSA_SOURCE_OF_TRUTH.json",
+    "source_of_truth_ref": "00_GOVERNANCA/SOUSA_SOURCE_OF_TRUTH.json",
     "principio": "NAO_DUPLICAR"
   },
   "identidade": {
     "nome": "Qwen 3.8 como Motor Cognitivo do SOUSA IA",
     "funcao": "Camada de inteligencia, raciocinio e linguagem do SOUSA IA",
-    "integracao": "FIO_CONDUTOR"
+    "integracao": "FIO_CONDUTOR",
+    "coordenacao": "SOUSA IA"
   },
   "mapeamento_capacidades": {
     "raciocinio_logico": "SOUSA_IA.PROCESSADOR_CENTRAL",
@@ -28,7 +29,7 @@
   "agentes_que_usam_qwen": {
     "CAO_DE_GUARDA": "analise de anomalias e risco",
     "MECANICO_FAXINEIRO": "diagnostico e manutencao de codigo",
-    "SOUSAILEON": "orquestracao e coordenacao",
+    "SOUSAILEON": "execucao operacional sob coordenacao da SOUSA IA",
     "MONITOR_SINTAXE": "validacao de codigo",
     "ESTRATEGISTA": "analise de mercado e copy"
   },

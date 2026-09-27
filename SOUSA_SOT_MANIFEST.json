@@ -1,0 +1,280 @@
+{
+  "manifestVersion": "1.0.0",
+  "package": {
+    "id": "sousa-2.0",
+    "version": "2.0.4",
+    "name": "SOUSA 2.0",
+    "purpose": "Catálogo canônico para a futura criação do instalador."
+  },
+  "sourceOfTruth": {
+    "fileId": "source-of-truth"
+  },
+  "files": [
+    {
+      "id": "source-of-truth",
+      "path": "00_GOVERNANCA/SOUSA_SOURCE_OF_TRUTH.json",
+      "sha256": "ab8f8717e80b4b9f6337511b025d1cc2b6fffc2e603fb24c73b9d72ef39b9776",
+      "role": "authority"
+    },
+    {
+      "id": "operational-panel",
+      "path": "SOUSA_2.0_PAINEL_OPERACIONAL.html",
+      "sha256": "ce55e8714053f554153c0f09d87bb19b4070a83a3f06eb3f9a19c3f7c29f6d8f",
+      "role": "frontend"
+    },
+    {
+      "id": "backend-entrypoint",
+      "path": "sousa20/app.py",
+      "sha256": "74f20ae7829bf520f00d56c154b446a6bff03f17bd1d2765aa0fe03c9f9668f0",
+      "role": "backend"
+    },
+    {
+      "id": "backend-requirements",
+      "path": "sousa20/requirements.txt",
+      "sha256": "d9923bd15966c6bd5422fd04cd125287a1b144635aa2272605d4bf5d34b5e89f",
+      "role": "dependencies"
+    },
+    {
+      "id": "core-init",
+      "path": "sousa20/core/__init__.py",
+      "sha256": "56786692ba0d327ac671de964cfc13261da699b4f1749daec2011e92097684cc",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-auth",
+      "path": "sousa20/core/auth.py",
+      "sha256": "b4e5c708ad4530be9233adcdcb4570812f832f688d1296124c844db27aa1e05e",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-gemini-client",
+      "path": "sousa20/core/gemini_client.py",
+      "sha256": "9a648eb7c0618eed0db7d15658896ed8a7d89df1e16b639e6c8183501bbeb9d4",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-sousa-ia",
+      "path": "sousa20/core/sousa_ia.py",
+      "sha256": "d6e35ae41d6a4e3a005346e2370ac75c86202ba6a5ab5b6a0ab1fee3e6ba31bc",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-memoria",
+      "path": "sousa20/core/memoria.py",
+      "sha256": "23274820c17080fe1b2137eaf2b51969815ce32299ce9bd61426cbeb3135b2d5",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-auditoria",
+      "path": "sousa20/core/auditoria.py",
+      "sha256": "eb14b9646a0a755dfa57eec9957b3dc552daa00096643b3b51af38785c18c8ba",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-soberania",
+      "path": "sousa20/core/soberania.py",
+      "sha256": "8b208c0988d30333d6b82e898f5dfcabd3b457081e05098ee22b64672785af7f",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-registro-capacidades",
+      "path": "sousa20/core/registro_capacidades.py",
+      "sha256": "81a132684d1daf4d15b995b09c1902dbfb78c79d468141f6b69985a2610ba276",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-auto-evolucao",
+      "path": "sousa20/core/auto_evolucao.py",
+      "sha256": "402d920a6eb5a156075b0160779ecb071b50e5697c5b4cc9406f931b04ce3450",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-automacao",
+      "path": "sousa20/core/automacao.py",
+      "sha256": "3c1012bc2bc6f348071844595f020d9e8d0cbb9017c414a060d0df2f78c4474c",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-equipe-manutencao",
+      "path": "sousa20/core/equipe_manutencao.py",
+      "sha256": "1a9fb4280c093ad3e5a530cd9b130d0a9bd7cabd1b5e06020d336aafb93bee9e",
+      "role": "backend-module"
+    },
+    {
+      "id": "core-ads",
+      "path": "sousa20/core/ads.py",
+      "sha256": "556fb11fa0f5a95767ac1d954c4e3fca5a3873f687adcab6bb90a6822a6bf5ed",
+      "role": "backend-module"
+    },
+    {
+      "id": "ruflo-init",
+      "path": "sousa20/ruflo/__init__.py",
+      "sha256": "001c18cfe42d095ccb3bb0e9b7b233ad8f9f6895e9c90fb393ad7e409b37e5e2",
+      "role": "backend-module"
+    },
+    {
+      "id": "ruflo-orchestrator",
+      "path": "sousa20/ruflo/orchestrator.py",
+      "sha256": "f38da2ad3e81c1cb91f976fc18e1563bcd878fad066c3af12486ba2871eac339",
+      "role": "backend-module"
+    },
+    {
+      "id": "ruflo-politica",
+      "path": "sousa20/ruflo/politica.py",
+      "sha256": "75aad22ccbf25dc798defa14b8e3c472b5adce97477807fe560cede7b99723ed",
+      "role": "backend-module"
+    },
+    {
+      "id": "ruflo-persistencia",
+      "path": "sousa20/ruflo/persistencia.py",
+      "sha256": "756530650bcb846f1cd3084863b7efd39b149d45071f718ea45c4ea892353c50",
+      "role": "backend-module"
+    },
+    {
+      "id": "ruflo-handlers",
+      "path": "sousa20/ruflo/handlers.py",
+      "sha256": "994becb033690dfe391d9e0fbece09606a1d0cc5b905af3631dd55910d333a53",
+      "role": "backend-module"
+    },
+    {
+      "id": "usb-init",
+      "path": "sousa20/usb/__init__.py",
+      "sha256": "7b73f1abe0c20832e9ef8a8fd01faaad52ec8d9589848af83202230f6261804d",
+      "role": "backend-module"
+    },
+    {
+      "id": "usb-enriquecimento",
+      "path": "sousa20/usb/enriquecimento.py",
+      "sha256": "d553fc6bf56a1ba64477d509c47adcd89454c896fa52e9d2c1cd475d3e069ac9",
+      "role": "backend-module"
+    },
+    {
+      "id": "usb-operacoes-externas",
+      "path": "sousa20/usb/operacoes_externas.py",
+      "sha256": "5d727064136e610f14814d5db29d6590ed352d1e65e54ad21d8aa04840be2d22",
+      "role": "backend-module"
+    }
+  ],
+  "profiles": [
+    {
+      "id": "backend-local",
+      "kind": "backend",
+      "fileIds": [
+        "backend-entrypoint",
+        "backend-requirements",
+        "core-init",
+        "core-auth",
+        "core-gemini-client",
+        "core-sousa-ia",
+        "core-memoria",
+        "core-auditoria",
+        "core-soberania",
+        "core-registro-capacidades",
+        "core-auto-evolucao",
+        "core-automacao",
+        "core-equipe-manutencao",
+        "core-ads",
+        "ruflo-init",
+        "ruflo-orchestrator",
+        "ruflo-politica",
+        "ruflo-persistencia",
+        "ruflo-handlers",
+        "usb-init",
+        "usb-enriquecimento",
+        "usb-operacoes-externas"
+      ],
+      "command": {
+        "workingDirectory": ".",
+        "executable": ".venv\\Scripts\\python.exe",
+        "fallbackExecutable": "python",
+        "arguments": [
+          "sousa20\\app.py"
+        ]
+      },
+      "runtimeDirectories": [
+        {
+          "path": "sousa20/data",
+          "mode": "create-empty-writable",
+          "excludeExistingState": true
+        }
+      ],
+      "environment": {
+        "SOUSA_AUTH_TOKEN": "required-for-protected-routes",
+        "GEMINI_API_KEY": "optional-for-ai-provider",
+        "PORT": "optional-default-5000",
+        "FLASK_DEBUG": "optional-default-false",
+        "SOUSA_DATA_DIR": "optional-runtime-data-location",
+        "OMNIROUTE_BASE_URL": "optional-integration"
+      },
+      "provides": [
+        "/",
+        "/health",
+        "/status",
+        "/chat",
+        "/ciclo"
+      ]
+    },
+    {
+      "id": "painel-operacional",
+      "kind": "frontend",
+      "fileIds": [
+        "operational-panel"
+      ],
+      "open": "SOUSA_2.0_PAINEL_OPERACIONAL.html"
+    },
+    {
+      "id": "operacao-local-combinada",
+      "kind": "composed",
+      "includesProfiles": [
+        "backend-local",
+        "painel-operacional"
+      ],
+      "contractIds": [
+        "painel-status-local"
+      ]
+    }
+  ],
+  "contracts": [
+    {
+      "id": "painel-status-local",
+      "consumerProfile": "painel-operacional",
+      "providerProfile": "backend-local",
+      "frontendFileId": "operational-panel",
+      "backendFileId": "backend-entrypoint",
+      "frontendCalls": [
+        "http://localhost:5000/api/status",
+        "/api/status"
+      ],
+      "backendRoutes": [
+        "/status"
+      ],
+      "status": "blocked",
+      "reason": "O painel consulta /api/status, mas o backend canônico publica /status com autenticação.",
+      "installerPolicy": "Do not install the composed profile until an explicitly approved authenticated adapter exists."
+    }
+  ],
+  "rules": {
+    "sourcesAreReadOnly": true,
+    "copyOnlyRegisteredFileIds": true,
+    "excludeSecrets": [
+      ".env",
+      ".env.local",
+      "secrets/",
+      "*.pem",
+      "*.key"
+    ],
+    "excludeRuntimeState": [
+      "sousa20/data/*.db",
+      "sousa20/data/ciclos/"
+    ],
+    "legacyContentIsNotPartOfAnyProfile": [
+      "sousa20/.github/",
+      "sousa20/docs/",
+      "sousa20/scripts/",
+      "sousa20/voice/",
+      "sousa20/avatar/",
+      "sousa20/distribution/",
+      "pacote_oficial/"
+    ]
+  }
+}

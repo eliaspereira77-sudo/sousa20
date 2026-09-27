@@ -25,14 +25,35 @@
 
 const SOUSA_IA = {
 
-  versao: "1.0.0",
+  versao: "2.0.0",
 
   identidade: {
     sistema: "SOUSA 2.0",
     nome: "SOUSA IA",
-    funcao: "Camada de inteligência, contexto, coordenação e aprendizado.",
-    principio: "Coordenar competências sem substituir seus módulos."
+    funcao: "Camada central de inteligência, coordenação e aprendizado.",
+    principio: "Todo módulo atua como agente especializado e responde à SOUSA IA."
   },
+
+  coordenacao: {
+    id: "sousa-ia",
+    nome: "SOUSA IA",
+    funcao: "Coordenação única dos agentes especializados."
+  },
+
+  agentesEspecializados: [
+    { id: "ads", nome: "ADS", especialidade: "Desenvolvimento, escrita e estruturação", termos: ["código", "codigo", "programação", "programacao", "software", "sistema", "script", "api", "arquitetura", "bug", "erro", "programar", "desenvolver", "desenvolvimento", "hardware", "computador", "engenharia"] },
+    { id: "juridico", nome: "JURÍDICO", especialidade: "Proteção legal, conformidade e direitos", termos: ["lei", "legal", "jurídico", "juridico", "contrato", "direito", "processo", "conformidade", "marca"] },
+    { id: "financeiro", nome: "FINANCEIRO", especialidade: "Registros, relatórios e transparência financeira", termos: ["dinheiro", "finanças", "financas", "investimento", "renda", "dívida", "divida", "custo", "orçamento", "orcamento", "financeiro"] },
+    { id: "produtor", nome: "PRODUTOR", especialidade: "Criação e entrega de conteúdo", termos: ["conteúdo", "conteudo", "roteiro", "vídeo", "video", "post", "legenda", "youtube", "instagram", "facebook", "tiktok", "kwai"] },
+    { id: "afiliadospro", nome: "AFILIADOSPRO", especialidade: "Recomendação de produtos e preservação de identidade", termos: ["afiliado", "afiliados", "mercado livre", "shopee", "amazon", "comissão", "comissao", "produto", "venda"] },
+    { id: "estrategista", nome: "ESTRATEGISTA", especialidade: "Estudo, planejamento e indicação de caminhos", termos: ["estratégia", "estrategia", "planejamento", "prioridade", "decisão", "decisao", "plano"] },
+    { id: "saber-conhecimento", nome: "SABER_CONHECIMENTO", especialidade: "Aprendizado, armazenamento e evolução do conhecimento", termos: ["o que é", "o que e", "como funciona", "história", "historia", "ciência", "ciencia", "curiosidade", "conhecimento", "aprender"] },
+    { id: "mentor", nome: "MENTOR", especialidade: "Propósito, orientação e fortalecimento", termos: ["propósito", "proposito", "legado", "vida", "família", "familia", "futuro", "motivação", "motivacao"] },
+    { id: "cao-de-guarda", nome: "CÃO DE GUARDA", especialidade: "Vigilância, detecção, alerta e proteção", termos: ["vigiar", "vigilância", "vigilancia", "anomalia", "risco", "alerta", "integridade", "segurança", "seguranca"] },
+    { id: "mecanico-faxineiro", nome: "MECANICO_FAXINEIRO", especialidade: "Limpeza, reparo e organização", termos: ["limpar", "limpeza", "reparar", "reparo", "organizar", "organização", "organizacao", "faxina", "resíduo", "residuo", "manutenção", "manutencao"] },
+    { id: "monitor-de-sintaxe", nome: "MONITOR_DE_SINTAXE", especialidade: "Correção, padronização e preservação de sentido", termos: ["sintaxe", "padronizar", "padronização", "padronizacao", "formatar", "lint", "validar código", "validar codigo"] },
+    { id: "sousaileon", nome: "SOUSAILEON", especialidade: "Execução operacional precisa", termos: ["executar", "execução", "execucao", "acionar", "operar", "realizar", "movimento", "manusear"] }
+  ],
 
 
   /**
@@ -56,7 +77,7 @@ const SOUSA_IA = {
 
     const competencia = this.identificarCompetencia(
       comando,
-      conhecimento.modulos
+      conhecimento.agentes
     );
 
     const resultado = {
@@ -65,6 +86,8 @@ const SOUSA_IA = {
       sistema: "SOUSA 2.0",
 
       camada: "SOUSA_IA",
+
+      coordenador: this.coordenacao,
 
       versao: this.versao,
 
@@ -121,7 +144,19 @@ const SOUSA_IA = {
 
     return {
 
-      fonte: "SOUSA_REGISTRY",
+      fonte: "SOUSA_IA",
+
+      coordenador: this.coordenacao,
+
+      agentes: this.agentesEspecializados.map(function(agente) {
+        return {
+          id: agente.id,
+          nome: agente.nome,
+          especialidade: agente.especialidade,
+          termos: agente.termos,
+          coordenado_por: "sousa-ia"
+        };
+      }),
 
       modulos: modulos,
 
@@ -156,154 +191,21 @@ const SOUSA_IA = {
    * IDENTIFICA COMPETÊNCIA
    * ----------------------------------------------------------
    */
-  identificarCompetencia: function(comando, modulos) {
+  identificarCompetencia: function(comando, agentes) {
 
     const texto = String(comando).toLowerCase();
-
-
-    const regras = [
-
-      {
-        modulo: "ads",
-        termos: [
-          "código",
-          "codigo",
-          "programação",
-          "programacao",
-          "software",
-          "sistema",
-          "script",
-          "api",
-          "arquitetura",
-          "bug",
-          "erro",
-          "programar",
-          "desenvolver",
-          "desenvolvimento",
-          "hardware",
-          "computador",
-          "engenharia"
-        ]
-      },
-
-      {
-        modulo: "juridico",
-        termos: [
-          "lei",
-          "legal",
-          "jurídico",
-          "juridico",
-          "contrato",
-          "servidor",
-          "direito",
-          "processo"
-        ]
-      },
-
-      {
-        modulo: "financeiro",
-        termos: [
-          "dinheiro",
-          "finanças",
-          "financas",
-          "investimento",
-          "renda",
-          "dívida",
-          "divida",
-          "custo",
-          "orçamento",
-          "orcamento"
-        ]
-      },
-
-      {
-        modulo: "produtor",
-        termos: [
-          "conteúdo",
-          "conteudo",
-          "roteiro",
-          "vídeo",
-          "video",
-          "post",
-          "legenda",
-          "youtube",
-          "instagram",
-          "facebook",
-          "tiktok",
-          "kwai"
-        ]
-      },
-
-      {
-        modulo: "afiliadopro",
-        termos: [
-          "afiliado",
-          "afiliados",
-          "mercado livre",
-          "shopee",
-          "amazon",
-          "comissão",
-          "comissao",
-          "produto",
-          "venda"
-        ]
-      },
-
-      {
-        modulo: "estrategista",
-        termos: [
-          "estratégia",
-          "estrategia",
-          "planejamento",
-          "prioridade",
-          "decisão",
-          "decisao",
-          "plano"
-        ]
-      },
-
-      {
-        modulo: "saber",
-        termos: [
-          "o que é",
-          "o que e",
-          "como funciona",
-          "história",
-          "historia",
-          "ciência",
-          "ciencia",
-          "curiosidade",
-          "conhecimento"
-        ]
-      },
-
-      {
-        modulo: "mentor",
-        termos: [
-          "propósito",
-          "proposito",
-          "legado",
-          "vida",
-          "família",
-          "familia",
-          "futuro",
-          "motivação",
-          "motivacao"
-        ]
-      }
-
-    ];
-
+    const catalogo = Array.isArray(agentes) && agentes.length
+      ? agentes
+      : this.agentesEspecializados;
 
     let melhor = null;
     let maiorPontuacao = 0;
 
-
-    regras.forEach(function(regra) {
+    catalogo.forEach(function(agente) {
 
       let pontuacao = 0;
 
-      regra.termos.forEach(function(termo) {
+      (agente.termos || []).forEach(function(termo) {
 
         if (texto.indexOf(termo) !== -1) {
           pontuacao++;
@@ -311,26 +213,29 @@ const SOUSA_IA = {
 
       });
 
-
       if (pontuacao > maiorPontuacao) {
 
         maiorPontuacao = pontuacao;
-
-        melhor = regra.modulo;
+        melhor = agente;
       }
 
     });
 
-
     if (!melhor) {
-
-      melhor = "conselho";
+      melhor = this.coordenacao;
     }
-
 
     return {
 
-      modulo: melhor,
+      modulo: melhor.id,
+
+      agente: {
+        id: melhor.id,
+        nome: melhor.nome,
+        especialidade: melhor.especialidade || melhor.funcao
+      },
+
+      coordenado_por: this.coordenacao.id,
 
       pontuacao: maiorPontuacao,
 
@@ -342,9 +247,9 @@ const SOUSA_IA = {
             : "BAIXA",
 
       motivo:
-        melhor === "conselho"
-          ? "Nenhuma competência específica identificada; Conselho recomendado."
-          : "Competência identificada por correspondência semântica inicial.",
+        melhor.id === this.coordenacao.id
+          ? "Nenhuma especialidade identificada; SOUSA IA assumirá a coordenação da análise."
+          : "Agente especializado identificado e coordenado pela SOUSA IA.",
 
       registrado: true
     };
@@ -374,8 +279,16 @@ const SOUSA_IA = {
 
       status: "DELEGACAO_PREPARADA",
 
+      coordenador: this.coordenacao,
+
       modulo_destino:
         analise.competencia.modulo,
+
+      agente_destino:
+        analise.competencia.agente,
+
+      fluxo:
+        "SOUSA_IA -> " + analise.competencia.modulo,
 
       competencia:
         analise.competencia,
@@ -386,7 +299,7 @@ const SOUSA_IA = {
       },
 
       mensagem:
-        "Competência identificada e pronta para delegação."
+        "Delegação preparada sob coordenação exclusiva da SOUSA IA."
     };
   },
 
@@ -485,6 +398,12 @@ const SOUSA_IA = {
 
       funcao:
         "Inteligência, contexto, coordenação e aprendizado.",
+
+      coordenacao_unica:
+        "SOUSA IA",
+
+      agentes_especializados:
+        this.agentesEspecializados.length,
 
       soberania:
         "ATIVA",

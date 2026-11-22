@@ -1,14 +1,5 @@
-﻿token_youtube.json
-.env
-*.tmp
-*.bak
+﻿jarvis_desktop_manifest.json
 __pycache__/
-.sousa_checkpoints/
-tmp_sousa_upload/
+*.pyc
+.env
 
-node_modules/
-*.pdf
-Grande-nex4go.pdf
-node_modules/
-sousa-zap-bridge/node_modules/
-_QUARENTENA_DESKTOP/

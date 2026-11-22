@@ -1,109 +1,14 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# C extensions
-*.so
-
-# Distribution / packaging
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
-*.egg-info/
-.installed.cfg
-*.egg
-
-# Virtual environments
-venv/
-.env/
-env/
-ENV/
-
-# IDE
-.idea/
-.vscode/
-*.swp
-*.swo
-
-# Environment variables
+Ôªøtoken_youtube.json
 .env
-.env.local
-*.local
-
-# Logs
-*.log
-logs/
-
-# OS
-.DS_Store
-Thumbs.db
-
-# Secrets and keys
-*.pem
-*.key
-secrets/
-config/secrets*
-
-# Media / temporary
-temp/
-tmp/
-media/generated/
-*.mp3
-*.wav
-*.mp4
-
-# Jupyter
-.ipynb_checkpoints/
-
-# SOUSA data operacional (n√£o versionar)
-data/ciclos/
-data/*.db
-data/*.db-*
-!data/.gitkeep
-
-.tmp.driveupload/
-node_modules/
-.venv/
-.venv-piper/
-
-SOUSA_GITHUB_REF/
-
-# Backups grandes
-*.zip
-
-# Modelos grandes (usar Git LFS ou download separado)
-models/*.onnx
-
-# Bloqueio de backups manuais (SoT È o Git)
-*.BACKUP_*
-*.BK_*
-
-# Bloqueio de backups manuais (SoT È o Git)
-*.BACKUP_*
-*.BK_*
-
-# Bloqueio de backups manuais (SoT È o Git)
-*.BACKUP_*
-*.BK_*
-
-# Bloqueio de backups manuais (SoT È o Git)
-*.BACKUP_*
-*.BK_*
-
-# Bloqueio de backups manuais (SoT È o Git)
-*.BACKUP_*
-*.BK_*
-.tmp.drivedownload/
 *.tmp
-desktop.ini
+*.bak
+__pycache__/
+.sousa_checkpoints/
+tmp_sousa_upload/
+
+node_modules/
+*.pdf
+Grande-nex4go.pdf
+node_modules/
+sousa-zap-bridge/node_modules/
+_QUARENTENA_DESKTOP/

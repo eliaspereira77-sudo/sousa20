@@ -1,0 +1,29 @@
+name: SOUSA 2.0 — Disparador Universal 24/7 (YouTube + Redes Sociais)
+
+on:
+  schedule:
+    - cron: "0 21 * * *" # 18:00 BRT todos os dias na nuvem gratuita do GitHub
+  workflow_dispatch:     # Permite disparar imediatamente com 1 clique
+
+jobs:
+  publicar-fila-sousa:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Baixar código do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Executar Disparador Universal Multicanal (Regra 0800)
+        env:
+          YOUTUBE_CLIENT_ID: ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET: ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN: ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          META_ACCESS_TOKEN: ${{ secrets.META_ACCESS_TOKEN }}
+        run: python3 sousa_universal_dispatcher.py
